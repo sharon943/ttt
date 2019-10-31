@@ -18,10 +18,13 @@ header img{
 .inside p{
 	font-size: 12px;color:#eee;
 }
-ul{
+.inside ul{
 	position: absolute;left:0;right:0;top:0;bottom: 0;margin:auto;
-	width: 450px;display: flex;justify-content: space-between;font-size:12px;height: 30px;
+	width: 450px;height: 30px;
 	color: #fff;
+}
+ul{
+	display: flex;justify-content: space-between;font-size:12px;
 }
 .top_bottom{
 	width: 100%;background: #fff;
@@ -44,8 +47,19 @@ ul{
 	height: 75px;
 }
 .middlebox{
-	width: 560px;height: 40px;
-	background-image: url('../../lib/images/bg.png');background-repeat: no-repeat;background-size: 100% 100%;
+	width: 560px;height: 40px;    margin: 15px auto;
+	background-image: url('../../lib/images/search-box.png');background-repeat: no-repeat;background-size: 100% 100%;
+}
+.middlebox input{
+	padding: 10px;    width: 400px;
+	background: transparent;
+	line-height: 22px;
+}
+.topnav{
+	margin-left: 20px;
+}
+.search_box ul{
+	margin-left: 20px;width: 400px;
 }
 
 

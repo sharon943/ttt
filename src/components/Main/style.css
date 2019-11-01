@@ -1,3 +1,95 @@
+
 main {
-	font-size: 0.75rem;
+	font-size: 0.75rem;background: #f6f5f5;height: auto;
+}
+nav{
+	display: flex;
+}
+div.mycontainer{
+	background: #f6f5f5;
+}
+.left_nav{
+	background: #f54338;width: 162px;height: auto;padding-right: 14px;
+}
+.left_nav li{
+	height: 40px;font-size: 14px;color:rgba(255,255,255,0.5);line-height: 40px;text-align: center;border-bottom: 1px solid rgba(255,255,255,0.5);box-sizing: border-box;
+}
+ul.left_nav div p span{
+	width: 20px;height: 3px;background: #fff;    display: inline-block;
+}
+ul.left_nav div p {
+	font-size: 14px;color:#fff;width: 140px;margin:15px 0 15px 18px;text-align: center;
+	display: flex;
+	justify-content: space-between;
+}
+ul.left_nav div img{
+	width: 150px;height: 180px;margin-left: 13px;margin-bottom: 15px;
+}
+.right_nav > ul{
+	display: flex;justify-content: space-between;width: 924px;
+	height: 40px;
+	padding-left: 30px;
+}
+.right_nav > ul li{
+	line-height: 40px;color:#000;font-size: 14px;
+}
+.mid{
+	display: flex;height: 460px;
+}
+.fourP{
+	display: flex;justify-content: space-between;flex-wrap: wrap;
+}
+.fourP div{
+	width: 191px;height: 230px;
+}
+.fourP div  img{
+	width: 100%;height: 100%;
+}
+.fourP div p{
+	width: 85px;
+	height: 25px;line-height:25px;text-align: center;font-size: 14px;color:rgba(255,255,255,0.5);margin:15px auto;border-radius: 15px;
+}
+.fourP div span{
+	width: 100%;text-align: center;font-size: 14px;color:rgba(0,0,0,0.5);margin:15px auto;display: block;
+}
+.fourP div p:nth-of-type(1){
+	background: #f43e31;
+}
+.fourP div p:nth-of-type(2){
+	background: #ff753f;
+}
+.fourP div p:nth-of-type(3){
+	border:1px solid #f46e69;color:#f46e69;
+}
+.avat{
+	width: 60px;height: 60px;border-radius: 50%;
+	overflow: hidden;margin:15px auto 0;
+}
+.news{
+	color:#ff753f;padding-left:30px;
+}
+ul.news li{
+	list-style-type:disc;color:#ff753f;line-height: 38px;font-size: 14px;
+}
+ul.news{
+	width: 100%;
+}
+.news li::after{
+	color:#ff753f;
+}
+.news li a{
+	color:#000;white-space: nowrap;text-overflow: ellipsis;overflow:hidden;width: 167px;display: block;
+}
+.bot{
+	width: 100%;display: flex;justify-content: space-between;height: 230px;
+}
+.bot a{
+	width: 189px;background: #fff;
+}
+.bot img{
+	width: 189px;height: 189px;
+}
+.bot p{
+	font-size: 12px;color:#000;line-height: 41px;
+	text-align: center;
 }

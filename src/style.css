@@ -1,7 +1,111 @@
 body {
-	display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  justify-content: space-between;
-  height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+}
+.mycontainer{
+    width: 1200px;
+    margin: 0 auto;
+    background: #fff;
+}
+.blods{
+    font-weight: bolder;
+}
+/* 字体大小 */
+.normalfont{
+    font-size: 12px;
+}
+.firstfont{
+    font-size: 14px;
+}
+.secondfont{
+    font-size: 16px;
+}
+.threefont{
+    font-size: 18px;
+}
+.supnumfont{
+    font-size: 24px;
+}
+.bigfont{
+    font-size: 32px;
+}
+
+
+.orange{
+    color: #fd6619;/* 橙色字体 */
+}
+.red{
+    color: #f43e31;/* 红色字体 */
+}
+.darkgrey{
+    color: #666666;/* 深灰色字体 */
+}
+.Sorrel{
+    color: #e74639;/* 红棕色字体 */
+}
+.lightgrey{
+    color: #999;/* 浅灰色字体 */
+}
+
+
+.lightpinks{
+    background: #fff0f2;/* 浅粉色背景 */
+}
+.reds{
+    background: #f43e31;/* 红色背景 */
+    color: #fff;
+}
+.khakis{
+    background: #dd7f1b;/* 土黄色背景 */
+    color: #fff;
+}
+.oranges{
+    background: #fc6b1f;/* 橙色背景 */
+    color: #fff;
+}
+.rosereds{
+    background: #f42341;/* 玫瑰红背景 */
+    color: #fff;
+}
+.lightoranges{
+    background: #fff0e6;/* 浅橙色背景 */
+    color: #fc6b1f;
+}
+.lightgreys{
+    background: #f7f7f7;/* 浅灰色背景 */
+    color: #949494;
+}
+.midgreys{
+    background: #949494;/* 中灰色背景 */
+    color: #fff;
+}
+.Sorrels{
+    color: #e33a33;/* 红棕色背景 */
+}
+
+/* 按钮 */
+.smallbtn{
+    line-height: 25px;
+    text-align: center;
+}
+.normalbtn{
+    line-height: 38px;
+    text-align: center;
+}
+
+/* 边框 */
+.orangrebor{
+    border: 1px solid #fc6b1f;
+}
+.lightorangrebor{
+    border: 1px solid #fc9159;
+}
+.lightgreybor{
+    border: 1px solid #e6e6e6;
+}
+.redbor{
+    border: 1px solid #f43e31;
 }

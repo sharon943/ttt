@@ -9,7 +9,6 @@
 
 ## 运行效果
 
-![image](./show.png)
 
 ## 项目结构
 
@@ -46,9 +45,7 @@
     └── bundle.js
 ```
 
-## 用法
 
-### `git clone https://github.com/xingbofeng/webpack-jQuery-cli.git`
 
 下载本项目
 

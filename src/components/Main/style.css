@@ -93,3 +93,114 @@ ul.news{
 	font-size: 12px;color:#000;line-height: 41px;
 	text-align: center;
 }
+.two_part{
+	width: 100%;display: flex;justify-content: space-between;
+	height: 100px;margin-top:15px;
+}
+.two_part a{
+	width: calc(50% - 2.5px);height: 100%;
+}
+.unit{
+
+}
+.part_title{
+	width: 100%;font-size: 22px;color:#333333;height: 76px;line-height: 76px;
+}
+.brand .son_part{
+	width: 100%;display: flex;height: 430px;
+}
+.son_part a{
+	display: inline-block;
+}
+.son_part a img{
+	width: 100%;height: 100%;
+}
+.brand_1{
+	width: 245px;height: 100%;
+}
+.brand_2{
+	width: 323px;height: 100%;
+}
+.elements{
+	width: calc(100% - 568px);height: 100%;
+}
+.son_part ul{
+	display: flex;justify-content: space-between;flex-wrap: wrap;
+}
+.elements li{
+	width: 150.5px;height: 100px;margin-bottom: 10px;
+}
+.son_part li a,.son_part li a img{
+	width: 100%;height: 100%;
+}
+.elements li:nth-of-type(13),.elements li:nth-of-type(14),.elements li:nth-of-type(15),.elements li:nth-of-type(16){
+	margin-bottom: 0;
+}
+.elements_1 li{
+	width: 20%;height: 300px;
+}
+.elements_2 li {
+	width: 296px;
+	height: 358px;
+	margin-top: 2px;
+}
+.elements_2 li a{
+	position: relative;
+}
+.describe{
+   width: 100%;height:88px;position: absolute;bottom: 0;left:0;font-size: 12px;
+}
+.describe h1 p{
+	float: left;
+}
+
+.describe h1{
+	margin-bottom: 33px;    font-size: 16px;
+}
+.describe h1 span{
+	width: 20px;height: 2px;background: #fff; float: left;
+}
+h5{
+	margin-bottom: 33px;
+}
+.handpick .elements_3 li{
+	width: 288px;height: 340px;
+}
+.handpick .elements_3 li a img{
+	width: 236px;height: 236px;
+}
+.handpick h2{
+	color:#f24e48;    font-size: 14px;
+	margin-bottom: 20px;margin-top: 20px;
+}
+.handpick h3{
+	font-size: 13px;
+	margin-bottom: 18px;
+	color: #333;
+}
+.handpick h4{
+	color: #b0b0b0;
+	font-size: 12px;
+	margin-bottom: 20px;
+}
+.handpick li{
+	border:1px solid #e5e5e5;margin-bottom: 15px;
+}
+.handpick a{
+	text-align: center;
+}
+.starStores ul{
+	display: block;width: 116px;
+}
+.starStores ul li{
+	width: 116px;height: 69px;border-radius: 5px;overflow: hidden;margin-bottom: 10px;
+}
+div.bg_img{
+	width: 922px;height: 464px;
+}
+div.bg_img a,div.bg_img a img{
+	width: 100%;height: 100%;
+}
+.starStores .son_part{
+	width: 100%;display: flex;justify-content: space-between;
+}

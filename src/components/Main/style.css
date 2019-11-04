@@ -3,7 +3,10 @@ main {
 	font-size: 0.75rem;background: #f6f5f5;height: auto;
 }
 nav{
-	display: flex;
+	display: flex;width: 1200px;margin:0 auto;
+}
+.unit{
+	width: 1200px;margin:0 auto;
 }
 div.mycontainer{
 	background: #f6f5f5;
@@ -94,8 +97,8 @@ ul.news{
 	text-align: center;
 }
 .two_part{
-	width: 100%;display: flex;justify-content: space-between;
-	height: 100px;margin-top:15px;
+	width: 1200px;display: flex;justify-content: space-between;
+	height: 100px;margin:15px auto 0;
 }
 .two_part a{
 	width: calc(50% - 2.5px);height: 100%;
@@ -147,17 +150,17 @@ ul.news{
 .elements_2 li a{
 	position: relative;
 }
-.describe{
+.elements_2 .describe{
    width: 100%;height:88px;position: absolute;bottom: 0;left:0;font-size: 12px;
 }
-.describe h1 p{
+.elements_2 .describe h1 p{
 	float: left;
 }
 
-.describe h1{
+.elements_2 .describe h1{
 	margin-bottom: 33px;    font-size: 16px;
 }
-.describe h1 span{
+.elements_2 .describe h1 span{
 	width: 20px;height: 2px;background: #fff; float: left;
 }
 h5{
@@ -203,4 +206,48 @@ div.bg_img a,div.bg_img a img{
 }
 .starStores .son_part{
 	width: 100%;display: flex;justify-content: space-between;
+}
+.elements_6 li{
+	margin-bottom: 10px;width: calc((100% - 4px)/5);
+}
+.elements_6 li a{
+	position: relative;    overflow: hidden;
+}
+.elements_6 .describe{
+	position: absolute;width: calc(100% - 10px);height: 47px;bottom: 0px;left:0px;background: rgba(0,0,0,0.3);padding-left: 10px;box-shadow: 0 -10px 15px 10px rgba(0,0,0,0.3);
+}
+.elements_6 .describe p{
+	font-size: 12px;
+	margin-top: 20px;
+}
+.elements_6 .describe h3{
+	font-size: 14px;
+}
+.elements_7{
+	width: 100%;
+}
+.elements_7 li{
+  padding:15px;width: calc((100% - 110px)/3);background: #fff;margin-bottom: 10px;height: 317px;
+}
+.elements_7 li a >img{
+	width: 100%;height: 130px;
+}
+.elements_7 li a >img.spe_single{
+	height: 165px;margin-bottom: 15px;
+}
+.singleP{
+	display: flex;justify-content: space-between;
+}
+.singleP div{
+	width: 110px;height: 110px;
+}
+.elements_7 h3{
+	font-size: 14px;
+	text-align: center;
+	height: 50px;
+	line-height: 50px;
+	color: #000;
+}
+.singleP p{
+	font-size: 16px;margin-top: 20px;color: #f43e31;text-align: center;
 }

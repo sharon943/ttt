@@ -96,12 +96,18 @@ ul.news{
 	font-size: 12px;color:#000;line-height: 41px;
 	text-align: center;
 }
-.two_part{
+.two_part,.three_part{
 	width: 1200px;display: flex;justify-content: space-between;
 	height: 100px;margin:15px auto 0;
 }
 .two_part a{
 	width: calc(50% - 2.5px);height: 100%;
+}
+.three_part a{
+	width: calc((100% - 5px)/3);height: 100%;
+}
+.three_part a img,.two_part a img{
+	width: 100%;height: 100%;
 }
 .unit{
 
@@ -172,8 +178,11 @@ h5{
 .handpick .elements_3 li a img{
 	width: 236px;height: 236px;
 }
+.h2{
+	font-size: 14px;
+}
 .handpick h2{
-	color:#f24e48;    font-size: 14px;
+	color:#f24e48;
 	margin-bottom: 20px;margin-top: 20px;
 }
 .handpick h3{
@@ -250,4 +259,104 @@ div.bg_img a,div.bg_img a img{
 }
 .singleP p{
 	font-size: 16px;margin-top: 20px;color: #f43e31;text-align: center;
+}
+.hotBrand .part_title{
+	width: 1200px;margin:0 auto
+}
+.hotBrand .son_part{
+	width: 100%;height: 470px;background: pink;padding: 10px 0;
+}
+ul.elements_8{
+	display: block;width: auto;
+}
+ul.elements_8 li{
+	width: 150px;height: 45px;line-height: 45px;margin-bottom: 10px;font-size: 14px;background: #333;color: #fff;padding-left: 10px;
+}
+.hotBrand .unit{
+	display: flex;justify-content: space-around;
+}
+.mid_bgimg{
+	margin-left: 50px;width: 245px;height: 470px;
+}
+.mid_bgimg img{
+	width: 100%;height: 100%;
+}
+.elements_9{
+	width: 708px;float: right;
+}
+.elements_9 li{
+	margin-bottom: 10px;width: 228px;height: 230px;
+}
+.elements_10 li{
+	width: calc((100% - 9px)/10);text-align: center;padding:10px 0;background: #fff;height: 40px;
+}
+.elements_10 li p{
+	font-size: 14px;margin-top: 10px;
+}
+.elements_10 li span{
+	font-size: 12px;margin-top: 8px;
+}
+.elements_11 li{
+	width: calc((100% - 5px)/2);height: 266px;position: relative;
+}
+.shadow{
+	position: absolute;bottom: 25px;left: 0;width: 100%;height: 52px;background: rgba(255,255,255,0.3);text-align: center;padding-top: 25px;
+}
+.shadow h2{
+	font-size: 14px;margin-bottom: 25px;
+}
+.shadow p{
+	font-size: 12px;
+}
+.elements_12 li{
+	width: calc((100% - 9px)/10);text-align: center;background: #fff;height: 60px;font-size: 14px;line-height: 60px;
+}
+.elements_13{
+	background: #fff;padding-top:17px;display: flex;
+}
+ul.elements_13 li{
+	width: calc((100% - 200px)/6);text-align: center;
+}
+ul.elements_13 li img{
+	width: 167px;height: 170px;
+}
+.elements_13 li h2{
+	font-size: 14px;color: #333;margin-top: 15px;
+}
+.elements_13 li h1{
+	font-size: 16px;color: #f43e31;margin: 20px 0;
+}
+.finershops .son_part{
+	width: 100%;display: flex;justify-content: space-between;margin-bottom: 15px;
+}
+.finershops .son_part:nth-of-type(2){
+	margin-bottom: 0;
+}
+.finershops .son_part >a >img{
+	width: 800px;height: 356px;
+}
+.elements_14{
+	width: calc(100% - 802px);
+}
+.elements_14 li{
+	width: calc((100% - 2px)/2);
+}
+.elements_14 li:nth-of-type(1) {
+	width: 100%;height: 156px;
+}
+.elements_15 li a img{
+	width: 200px;height: 200px;
+}
+.elements_15 li{
+	padding: 15px;text-align: center;width: calc((100% - 210px)/5);background: #fff;margin-bottom: 15px;
+}
+.elements_15 li h2{
+	font-size: 12px;margin: 15px 0 0 0 ;color:#333;text-align: left;
+}
+.elements_15 li h3{
+	font-size: 14px;padding: 10px 10px;background: #ffe7e7;margin-bottom: 15px;display: inline-block;color: #f43e31;font-weight: normal;
+	border-radius: 10px;
+}
+.elements_15 li p{
+	font-size: 16px;color: #f43e31;
 }

@@ -334,7 +334,7 @@ h5 {
 .handpick h2 {
 	color: #f24e48;
 	margin-bottom: 20px;
-	margin-top: 20px;
+	margin-top: 20px;font-size: 14px;
 }
 
 .handpick h3 {
@@ -434,7 +434,7 @@ div.bg_img a, div.bg_img a img {
 	height: 130px;
 }
 
-.elements_7 li a > img.spe_single {
+.elements_7 li:nth-of-type(5) a > img {
 	height: 165px;
 	margin-bottom: 15px;
 }

@@ -1,7 +1,6 @@
 var webpack = require('webpack');
 var $ = require('jquery');
 var UglifyJSPlugin = require('uglifyjs-webpack-plugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   devtool: 'eval-source-map', //配置生成Source Maps
@@ -28,9 +27,6 @@ module.exports = {
     }, {
       test: /\.css$/,
       loader: 'style-loader!css-loader!autoprefixer-loader' //添加对样式表的处理
-    },{
-      test: /\.scss$/,
-      loader: ExtractTextPlugin.extract("style", 'css!sass') //这里用了样式分离出来的插件，如果不想分离出来，可以直接这样写 loader:'style!css!sass'
     }, {
       test: /\.(png|jpg)$/,
       loader: 'url-loader?limit=8192'
@@ -52,7 +48,6 @@ module.exports = {
       jQuery: "jquery",
       "window.jQuery": "jquery"
     }),
-    new ExtractTextPlugin("style.css"),
     new UglifyJSPlugin()
   ]
 }

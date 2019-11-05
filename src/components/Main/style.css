@@ -1,5 +1,4 @@
 
-.homepage{
 main {
 	font-size: 0.75rem;background: #f6f5f5;height: auto;
 }
@@ -184,7 +183,7 @@ h5{
 }
 .handpick h2{
 	color:#f24e48;
-	margin-bottom: 20px;margin-top: 20px;font-size: 14px;
+	margin-bottom: 20px;margin-top: 20px;
 }
 .handpick h3{
 	font-size: 13px;
@@ -360,5 +359,4 @@ ul.elements_13 li img{
 }
 .elements_15 li p{
 	font-size: 16px;color: #f43e31;
-}
 }

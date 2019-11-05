@@ -12,13 +12,12 @@
     "no-console": 0,
     "no-unused-vars": 0,
     "indent": [
-      "off",
+      "error",
       2
     ],
     "linebreak-style": [
-      0,
       "error",
-      "unix", "windows"
+      "unix"
     ],
     "quotes": [
       "error",

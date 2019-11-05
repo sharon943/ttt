@@ -10,13 +10,8 @@ import allproduct from './components/allproduct/index.js';
 // 匹配路由时一定要注意先后顺序，他们会是同辈元素
 export default [{
   'path': '/',
-<<<<<<< HEAD
-  'components': Header + Main
-}, {
-=======
   'components': Header + Main + Footer
-}, 
-{
+},{
   'path': '/Shopdetails',
   'components': Shopdetails
 },{
@@ -32,7 +27,6 @@ export default [{
   'path': '/storehome2',
   'components': storehome2
 },{
->>>>>>> test
   'path': '/Main',
   'components': Main
 }, {
@@ -40,5 +34,5 @@ export default [{
   'components': Footer
 }, {
   'path': '/Header',
-  'components': Header	
+  'components': Header
 }];

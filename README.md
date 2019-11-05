@@ -48,8 +48,6 @@
 
 ## 用法
 
-### `git clone https://github.com/xingbofeng/webpack-jQuery-cli.git`
-
 下载本项目
 
 ### `npm install`

@@ -1,0 +1,288 @@
+*{
+    margin:0;padding:0;list-style: none;
+}
+header img{
+    width: 100%;
+    height: 80px;
+}
+.black_box{
+    width: 100%;background: #000;
+    height: 30px;
+}
+.inside{
+    width: 1200px;display: flex;height: 100%;line-height: 30px;margin:0 auto;position: relative;justify-content: space-between;
+}
+.inside p{
+    font-size: 12px;color:#eee;
+}
+.inside ul{
+    position: absolute;left:0;right:0;top:0;bottom: 0;margin:auto;
+    width: 450px;height: 30px;
+    color: #fff;
+}
+header ul{
+    display: flex;justify-content: space-between;font-size:12px;
+}
+.top_bottomLogin{
+    width: 1200px;background: #fff;margin:0 auto;
+    height: 84px;font-size: 12px;padding: 16px 0 30px 30px;
+}
+.top_bottomLogin .box{
+    width: 500px;height:100%;
+    display: flex;
+}
+.logo{
+    width: 190px;height: 68px;
+}
+.top_bottomLogin .box p{
+    font-size: 34px;line-height: 68px;
+    color: #bbbbbb;
+}
+.top_bottomLogin .box span {
+   width: 2px;height: 53px;background: #bbbbbb;margin-top: 8.5px;margin-right: 15px;
+}
+.loginbox{
+    width: 100%;height: 822px;position: relative;
+}
+.loginbox img{
+    width: 100%;height: 100%;
+}
+.loginbox .box{
+    position: absolute;right: 60px;top:0;bottom: 0;margin-top: auto;margin-bottom: auto;height: 485px;width: 430px;background: #fff;
+}
+.loginbox .title{
+    display: flex;justify-content: space-between;padding: 30px;
+}
+.loginbox .title a{
+    font-size: 18px;color: #333;width: calc(50% - 30px);text-align: center;
+}
+.tabs-nav {
+    font-size: 0;
+    word-spacing: -1em;
+    border-bottom: solid 1px #E6E6E6;
+}
+.tabs-container {
+    padding: 0 40px 0px 40px;
+    position: relative;
+    z-index: 1;
+}
+.tabs-content {
+    width: 352px;
+}
+.nc-login-form {
+    display: block;
+}
+
+input, button, select, textarea {
+    outline: none;
+}
+.nc-login-form dl {
+    width: 348px;
+}
+.nc-login-form dl {
+    background-color: #FFF;
+    width: 348px;
+    height: 52px;
+    margin-top: -1px;
+    border: solid 1px #E6E6E6;
+    position: relative;
+    z-index: 1;
+}
+.nc-login-form dl dt {
+    font-size: 14px;
+    line-height: 20px;
+    color: #666;
+    width: 72px;
+    padding: 16px 0 16px 20px;
+    float: left;
+}
+.nc-login-form dl dd {
+    height: 28px;
+    float: left;width: 250px;
+    padding: 12px 0;
+}
+.nc-login-form dl dd .text {
+  display: inherit;
+}
+.nc-login-form dl dd .text {
+    font-family: "microsoft yahei";
+    font-size: 14px;
+    line-height: 28px;
+    width: 250px;
+    height: 28px;
+    padding: 0;
+    border: none 0;
+}
+.nc-login-form .code-div {
+    width: 100%;
+    height: 54px;margin-top: 20px;
+}
+ .nc-login-form .code-div dl {
+    width: 228px;
+}
+
+ .nc-login-form dl {
+    width: 348px;
+}
+.nc-login-form .code-div dl {
+    width: 277px;
+    float: left;
+}
+.nc-login-form dl {
+    background-color: #FFF;
+    width: 348px;
+    height: 52px;
+    margin-top: -1px;
+    border: solid 1px #E6E6E6;
+    position: relative;
+    z-index: 1;
+}
+.nc-login-form dl{
+    margin-top: 20px;
+}
+.nc-login-form dl:nth-of-type(1){
+    margin-top: 0;
+}
+.nc-login-form .code-div span {
+    width: 120px;
+    height: 52px;
+    float: left;
+    margin: -1px 0 0 -1px;
+    border: solid 1px #E6E6E6;
+    position: relative;
+    z-index: 1;
+}
+.code-div dl dd{
+    width: 130px;
+}
+ .nc-login-form .handle-div {
+    line-height: 20px;
+    margin-top: 15px;
+    overflow: hidden;
+}
+ .nc-login-form .handle-div .auto {
+    color: #999;
+    float: left;
+}
+ .nc-login-form .handle-div .auto .checkbox {
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: 4px;
+}
+a:link, a:visited, a:active {
+    text-decoration: none;
+}
+.nc-login-form .handle-div .forget {
+    float: right;
+}
+a{
+    color:#333;font-size: 14px;
+}
+a:hover, a:visited, a:link, a:active {
+    outline-width: 0;
+    color: #333;
+}
+.nc-login-form .submit-div {
+    margin-top: 15px;
+}
+.nc-login-form .submit-div .submit {
+    width: 348px;
+}
+
+.nc-login-form .submit-div .submit {
+    font-family: "microsoft yahei";
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFF;
+    background-color: #F32613;
+    width: 348px;
+    height: 42px;
+    border: solid 1px #D91E17;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.nc-login-form .code-div {
+    width: 100%;
+    height: 54px;
+}
+ .nc-login-form .code-div dl {
+    width: 228px;
+}
+.nc-login-form .code-div span {
+    width: 120px;
+    height: 52px;
+    float: left;
+    margin: -1px 0 0 -1px;
+    border: solid 1px #E6E6E6;
+    position: relative;
+    z-index: 1;
+}
+.nc-login-form .code-div span a {
+    font-size: 14px;
+    text-decoration: none;
+    line-height: 52px;
+    color: #FFF;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#7F000000', endColorstr='#7F000000');
+    background: rgba(0,0,0,0.5);
+    text-align: center;
+    display: none;
+    width: 120px;
+    height: 52px;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+.nc-login-form .tiptext {
+    line-height: 20px;
+    color: #999;
+    margin: 15px 0;font-size: 13px;
+}
+
+.nc-login-form .tiptext a {
+    line-height: 22px;
+    color: #FFF;
+    background-color: #21b384;
+    vertical-align: middle;
+    display: inline-block;
+    height: 22px;
+    padding: 0 8px;
+    margin: 0 4px;
+    border-radius: 2px;
+}
+.hideflip {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    display: none\9;
+    opacity: 0;
+    -webkit-transform: rotatey(-90deg) scale(1.1);
+    -moz-transform: rotatey(-90deg) scale(1.1);
+    -o-transform: rotatey(-90deg) scale(1.1);
+    -ms-transform: rotatey(-90deg) scale(1.1);
+    transform: rotatey(-90deg) scale(1.1);
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+
+.make_transist {
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+.otherLoginway{
+    height: 85px;line-height: 85px;font-size: 14px;padding: 0 40px;border-top:1px solid #eaeae9;margin-top: 35px;
+}
+.otherLoginway span{
+  float: left;
+}
+.otherLoginway img{
+    width: 40px;height: 40px;margin-top: 22.5px;
+}
+.otherLoginway p{
+    float: right;
+}

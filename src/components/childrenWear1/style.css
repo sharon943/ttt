@@ -1,0 +1,43 @@
+.CW header{
+    width: 100%;background: #000;height: 57px;line-height: 57px;
+}
+.maintop{
+    width: 1200px;margin:0 auto;color: #fff;
+}
+.maintop span {
+  float: left;
+}
+.maintop p{
+    float: right;
+}
+.maintop ul{
+    width: 620px;display: flex;float: left;margin-left: 85px;
+}
+.maintop li a:hover{
+    color:#e03a30;
+}
+li.activeli{
+    border-bottom: 1px solid #e03a30;height: 47px;
+}
+.bgimg{
+    width: 100%;height: 563px;
+}
+.bgimg img{
+    width: 100%;height: 100%;
+}
+.modleTitle{
+    height: 78px;width: 100%;text-align: center;font-size: 16px;position: relative;
+}
+.modleTitle p{
+    line-height: 78px;
+}
+.modleTitle span{
+    position: absolute;
+    text-align: center;
+    top: 57%;
+    font-size: 20px;
+    color: #e0dfdf;
+    display: block;
+    left: 45%;
+}
+

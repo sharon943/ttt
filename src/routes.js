@@ -6,11 +6,20 @@ import Consultingprogram from './components/Consultingprogram/index.js';
 import Consultingdetail from './components/Consultingdetail/index.js';
 import storehome2 from './components/storehome2/index.js';
 import allproduct from './components/allproduct/index.js';
+import childrenWear1 from './components/childrenWear1/index.js';
+import Login from './components/Login/index.js';
 
 // 匹配路由时一定要注意先后顺序，他们会是同辈元素
 export default [{
   'path': '/',
-  'components': Header + Main + Footer
+  'components': Login
+      // Header + Main + Footer
+},{
+  'path': '/childrenWear1',
+  'components': childrenWear1
+},{
+  'path': '/Login',
+  'components': Login
 },{
   'path': '/Shopdetails',
   'components': Shopdetails
@@ -32,7 +41,10 @@ export default [{
 }, {
   'path': '/Footer',
   'components': Footer
-}, {
+},  {
+  'path': '/childrenWear1',
+  'components': childrenWear1  //童装服务模块首页，未完
+},{
   'path': '/Header',
   'components': Header
 }];

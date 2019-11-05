@@ -1,0 +1,102 @@
+<header>
+    <img src="../../lib/images/top.png" alt="">
+    <div class="black_box">
+        <section class="inside">
+            <p>您好，欢迎来到童淘淘 <span>登录</span> <span>注册</span> </p>
+            <ul>
+                <li>免费代发</li>
+                <li>功能服务</li>
+                <li>我是厂家</li>
+                <li>用户中心</li>
+                <li>运费测算</li>
+                <li>在线客服</li>
+            </ul>
+            <p>手机童淘淘</p>
+        </section>
+    </div>
+    <div class="top_bottomLogin">
+        <section class="box">
+            <img src="../../lib/images/logo.png" alt="" class="logo">
+            <span></span>
+            <p>欢迎来到童淘淘</p>
+        </section>
+    </div>
+    <div class="loginbox">
+        <img src="../../lib/images/login/login-bg.png" alt="">
+        <section class="box">
+            <div class="title">
+                <a href="#default">账户密码登录</a>
+                <a href="#mobile">手机动态登录</a>
+            </div>
+            <div id="tabs_container" class="tabs-container" style="height: 312px;">
+                <div id="default" class="tabs-content " style="position: absolute;top: 0px;">
+                    <form id="login_form" class="nc-login-form" method="post" action="">
+                        <dl>
+                            <dt>账&nbsp;&nbsp;号：</dt>
+                            <dd>
+                                <input type="text" class="text" autocomplete="off"  name="user_name" placeholder="可使用已注册的用户名或手机号登录" id="user_name">
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>密&nbsp;&nbsp;&nbsp;码：</dt>
+                            <dd>
+                                <input type="password" class="text" name="password" autocomplete="off" placeholder="6-20个大小写英文字母、符号或数字" id="password">
+                            </dd>
+                        </dl>
+                        <div class="code-div mt15">
+                            <dl>
+                                <dt>验证码：</dt>
+                                <dd>
+                                    <input type="text" name="captcha" autocomplete="off" class="text w100" placeholder="输入验证码" id="captcha" size="10" />
+                                </dd>
+                            </dl>
+                            <span><img src="" name="codeimage" id="codeimage"> <a class="makecode" href="javascript:void(0)" onclick="javascript:document.getElementById('codeimage').src='' + Math.random();">看不清，换一张</a></span></div>
+                        <div class="submit-div">
+                            <input type="submit" class="submit" value="登&nbsp;&nbsp;&nbsp;录">
+                            <input type="hidden" value="" name="ref_url">
+                        </div>
+                        <div class="handle-div"><a class="forget" href="">忘记密码</a></div>
+                    </form>
+                </div>
+                <div id="mobile" class="tabs-content hideflip" style="position: absolute; top: 0px;">
+                    <form id="post_form" method="post" class="nc-login-form" action="">
+                        <input type='hidden' name='formhash' value='nt0ToE9_bvt4ApjL_Lot8Oq0t_cfRmD' />            <input type="hidden" name="form_submit" value="ok" />
+                        <input name="nchash" type="hidden" value="ad6a68a5" />
+                        <dl>
+                            <dt>手机号：</dt>
+                            <dd>
+                                <input name="phone" type="text" class="text" id="phone" placeholder="可填写已注册的手机号接收短信" autocomplete="off" value="" >
+                            </dd>
+                        </dl>
+                        <div class="code-div">
+                            <dl>
+                                <dt>验证码：</dt>
+                                <dd>
+                                    <input type="text" name="captcha" class="text w100" placeholder="输入验证码" id="image_captcha" size="10" />
+                                </dd>
+                            </dl>
+                            <span><img src="" name="codeimage" id="sms_codeimage"> <a class="makecode" href="javascript:void(0);" onclick="javascript:document.getElementById('sms_codeimage').src='' + Math.random();">看不清，换一张</a></span> </div>
+
+                        <div class="tiptext" id="sms_text">正确输入上方验证码后，点击<span> <a href="javascript:void(0);" onclick="get_sms_captcha('2')"><i class="icon-mobile-phone"></i>发送手机动态码</a></span>，查收短信将系统发送的“6位手机动态码”输入到下方验证后登录。</div>
+                        <dl>
+                            <dt>动态码：</dt>
+                            <dd>
+                                <input type="text" name="sms_captcha" autocomplete="off" class="text" placeholder="输入6位手机动态码" id="sms_captcha" size="15" />
+                            </dd>
+                        </dl>
+                        <div class="submit-div">
+                            <input type="submit" id="submit" class="submit" value="登&nbsp;&nbsp;&nbsp;录">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="otherLoginway">
+                <span>其他账户登录：</span>
+                <img src="../../lib/images/login/wechatlogo.png" alt="">
+                <img src="../../lib/images/login/qqlogo.png" alt="">
+                <p>立即注册</p>
+            </div>
+        </section>
+
+    </div>
+</header>

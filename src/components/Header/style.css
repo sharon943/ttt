@@ -55,6 +55,9 @@ header ul{
 	background: transparent;
 	line-height: 22px;
 }
+.search,.photo{
+	width: 60px;height: 100%;float: right;    background: transparent;
+}
 .topnav{
 	margin-left: 20px;
 }

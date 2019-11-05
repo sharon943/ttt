@@ -1,111 +1,195 @@
-body {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: space-between;
-    height: 100vh;
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: PingFangSC-Regular,Arial,'Microsoft YaHei', sans-serif;
 }
-.mycontainer{
+body {
+    background: #f6f5f5;
+    width: 100%;
+    font-size: 12px;
+}
+img{
+    border: 0 none;
+    vertical-align: middle;
+}
+a{
+    text-decoration: none;
+}
+a:hover, a:visited, a:link, a:active{
+    color: unset;
+}
+ui,li,ol{
+    list-style: none;
+}
+html, body, h1, h2, h3, h4, h5, h6, p, dl, dt, dd, ul, ol, div, li, table, thead, tbody, pre, code, form, fieldset, legend, input, textarea, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, select {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+select, input, a:focus {
+    outline: 0;
+}
+input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="time"], input[type="url"], input[type="week"], select {
+    display: inline-block;
+    width: 200px;
+    height: 35px;
+    line-height: 33px;
+    padding: 0 0 0 6px;
+    border: 1px solid #e2e2e2;
+    box-sizing: border-box;
+    background: none;
+}
+textarea {
+    resize: none;
+    border: 1px solid #e2e2e2;
+}
+.mycontainer {
     width: 1200px;
     margin: 0 auto;
     background: #fff;
 }
-.blods{
+
+.blods {
     font-weight: bolder;
 }
+
 /* 字体大小 */
-.normalfont{
+.normalfont {
     font-size: 12px;
 }
-.firstfont{
+
+.firstfont {
     font-size: 14px;
 }
-.secondfont{
+
+.secondfont {
     font-size: 16px;
 }
-.threefont{
+
+.threefont {
     font-size: 18px;
 }
-.supnumfont{
+
+.supnumfont {
     font-size: 24px;
 }
-.bigfont{
+
+.bigfont {
     font-size: 32px;
 }
 
-
-.orange{
-    color: #fd6619;/* 橙色字体 */
+.orange {
+    color: #fd6619; /* 橙色字体 */
 }
-.red{
-    color: #f43e31;/* 红色字体 */
+.lightorange{
+    color: #FD894D; /* 橙色字体 */
 }
-.darkgrey{
-    color: #666666;/* 深灰色字体 */
-}
-.Sorrel{
-    color: #e74639;/* 红棕色字体 */
-}
-.lightgrey{
-    color: #999;/* 浅灰色字体 */
+.red {
+    color: #F43E31; /* 红色字体 */
 }
 
+.darkgrey {
+    color: #666666; /* 深灰色字体 */
+}
 
-.lightpinks{
-    background: #fff0f2;/* 浅粉色背景 */
+.Sorrel {
+    color: #E74639; /* 红棕色字体 */
 }
-.reds{
-    background: #f43e31;/* 红色背景 */
+
+.lightgrey {
+    color: #999; /* 浅灰色字体 */
+}
+
+.lightpinks {
+    background: #fff0f2; /* 浅粉色背景 */
+}
+
+.reds {
+    background: #f43e31; /* 红色背景 */
     color: #fff;
 }
-.khakis{
-    background: #dd7f1b;/* 土黄色背景 */
+
+.khakis {
+    background: #dd7f1b; /* 土黄色背景 */
     color: #fff;
 }
-.oranges{
-    background: #fc6b1f;/* 橙色背景 */
+
+.oranges {
+    background: #fc6b1f; /* 橙色背景 */
     color: #fff;
 }
-.rosereds{
-    background: #f42341;/* 玫瑰红背景 */
+
+.rosereds {
+    background: #f42341; /* 玫瑰红背景 */
     color: #fff;
 }
-.lightoranges{
-    background: #fff0e6;/* 浅橙色背景 */
+
+.lightoranges {
+    background: #fff0e6; /* 浅橙色背景 */
     color: #fc6b1f;
 }
-.lightgreys{
-    background: #f7f7f7;/* 浅灰色背景 */
+
+.lightgreys {
+    background: #f7f7f7; /* 浅灰色背景 */
     color: #949494;
 }
-.midgreys{
-    background: #949494;/* 中灰色背景 */
+
+.midgreys {
+    background: #949494; /* 中灰色背景 */
     color: #fff;
 }
-.Sorrels{
-    color: #e33a33;/* 红棕色背景 */
+
+.Sorrels {
+    background: #e33a33; /* 红棕色背景 */
+    color: #fff;
 }
 
 /* 按钮 */
-.smallbtn{
+.smallbtn {
     line-height: 25px;
     text-align: center;
 }
-.normalbtn{
+
+.normalbtn {
     line-height: 38px;
     text-align: center;
 }
 
 /* 边框 */
-.orangrebor{
+.orangrebor {
     border: 1px solid #fc6b1f;
 }
-.lightorangrebor{
+
+.lightorangrebor {
     border: 1px solid #fc9159;
 }
-.lightgreybor{
-    border: 1px solid #e6e6e6;
+
+.lightgreybor {
+    border: 1px solid #e8e8e8;
 }
-.redbor{
+
+.redbor {
     border: 1px solid #f43e31;
+}
+
+.commodity{
+    padding: 26px 25px 60px 25px;
+}
+.icon{
+    font-family: 'iconfont';
+}
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url(./lib/images/main/icons.png);
+}
+.merchant-phone i {
+    margin-right: 5px;
+    margin-top: -2px;
+}
+.icon-tel {
+    background-position: -56px -158px;
+    width: 11px;
+    height: 17px;
 }

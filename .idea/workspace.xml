@@ -3,9 +3,842 @@
   <component name="ChangeListManager">
     <list default="true" id="2f4fcfe1-4587-4fb2-8469-bea7e51c14bd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main/Main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/csso" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/svgo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/alphanum-sort/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/alphanum-sort/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/alphanum-sort/lib/compare.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/alphanum-sort/lib/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/alphanum-sort/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/caniuse-api/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/caniuse-api/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/caniuse-api/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/caniuse-api/dist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/caniuse-api/dist/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/caniuse-api/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/clap/HISTORY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/clap/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/clap/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/clap/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/clap/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/clone/.npmignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/clone/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/clone/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/clone/clone.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/clone/clone.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/clone/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/coa/.npmignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/coa/.nyc_output/1f2a0db5a6d6559149db56d397f47cfc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/coa/.nyc_output/75b82d38f2186df930141082076e11c6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/coa/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/coa/GNUmakefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/coa/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/coa/README.ru.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/coa/coverage/base.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/coa/coverage/coa/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/coa/coverage/coa/index.js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/coa/coverage/coa/lib/arg.js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/coa/coverage/coa/lib/cmd.js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/coa/coverage/coa/lib/coaobject.js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/coa/coverage/coa/lib/coaparam.js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/coa/coverage/coa/lib/color.js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/coa/coverage/coa/lib/completion.js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/coa/coverage/coa/lib/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/coa/coverage/coa/lib/index.js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/coa/coverage/coa/lib/opt.js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/coa/coverage/coa/lib/shell.js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/coa/coverage/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/coa/coverage/prettify.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/coa/coverage/prettify.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/coa/coverage/sort-arrow-sprite.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/coa/coverage/sorter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/coa/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/coa/lib/arg.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/coa/lib/cmd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/coa/lib/color.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/coa/lib/completion.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/coa/lib/completion.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/coa/lib/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/coa/lib/opt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/coa/lib/shell.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/coa/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/coa/qq.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/coa/src/arg.coffee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/coa/src/cmd.coffee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/coa/src/color.coffee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/coa/src/completion.coffee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/coa/src/index.coffee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/coa/src/opt.coffee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/coa/src/shell.coffee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/coa/test/coa.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/coa/test/mocha.opts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/coa/test/shell-test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/coa/tests/api-h.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/coa/tests/h.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/color-string/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/color-string/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/color-string/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/color-string/color-string.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/color-string/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/color-string/test/basic.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/color/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/color/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/color/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/color/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/colormin/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/colormin/LICENSE-MIT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/colormin/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/colormin/dist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/colormin/dist/lib/colourNames.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/colormin/dist/lib/colourType.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/colormin/dist/lib/stripWhitespace.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/colormin/dist/lib/toLonghand.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/colormin/dist/lib/toShorthand.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/colormin/dist/lib/trimLeadingZero.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/colormin/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/colors/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/colors/ReadMe.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/colors/examples/normal-usage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/colors/examples/safe-string.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/colors/lib/colors.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/colors/lib/custom/trap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/colors/lib/custom/zalgo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/colors/lib/extendStringPrototype.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/colors/lib/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/colors/lib/maps/america.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/colors/lib/maps/rainbow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/colors/lib/maps/random.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/colors/lib/maps/zebra.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/colors/lib/styles.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/colors/lib/system/supports-colors.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/colors/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/colors/safe.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/colors/themes/generic-logging.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/css-color-names/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/css-color-names/css-color-names.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/css-color-names/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/css-loader/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/css-loader/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/css-loader/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/css-loader/lib/compile-exports.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/css-loader/lib/css-base.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/css-loader/lib/getImportPrefix.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/css-loader/lib/getLocalIdent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/css-loader/lib/loader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/css-loader/lib/localsLoader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/css-loader/lib/processCss.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/css-loader/locals.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/css-loader/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/css-loader/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/css-selector-tokenizer/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/css-selector-tokenizer/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/css-selector-tokenizer/lib/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/css-selector-tokenizer/lib/parse.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/css-selector-tokenizer/lib/parseValues.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/css-selector-tokenizer/lib/stringify.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/css-selector-tokenizer/lib/stringifyValues.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/css-selector-tokenizer/node_modules/regexpu-core/LICENSE-MIT.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/css-selector-tokenizer/node_modules/regexpu-core/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/css-selector-tokenizer/node_modules/regexpu-core/data/character-class-escape-sets.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/css-selector-tokenizer/node_modules/regexpu-core/data/iu-mappings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/css-selector-tokenizer/node_modules/regexpu-core/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/css-selector-tokenizer/node_modules/regexpu-core/rewrite-pattern.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/css-selector-tokenizer/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cssesc/LICENSE-MIT.txt" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cssesc/LICENSE-MIT.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cssesc/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cssesc/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cssesc/bin/cssesc" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cssesc/bin/cssesc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cssesc/cssesc.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cssesc/cssesc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cssesc/man/cssesc.1" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cssesc/man/cssesc.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cssesc/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cssesc/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cssnano/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cssnano/LICENSE-MIT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cssnano/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cssnano/dist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cssnano/dist/lib/core.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cssnano/dist/lib/evenValues.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cssnano/dist/lib/filterOptimiser.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cssnano/dist/lib/functionOptimiser.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cssnano/dist/lib/getArguments.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cssnano/dist/lib/getMatch.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cssnano/dist/lib/normalizeString.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cssnano/dist/lib/normalizeUnicode.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cssnano/dist/lib/reduceBackgroundRepeat.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cssnano/dist/lib/reduceDisplayValues.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cssnano/dist/lib/reducePositions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cssnano/dist/lib/reduceTimingFunctions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cssnano/dist/lib/styleCache.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cssnano/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/cssnano/quickstart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/HISTORY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/bin/csso" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/dist/csso-browser.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/lib/cli.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/lib/compressor/clean/Atrule.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/lib/compressor/clean/Comment.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/lib/compressor/clean/Declaration.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/lib/compressor/clean/Identifier.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/lib/compressor/clean/Ruleset.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/lib/compressor/clean/Space.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/lib/compressor/clean/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/lib/compressor/compress/Atrule.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/lib/compressor/compress/Attribute.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/lib/compressor/compress/Dimension.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/lib/compressor/compress/Number.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/lib/compressor/compress/String.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/lib/compressor/compress/Url.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/lib/compressor/compress/Value.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/lib/compressor/compress/atrule/keyframes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/lib/compressor/compress/color.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/lib/compressor/compress/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/lib/compressor/compress/property/background.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/lib/compressor/compress/property/font-weight.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/lib/compressor/compress/property/font.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/lib/compressor/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/lib/compressor/restructure/1-initialMergeRuleset.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/lib/compressor/restructure/2-mergeAtrule.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/lib/compressor/restructure/3-disjoinRuleset.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/lib/compressor/restructure/4-restructShorthand.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/lib/compressor/restructure/6-restructBlock.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/lib/compressor/restructure/7-mergeRuleset.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/lib/compressor/restructure/8-restructRuleset.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/lib/compressor/restructure/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/lib/compressor/restructure/prepare/createDeclarationIndexer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/lib/compressor/restructure/prepare/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/lib/compressor/restructure/prepare/processSelector.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/lib/compressor/restructure/prepare/specificity.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/lib/compressor/restructure/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/lib/compressor/usage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/lib/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/lib/parser/const.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/lib/parser/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/lib/parser/scanner.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/lib/utils/clone.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/lib/utils/list.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/lib/utils/names.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/lib/utils/translate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/lib/utils/translateWithSourceMap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/lib/utils/walk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/csso/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/defined/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/defined/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/defined/example/defined.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/defined/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/defined/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/defined/readme.markdown" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/defined/test/def.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/defined/test/falsy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/esprima/ChangeLog" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/esprima/ChangeLog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/esprima/LICENSE.BSD" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/esprima/LICENSE.BSD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/esprima/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/esprima/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/esprima/bin/esparse.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/esprima/bin/esparse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/esprima/bin/esvalidate.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/esprima/bin/esvalidate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/esprima/esprima.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/esprima/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/esprima/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/flatten/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/flatten/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/flatten/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/flatten/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/flatten/test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/html-comment-regex/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/html-comment-regex/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/html-comment-regex/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/html-comment-regex/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/icss-replace-symbols/.npmignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/icss-replace-symbols/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/icss-replace-symbols/lib/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/icss-replace-symbols/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/is-absolute-url/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/is-absolute-url/license" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/is-absolute-url/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/is-absolute-url/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/is-plain-obj/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/is-plain-obj/license" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/is-plain-obj/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/is-plain-obj/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/is-svg/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/is-svg/license" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/is-svg/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/is-svg/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/js-yaml/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/js-yaml/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/js-yaml/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/js-yaml/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/js-yaml/dist/js-yaml.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/js-yaml/dist/js-yaml.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/js-yaml/dist/js-yaml.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/js-yaml/dist/js-yaml.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/js-yaml/lib/js-yaml/dumper.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/js-yaml/lib/js-yaml/dumper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/js-yaml/lib/js-yaml/exception.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/js-yaml/lib/js-yaml/exception.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/js-yaml/lib/js-yaml/loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/js-yaml/lib/js-yaml/loader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/js-yaml/lib/js-yaml/type/binary.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/js-yaml/lib/js-yaml/type/binary.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/js-yaml/lib/js-yaml/type/float.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/js-yaml/lib/js-yaml/type/float.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/js-yaml/lib/js-yaml/type/int.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/js-yaml/lib/js-yaml/type/int.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/js-yaml/lib/js-yaml/type/js/function.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/js-yaml/lib/js-yaml/type/js/function.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/js-yaml/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/js-yaml/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lodash.camelcase/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lodash.camelcase/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lodash.camelcase/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lodash.camelcase/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lodash.memoize/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lodash.memoize/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lodash.memoize/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lodash.memoize/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lodash.uniq/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lodash.uniq/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lodash.uniq/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lodash.uniq/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/math-expression-evaluator/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/math-expression-evaluator/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/math-expression-evaluator/dist/browser/math-expression-evaluator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/math-expression-evaluator/dist/browser/math-expression-evaluator.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/math-expression-evaluator/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/math-expression-evaluator/src/formula_evaluator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/math-expression-evaluator/src/lexer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/math-expression-evaluator/src/math_function.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/math-expression-evaluator/src/postfix.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/math-expression-evaluator/src/postfix_evaluator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/math-expression-evaluator/test/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/mime/.npmignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/mime/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/mime/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/mime/build/build.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/mime/build/test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/mime/cli.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/mime/cli.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/mime/mime.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/mime/mime.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/mime/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/mime/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/mime/types.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/normalize-url/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/normalize-url/license" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/normalize-url/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/normalize-url/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-calc/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-calc/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-calc/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-calc/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-calc/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-colormin/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-colormin/LICENSE-MIT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-colormin/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-colormin/dist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-colormin/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-convert-values/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-convert-values/LICENSE-MIT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-convert-values/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-convert-values/dist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-convert-values/dist/lib/convert.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-convert-values/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-discard-comments/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-discard-comments/LICENSE-MIT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-discard-comments/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-discard-comments/dist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-discard-comments/dist/lib/commentParser.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-discard-comments/dist/lib/commentRemover.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-discard-comments/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-discard-duplicates/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-discard-duplicates/LICENSE-MIT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-discard-duplicates/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-discard-duplicates/dist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-discard-duplicates/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-discard-empty/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-discard-empty/LICENSE-MIT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-discard-empty/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-discard-empty/dist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-discard-empty/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-discard-overridden/.babelrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-discard-overridden/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-discard-overridden/.npmignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-discard-overridden/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-discard-overridden/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-discard-overridden/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-discard-overridden/dist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-discard-overridden/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-discard-overridden/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-discard-overridden/test/input.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-discard-overridden/test/output.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-discard-unused/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-discard-unused/LICENSE-MIT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-discard-unused/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-discard-unused/dist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-discard-unused/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-filter-plugins/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-filter-plugins/LICENSE-MIT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-filter-plugins/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-filter-plugins/dist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-filter-plugins/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-merge-idents/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-merge-idents/LICENSE-MIT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-merge-idents/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-merge-idents/dist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-merge-idents/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-merge-longhand/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-merge-longhand/LICENSE-MIT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-merge-longhand/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-merge-longhand/dist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-merge-longhand/dist/lib/canMerge.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-merge-longhand/dist/lib/clone.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-merge-longhand/dist/lib/colorMerge.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-merge-longhand/dist/lib/decl/borders.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-merge-longhand/dist/lib/decl/boxBase.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-merge-longhand/dist/lib/decl/columns.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-merge-longhand/dist/lib/decl/margin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-merge-longhand/dist/lib/decl/padding.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-merge-longhand/dist/lib/genericMerge.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-merge-longhand/dist/lib/getDecls.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-merge-longhand/dist/lib/getLastNode.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-merge-longhand/dist/lib/getRules.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-merge-longhand/dist/lib/getValue.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-merge-longhand/dist/lib/hasAllProps.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-merge-longhand/dist/lib/identical.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-merge-longhand/dist/lib/insertCloned.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-merge-longhand/dist/lib/mergeValues.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-merge-longhand/dist/lib/minifyTrbl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-merge-longhand/dist/lib/numValues.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-merge-longhand/dist/lib/parseTrbl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-merge-longhand/dist/lib/remove.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-merge-longhand/dist/lib/trbl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-merge-longhand/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-merge-rules/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-merge-rules/LICENSE-MIT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-merge-rules/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-merge-rules/dist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-merge-rules/dist/lib/clone.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-merge-rules/dist/lib/ensureCompatibility.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-merge-rules/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-message-helpers/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-message-helpers/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-message-helpers/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-message-helpers/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-message-helpers/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-minify-font-values/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-minify-font-values/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-minify-font-values/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-minify-font-values/lib/keywords.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-minify-font-values/lib/minify-family.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-minify-font-values/lib/minify-font.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-minify-font-values/lib/minify-weight.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-minify-font-values/lib/uniqs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-minify-font-values/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-minify-gradients/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-minify-gradients/LICENSE-MIT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-minify-gradients/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-minify-gradients/dist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-minify-gradients/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-minify-params/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-minify-params/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-minify-params/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-minify-params/dist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-minify-params/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-minify-selectors/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-minify-selectors/LICENSE-MIT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-minify-selectors/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-minify-selectors/dist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-minify-selectors/dist/lib/canUnquote.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-minify-selectors/dist/lib/unquote.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-minify-selectors/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/lib/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/lib/topologicalSort.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/CONTRIBUTING.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/README-cn.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/docs/architecture.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/docs/architecture.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/docs/guidelines/plugin.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/docs/guidelines/plugin.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/docs/guidelines/runner.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/docs/guidelines/runner.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/docs/source-maps.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/docs/source-maps.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/docs/syntax.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/docs/syntax.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/gulpfile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/at-rule.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/at-rule.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/comment.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/comment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/container.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/container.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/css-syntax-error.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/css-syntax-error.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/declaration.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/declaration.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/input.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/input.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/lazy-result.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/lazy-result.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/map-generator.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/map-generator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/node.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/node.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/parse.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/parse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/parser.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/parser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/postcss.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/postcss.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/postcss.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/postcss.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/previous-map.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/previous-map.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/processor.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/processor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/result.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/result.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/root.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/root.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/rule.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/rule.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/stringifier.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/stringifier.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/stringify.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/stringify.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/terminal-highlight.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/terminal-highlight.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/tokenize.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/tokenize.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/vendor.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/vendor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/warn-once.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/warn-once.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/warning.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/lib/warning.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/postcss/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/supports-color/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/supports-color/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/supports-color/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/supports-color/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/supports-color/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/node_modules/supports-color/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-extract-imports/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/CONTRIBUTING.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/README-cn.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/docs/architecture.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/docs/architecture.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/docs/guidelines/plugin.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/docs/guidelines/plugin.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/docs/guidelines/runner.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/docs/guidelines/runner.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/docs/source-maps.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/docs/source-maps.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/docs/syntax.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/docs/syntax.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/gulpfile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/at-rule.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/at-rule.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/comment.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/comment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/container.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/container.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/css-syntax-error.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/css-syntax-error.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/declaration.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/declaration.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/input.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/input.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/lazy-result.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/lazy-result.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/map-generator.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/map-generator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/node.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/node.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/parse.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/parse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/parser.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/parser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/postcss.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/postcss.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/postcss.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/postcss.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/previous-map.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/previous-map.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/processor.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/processor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/result.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/result.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/root.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/root.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/rule.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/rule.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/stringifier.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/stringifier.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/stringify.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/stringify.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/terminal-highlight.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/terminal-highlight.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/tokenize.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/tokenize.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/vendor.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/vendor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/warn-once.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/warn-once.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/warning.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/lib/warning.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/postcss/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/supports-color/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/supports-color/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/supports-color/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/supports-color/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/supports-color/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/node_modules/supports-color/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-local-by-default/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-scope/lib/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/CONTRIBUTING.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/README-cn.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/docs/architecture.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/docs/architecture.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/docs/guidelines/plugin.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/docs/guidelines/plugin.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/docs/guidelines/runner.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/docs/guidelines/runner.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/docs/source-maps.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/docs/source-maps.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/docs/syntax.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/docs/syntax.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/gulpfile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/at-rule.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/at-rule.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/comment.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/comment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/container.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/container.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/css-syntax-error.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/css-syntax-error.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/declaration.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/declaration.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/input.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/input.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/lazy-result.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/lazy-result.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/map-generator.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/map-generator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/node.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/node.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/parse.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/parse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/parser.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/parser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/postcss.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/postcss.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/postcss.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/postcss.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/previous-map.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/previous-map.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/processor.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/processor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/result.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/result.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/root.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/root.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/rule.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/rule.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/stringifier.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/stringifier.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/stringify.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/stringify.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/terminal-highlight.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/terminal-highlight.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/tokenize.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/tokenize.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/vendor.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/vendor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/warn-once.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/warn-once.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/warning.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/lib/warning.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/postcss/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/supports-color/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/supports-color/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/supports-color/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/supports-color/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/supports-color/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-scope/node_modules/supports-color/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-scope/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-scope/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-values/.npmignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-values/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-values/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-values/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-values/lib/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/CONTRIBUTING.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/README-cn.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/docs/architecture.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/docs/architecture.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/docs/guidelines/plugin.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/docs/guidelines/plugin.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/docs/guidelines/runner.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/docs/guidelines/runner.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/docs/source-maps.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/docs/source-maps.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/docs/syntax.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/docs/syntax.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/gulpfile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/at-rule.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/at-rule.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/comment.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/comment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/container.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/container.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/css-syntax-error.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/css-syntax-error.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/declaration.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/declaration.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/input.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/input.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/lazy-result.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/lazy-result.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/map-generator.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/map-generator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/node.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/node.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/parse.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/parse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/parser.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/parser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/postcss.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/postcss.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/postcss.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/postcss.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/previous-map.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/previous-map.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/processor.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/processor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/result.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/result.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/root.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/root.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/rule.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/rule.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/stringifier.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/stringifier.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/stringify.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/stringify.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/terminal-highlight.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/terminal-highlight.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/tokenize.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/tokenize.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/vendor.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/vendor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/warn-once.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/warn-once.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/warning.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/lib/warning.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/postcss/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/supports-color/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/supports-color/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/supports-color/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/supports-color/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/supports-color/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-values/node_modules/supports-color/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-values/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-values/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-values/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-modules-values/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-modules-values/test/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-normalize-charset/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-normalize-charset/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-normalize-charset/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-normalize-charset/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-normalize-charset/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-normalize-url/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-normalize-url/LICENSE-MIT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-normalize-url/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-normalize-url/dist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-normalize-url/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-ordered-values/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-ordered-values/LICENSE-MIT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-ordered-values/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-ordered-values/dist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-ordered-values/dist/lib/addSpace.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-ordered-values/dist/lib/getArguments.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-ordered-values/dist/lib/getParsed.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-ordered-values/dist/lib/getValue.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-ordered-values/dist/rules/border.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-ordered-values/dist/rules/boxShadow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-ordered-values/dist/rules/flexFlow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-ordered-values/dist/rules/transition.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-ordered-values/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-reduce-idents/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-reduce-idents/LICENSE-MIT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-reduce-idents/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-reduce-idents/dist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-reduce-idents/dist/lib/cache.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-reduce-idents/dist/lib/counter-style.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-reduce-idents/dist/lib/counter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-reduce-idents/dist/lib/encode.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-reduce-idents/dist/lib/grid-template.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-reduce-idents/dist/lib/isNum.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-reduce-idents/dist/lib/keyframes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-reduce-idents/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-reduce-initial/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-reduce-initial/LICENSE-MIT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-reduce-initial/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-reduce-initial/data/values.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-reduce-initial/dist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-reduce-initial/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-reduce-transforms/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-reduce-transforms/LICENSE-MIT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-reduce-transforms/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-reduce-transforms/dist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-reduce-transforms/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-selector-parser/API.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-selector-parser/API.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-selector-parser/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-selector-parser/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-selector-parser/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-selector-parser/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-selector-parser/dist/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-selector-parser/dist/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-selector-parser/dist/parser.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-selector-parser/dist/parser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-selector-parser/dist/processor.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-selector-parser/dist/processor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-selector-parser/dist/selectors/attribute.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-selector-parser/dist/selectors/attribute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-selector-parser/dist/selectors/className.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-selector-parser/dist/selectors/className.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-selector-parser/dist/selectors/combinator.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-selector-parser/dist/selectors/combinator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-selector-parser/dist/selectors/comment.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-selector-parser/dist/selectors/comment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-selector-parser/dist/selectors/container.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-selector-parser/dist/selectors/container.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-selector-parser/dist/selectors/id.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-selector-parser/dist/selectors/id.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-selector-parser/dist/selectors/namespace.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-selector-parser/dist/selectors/namespace.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-selector-parser/dist/selectors/nesting.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-selector-parser/dist/selectors/nesting.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-selector-parser/dist/selectors/node.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-selector-parser/dist/selectors/node.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-selector-parser/dist/selectors/pseudo.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-selector-parser/dist/selectors/pseudo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-selector-parser/dist/selectors/root.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-selector-parser/dist/selectors/root.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-selector-parser/dist/selectors/selector.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-selector-parser/dist/selectors/selector.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-selector-parser/dist/selectors/string.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-selector-parser/dist/selectors/string.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-selector-parser/dist/selectors/tag.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-selector-parser/dist/selectors/tag.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-selector-parser/dist/selectors/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-selector-parser/dist/selectors/types.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-selector-parser/dist/selectors/universal.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-selector-parser/dist/selectors/universal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-selector-parser/dist/sortAscending.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-selector-parser/dist/sortAscending.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-selector-parser/dist/tokenize.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-selector-parser/dist/tokenize.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-selector-parser/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/postcss-selector-parser/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-svgo/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-svgo/LICENSE-MIT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-svgo/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-svgo/dist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-svgo/dist/lib/url.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-svgo/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-unique-selectors/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-unique-selectors/LICENSE-MIT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-unique-selectors/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-unique-selectors/dist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-unique-selectors/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-zindex/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-zindex/LICENSE-MIT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-zindex/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-zindex/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-zindex/lib/layerCache.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/postcss-zindex/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/prepend-http/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/prepend-http/license" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/prepend-http/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/prepend-http/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/q/CHANGES.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/q/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/q/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/q/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/q/q.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/q/queue.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/query-string/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/query-string/license" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/query-string/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/query-string/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/reduce-css-calc/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/reduce-css-calc/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/reduce-css-calc/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/reduce-css-calc/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/reduce-css-calc/node_modules/balanced-match/.npmignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/reduce-css-calc/node_modules/balanced-match/LICENSE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/reduce-css-calc/node_modules/balanced-match/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/reduce-css-calc/node_modules/balanced-match/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/reduce-css-calc/node_modules/balanced-match/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/reduce-css-calc/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/reduce-function-call/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/reduce-function-call/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/reduce-function-call/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/reduce-function-call/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/reduce-function-call/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/sax/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/sax/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/sax/lib/sax.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/sax/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/sort-keys/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/sort-keys/license" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/sort-keys/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/sort-keys/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/source-list-map/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/source-list-map/lib/CodeNode.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/source-list-map/lib/MappingsContext.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/source-list-map/lib/SourceListMap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/source-list-map/lib/SourceNode.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/source-list-map/lib/base64-vlq.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/source-list-map/lib/fromStringWithSourceMap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/source-list-map/lib/helpers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/source-list-map/lib/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/source-list-map/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/strict-uri-encode/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/strict-uri-encode/license" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/strict-uri-encode/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/strict-uri-encode/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/.npmignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/.svgo.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/README.ru.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/bin/svgo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/lib/svgo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/lib/svgo/coa.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/lib/svgo/config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/lib/svgo/js2svg.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/lib/svgo/jsAPI.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/lib/svgo/plugins.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/lib/svgo/svg2js.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/lib/svgo/tools.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/plugins/_collections.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/plugins/_path.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/plugins/_transforms.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/plugins/addAttributesToSVGElement.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/plugins/addClassesToSVGElement.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/plugins/cleanupAttrs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/plugins/cleanupEnableBackground.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/plugins/cleanupIDs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/plugins/cleanupListOfValues.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/plugins/cleanupNumericValues.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/plugins/collapseGroups.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/plugins/convertColors.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/plugins/convertPathData.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/plugins/convertShapeToPath.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/plugins/convertStyleToAttrs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/plugins/convertTransform.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/plugins/mergePaths.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/plugins/minifyStyles.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/plugins/moveElemsAttrsToGroup.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/plugins/moveGroupAttrsToElems.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/plugins/removeAttrs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/plugins/removeComments.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/plugins/removeDesc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/plugins/removeDimensions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/plugins/removeDoctype.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/plugins/removeEditorsNSData.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/plugins/removeElementsByAttr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/plugins/removeEmptyAttrs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/plugins/removeEmptyContainers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/plugins/removeEmptyText.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/plugins/removeHiddenElems.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/plugins/removeMetadata.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/plugins/removeNonInheritableGroupAttrs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/plugins/removeRasterImages.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/plugins/removeStyleElement.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/plugins/removeTitle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/plugins/removeUnknownsAndDefaults.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/plugins/removeUnusedNS.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/plugins/removeUselessDefs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/plugins/removeUselessStrokeAndFill.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/plugins/removeViewBox.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/plugins/removeXMLNS.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/plugins/removeXMLProcInst.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/plugins/sortAttrs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/svgo/plugins/transformsWithOnePath.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uniqs/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uniqs/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uniqs/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uniqs/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/uniqs/test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/url-loader/.github/ISSUE_TEMPLATE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/url-loader/.github/PULL_REQUEST_TEMPLATE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/url-loader/.npmignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/url-loader/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/url-loader/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/url-loader/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/url-loader/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/url-loader/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/url-loader/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/url-loader/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vendors/index.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vendors/license" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vendors/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vendors/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/whet.extend/.npmignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/whet.extend/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/whet.extend/Cakefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/whet.extend/History.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/whet.extend/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/whet.extend/Readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/whet.extend/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/whet.extend/lib/whet.extend.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/whet.extend/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/whet.extend/src/whet.extend.coffee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/whet.extend/test/extend_test.coffee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/whet.extend/test/mocha.opts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/whet.extend/test/test_helper.coffee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/public/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -41,15 +874,33 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="35" selection-start-line="35" selection-end-line="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/webpack.config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/normalize.css">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/routes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+            <state relative-caret-position="240">
+              <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
@@ -117,6 +968,7 @@
         <option value="$PROJECT_DIR$/src/components/Main/style.css" />
         <option value="$PROJECT_DIR$/src/components/Main/Main.html" />
         <option value="$PROJECT_DIR$/src/routes.js" />
+        <option value="$PROJECT_DIR$/webpack.config.js" />
       </list>
     </option>
   </component>
@@ -147,20 +999,6 @@
               <item name="ttt" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ttt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ttt" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Header" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ttt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ttt" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Main" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -203,18 +1041,18 @@
       <option name="presentableId" value="Default" />
       <updated>1572510326763</updated>
       <workItem from="1572510329499" duration="1136000" />
-      <workItem from="1572527294253" duration="29230000" />
+      <workItem from="1572527294253" duration="30899000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30366000" />
+    <option name="totallyTimeSpent" value="32035000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -228,7 +1066,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.19036144" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2759036" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -262,13 +1100,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -349,11 +1180,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/routes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+        <state relative-caret-position="240">
+          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>

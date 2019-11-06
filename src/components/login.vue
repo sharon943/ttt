@@ -108,7 +108,7 @@
           <span>其他账户登录：</span>
           <img src="../assets/img/login/wechatlogo.png" alt="">
           <img src="../assets/img/login/qqlogo.png" alt="">
-          <p>立即注册</p>
+          <router-link :to="{path:'marketTool'}">立即注册</router-link>
         </div>
       </section>
 
@@ -491,7 +491,7 @@
   .otherLoginway img{
     width: 40px;height: 40px;margin-top: 22.5px;
   }
-  .otherLoginway p{
-    float: right;
+  .otherLoginway a{
+    float: right;display: inline-block;
   }
 </style>

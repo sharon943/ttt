@@ -26,20 +26,20 @@
       <img src="../assets/img/login/login-bg.png" alt="">
       <section class="box">
         <div class="title">
-          <p id="defaultshow">账户密码登录</p>
-          <p id="mobileshow">手机动态登录</p>
+          <p  @click="defaultshow">账户密码登录</p>
+          <p  @click="mobileshow">手机动态登录</p>
         </div>
         <div id="tabs_container" class="tabs-container" style="height: 312px;">
-          <div id="default" class="tabs-content hideflip" style="position: absolute;top: 0px;">
+          <div id="default" class="tabs-content" v-show="showdefaultbox" style="position: absolute;top: 0px;">
             <form id="login_form" class="nc-login-form" method="post" action="">
               <dl>
-                <dt>账号：</dt>
+                <dt>账  号：</dt>
                 <dd>
                   <input type="text" class="text" autocomplete="off"  name="user_name" placeholder="可使用已注册的用户名或手机号登录" id="user_name">
                 </dd>
               </dl>
               <dl>
-                <dt>密码：</dt>
+                <dt>密  码：</dt>
                 <dd>
                   <input type="password" class="text" name="password" autocomplete="off" placeholder="6-20个大小写英文字母、符号或数字" id="password">
                 </dd>
@@ -51,15 +51,21 @@
                     <input type="text" name="captcha" autocomplete="off" class="text w100" placeholder="输入验证码" id="captcha" size="10" />
                   </dd>
                 </dl>
-                <span><img src="" name="codeimage" id="codeimage"> <a class="makecode" href="javascript:void(0)" onclick="javascript:document.getElementById('codeimage').src='' + Math.random();">看不清，换一张</a></span></div>
+                <span  class="verificationCode">
+                                <!--<img src="" name="codeimage" id="sms_codeimage">-->
+                                <canvas id="canvas1" width="120" height="54"></canvas>
+                  <!--<img src="" alt="" id="code_img">-->
+                  <!--<a class="makecode" href="javascript:void(0);" onclick="javascript:document.getElementById('sms_codeimage').src='' + Math.random();">看不清，换一张</a>-->
+                            </span>
+              </div>
               <div class="submit-div">
-                <input type="submit" class="submit" value="登录">
+                <input type="submit" class="submit" value="登  录">
                 <input type="hidden" value="" name="ref_url">
               </div>
               <div class="handle-div"><a class="forget" href="">忘记密码</a></div>
             </form>
           </div>
-          <div id="mobile" class="tabs-content " style="position: absolute; top: 0px;">
+          <div id="mobile" class="tabs-content " v-show="showmobilebox" style="position: absolute; top: 0px;">
             <form id="post_form" method="post" class="nc-login-form" action="">
               <input type='hidden' name='formhash' value='nt0ToE9_bvt4ApjL_Lot8Oq0t_cfRmD' />            <input type="hidden" name="form_submit" value="ok" />
               <input name="nchash" type="hidden" value="ad6a68a5" />
@@ -77,7 +83,7 @@
                   </dd>
                 </dl>
 
-                <span id="verificationCode" class="verificationCode">
+                <span class="verificationCode">
                                 <!--<img src="" name="codeimage" id="sms_codeimage">-->
                                 <canvas id="canvas" width="120" height="54"></canvas>
                   <!--<img src="" alt="" id="code_img">-->
@@ -85,7 +91,7 @@
                             </span>
               </div>
 
-              <div class="tiptext" id="sms_text">正确输入上方验证码后，点击<span> <a href="javascript:void(0);" onclick="get_sms_captcha('2')"><i class="icon-mobile-phone"></i>发送手机动态码</a></span>，查收短信将系统发送的“6位手机动态码”输入到下方验证后登录。</div>
+              <div class="tiptext" id="sms_text">正确输入上方验证码后，点击<span> <i class="icon-mobile-phone"></i>发送手机动态码</span>，查收短信将系统发送的“6位手机动态码”输入到下方验证后登录。</div>
               <dl>
                 <dt>动态码：</dt>
                 <dd>
@@ -93,7 +99,7 @@
                 </dd>
               </dl>
               <div class="submit-div">
-                <input type="submit" id="submit" class="submit" value="登录">
+                <input type="submit" id="submit" class="submit" value="登   录">
               </div>
             </form>
           </div>
@@ -114,17 +120,92 @@
   export default {
     data() {
       return {
-
+        showmobilebox:false,showdefaultbox:true,
       }
     },
     created(){
     },
     mounted(){
+      var name='canvas1'
+      this.draw(name)
     },
     methods: {
-
-
+      mobileshow(){
+        var name='canvas'
+        this.draw(name)
+        this.showdefaultbox=false
+        this.showmobilebox=true
+      },
+      defaultshow(){
+        var name='canvas1'
+        this.draw(name)
+        this.showdefaultbox=true
+        this.showmobilebox=false
+      },
+      getColor(){
+        var r = Math.floor(Math.random() * 256);
+        var g = Math.floor(Math.random() * 256);
+        var b = Math.floor(Math.random() * 256);
+        return "rgb(" + r + "," + g + "," + b + ")";
+      },
+  draw(name){
+        var canvas=document.getElementById(name)
+    var context = canvas.getContext("2d");//舞台，getContext() 方法可返回一个对象，该对象提供了用于在画布上绘图的方法和属性。
+    var button = document.getElementById("bt");//获取按钮
+    var input = document.getElementById("text");//获取输入框
+    context.strokeRect(0, 0, 120, 54);//绘制矩形（无填充）
+    var aCode = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+    // 绘制字母
+    var arr = [] //定义一个数组用来接收产生的随机数
+    var num //定义容器接收验证码
+    for (var i = 0; i < 4; i++) {
+      var x = 20 + i * 20;//每个字母之间间隔20
+      var y = 20 + 10 * Math.random();//y轴方向位置为20-30随机
+      var index = Math.floor(Math.random() * aCode.length);//随机索引值
+      var txt = aCode[index];
+      context.font = "bold 20px 微软雅黑";//设置或返回文本内容的当前字体属性
+      context.fillStyle = this.getColor();//设置或返回用于填充绘画的颜色、渐变或模式，随机
+      context.translate(x, y);//重新映射画布上的 (0,0) 位置，字母不可以旋转移动，所以移动容器
+      var deg = 90 * Math.random() * Math.PI / 180;//0-90度随机旋转
+      context.rotate(deg);// 	旋转当前绘图
+      context.fillText(txt, 0, 0);//在画布上绘制“被填充的”文本
+      context.rotate(-deg);//将画布旋转回初始状态
+      context.translate(-x, -y);//将画布移动回初始状态
+      arr[i] = txt //接收产生的随机数
     }
+    num = arr[0] + arr[1] + arr[2] + arr[3] //将产生的验证码放入num
+    // 绘制干扰线条
+    for (var i = 0; i < 8; i++) {
+      context.beginPath();//起始一条路径，或重置当前路径
+      context.moveTo(Math.random() * 120, Math.random() * 54);//把路径移动到画布中的随机点，不创建线条
+      context.lineTo(Math.random() * 120, Math.random() * 54);//添加一个新点，然后在画布中创建从该点到最后指定点的线条
+      context.strokeStyle = this.getColor();//随机线条颜色
+      context.stroke();// 	绘制已定义的路径
+    }
+    // 绘制干扰点，和上述步骤一样，此处用长度为1的线代替点
+    for (var i = 0; i < 20; i++) {
+      context.beginPath();
+      var x = Math.random() * 120;
+      var y = Math.random() * 54;
+      context.moveTo(x, y);
+      context.lineTo(x + 1, y + 1);
+      context.strokeStyle = this.getColor();
+      context.stroke();
+    }
+
+    //点击按钮验证
+    // button.click = function () {
+    //   var text = input.value //获取输入框的值
+    //   if (text === num) {
+    //     alert('验证通过')
+    //   } else {
+    //     alert('验证失败')
+    //   }
+    // }
+
+  },
+
+    },
   }
 </script>
 <style scoped lang="scss">

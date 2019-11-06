@@ -24,7 +24,7 @@ header ul{
     display: flex;justify-content: space-between;font-size:12px;
 }
 .top_bottomLogin{
-    width: 1200px;background: #fff;margin:0 auto;
+    width: 1170px;background: #fff;margin:0 auto;
     height: 84px;font-size: 12px;padding: 16px 0 30px 30px;
 }
 .top_bottomLogin .box{
@@ -53,8 +53,8 @@ header ul{
 .loginbox .title{
     display: flex;justify-content: space-between;padding: 30px;
 }
-.loginbox .title a{
-    font-size: 18px;color: #333;width: calc(50% - 30px);text-align: center;
+.loginbox .title p{
+    font-size: 18px;color: #333;width: calc(50% - 30px);text-align: center;cursor: pointer;
 }
 .tabs-nav {
     font-size: 0;
@@ -67,7 +67,7 @@ header ul{
     z-index: 1;
 }
 .tabs-content {
-    width: 352px;
+    width: 352px;opacity: 1;
 }
 .nc-login-form {
     display: block;

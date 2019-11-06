@@ -8,18 +8,22 @@ import storehome2 from './components/storehome2/index.js';
 import allproduct from './components/allproduct/index.js';
 import childrenWear1 from './components/childrenWear1/index.js';
 import Login from './components/Login/index.js';
+import Register from './components/Register/index.js';
 
 // 匹配路由时一定要注意先后顺序，他们会是同辈元素
 export default [{
   'path': '/',
-  'components': Login
+  'components': Register
       // Header + Main + Footer
 },{
   'path': '/childrenWear1',
   'components': childrenWear1
 },{
   'path': '/Login',
-  'components': Login
+  'components': Login     //登录
+},{
+  'path': '/Register',
+  'components': Register     //注册
 },{
   'path': '/Shopdetails',
   'components': Shopdetails

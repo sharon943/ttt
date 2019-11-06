@@ -1,8 +1,10 @@
+/* eslint-disable */
 import Login from './Login.html';
 import style from './style.css';
 import $ from 'jquery';
 
-// $(function(){
+// require('../../lib/js/mui.js');
+$(function(){
 //     $('.submit').click(function(){
 //         var password = $('[name="password"]').val();
 //         var key = CryptoJS.enc.Latin1.parse('0482464415866281'); //为了避免补位，直接用16位的秘钥
@@ -20,13 +22,18 @@ import $ from 'jquery';
 //     $('.nc-login-mode').tabulous({
 //         effect: 'flip'//动画反转效果
 //     });
-//     var div_form = '#default';
-//     $(".nc-login-mode .tabs-nav li a").click(function(){
-//         if($(this).attr("href") !== div_form){
-//             div_form = $(this).attr('href');
-//             $(""+div_form).find(".makecode").trigger("click");
-//         }
-//     });
+    var div_form = '#default';
+
+    $("#defaultshow").click(function () {
+        alert(111)
+        $("#default").removeClass('hideflip')
+        $("#mobile").addClass('hideflip')
+    })
+    $("#mobileshow").click(function () {
+        alert(222)
+        $("#default").addClass('hideflip')
+        $("#mobile").removeClass('hideflip')
+    })
 //
 //     $("#login_form").validate({
 //         errorPlacement: function(error, element){
@@ -157,6 +164,6 @@ import $ from 'jquery';
 //     mySwiper.el.onmouseout = function(){
 //         mySwiper.autoplay.start();
 //     }
-// })
+})
 
 export default Login;

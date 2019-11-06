@@ -33,13 +33,13 @@
           <div id="default" class="tabs-content hideflip" style="position: absolute;top: 0px;">
             <form id="login_form" class="nc-login-form" method="post" action="">
               <dl>
-                <dt>账&nbsp;&nbsp;号：</dt>
+                <dt>账号：</dt>
                 <dd>
                   <input type="text" class="text" autocomplete="off"  name="user_name" placeholder="可使用已注册的用户名或手机号登录" id="user_name">
                 </dd>
               </dl>
               <dl>
-                <dt>密&nbsp;&nbsp;&nbsp;码：</dt>
+                <dt>密码：</dt>
                 <dd>
                   <input type="password" class="text" name="password" autocomplete="off" placeholder="6-20个大小写英文字母、符号或数字" id="password">
                 </dd>
@@ -53,7 +53,7 @@
                 </dl>
                 <span><img src="" name="codeimage" id="codeimage"> <a class="makecode" href="javascript:void(0)" onclick="javascript:document.getElementById('codeimage').src='' + Math.random();">看不清，换一张</a></span></div>
               <div class="submit-div">
-                <input type="submit" class="submit" value="登&nbsp;&nbsp;&nbsp;录">
+                <input type="submit" class="submit" value="登录">
                 <input type="hidden" value="" name="ref_url">
               </div>
               <div class="handle-div"><a class="forget" href="">忘记密码</a></div>
@@ -93,7 +93,7 @@
                 </dd>
               </dl>
               <div class="submit-div">
-                <input type="submit" id="submit" class="submit" value="登&nbsp;&nbsp;&nbsp;录">
+                <input type="submit" id="submit" class="submit" value="登录">
               </div>
             </form>
           </div>
@@ -114,12 +114,7 @@
   export default {
     data() {
       return {
-        limits:[],
-        limits_shop:[],limits_market:[],limits_goods:[],limits_member:[],limits_more:[],limits_report:[],limits_Pic:[],loading:false,
-        formInline: {
-          user: '',
-          pwd: ''
-        }
+
       }
     },
     created(){
@@ -133,9 +128,6 @@
   }
 </script>
 <style scoped lang="scss">
-  *{
-    margin:0;padding:0;list-style: none;
-  }
   header img{
     width: 100%;
     height: 80px;
@@ -183,7 +175,7 @@
     width: 100%;height: 100%;
   }
   .loginbox .box{
-    position: absolute;right: 60px;top:0;bottom: 0;margin-top: auto;margin-bottom: auto;height: 485px;width: 430px;background: #fff;
+    position: absolute;right: 60px;top:0;bottom: 0;margin-top: auto;margin-bottom: auto;height: 520px;width: 430px;background: #fff;
   }
   .loginbox .title{
     display: flex;justify-content: space-between;padding: 30px;
@@ -227,7 +219,7 @@
     font-size: 14px;
     line-height: 20px;
     color: #666;
-    width: 72px;
+    width: 84px;
     padding: 16px 0 16px 20px;
     float: left;
   }
@@ -249,7 +241,7 @@
     border: none 0;
   }
   .nc-login-form .code-div {
-    width: 100%;
+    width: 100%;display: flex;
     height: 54px;margin-top: 20px;
   }
   .nc-login-form .code-div dl {

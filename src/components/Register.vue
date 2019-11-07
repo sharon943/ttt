@@ -26,12 +26,23 @@
     </header>
     <section class="registerbox">
       <div class="modules">
-        <div class="registertitles">
-          <p :class="{active:showpurchase}" @click="showpurchase=true">采购商</p>
-          <p :class="{active:!showpurchase}" @click="showpurchase=false">供应商</p>
+        <ul class="registertitles">
+          <li>
+            <p :class="{active:showpurchase}" @click="showpurchase=true">采购商</p>
+            <el-tooltip  class="item" effect="dark" content="淘宝店主及网商企业/个人注册成为采购身份" placement="right-start">
+              <el-button style="margin-top: -120px"> <i class="el-icon-question"></i></el-button>
+            </el-tooltip>
+          </li>
+         <li>
+           <p :class="{active:!showpurchase}" @click="showpurchase=false">供应商</p>
+           <el-tooltip  class="item" effect="dark" content="童装生产企业及经销商/代理商/批发商/统一注册身份为供应商" placement="right-start">
+             <el-button style="margin-top: -120px"> <i class="el-icon-question"></i></el-button>
+           </el-tooltip>
+         </li>
           <span :class="['line',{active:!showpurchase}]"></span>
-        </div>
+        </ul>
         <div class="registermodule1">
+          <!--采购商部分-->
           <div v-show="showpurchase">
             <el-form ref="form" :model="form" label-width="100px" :rules="rules">
               <el-form-item label="用户名">
@@ -47,7 +58,8 @@
                 <el-input type="number" v-model="form.phone" placeholder="便于安全找回密码" autocomplete="off"></el-input>
               </el-form-item>
               <el-form-item label="短信验证码" prop="checkPass">
-                <el-input type="number" v-model="form.phonecode" autocomplete="off"></el-input>
+                <el-input type="number" v-model="form.phonecode" autocomplete="off" style="width: 150px"></el-input>
+                <span class="getCode">获取验证码</span>
               </el-form-item>
               <el-form-item label="您的店铺">
                 <el-checkbox-group v-model="form.type">
@@ -60,68 +72,84 @@
                   <el-checkbox label="蘑菇街" name="type"></el-checkbox>
                   <el-checkbox label="实体店主" name="type"></el-checkbox>
                   <el-checkbox label="随便逛逛" name="type"></el-checkbox>
-                  <el-checkbox label="其他" name="type"></el-checkbox><el-input type="text" v-model="form.otherplatform" autocomplete="off"></el-input>
+                  <el-checkbox label="其他" name="type"></el-checkbox><el-input type="text" v-model="form.otherplatform" placeholder="请输入第三方平台名称" autocomplete="off" style="width: 200px" class="thirdParty"></el-input>
                 </el-checkbox-group>
               </el-form-item>
 
               <el-form-item label="qq号码">
                 <el-input v-model="form.qq" placeholder="请输入您的qq号码"></el-input>
               </el-form-item>
-              <el-form-item prop="email" label="邮箱" :rules="[{ required: false, message: '请输入邮箱地址', trigger: 'blur' },{ type: 'email', message: '请输入正确的邮箱地址', trigger: ['blur', 'change'] }]">
-                <el-input v-model="form.email"></el-input>
+              <el-form-item prop="email" label="邮箱地址" :rules="[{ required: false, message: '请输入邮箱地址', trigger: 'blur' },{ type: 'email', message: '请输入正确的邮箱地址', trigger: ['blur', 'change'] }]">
+                <el-input v-model="form.email" placeholder="请输入您的邮箱地址"></el-input>
               </el-form-item>
               <el-form-item>
                 <el-button type="primary" @click="onSubmit">立即创建</el-button>
-                <el-button>取消</el-button>
               </el-form-item>
             </el-form>
           </div>
+          <!--供应商部分-->
           <div v-show="!showpurchase" class="supplybox">
             <span class="title">账户信息</span>
             <el-form ref="form" :model="form" label-width="100px" :rules="rules">
               <el-form-item label="用户名">
-                <el-input v-model="form.name"></el-input>
+                <el-input v-model="supplyform.name"></el-input>
               </el-form-item>
               <el-form-item label="设置密码" prop="pass">
-                <el-input type="password" v-model="form.pass" placeholder="请设置6-16位密码" autocomplete="off"></el-input>
+                <el-input type="password" v-model="supplyform.pass" placeholder="请设置6-16位密码" autocomplete="off"></el-input>
               </el-form-item>
               <el-form-item label="重复密码" prop="checkPass">
-                <el-input type="password" v-model="form.checkPass" placeholder="重复输入已设置的密码，两次密码要一致" autocomplete="off"></el-input>
+                <el-input type="password" v-model="supplyform.checkPass" placeholder="重复输入已设置的密码，两次密码要一致" autocomplete="off"></el-input>
               </el-form-item>
               <el-form-item label="童淘淘店铺" prop="checkPass">
-                <p>http://</p><el-input v-model="form.store" placeholder="请输入6-20位字母和数字，不可修改" autocomplete="off"></el-input><p>.tongtaotao.com</p>
+                <p style="width: 50px;display: inline-block">http://</p><el-input v-model="supplyform.store" class="linkAddress" placeholder="请输入6-20位字母和数字，不可修改" autocomplete="off"></el-input><p style="width: 100px;display: inline-block;margin-left: 10px">.tongtaotao.com</p>
               </el-form-item>
               <span class="title">联系信息</span>
+              <el-form-item label="商家品牌" prop="checkPass">
+                <el-input v-model="supplyform.brand" placeholder="请输入您的品牌名称（汉字，字母或数字）" autocomplete="off"></el-input>
+              </el-form-item>
+              <el-form-item label="取货地址" prop="checkPass">
+                <el-input v-model="supplyform.address" placeholder="请输入门店地址方便（采购商/服务商）拿货" autocomplete="off"></el-input>
+              </el-form-item>
+              <el-form-item label="厂址" prop="checkPass">
+                <el-input v-model="supplyform.Faddress" placeholder="您是生产厂家，请输入厂址，便于认证服务" autocomplete="off"></el-input>
+              </el-form-item>
+              <el-form-item label="联系人" prop="checkPass">
+                <el-input v-model="supplyform.linePeople" placeholder="请填写真是姓名" autocomplete="off"></el-input>
+              </el-form-item>
               <el-form-item label="手机号码" prop="checkPass">
-                <el-input type="number" v-model="form.phone" placeholder="便于安全找回密码" autocomplete="off"></el-input>
+                <el-input type="number" v-model="supplyform.phone" placeholder="请输入您的手机号码" autocomplete="off"></el-input>
               </el-form-item>
-              <el-form-item label="短信验证码" prop="checkPass">
-                <el-input type="number" v-model="form.phonecode" autocomplete="off"></el-input>
+              <el-form-item label="qq号码">
+                <el-input v-model="supplyform.qq" placeholder="请输入您的QQ号"></el-input>
               </el-form-item>
-              <el-form-item label="您的店铺">
-                <el-checkbox-group v-model="form.type">
-                  <el-checkbox label="淘宝网店" name="type"></el-checkbox>
-                  <el-checkbox label="天猫商城" name="type"></el-checkbox>
-                  <el-checkbox label="阿里巴巴" name="type"></el-checkbox>
-                  <el-checkbox label="京东商城" name="type"></el-checkbox>
-                  <el-checkbox label="微店店主" name="type"></el-checkbox>
-                  <el-checkbox label="手机微商" name="type"></el-checkbox>
-                  <el-checkbox label="蘑菇街" name="type"></el-checkbox>
-                  <el-checkbox label="实体店主" name="type"></el-checkbox>
-                  <el-checkbox label="随便逛逛" name="type"></el-checkbox>
-                  <el-checkbox label="其他" name="type"></el-checkbox><el-input type="text" v-model="form.otherplatform" autocomplete="off"></el-input>
+              <el-form-item prop="email" label="邮箱地址" :rules="[{ required: false, message: '请输入邮箱地址', trigger: 'blur' },{ type: 'email', message: '请输入正确的邮箱地址', trigger: ['blur', 'change'] }]">
+                <el-input v-model="supplyform.email" placeholder="请输入您正确的邮箱地址"></el-input>
+              </el-form-item>
+              <span class="title">公司信息</span>
+              <el-form-item label="经营性质">
+                <el-checkbox-group v-model="supplyform.type">
+                  <el-checkbox label="生产厂家" name="type"></el-checkbox>
+                  <el-checkbox label="门市销售" name="type"></el-checkbox>
+                  <el-checkbox label="经销代理" name="type"></el-checkbox>
+                  <el-checkbox label="个人" name="type"></el-checkbox>
                 </el-checkbox-group>
               </el-form-item>
-
-              <el-form-item label="qq号码">
-                <el-input v-model="form.qq" placeholder="请输入您的qq号码"></el-input>
+              <el-form-item label="生产规模">
+                <el-select v-model="supplyform.peopleNum" placeholder="请选择活动区域">
+                  <el-option v-for="item in optionNum" :label="item.label" :value="item.id"></el-option>
+                </el-select>
               </el-form-item>
-              <el-form-item prop="email" label="邮箱" :rules="[{ required: false, message: '请输入邮箱地址', trigger: 'blur' },{ type: 'email', message: '请输入正确的邮箱地址', trigger: ['blur', 'change'] }]">
-                <el-input v-model="form.email"></el-input>
+              <el-form-item label="分销招募">
+                <el-checkbox-group v-model="supplyform.type">
+                  <el-checkbox label="1" name="type" style="display: block">阅读并同意 <span class="agreement">《开通分销招募服务》</span>，为网销代理供货</el-checkbox>
+                  <el-checkbox label="2" name="type">门市销售</el-checkbox>
+                  <el-checkbox label="3" name="type">经销代理</el-checkbox>
+                  <el-checkbox label="4" name="type">个人</el-checkbox>
+                </el-checkbox-group>
               </el-form-item>
               <el-form-item>
-                <el-button type="primary" @click="onSubmit">立即创建</el-button>
-                <el-button>取消</el-button>
+                <el-button type="primary" @click="onSubmit">提交申请</el-button>
+                <p>注册成功，即可成为供应商发布商品</p>
               </el-form-item>
             </el-form>
           </div>
@@ -163,13 +191,23 @@
             { required: true, message: '请填写活动形式', trigger: 'blur' }
           ]
         },
-        showpurchase:true,showupply:false,form: {
+        optionNum:[{id:1,label:'1-5人'},{id:2,label:'5-15人'},{id:3,label:'15-35人'}],
+        showpurchase:true,showupply:false,
+        // 采购商表单部分
+        form: {
           name: '',checkPass:'',pass:'',
           phone: '',phonecode:'',otherplatform:'',
-qq:'',email:'',
+          qq:'',email:'',
           type: [],
-          resource: '',
-          desc: ''
+
+        },
+        // 供应商表单部分
+        supplyform:{
+          name: '',checkPass:'',pass:'',
+          phone: '',phonecode:'',otherplatform:'',
+          qq:'',email:'',peopleNum:'',
+          type: [],
+
         }
       }
     },
@@ -195,6 +233,9 @@ qq:'',email:'',
   .registertitles p.active{
     border-bottom: 1px solid #fff;
   }
+  .agreement{
+    color: #409EFF;cursor: pointer;
+  }
   .supplybox{
     span.title{
       display: block;
@@ -203,6 +244,9 @@ qq:'',email:'',
       padding: 0 0 10px 30px;
     }
   }
+.linkAddress{
+  width: 200px;
+}
   span.line{
     width: 100px;height: 2px;background: #f3463a;position: absolute;left:110px;top:-2px
   }
@@ -226,6 +270,9 @@ qq:'',email:'',
   }
   header ul{
     display: flex;justify-content: space-between;font-size:12px;
+  }
+  .getCode{
+    width: 115px;height: 40px;line-height: 40px;text-align: center;background: #7f889a;display: inline-block;color:#fff;font-weight: 200;border-radius: 3px;
   }
   .top_bottomLogin{
     width: 1200px;background: #fff;margin:0 auto;
@@ -255,21 +302,37 @@ qq:'',email:'',
   .registerbox .modules{
     width: 1190px;border:1px solid #d5d5d5;margin:40px  auto 0;height: auto;position: relative;display: flex;
   }
-  .registertitles p{
-    cursor: pointer;
-    font-size: 20px;width: 120px;height: 40px;line-height: 40px;text-align: center;position: absolute;border:1px solid #d5d5d5;top: -40px;
+  .registertitles{
+    p{
+      cursor: pointer;
+      font-size: 20px;width: 120px;height: 40px;line-height: 40px;text-align: center;position: absolute;border:1px solid #d5d5d5;top: -40px;
+    }
+    button{
+      border:none;position: absolute;top:73px;background: transparent;
+    }
+    & > li:nth-of-type(1) p{
+      left:100px;
+    }
+    & > li:nth-of-type(2) p{
+      left:250px;
+    }
+    & > li:nth-of-type(1) button{
+      left:178px;
+    }
+    & > li:nth-of-type(2) button{
+      left:328px;
+    }
   }
-  .registertitles p:nth-of-type(1){
-    left:100px;
-  }
-  .registertitles p:nth-of-type(2){
-    left:250px;
-  }
+
+
   .registermodule1{
     width: 60%;
+    & > div{
+      padding: 0 80px 0 50px;
+    }
   }
   .rightimg{
-    width: 40%;border-left: 2px solid #f5f5f5;box-sizing: border-box;margin-bottom: 20px;
+    width: 40%;box-sizing: border-box;margin-bottom: 20px;height: auto;border-left: 2px solid #f5f5f5;
   }
   .rightimg img{
     width: 380px;height: 736px;margin:30px auto 0;display: block;

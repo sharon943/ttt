@@ -108,7 +108,7 @@
           <span>其他账户登录：</span>
           <img src="../assets/img/login/wechatlogo.png" alt="">
           <img src="../assets/img/login/qqlogo.png" alt="">
-          <router-link :to="{path:'marketTool'}">立即注册</router-link>
+          <router-link :to="{path:'Register'}">立即注册</router-link>
         </div>
       </section>
 

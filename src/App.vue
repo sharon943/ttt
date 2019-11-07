@@ -25,6 +25,7 @@ export default {
   padding: 0;
   text-decoration: none;
   box-sizing: border-box;
+  list-style: none;
   /*font-size: 16px;*/
   font-family: 'xh';
 }

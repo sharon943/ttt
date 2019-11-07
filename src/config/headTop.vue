@@ -1,25 +1,51 @@
 <template>
-  <div class="header-container">
-     <router-link class="left" :to="{name:'index'}">
-        <img :src="logo_src" alt="" class="logo">
-      	<h1 class="brand">{{name}}</h1>
-      	<span style="font-size:14px">精确用户数据运营平台</span>
-     </router-link>
-     <section class="right">
-       <router-link v-show="shop_view" :to="{name:'shopManage'}" :class="{active:activeindex==0}" @click="activeindex=0">门店管理</router-link>
-       <router-link v-show="member_view" :to="{name:'memberManage'}" :class="{active:activeindex==1}" @click="activeindex=1">会员管理</router-link>
-       <router-link v-show="Pic_view" :to="{name:'PicCenter'}" :class="{active:activeindex==2}" @click="activeindex=2">画像中心</router-link>
-       <router-link v-show="market_view" :to="{name:'marketTool'}" :class="{active:activeindex==3}" @click="activeindex=3">营销中心</router-link>
-       <router-link v-show="report_view" :to="{name:'monthReport'}" :class="{active:activeindex==4}" @click="activeindex=4">统计报表</router-link>
-      <div @mouseleave="moreview=false" v-show="more_view||goods_view" style="position: relative">
-       <router-link v-show="moreview&&more_view"  :to="{name:'more'}" :class="['moreclass',{active:activeindex==5}]" @click="activeindex=5">系统设置</router-link>
-       <router-link v-show="moreview&&goods_view" :to="{name:'goodsManage'}" :class="['moreclass_',{active:activeindex==6}]" @click="activeindex=6">商品管理</router-link>
-       <!-- <img class="more" v-show="activeindex==5||activeindex==6" src="../assets/img/_more.png" alt="">-->
-       <!--<img @mouseenter="moreview=true" class="more" v-show="activeindex!=5&&activeindex!=6" src="../assets/img/more.png" alt="">-->
-       <img @mouseenter="moreview=true" class="more" v-show="activeindex!=5&&activeindex!=6" src="../assets/img/more.png" alt="">
-      </div>
-     </section>
-   </div>
+  <header>
+    <img src="../assets/img/top.png" alt="">
+    <div class="black_box">
+      <section class="inside">
+        <p>您好，欢迎来到童淘淘 <span>登录</span> <span>注册</span> </p>
+        <ul>
+          <li>免费代发</li>
+          <li>功能服务</li>
+          <li>我是厂家</li>
+          <li>用户中心</li>
+          <li>运费测算</li>
+          <li>在线客服</li>
+        </ul>
+        <p>手机童淘淘</p>
+      </section>
+    </div>
+    <div class="top_bottom">
+      <section class="box">
+        <img src="../assets/img/logo.png" alt="" class="logo">
+        <section class="search_box">
+          <div class="topnav">
+            <span>商品</span>
+            <span>厂家</span>
+          </div>
+          <div class="middlebox">
+            <input type="text" placeholder="根据产品标题，厂家名字进行命名">
+            <button class="photo"></button>   <!--拍照button-->
+            <button class="search"></button>  <!--搜索button-->
+          </div>
+          <ul>
+            <li>童群</li>
+            <li>秋装童群</li>
+            <li>哈伦裤</li>
+            <li>T恤</li>
+            <li>羽绒裤</li>
+            <li>棉服</li>
+            <li>中长款</li>
+          </ul>
+        </section>
+        <section class="ma_box">
+          <img src="../assets/img/erweima.png" alt="">
+          <img src="../assets/img/erweima.png" alt="">
+        </section>
+
+      </section>
+    </div>
+  </header>
 </template>
 <script>
   import api from '../api/api'
@@ -73,66 +99,69 @@
   }
 </script>
 <style scoped lang="scss">
-.header-container{
-	width:100%;
-	height:55px;
-	background-color:#FAFAFA;
-  display: flex;
-  justify-content: space-between;
-	.left{
-	height:100%;
-	/*background:red;*/
-	display:flex;
-  justify-content: space-between;
-    color: #9B9B9B;
-    line-height: 55px;
-    .logo{
-      width:35px;
-      height:35px;
-      margin-top: 10px;
-      margin-left: 20px;
-      margin-right: 20px;
-    }
-    h1{
-      font-size: 20px;
-      color: #000;
-      margin-right: 20px;font-family: "zy";font-weight: normal;
-    }
-    span{
-      font-size: 14px;font-family: "zy";
-    }
-    }
-    .right{
-      width:auto;
-	    height:100%;
-	   /*background:blue;*/
-      display:flex;
-      justify-content: space-between;padding:0  0 0 20px;
-      a{
-        font-size: 14px;
-        color: #9B9B9B;width:125px;
-        line-height: 55px;font-family: "zy";text-align: center;display: block;
-        background: #FAFAFA;
-      }
-      .moreclass{
-         position:absolute;top:55px;right:0;box-shadow: -1px 1px 1px 1px rgba(0,0,0,0.03);width: 160px;z-index: 99999;
-      }
-      .moreclass_{
-        position:absolute;top:110px;right:0;box-shadow: -1px 1px 1px 1px rgba(0,0,0,0.03);width: 160px;z-index: 99999
-      }
-      .router-link-active,.router-link-active:hover{
-        background: #FF4A4A;
-        color:white;
-      }
-      a:hover{
-        background: #DCDCDC;
-      }
-      .more{
-        width: 55px;
-        height:55px;
-        background: #77d04b;cursor: pointer;
-      }
-    }
-}
+  header img{
+    width: 100%;
+    height: 80px;
+  }
+  .black_box{
+    width: 100%;background: #000;
+    height: 30px;
+  }
+  .inside{
+    width: 1200px;display: flex;height: 100%;line-height: 30px;margin:0 auto;position: relative;justify-content: space-between;
+  }
+  .inside p{
+    font-size: 12px;color:#eee;
+  }
+  .inside ul{
+    position: absolute;left:0;right:0;top:0;bottom: 0;margin:auto;
+    width: 450px;height: 30px;
+    color: #fff;
+  }
+  header ul{
+    display: flex;justify-content: space-between;font-size:12px;
+  }
+  .top_bottom{
+    width: 100%;background: #fff;
+    height: 124px;font-size: 12px;
+  }
+  .top_bottom .box{
+    width: 1200px;margin:0 auto;height:100%;
+    padding: 30px;display: flex;justify-content: space-between;
+  }
+  .logo{
+    width: 190px;height: 68px;
+  }
+  .ma_box{
+    width: 160px;
+    height: 75px;    display: flex;
+    justify-content: space-between;
+  }
+  .ma_box img{
+    width: 75px;
+    height: 75px;
+  }
+  .middlebox{
+    width: 560px;height: 40px;    margin: 15px auto;
+    background-image: url('../assets/img/search-box.png');background-repeat: no-repeat;background-size: 100% 100%;
+  }
+  .middlebox input{
+    padding: 10px;    width: 400px;
+    background: transparent;
+    line-height: 22px;
+  }
+  .search,.photo{
+    width: 60px;height: 100%;float: right;    background: transparent;
+  }
+  .topnav{
+    margin-left: 20px;
+  }
+  .search_box ul{
+    margin-left: 20px;width: 400px;
+  }
+
+
+
+
 
 </style>

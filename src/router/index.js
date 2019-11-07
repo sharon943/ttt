@@ -22,8 +22,8 @@ Vue.use(Register)
 
 export default new Router({
   routes: [
-    {path: '/', name: 'Register', component: Register},
-    // {path: '/', name: 'login', component: Login},
+    // {path: '/', name: 'Register', component: Register},
+    {path: '/', name: 'login', component: Login},
     {path: '/Register', name: 'Register', component: Register},
     {path: '/Homepage', name: 'Homepage', component: Homepage},
     // {path: '/index', name: 'index', component: index},

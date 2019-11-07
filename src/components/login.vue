@@ -209,9 +209,9 @@
   }
 </script>
 <style scoped lang="scss">
-  header img{
+  header > img{
     width: 100%;
-    height: 80px;
+    height: 80px;display: block;
   }
   .black_box{
     width: 100%;background: #000;

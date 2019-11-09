@@ -142,7 +142,7 @@
     height: 75px;
   }
   .middlebox{
-    width: 560px;height: 40px;    margin: 15px auto;
+    width: 560px;height: 40px;    margin: 5px auto;
     background-image: url('../assets/img/search-box.png');background-repeat: no-repeat;background-size: 100% 100%;
   }
   .middlebox input{

@@ -38,5 +38,36 @@ export default {
 .thirdParty  > input.el-input__inner{
     height: 30px;
   }
+input,button{
+  border: none;outline: none;outline:medium;
+}
+.orderInfo .el-form-item__content{
+  width: 300px;float: left;margin-left: 0!important;
+}
+.orderInfo .el-form-item{
+  padding-left: 50px;
+}
+.orderInfo .el-button--primary{
+  background-color: #d73a19;
+  border-color: #d73a19;
+}
+.orderInfo .el-textarea{
+  width: 500px;
+}
+.phoneBox .el-form-item__content{
+  width: 800px;
+}
+.phoneBox .el-form-item__content .el-input{
+  width: 300px;
+}
+.el-table td, .el-table th.is-leaf{
+  text-align: center;
+}
 
+/*input::before,input::after{*/
+  /*background: #fff!important;*/
+/*}*/
+/*input{*/
+  /*background: #fff!important;*/
+/*}*/
 </style>

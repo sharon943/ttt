@@ -3,7 +3,7 @@
     <img src="../assets/img/top.png" alt="">
     <div class="black_box">
       <section class="inside">
-        <p>您好，欢迎来到童淘淘 <span>登录</span> <span>注册</span> </p>
+        <p>您好，欢迎来到童淘淘 <span>登录</span>  <router-link :to="{path:'Register'}">注册</router-link> </p>
         <ul>
           <li>免费代发</li>
           <li>功能服务</li>
@@ -219,9 +219,15 @@
   }
   .inside{
     width: 1200px;display: flex;height: 100%;line-height: 30px;margin:0 auto;position: relative;justify-content: space-between;
-  }
-  .inside p{
-    font-size: 12px;color:#eee;
+    p{
+      font-size: 12px;color:#eee;
+      a{
+        font-size: 12px;color: #fff;
+      }
+      span{
+        cursor: pointer;
+      }
+    }
   }
   .inside ul{
     position: absolute;left:0;right:0;top:0;bottom: 0;margin:auto;

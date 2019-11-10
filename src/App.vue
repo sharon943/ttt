@@ -63,7 +63,28 @@ input,button{
 .el-table td, .el-table th.is-leaf{
   text-align: center;
 }
-
+.giftBox .el-input{
+  width: 50px;margin-right: 50px;margin-left: 10px;
+}
+.giftBox .el-input input.el-input__inner{
+  height: 30px;line-height: 30px;width: 50px;padding: 0;
+}
+.giftBox .el-checkbox{
+  margin-bottom: 10px;
+}
+.el-step__title.is-finish,.el-step__head.is-finish {
+  color: #ef1e1e;border-color: #ef1e1e;
+}
+.el-step__icon-inner[class*=el-icon]:not(.is-status) {
+  font-size: 35px;
+  font-weight: 550;
+}
+header > img{
+  display: block;
+}
+.Area .el-select{
+  width: 96.5px;
+}
 /*input::before,input::after{*/
   /*background: #fff!important;*/
 /*}*/

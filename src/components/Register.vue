@@ -136,7 +136,7 @@
               </el-form-item>
               <el-form-item label="生产规模">
                 <el-select v-model="supplyform.peopleNum" placeholder="请选择活动区域">
-                  <el-option v-for="item in optionNum" :label="item.label" :value="item.id"></el-option>
+                  <el-option v-for="item in optionNum" :label="item.label" :value="item.id" :key="item.id"></el-option>
                 </el-select>
               </el-form-item>
               <el-form-item label="分销招募">

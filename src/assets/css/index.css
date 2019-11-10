@@ -208,3 +208,47 @@ textarea {
 cursor: pointer;
 }
 
+
+
+.mycar .el-input__inner{
+  background: none;
+  border: none;
+  text-align: center;
+  color: #000;
+  height: 42px;
+  line-height: 42px;
+  width: 100%;
+  font-weight: bold;
+}
+.undertake .el-input__inner{
+  background: none;
+  border: none;
+  text-align: center;
+  color: #000;
+  height: 34px;
+  line-height: 34px;
+  width: 100%;
+  font-weight: bold;
+  font-size: 12px;
+  padding-left: 25px;
+}
+.undertake  .el-date-editor.el-input, .undertake  .el-date-editor.el-input__inner{
+  width: 100%;
+}
+.undertake .el-input__prefix{
+  width: 0;
+  opacity: 0;
+}
+.mycar  .el-select .el-input .el-select__caret{
+  color: #000;
+}
+
+.mycar  input::-webkit-input-placeholder {
+  color: #000;
+}
+.mycar input::-moz-input-placeholder {
+  color:  #000;
+}
+.mycar input::-ms-input-placeholder {
+  color: #000;
+}

@@ -85,6 +85,21 @@ header > img{
 .Area .el-select{
   width: 96.5px;
 }
+.modification button.el-button,.modification button.el-button:hover,.modification button.el-button:active,.modification button.el-button span,.modification button.el-button--primary,.modification .el-button:focus{
+  background: #fc6c21;border-color:#fc6c21;width: 136px;height: 38px;
+}
+.modification .el-form-item{
+   width: 100%;
+}
+.modification .el-input{
+  width: 70%;
+}
+.payForm .el-input{
+  width: 100%;
+}
+.payForm_code .el-input{
+  width: 38%;
+}
 /*input::before,input::after{*/
   /*background: #fff!important;*/
 /*}*/

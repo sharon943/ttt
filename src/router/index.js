@@ -10,6 +10,7 @@ import Login from '@/components/login'              //登录页
 import Register from '@/components/Register'       //注册页面
 import PostOrder from '@/components/PostOrder'     //提交订单
 import Pay from '@/components/Pay'                 //支付页面
+import SafeAuthorization from '@/components/SafeAuthorization'                 //账户安全和授权
 
 import Vueresource from "vue-resource"
 import VueClipboard from 'vue-clipboard2'
@@ -22,16 +23,18 @@ Vue.use(Login)
 Vue.use(Register)
 Vue.use(Pay)
 Vue.use(PostOrder)
+Vue.use(SafeAuthorization)
 
 
 export default new Router({
   routes: [
-    {path: '/', name: 'PostOrder', component: PostOrder},
+    {path: '/', name: 'SafeAuthorization', component: SafeAuthorization},
     // {path: '/', name: 'login', component: Login},
     {path: '/Register', name: 'Register', component: Register},
     {path: '/Homepage', name: 'Homepage', component: Homepage},
     {path: '/PostOrder', name: 'PostOrder', component: PostOrder},
     {path: '/Pay', name: 'Pay', component: Pay},
+    {path: '/SafeAuthorization', name: 'SafeAuthorization', component: SafeAuthorization},
     // {path: '/index', name: 'index', component: index},
 
   ]

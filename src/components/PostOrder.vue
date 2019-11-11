@@ -42,7 +42,7 @@
              <div class="senderBox" v-show="activeIndex==1">
                <h2>提货人信息</h2>
                <section class=""><img src="../assets/img/check.png" alt=""><span style="display: inline-block">使用新提货人</span></section>
-               <el-form :model="supplyForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
+               <el-form :model="supplyForm" :rules="rules" ref="supplyForm" label-width="100px" class="demo-ruleForm">
                  <el-form-item label="提货人姓名" prop="name">
                    <el-input v-model="supplyForm.name"></el-input>
                  </el-form-item>
@@ -60,33 +60,33 @@
              <div class="senderBox" v-show="activeIndex==0">
                <h2>收货人信息</h2>
                <section class=""><img src="../assets/img/check.png" alt=""><span style="display: inline-block">使用新地址</span> <span style="color: #d8504d;">使用自提服务站</span></section>
-                 <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="120px" class="demo-ruleForm">
+                 <el-form :model="consigneeForm" :rules="rules" ref="consigneeForm" label-width="120px" class="demo-ruleForm">
                  <el-form-item label="模糊地址识别" class="textarea" prop="name">
-                   <el-input type="textarea" v-model="ruleForm.name"></el-input>
+                   <el-input type="textarea" v-model="consigneeForm.text"></el-input>
                  </el-form-item>
                  <el-form-item label="收货人姓名" prop="name">
-                   <el-input v-model="ruleForm.name"></el-input>
+                   <el-input v-model="consigneeForm.name"></el-input>
                  </el-form-item>
                  <el-form-item label="所在地区" prop="address" class="Area">
-                   <el-select v-model="ruleForm.province" placeholder="请选择" @change="showCity">
+                   <el-select v-model="consigneeForm.province" placeholder="请选择" @change="showCity">
                      <el-option v-for="row in provices" :label="row.name" :value="row.name" :key="row.name">{{row.name}}</el-option>
                    </el-select>
-                   <el-select v-model="ruleForm.city" placeholder="请选择" @change="showDis" v-if="citys.length>0">
+                   <el-select v-model="consigneeForm.city" placeholder="请选择" @change="showDis" v-if="citys.length>0">
                      <el-option v-for="row in citys" :label="row.name" :value="row.name" :key="row.name">{{row.name}}</el-option>
                    </el-select>
-                   <el-select v-model="ruleForm.districtAndCounty" placeholder="请选择" @change="showDis" v-if="districtAndCounties.length>0">
+                   <el-select v-model="consigneeForm.districtAndCounty" placeholder="请选择" @change="showDis" v-if="districtAndCounties.length>0">
                      <el-option v-for="row in districtAndCounties" :label="row" :value="row" :key="row">{{row}}</el-option>
                    </el-select>
                  </el-form-item>
                  <el-form-item label="详细地址" prop="address">
-                   <el-input v-model="ruleForm.address"></el-input>
+                   <el-input v-model="consigneeForm.address"></el-input>
                    <p style="color: #8b8b8b">请填写真实地址，不需要重复填写所在地区</p>
                  </el-form-item>
                  <el-form-item label="手机号码" prop="phone" class="phoneBox">
-                   <el-input v-model="ruleForm.phone"></el-input>（或）电话   <el-input v-model="ruleForm.phone"></el-input>
+                   <el-input v-model="consigneeForm.phone"></el-input>（或）电话   <el-input v-model="ruleForm.phone"></el-input>
                  </el-form-item>
                  <el-form-item style="padding-left: 0">
-                   <el-button type="primary" @click="submitForm('ruleForm')">保存收货人信息</el-button>
+                   <el-button type="primary" @click="submitForm('consigneeForm')">保存收货人信息</el-button>
                  </el-form-item>
                  </el-form>
                <section class=""><img src="../assets/img/check.png" alt=""><span style="display: inline-block">邓先生</span> <span style="color:#606266;">湖北  武汉  江岸 唐家墩街道 </span><span style="color: #d8504d;">删除</span></section>
@@ -195,6 +195,15 @@
           type: [],
           resource: '',
           desc: ''
+        },
+        consigneeForm: {
+          name: '',
+          text: '',
+          province: '',
+          city: '',
+          districtAndCounty: '',
+          address: '',
+          phone: ''
         },
         rules: {
           name: [

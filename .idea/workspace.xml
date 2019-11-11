@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8397bca8-c3d5-408c-a0d4-39116ed926c2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/SafeAuthorization.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AttentionShops.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PostOrder.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostOrder.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -49,8 +47,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/router/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+            <state relative-caret-position="90">
+              <caret line="6" column="41" lean-forward="true" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
                 <element signature="e#417#455#0" expanded="true" />
@@ -60,16 +58,32 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/AttentionShops.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="302">
+              <caret line="111" column="115" selection-start-line="111" selection-start-column="115" selection-end-line="111" selection-end-column="115" />
+              <folding>
+                <element signature="e#801#1096#0" />
+                <element signature="e#1551#1795#0" />
+                <element signature="e#2522#2548#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/SafeAuthorization.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="40" column="79" selection-start-line="40" selection-start-column="79" selection-end-line="40" selection-end-column="79" />
+            <state relative-caret-position="45">
+              <caret line="3" column="10" lean-forward="true" selection-end-line="245" />
               <folding>
                 <element signature="n#style#0;n#el-form#0;n#section#0;n#div#0;n#main#0;n#div#0;n#template#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#el-form-item#1;n#el-form#0;n#section#0;n#div#0;n#main#0;n#div#0;n#template#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#el-form#0;n#section#1;n#div#0;n#main#0;n#div#0;n#template#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#el-form#0;n#section#2;n#div#0;n#main#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#script#0;n#!!top" />
+                <element signature="e#2744#3004#0" />
+                <element signature="e#1737#1961#0" />
+                <element signature="e#3444#3668#0" />
               </folding>
             </state>
           </provider>
@@ -131,9 +145,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>paybox</find>
-      <find>postButton</find>
-      <find>senderBox</find>
       <find>consignee</find>
       <find>districtAndCounties</find>
       <find>middlebox</find>
@@ -141,7 +152,6 @@
       <find>supplyForm</find>
       <find>v-for</find>
       <find>activeIndex</find>
-      <find>headTop</find>
       <find>inside</find>
       <find>&lt;router-link&gt;</find>
       <find>:class</find>
@@ -155,12 +165,16 @@
       <find>getCode</find>
       <find>payForm_code</find>
       <find>registermodule1</find>
-      <find>consigneeForm</find>
       <find>checkPass</find>
       <find>payForm</find>
       <find>modification</find>
       <find>tengXunbox</find>
       <find>忘记密码</find>
+      <find>更改手机</find>
+      <find>AttentionShops</find>
+      <find>SafeAuthorization</find>
+      <find>consigneeForm</find>
+      <find>headTop</find>
     </findStrings>
     <replaceStrings>
       <replace>regionitems</replace>
@@ -177,7 +191,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/marketing/precisionsendstamps.vue" />
         <option value="$PROJECT_DIR$/src/components/marketing/Timedvoucher.vue" />
         <option value="$PROJECT_DIR$/src/components/marketing/conditionVoucher.vue" />
         <option value="$PROJECT_DIR$/src/components/marketing/awake.vue" />
@@ -224,10 +237,11 @@
         <option value="$PROJECT_DIR$/src/components/Pay.vue" />
         <option value="$PROJECT_DIR$/src/assets/js/area.js" />
         <option value="$PROJECT_DIR$/src/components/authorization.vue" />
-        <option value="$PROJECT_DIR$/src/router/index.js" />
         <option value="$PROJECT_DIR$/src/components/PostOrder.vue" />
         <option value="$PROJECT_DIR$/src/App.vue" />
         <option value="$PROJECT_DIR$/src/components/SafeAuthorization.vue" />
+        <option value="$PROJECT_DIR$/src/router/index.js" />
+        <option value="$PROJECT_DIR$/src/components/AttentionShops.vue" />
       </list>
     </option>
   </component>
@@ -369,15 +383,16 @@
       <workItem from="1567994400116" duration="191000" />
       <workItem from="1568001030432" duration="7000" />
       <workItem from="1573046604570" duration="628000" />
-      <workItem from="1573132979024" duration="40939000" />
+      <workItem from="1573132979024" duration="44474000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="321924000" />
+    <option name="totallyTimeSpent" value="325459000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -423,7 +438,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/memberManage/smallProgram.vue" />
     <entry file="file://$USER_HOME$/会员中心小程序/pages/completionInfo/completionInfo.js" />
     <entry file="file://$USER_HOME$/会员中心小程序/pages/homepage/homepage.js" />
     <entry file="file://$USER_HOME$/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/cf05daf00f5a27fe317e6ea5765ae22b/Message/MessageTemp/d890e4ecdf03b39a0d8d7b3404cba1bb/File/couponManage.vue" />
@@ -536,17 +550,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/router/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-            <element signature="e#417#455#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/login.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="151">
@@ -586,6 +589,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="41" lean-forward="true" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#417#455#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/PostOrder.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -620,14 +634,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/SafeAuthorization.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="40" column="79" selection-start-line="40" selection-start-column="79" selection-end-line="40" selection-end-column="79" />
+        <state relative-caret-position="45">
+          <caret line="3" column="10" lean-forward="true" selection-end-line="245" />
           <folding>
             <element signature="n#style#0;n#el-form#0;n#section#0;n#div#0;n#main#0;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#el-form-item#1;n#el-form#0;n#section#0;n#div#0;n#main#0;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#el-form#0;n#section#1;n#div#0;n#main#0;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#el-form#0;n#section#2;n#div#0;n#main#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#script#0;n#!!top" />
+            <element signature="e#2744#3004#0" />
+            <element signature="e#1737#1961#0" />
+            <element signature="e#3444#3668#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/AttentionShops.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="111" column="115" selection-start-line="111" selection-start-column="115" selection-end-line="111" selection-end-column="115" />
+          <folding>
+            <element signature="e#801#1096#0" />
+            <element signature="e#1551#1795#0" />
+            <element signature="e#2522#2548#0" />
           </folding>
         </state>
       </provider>

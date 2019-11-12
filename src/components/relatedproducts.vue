@@ -81,89 +81,59 @@
         <div class="thed">
           <div class="productpic">
             <span class="lightgreybor"></span>
-            <span >商品图片</span>
+            <span style="width: 158px;">商品图片</span>
           </div>
-          <div  class="productcode">
+          <div class="productcode">
             <span>货号</span>
           </div>
-          <div class="productsize">
-            <span>颜色/尺码</span>
-          </div>
-          <div  class="productnum">
-            <span>数量</span>
-          </div>
-          <div  class="productprice">
+          <div class="productprice">
             <span>拿货价</span>
           </div>
-          <div class="orderstatus">
-            <span class="red firstfont">订单状态</span>
-          </div>
+
           <div class="ordertrack">
-            <span class="red">拿货轨迹</span>
+            <span >厂家名称</span>
           </div>
           <div class="express">
-            <span>快递信息</span>
+            <span>联系电话</span>
           </div>
           <div class="withmess">
-            <span>拿货信息</span>
-          </div>
-          <div class="orderdesc">
-            <span>订单备注</span>
-          </div>
-          <div class="proedit">
-            <span>操作</span>
+            <span>厂址</span>
           </div>
         </div>
         <div class="prolists">
-          <div class="proitem lightgreybor">
+          <div class="proitem lightgreybor darkgrey">
             <div class="itembox">
               <div>
                 <div class="productpic">
-                <span>
-                  <img src="../assets/img/1.png" alt="">
-                </span>
-                </div>
-              </div>
-              <div>
-                <div  class="productcode">
-                  <span>豆仔小当家&卡通</span>
-                </div>
-              </div>
-              <div>
-                <div class="productsize">
-                  <span>白色/30</span>
-                </div>
-              </div>
-              <div>
-                <div  class="productnum">
-                  <span>1</span>
-                </div>
-              </div>
-              <div>
-                <div  class="productprice">
-                  <span>9.90</span>
-                </div>
-              </div>
-              <div>
-                <div class="orderstatus">
-                  <span >已完成</span>
-                </div>
-              </div>
-              <div>
-                <div class="ordertrack" style="text-align: center">
-                  <div >安排拿货员（周边地区拿货取消是，着急请联系厂家代发）</div>
-                  <div>拿货中</div>
-                  <div style="text-align: center">
-                    <div style="border: 1px dotted #F43E31;padding: 2px 4px;display: inline-block" class="red">轨迹</div>
+                  <div style="display: flex;align-items: center">
+                    <div>
+                      <img src="../assets/img/1.png" alt="">
+                    </div>
+                    <div class="blods" style="margin-left: 8px;width: 80px;text-align: left;color: #000">红色家族童装套装</div>
                   </div>
+                </div>
+              </div>
+              <div>
+                <div class="productcode">
+                  <span >豆仔小当家&卡通</span>
+                </div>
+              </div>
+
+              <div>
+                <div class="productprice">
+                  <span class="red blods secondfont">￥9.90</span>
+                </div>
+              </div>
+
+              <div>
+                <div class="ordertrack">
+
 
                 </div>
               </div>
               <div>
-                <div class="express" style="text-align: left">
-                  <div>快递:申通快递 <span style="border:1px dotted #19a4f4;padding: 2px;margin-left: 3px" class="blue">普</span> </div>
-                  <div>快递费：4.00</div>
-                  <div>单号：</div>
+                <div class="express">
+
                 </div>
               </div>
               <div>
@@ -172,18 +142,6 @@
                   <div>陈雅元 18634301234</div>
                 </div>
               </div>
-              <div>
-                <div class="orderdesc">
-                  <div></div>
-                </div>
-              </div>
-              <div>
-                <div class="proedit">
-                  <div class="blue cursor">查看详情</div>
-                  <div class="blue cursor">退款</div>
-                </div>
-              </div>
-
             </div>
           </div>
         </div>
@@ -481,42 +439,50 @@
     display: block;
     border-color: #a6a6a6;
   }
-  .productpic{
-    width: 106px;
+  .productpic {
+    width: 186px;
   }
-  .productcode{
-    width: 106px;
+
+  .productcode {
+    width: 146px;
   }
-  .productsize{
+
+  .productsize {
     width: 84px;
   }
-  .productnum{
+
+  .productnum {
     width: 52px;
   }
-  .productprice{
-    width: 68px;
+
+  .productprice {
+    width: 108px;
   }
-  .orderstatus{
-    width: 84px;
+
+  .ordertrack {
+    width: 168px;
   }
-  .ordertrack{
-    width: 132px;
+
+  .express {
+    width: 226px;
   }
-  .express{
-    width: 166px;
+
+  .withmess {
+    width:358px;
   }
-  .withmess{
-    width: 135px;
-  }
-  .orderdesc{
+
+  .orderdesc {
     width: 156px;
   }
-  .proedit{
+
+  .proedit {
     width: 104px;
   }
-  .proitem{
+
+  .proitem {
 
   }
+
 
   .itembox{
     display: flex;

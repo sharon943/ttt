@@ -252,3 +252,18 @@ cursor: pointer;
 .mycar input::-ms-input-placeholder {
   color: #000;
 }
+
+
+.longinputs  input::-webkit-input-placeholder {
+  color: #999;
+}
+.longinputs input::-moz-input-placeholder {
+  color:  #999;
+}
+.longinputs input::-ms-input-placeholder {
+  color: #999;
+}
+.longinputs .el-input__inner{
+  text-align: left;
+  font-weight: normal;
+}

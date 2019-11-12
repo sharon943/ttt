@@ -16,8 +16,8 @@ export default {
   src: url('./assets/font/jt.ttf');
   font-weight: normal;
 }
-#app{
-  height:100%;
+html,body,#app{
+  height:100%;background: #f6f5f5;
 }
 
 *{

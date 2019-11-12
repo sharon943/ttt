@@ -100,6 +100,16 @@ header > img{
 .payForm_code .el-input{
   width: 38%;
 }
+.formBox button.el-button,.formBox button.el-button:hover,.formBox button.el-button:active,.formBox button.el-button span,.formBox button.el-button--primary,.formBox .el-button:focus{
+  background: #f3463a;border-color:#f3463a;
+}
+.formBox .el-checkbox__input.is-checked .el-checkbox__inner, .formBox .el-checkbox__input.is-indeterminate .el-checkbox__inner {
+  background-color: #f3463a;
+  border-color: #f3463a;
+}
+.formBox span.el-checkbox__inner:hover,.formBox .is-focus span.el-checkbox__inner{
+  border-color: #f3463a;
+}
 /*input::before,input::after{*/
   /*background: #fff!important;*/
 /*}*/

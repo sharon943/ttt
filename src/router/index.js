@@ -12,6 +12,7 @@ import PostOrder from '@/components/PostOrder'     //提交订单
 import Pay from '@/components/Pay'                 //支付页面
 import SafeAuthorization from '@/components/SafeAuthorization'   //账户安全和授权
 import AttentionShops from '@/components/AttentionShops'   //厂家关注
+import AccountInfo from '@/components/AccountInfo'   //账户信息
 
 import Vueresource from "vue-resource"
 import VueClipboard from 'vue-clipboard2'
@@ -25,12 +26,13 @@ Vue.use(Register)
 Vue.use(Pay)
 Vue.use(PostOrder)
 Vue.use(SafeAuthorization)
-Vue.use(AttentionShops)
+Vue.use(SafeAuthorization)
+Vue.use(AccountInfo)
 
 
 export default new Router({
   routes: [
-    {path: '/', name: 'AttentionShops', component: AttentionShops},
+    {path: '/', name: 'login', component: login},
     // {path: '/', name: 'login', component: Login},
     {path: '/Register', name: 'Register', component: Register},
     {path: '/Homepage', name: 'Homepage', component: Homepage},
@@ -38,6 +40,7 @@ export default new Router({
     {path: '/Pay', name: 'Pay', component: Pay},
     {path: '/SafeAuthorization', name: 'SafeAuthorization', component: SafeAuthorization},
     {path: '/AttentionShops', name: 'AttentionShops', component: AttentionShops},
+    {path: '/AccountInfo', name: 'AccountInfo', component: AccountInfo},
     // {path: '/index', name: 'index', component: index},
   ]
 })

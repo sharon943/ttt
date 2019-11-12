@@ -8,7 +8,7 @@
           <li class="active">厂家关注</li>
           <li>批量取消关注</li>
         </ul>
-        <ul class="boxes">
+        <ul class="boxes" v-for="row in Stores">
           <li>
             <div class="boxLeft">
               <section class="l_top">
@@ -31,6 +31,13 @@
                  <span>关注商家</span>
               </section>
             </div>
+            <ul class="products">
+              <li v-for="item in productsARR">
+                <img src="../assets/img/13.png" alt="">
+                <p>6斤服装大甩卖生意好啊</p>
+                <p><span>$30.00</span> 91387人看过</p>
+              </li>
+            </ul>
           </li>
         </ul>
       </div>
@@ -44,7 +51,8 @@
     data(){
 
       return {
-
+        productsARR:[{id:1},{id:2},{id:3},{id:4}],
+        Stores:[{id:1},{id:2},{id:3},{id:4}],
       }
     },
     components:{
@@ -62,7 +70,7 @@
       }
     }
     .main{
-      background: #fff;width: 1200px;border-top: 1px solid #f3463a;height: auto;margin:50px auto 0;position: relative;
+      width: 1200px;border-top: 1px solid #f3463a;height: auto;margin:50px auto 0;position: relative;
       .topUL{
         width: 50%;display: flex;justify-content: space-between;position: absolute;top:-40px;left: 0;cursor: pointer;
         li{
@@ -73,12 +81,13 @@
         }
       }
       .boxes{
-        li{
-          margin-bottom: 10px;
+        margin-bottom: 10px;background: #fff;padding: 20px;
+        & > li{
+          margin-bottom: 10px;display: flex;justify-content: space-between;
           .boxLeft{
             width: 35%;
             & >section{
-              height: 100px;padding: 30px 10px;
+              height: 62px;
             }
             .l_top{
               position: relative;
@@ -92,11 +101,11 @@
                 }
               }
               & >img{
-                width: 30px;height: 15px;position: absolute;right:0;top:0;bottom:0;margin-top: auto;margin-bottom: auto;
+                width: 30px;height: 15px;position: absolute;right:0;top:21px;
               }
             }
             .l_middle{
-              border-top:1px solid #f6f5f5;border-bottom:1px solid #f6f5f5;
+              border-top:1px solid #f6f5f5;border-bottom:1px solid #f6f5f5;height: 95px;padding: 25px 0;
               & >div{
                 display: flex;justify-content: space-between;font-size: 12px;
                 p{
@@ -120,6 +129,32 @@
               }
             }
           }
+          .products {
+          display: flex;justify-content: space-between;
+            li{
+              width: 185px;height: 245px;border:1px solid #e7e7e7;box-sizing: border-box;
+              border-left: none;
+              p{
+                margin-left: 10px;
+              }
+              &>p:nth-of-type(1){
+                font-size: 14px;color:#333;margin: 10px 0 10px 10px;
+              }
+              & >p:nth-of-type(2){
+                font-size: 12px;color:#666;text-align: right;margin: 0 10px;
+                span{
+                  color:#f45148;font-size: 14px;float: left;
+                }
+              }
+              img{
+                width: 160px;height: 160px;margin:7.5px auto 0;display: block;
+              }
+            }
+            & > li:nth-of-type(1){
+              border-left: 1px solid #e7e7e7;
+            }
+
+        }
         }
 
 

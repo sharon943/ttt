@@ -447,6 +447,8 @@
     <Supplydynamic v-else-if="active==12"></Supplydynamic>
     <AccountInfo v-else-if="active==14"></AccountInfo>
     <SafeAuthorization v-else-if="active==15"></SafeAuthorization>
+    <AccountBalance v-else-if="active==17"></AccountBalance>
+    <MyCoupons v-else-if="active==18"></MyCoupons>
     <MyPoints v-else-if="active==19"></MyPoints>
     <Message v-else-if="active==20"></Message>
     <GrandPrize v-else-if="active==21"></GrandPrize>
@@ -470,15 +472,17 @@
   import Supplydynamic from './userCenter/Supplydynamic'           //货源动态
   import Manufacturersfocus from './userCenter/Manufacturersfocus'           //厂家关注
   import AccountInfo from './userCenter/AccountInfo'           //账户信息
+  import AccountBalance from './userCenter/AccountBalance'           //账户余额
+  import MyCoupons from './userCenter/MyCoupons'           //优惠券
   export default {
     data() {
       return {
-        active:1,
+        active:18,
       }
     },
     components:{
       Mycar,Shoporders,Browsefootprint,GrandPrize,Message,MyPoints,Productcollection,Relatedproducts,SafeAuthorization,Saleorder,
-      Storeproducts,Undertakesorder,uploadpicpackage,Manufacturersfocus,Supplydynamic,AccountInfo
+      Storeproducts,Undertakesorder,uploadpicpackage,Manufacturersfocus,Supplydynamic,AccountInfo,AccountBalance,MyCoupons
     },
     methods: {},
     mounted() {

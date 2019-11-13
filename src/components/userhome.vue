@@ -314,8 +314,6 @@
                   查看全部收藏
                 </div>
               </div>
-
-
             </div>
           </div>
           <div class="productpages">
@@ -438,6 +436,20 @@
     </div>
     <Mycar v-else-if="active==2"></Mycar>
     <shoporders v-else-if="active==3"></shoporders>
+    <Undertakesorder v-else-if="active==4"></Undertakesorder>
+    <Saleorder v-else-if="active==5"></Saleorder>
+    <Relatedproducts v-else-if="active==6"></Relatedproducts>
+    <Storeproducts v-else-if="active==7"></Storeproducts>
+    <uploadpicpackage v-else-if="active==8"></uploadpicpackage>
+    <Productcollection v-else-if="active==9"></Productcollection>
+    <Manufacturersfocus v-else-if="active==10"></Manufacturersfocus>
+    <Browsefootprint v-else-if="active==11"></Browsefootprint>
+    <Supplydynamic v-else-if="active==12"></Supplydynamic>
+    <AccountInfo v-else-if="active==14"></AccountInfo>
+    <SafeAuthorization v-else-if="active==15"></SafeAuthorization>
+    <MyPoints v-else-if="active==19"></MyPoints>
+    <Message v-else-if="active==20"></Message>
+    <GrandPrize v-else-if="active==21"></GrandPrize>
   </div>
 
 </template>
@@ -447,7 +459,7 @@
   import Browsefootprint from './userCenter/Browsefootprint'     //浏览足迹
   import GrandPrize from './userCenter/GrandPrize'     //推广赢大奖
   import Message from './userCenter/Message'           //消息通知
-  import MyPoints from './userCenter/MyPoints'           //消息通知
+  import MyPoints from './userCenter/MyPoints'           //我的积分
   import Productcollection from './userCenter/productcollection'           //产品收藏
   import Relatedproducts from './userCenter/relatedproducts'           //关联产品
   import SafeAuthorization from './userCenter/SafeAuthorization'           //账户安全和授权

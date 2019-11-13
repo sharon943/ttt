@@ -1,67 +1,5 @@
 <template>
   <div class="mycar">
-    <div class="mydetailtop storehome2top">
-      <div style="background: #fff">
-        <div class="mycontainer">
-          <div class="consultingtop">
-            <div class="shoplogo">
-              <img src="../../assets/img/logo.png" alt="">
-            </div>
-            <div class="serachs">
-              <div class="selecttype">
-                <span class="active">商品</span>
-                <span>厂家</span>
-              </div>
-              <div class="Consultingsearchbox">
-                <div>
-                  <input type="text" placeholder="根据产品标题、厂家名称进行搜索">
-                </div>
-                <div>
-                  <span class="iconfont icon-sousuo"></span>
-                  <span class="iconfont icon-paizhao"></span>
-                </div>
-              </div>
-              <div class="tjlist">
-                <span>童裙</span>
-                <span>秋冬童裙</span>
-                <span>哈伦裤</span>
-                <span>童T恤</span>
-                <span>羽绒裤</span>
-                <span>棉服</span>
-                <span>中长款</span>
-              </div>
-            </div>
-            <div class="sdcode">
-              <div>
-                <img src="../../assets/img/erweima.png" alt="">
-              </div>
-              <div>
-                <img src="../../assets/img/erweima.png" alt="">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="tablist">
-        <div class="mycontainer">
-          <div class="tabs">
-            <div class="mytab blods firstfont">
-              <span class="active"><i class="iconfont icon-liebiao1"></i>童装批发采购平台</span>
-              <span>首页</span>
-              <span>厂家直供</span>
-              <span>今日新款</span>
-              <span>库存直播频道</span>
-              <span class="red">爆款专区</span>
-              <span>视频专区</span>
-              <span>一周人气</span>
-              <span>金牌厂家</span>
-              <span>童装服务</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
     <div class="mycontainer" style="background: none">
       <div class="mycontainer" style="background: none">
         <div class="productserchnav">
@@ -99,16 +37,6 @@
 <style scoped>
   .mycar {
     font-size: 12px;
-    background: #f6f5f5;
-  }
-
-  .mydetailtop {
-    background: #fff;
-    border-bottom: 1px solid #f43e31;
-
-  }
-
-  .storehome2top {
     background: #f6f5f5;
   }
 

@@ -474,7 +474,6 @@
     data() {
       return {
         active:1,
-
       }
     },
     components:{

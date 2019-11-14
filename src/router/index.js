@@ -60,7 +60,7 @@ Vue.use(Manufacturersfocus)
 
 export default new Router({
   routes: [
-    {path: '/', name: 'userhome', component: userhome},
+    {path: '/', name: 'Login', component: Login},
     // {path: '/', name: 'login', component: Login},
     {path: '/Register', name: 'Register', component: Register},
     {path: '/Homepage', name: 'Homepage', component: Homepage},

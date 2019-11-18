@@ -477,7 +477,7 @@
   export default {
     data() {
       return {
-        active:18,
+        active:1,
       }
     },
     components:{
@@ -487,6 +487,10 @@
     methods: {},
     mounted() {
 
+    },
+    created(){
+      var name=this.$route.query.name
+      console.log(name)
     },
     beforeRouteEnter(to, from, next) {
       next(vm => {

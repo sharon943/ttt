@@ -3,7 +3,7 @@
     <div class="mycontainer" style="background: none">
       <div class="mycontainer" style="background: none">
         <div class="productserchnav">
-          <span class="lightgrey">用户中心 &gt;</span>
+          <router-link class="lightgrey toUser" :to="{path:'/userhome',query: {name:'default'}}">用户中心 &gt;</router-link>
           <span>浏览足迹</span>
         </div>
       </div>
@@ -78,6 +78,9 @@
     },
     methods: {},
     mounted() {
+
+    },
+    created(){
 
     },
     beforeRouteEnter(to, from, next) {

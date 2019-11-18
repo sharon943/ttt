@@ -267,3 +267,6 @@ cursor: pointer;
   text-align: left;
   font-weight: normal;
 }
+.toUser{
+  cursor: pointer;
+}

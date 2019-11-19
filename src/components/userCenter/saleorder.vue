@@ -245,8 +245,33 @@
     font-size: 12px;
     background: #f6f5f5;
   }
+
+  .mydetailtop {
+    background: #fff;
+    border-bottom: 1px solid #f43e31;
+
+  }
+
+  .storehome2top {
+    background: #f6f5f5;
+  }
+
   .tablist {
     background: #f6f5f5;
+  }
+
+  .consultingtop {
+    width: 100%;
+    height: 122px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .consultingtop > div:nth-child(1) {
+    display: inline-block;
+    height: auto;
   }
 
   .cursor {
@@ -280,6 +305,12 @@
     background: #f43e31; /* 红色背景 */
     color: #fff;
   }
+
+  .consultingtop .serachs {
+    width: 562px;
+
+  }
+
   .Consultingsearchbox {
     position: relative;
     height: 40px;
@@ -437,7 +468,10 @@
     position: relative;
     left: -2px;
   }
-
+  .underlists{
+    width: 1160px;
+    margin: 0 auto;
+  }
   .underlists>.thed{
     height: 38px;
     display: flex;

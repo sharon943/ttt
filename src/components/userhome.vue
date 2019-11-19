@@ -93,9 +93,11 @@
         <div class="zhsafe">
           <div>账户安全</div>
           <div class="blods">
-            <span class="orange">低</span>
-            <span class="jindu lightgreybor"></span>
-            <span class="blue">提升</span>
+            <span class="orange" @click="decrease">低</span>
+            <span class="jindu lightgreybor">
+              <el-progress :percentage="percentage" color="#fd6619" style="height: 15px"></el-progress>
+            </span>
+            <span class="blue" @click="increase">提升</span>
           </div>
           <div>
             <div>
@@ -156,17 +158,17 @@
                 </div>
                 <div>
                   <div>
-                    <div>
-                      <span>待付款</span>
-                      <span class="orange">（1）</span>
+                    <div @click="changestus('待付款')" :class="{activestatus:status=='待付款'}">
+                      <span class="lightgrey">待付款</span>
+                      <span class="lightgrey">（1）</span>
                     </div>
-                    <div>
-                      <span class="lightgrey">待收获</span>
-                      <span class="lightgrey">（0）</span>
+                    <div @click="changestus('待收获')" :class="{activestatus:status=='待收获'}">
+                      <span  class="lightgrey">待收获</span>
+                      <span  class="lightgrey">（0）</span>
                     </div>
-                    <div>
-                      <span class="lightgrey">售后中</span>
-                      <span class="lightgrey">（0）</span>
+                    <div @click="changestus('售后中')" :class="{activestatus:status=='售后中'}">
+                      <span  class="lightgrey">售后中</span>
+                      <span  class="lightgrey">（0）</span>
                     </div>
                   </div>
 
@@ -293,22 +295,27 @@
                   <span class="oranges"></span>
                   <span class="blods">店铺收藏</span>
                 </div>
-                <div >
-                    <div class="shopscs">
-                      <div>
+                <div class="myswipers">
+                  <el-carousel :interval="5000" arrow="always" style="height: 92px;" :autoplay="false">
+                    <el-carousel-item v-for="item in 4" :key="item">
+                      <div class="shopscs">
                         <div>
-                          <img src="" alt="">
+                          <div>
+                            <img src="" alt="">
+                          </div>
+                          <div class="darkgrey" style="text-align: center">新品8件</div>
                         </div>
-                        <div></div>
-                      </div>
-                      <div class="lines"></div>
-                      <div>
+                        <div class="lines"></div>
                         <div>
-                          <img src="" alt="">
+                          <div>
+                            <img src="" alt="">
+                          </div>
+                          <div class="darkgrey" style="text-align: center">新品8件</div>
                         </div>
-                        <div></div>
                       </div>
-                    </div>
+                    </el-carousel-item>
+                  </el-carousel>
+
                 </div>
                 <div class="lightgreybor scbtn">
                   查看全部收藏
@@ -474,13 +481,31 @@
     data() {
       return {
         active:1,
+        percentage:20,
+        status:'待付款'
       }
     },
     components:{
       Mycar,Shoporders,Browsefootprint,GrandPrize,Message,MyPoints,Productcollection,Relatedproducts,SafeAuthorization,Saleorder,
       Storeproducts,Undertakesorder,uploadpicpackage,Manufacturersfocus,Supplydynamic,AccountInfo
     },
-    methods: {},
+    methods: {
+      changestus(status){
+        this.status=status
+      },
+      increase() {
+        this.percentage += 10;
+        if (this.percentage > 100) {
+          this.percentage = 100;
+        }
+      },
+      decrease() {
+        this.percentage -= 10;
+        if (this.percentage < 0) {
+          this.percentage = 0;
+        }
+      }
+    },
     mounted() {
 
     },
@@ -872,6 +897,9 @@
   .pricebox > .zhsafe > div:nth-child(2) {
     margin-bottom: 25px;
   }
+  .pricebox > .zhsafe > div:nth-child(2)>span{
+    cursor: pointer;
+  }
 
   .pricebox > .zhsafe > div:nth-child(2) > .jindu {
     width: 214px;
@@ -1000,6 +1028,7 @@
 
   .dealtips > div:nth-child(2) > div > div {
     margin: 0 32px;
+    cursor: pointer;
   }
 
   .productlist > .items {
@@ -1048,6 +1077,7 @@
   .productlist > .items > div:nth-child(2) > div:nth-child(2) {
     padding: 7px 22px;
     border-radius: 3px;
+    cursor: pointer;
   }
   .enshrine{
     padding: 17px 20px;
@@ -1159,6 +1189,18 @@
     height: 40px;
     width: auto;
     margin: 0 auto;
+  }
+  .jindu{
+    overflow: hidden;
+  }
+  .activestatus>span:nth-child(1){
+    color: #000;
+  }
+  .activestatus>span:nth-child(2){
+    color: #fd6619;
+  }
+  .scbtn{
+    cursor: pointer;
   }
 
 </style>

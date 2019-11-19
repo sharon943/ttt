@@ -222,6 +222,15 @@
     background: #f6f5f5;
   }
 
+  .mydetailtop {
+    background: #fff;
+    border-bottom: 1px solid #f43e31;
+
+  }
+
+  .storehome2top {
+    background: #f6f5f5;
+  }
 
   .tablist {
     background: #f6f5f5;
@@ -437,11 +446,11 @@
     justify-content: flex-end;
   }
   .undertakebox2 > div {
-     height: 34px;
-     line-height: 34px;
-     margin-left: 9px;
-     padding: 0 35px;
-   }
+    height: 34px;
+    line-height: 34px;
+    margin-left: 9px;
+    padding: 0 35px;
+  }
   .undertakebox1 > div {
     margin-right: 9px;
   }
@@ -454,7 +463,10 @@
     color: #fff;
     border-radius: 3px;
   }
-
+  .underlists{
+    width: 1160px;
+    margin: 0 auto;
+  }
   .underlists > .thed {
     height: 38px;
     display: flex;
@@ -482,7 +494,7 @@
   }
 
   .productpic {
-      width: 186px;
+    width: 186px;
   }
 
   .productcode {

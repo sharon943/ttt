@@ -27,7 +27,8 @@ import userhome from '@/components/userhome'//用户中心
 import mycar from '@/components/userCenter/mycar'//我的购物车
 import shoporders from '@/components/userCenter/shoporders'//店铺订单
 
-//用户中心（还未开发的）
+
+
 import Undertakesorder from '@/components/userCenter/Undertakesorder'//代发订单
 import saleorder from '@/components/userCenter/saleorder'//售后订单
 import relatedproducts from '@/components/userCenter/relatedproducts'//关联产品
@@ -36,6 +37,8 @@ import uploadpicpackage from '@/components/userCenter/uploadpicpackage'//下载�
 import productcollection from '@/components/userCenter/productcollection'//产品收藏
 import Browsefootprint from '@/components/userCenter/Browsefootprint'//浏览足迹
 import Supplydynamic from '@/components/userCenter/Supplydynamic'//货源动态
+import SenderSettings from '@/components/userCenter/SenderSettings'//寄件人设置
+import Merchantbatchoperation from '@/components/userCenter/Merchantbatchoperation'//商户批量操作
 
 
 import Vueresource from "vue-resource"
@@ -61,6 +64,8 @@ Vue.use(Manufacturersfocus)
 export default new Router({
   routes: [
     {path: '/', name: 'userhome', component: userhome},
+    {path: '/SenderSettings', name: 'SenderSettings', component: SenderSettings},
+    {path: '/Merchantbatchoperation', name: 'Merchantbatchoperation', component: Merchantbatchoperation},
     // {path: '/', name: 'login', component: Login},
     {path: '/Register', name: 'Register', component: Register},
     {path: '/Homepage', name: 'Homepage', component: Homepage},

@@ -670,6 +670,10 @@
   .undertakeprices>div>div:nth-child(1){
     margin-right: 10px;
   }
+  .underlists{
+    width: 1160px;
+    margin: 0 auto;
+  }
   .underlists>.thed{
     height: 38px;
     display: flex;

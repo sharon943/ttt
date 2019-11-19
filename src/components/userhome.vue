@@ -136,7 +136,7 @@
             <div class="lists">
               <div @click="active=14">账户信息</div>
               <div @click="active=15">账户安全</div>
-              <div @click="active=16">账户授权</div>
+              <div @click="active=15">账户授权</div>
               <div @click="active=17">账户余额</div>
               <div @click="active=18">优惠券</div>
               <div @click="active=19">我的积分</div>
@@ -484,7 +484,11 @@
       Mycar,Shoporders,Browsefootprint,GrandPrize,Message,MyPoints,Productcollection,Relatedproducts,SafeAuthorization,Saleorder,
       Storeproducts,Undertakesorder,uploadpicpackage,Manufacturersfocus,Supplydynamic,AccountInfo,AccountBalance,MyCoupons
     },
-    methods: {},
+    methods: {
+      fatherMethod(){
+        this.active=1
+      }
+    },
     mounted() {
 
     },

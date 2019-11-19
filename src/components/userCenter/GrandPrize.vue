@@ -2,7 +2,12 @@
   <div style="height:100%">
     <!--<headTop></headTop>-->
     <main>
-      <p>用户中心 > <span>我的积分</span></p>
+      <div class="mycontainer" style="background: none">
+        <div class="productserchnav">
+          <span class="lightgrey" @click="backTohome">用户中心 &gt;</span>
+          <span>我的积分</span>
+        </div>
+      </div>
       <div class="main">
         <ul>
           <li v-for="(item,index) in categories" :class="{active:index==activeindex}" @click="activeindex=index">{{item}}</li>
@@ -47,6 +52,11 @@
           {Nname:'618购物津贴',pontsChange:+50,date:'2019年6月2日 13：24：30',img:''},
         ],
       }
+    },
+    methods:{
+      backTohome(){
+        this.$parent.fatherMethod();
+      },
     },
     components:{
       // headTop,

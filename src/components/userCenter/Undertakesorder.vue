@@ -4,7 +4,7 @@
     <div class="mycontainer" style="background: none">
       <div class="mycontainer" style="background: none">
         <div class="productserchnav">
-          <span class="lightgrey">用户中心 &gt;</span>
+          <span class="lightgrey" @click="backTohome">用户中心 &gt;</span>
           <span>代发订单</span>
         </div>
       </div>
@@ -327,7 +327,11 @@
 
       }
     },
-    methods: {},
+    methods: {
+      backTohome(){
+        this.$parent.fatherMethod();
+      },
+    },
     mounted() {
 
     },

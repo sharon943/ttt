@@ -3,7 +3,7 @@
     <div class="mycontainer" style="background: none">
       <div class="mycontainer" style="background: none">
         <div class="productserchnav">
-          <router-link class="lightgrey toUser" :to="{path:'/userhome',query: {name:'default'}}">用户中心 &gt;</router-link>
+          <span class="lightgrey"  @click="backTohome">用户中心 &gt;</span>
           <span>浏览足迹</span>
         </div>
       </div>
@@ -76,7 +76,11 @@
     data() {
       return {}
     },
-    methods: {},
+    methods: {
+      backTohome(){
+        this.$parent.fatherMethod();
+      },
+    },
     mounted() {
 
     },

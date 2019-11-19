@@ -270,3 +270,14 @@ cursor: pointer;
 .toUser{
   cursor: pointer;
 }
+.productserchnav .lightgrey{
+  cursor: pointer;
+}
+.productserchnav {
+  height: 40px;
+  line-height: 40px;
+  padding-left: 10px;
+}
+.el-checkbox-group{
+  font-size: 12px;
+}

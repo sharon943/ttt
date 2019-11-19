@@ -2,44 +2,52 @@
   <div>
     <!--<headTop></headTop>-->
     <main>
-      <p>用户中心 > <span>账户安全</span></p>
+      <div class="mycontainer" style="background: none">
+        <div class="productserchnav">
+          <span class="lightgrey"  @click="backTohome">用户中心 &gt;</span>
+          <span>厂家关注</span>
+        </div>
+      </div>
+      <!--<p>用户中心 > <span>账户安全</span></p>-->
       <div class="main">
         <ul class="topUL">
           <li class="active">厂家关注</li>
           <li>批量取消关注</li>
         </ul>
-        <ul class="boxes" v-for="row in Stores">
-          <li>
-            <div class="boxLeft">
-              <section class="l_top">
-                <p>萌萌童装 <span>金牌厂家</span></p>
-                <p>武汉江岸区某某大街上203 <img src="../../assets/img/ismargin.png" alt=""></p>
-                <img src="../../assets/img/29.png" alt="">
-              </section>
-              <section class="l_middle">
-                <div>
-                  <p>目前有货： <span>4566</span></p>
-                  <p>联系方式： <span>123456789011</span></p>
-                </div>
-                <div>
-                  <p>供应登记： <span>lv20</span></p>
-                  <p>最新数据： <span>2018-9-12</span></p>
-                </div>
-              </section>
-              <section class="l_bottom">
-                 <span>进入店铺</span>
-                 <span>关注商家</span>
-              </section>
-            </div>
-            <ul class="products">
-              <li v-for="item in productsARR">
-                <img src="../../assets/img/13.png" alt="">
-                <p>6斤服装大甩卖生意好啊</p>
-                <p><span>$30.00</span> 91387人看过</p>
-              </li>
-            </ul>
-          </li>
-        </ul>
+        <el-checkbox-group v-model="checkList">
+          <ul class="boxes" v-for="row in Stores">
+            <li>
+              <div class="boxLeft">
+                <section class="l_top">
+                  <p><el-checkbox :label="row.name"></el-checkbox> <span>金牌厂家</span></p>
+                  <p>武汉江岸区某某大街上203 <img src="../../assets/img/ismargin.png" alt=""></p>
+                  <img src="../../assets/img/29.png" alt="">
+                </section>
+                <section class="l_middle">
+                  <div>
+                    <p>目前有货： <span>4566</span></p>
+                    <p>联系方式： <span>123456789011</span></p>
+                  </div>
+                  <div>
+                    <p>供应登记： <span>lv20</span></p>
+                    <p>最新数据： <span>2018-9-12</span></p>
+                  </div>
+                </section>
+                <section class="l_bottom">
+                   <span>进入店铺</span>
+                   <span>关注商家</span>
+                </section>
+              </div>
+              <ul class="products">
+                <li v-for="item in productsARR">
+                  <img src="../../assets/img/13.png" alt="">
+                  <p>6斤服装大甩卖生意好啊</p>
+                  <p><span>$30.00</span> 91387人看过</p>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </el-checkbox-group>
       </div>
     </main>
 
@@ -51,9 +59,15 @@
     data(){
 
       return {
+        checkList:[],
         productsARR:[{id:1},{id:2},{id:3},{id:4}],
-        Stores:[{id:1},{id:2},{id:3},{id:4}],
+        Stores:[{id:1,name:'萌萌童装1'},{id:2,name:'萌萌童装2'},{id:3,name:'萌萌童装3'},{id:4,name:'萌萌童装4'}],
       }
+    },
+    methods:{
+      backTohome(){
+        this.$parent.fatherMethod();
+      },
     },
     components:{
       // headTop,

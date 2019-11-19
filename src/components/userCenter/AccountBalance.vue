@@ -2,7 +2,12 @@
   <div>
     <!--<headTop></headTop>-->
     <main>
-      <p>用户中心 > <span>账户余额</span></p>
+      <div class="mycontainer" style="background: none">
+        <div class="productserchnav">
+          <span class="lightgrey" @click="backTohome">用户中心 &gt;</span>
+          <span>会员余额</span>
+        </div>
+      </div>
       <div class="main">
         <ul class="topUL">
           <li class="active">账户余额</li>
@@ -86,6 +91,9 @@
     methods: {
       onSubmit() {
         console.log('submit!');
+      },
+      backTohome(){
+        this.$parent.fatherMethod();
       }
     }
   }

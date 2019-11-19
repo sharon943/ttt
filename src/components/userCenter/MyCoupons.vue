@@ -2,7 +2,12 @@
   <div>
     <!--<headTop></headTop>-->
     <main>
-      <p>用户中心 > <span>优惠券</span></p>
+      <div class="mycontainer" style="background: none">
+        <div class="productserchnav">
+          <span class="lightgrey" @click="backTohome">用户中心 &gt;</span>
+          <span>优惠券</span>
+        </div>
+      </div>
       <div class="main">
         <ul class="topUL">
           <li class="active">优惠券</li>
@@ -53,6 +58,9 @@
       // headTop,
     },
     methods: {
+      backTohome(){
+        this.$parent.fatherMethod();
+      },
       onSubmit() {
         console.log('submit!');
       }

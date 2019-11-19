@@ -2,7 +2,12 @@
   <div>
     <!--<headTop></headTop>-->
     <main>
-      <p>用户中心 > <span>账户安全</span></p>
+      <div class="mycontainer" style="background: none">
+        <div class="productserchnav">
+          <span class="lightgrey" @click="backTohome">用户中心 &gt;</span>
+          <span>账户安全</span>
+        </div>
+      </div>
       <div class="main">
         <ul>
           <li v-for="(item,index) in categories" :class="{active:index==activeindex}" @click="activeindex=index">{{item}}</li>
@@ -160,6 +165,11 @@
           ]
         }
       }
+    },
+    methods:{
+      backTohome(){
+        this.$parent.fatherMethod();
+      },
     },
     components:{
       // headTop,

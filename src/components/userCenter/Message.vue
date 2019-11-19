@@ -2,7 +2,12 @@
   <div style="height: 100%">
     <!--<headTop></headTop>-->
     <main>
-      <p>用户中心 > <span>消息通知</span></p>
+      <div class="mycontainer" style="background: none">
+        <div class="productserchnav">
+          <span class="lightgrey" @click="backTohome">用户中心 &gt;</span>
+          <span>消息通知</span>
+        </div>
+      </div>
       <div class="main">
         <ul class="topUL">
           <li class="active">系统信息</li>
@@ -41,6 +46,9 @@
       // headTop,
     },
     methods: {
+      backTohome(){
+        this.$parent.fatherMethod();
+      },
       onSubmit() {
         console.log('submit!');
       }

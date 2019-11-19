@@ -3,7 +3,7 @@
     <div class="mycontainer" style="background: none">
       <div class="mycontainer" style="background: none">
         <div class="productserchnav">
-          <span class="lightgrey">用户中心 &gt;</span>
+          <span class="lightgrey" @click="backTohome">用户中心 &gt;</span>
           <span>店铺订单</span>
         </div>
       </div>
@@ -133,7 +133,11 @@
         ]
       }
     },
-    methods: {},
+    methods: {
+      backTohome(){
+        this.$parent.fatherMethod();
+      },
+    },
     mounted() {
 
     },
@@ -306,13 +310,19 @@
     width: 80px;
     box-shadow: 2px 4px 10px #fdd9d8;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> wt
   .productserchnav {
     height: 40px;
     line-height: 40px;
     padding-left: 10px;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> wt
   .mynavs {
     display: flex;
     border-bottom: 1px solid #f43e31;

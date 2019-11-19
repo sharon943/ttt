@@ -1,0 +1,283 @@
+/*
+* @Author: yan
+* @Date:   2017-11-07 00:02:25
+* @Last Modified by:   yan
+* @Last Modified time: 2017-11-07 00:08:11
+*/
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: PingFangSC-Regular,Arial,'Microsoft YaHei', sans-serif;
+}
+body {
+  background: #f6f5f5;
+  width: 100%;
+  font-size: 12px;
+}
+img{
+  border: 0 none;
+  vertical-align: middle;
+}
+a{
+  text-decoration: none;
+}
+a:hover, a:visited, a:link, a:active{
+  color: unset;
+}
+ui,li,ol{
+  list-style: none;
+}
+html, body, h1, h2, h3, h4, h5, h6, p, dl, dt, dd, ul, ol, div, li, table, thead, tbody, pre, code, form, fieldset, legend, input, textarea, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, select {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+select, input, a:focus {
+  outline: 0;
+}
+
+input{
+  border: 0;
+  outline: none;
+  box-sizing: border-box;
+  box-shadow: none;
+  background: none;
+}
+textarea {
+  resize: none;
+  border: 0;
+  outline: none;
+  box-sizing: border-box;
+  box-shadow: none;
+  background: none;
+}
+.mycontainer {
+  width: 1200px;
+  margin: 0 auto;
+  background: #fff;
+}
+
+.blods {
+  font-weight: bolder;
+}
+
+/* 字体大小 */
+.normalfont {
+  font-size: 12px;
+}
+
+.firstfont {
+  font-size: 14px;
+}
+
+.secondfont {
+  font-size: 16px;
+}
+
+.threefont {
+  font-size: 18px;
+}
+
+.supnumfont {
+  font-size: 24px;
+}
+
+.bigfont {
+  font-size: 32px;
+}
+
+.orange {
+  color: #fd6619; /* 橙色字体 */
+}
+.lightorange{
+  color: #FD894D; /* 橙色字体 */
+}
+.red {
+  color: #F43E31; /* 红色字体 */
+}
+
+.darkgrey {
+  color: #666666; /* 深灰色字体 */
+}
+
+.Sorrel {
+  color: #E74639; /* 红棕色字体 */
+}
+
+.lightgrey {
+  color: #999; /* 浅灰色字体 */
+}
+
+.lightpinks {
+  background: #fff0f2; /* 浅粉色背景 */
+}
+
+.reds {
+  background: #f43e31; /* 红色背景 */
+  color: #fff;
+}
+
+.khakis {
+  background: #dd7f1b; /* 土黄色背景 */
+  color: #fff;
+}
+
+.oranges {
+  background: #fc6b1f; /* 橙色背景 */
+  color: #fff;
+}
+
+.rosereds {
+  background: #f42341; /* 玫瑰红背景 */
+  color: #fff;
+}
+
+.lightoranges {
+  background: #fff0e6; /* 浅橙色背景 */
+  color: #fc6b1f;
+}
+
+.lightgreys {
+  background: #f7f7f7; /* 浅灰色背景 */
+  color: #949494;
+}
+
+.midgreys {
+  background: #949494; /* 中灰色背景 */
+  color: #fff;
+}
+
+.Sorrels {
+  background: #e33a33; /* 红棕色背景 */
+  color: #fff;
+}
+
+/* 按钮 */
+.smallbtn {
+  line-height: 25px;
+  text-align: center;
+}
+
+.normalbtn {
+  line-height: 38px;
+  text-align: center;
+}
+
+/* 边框 */
+.orangrebor {
+  border: 1px solid #fc6b1f;
+}
+
+.lightorangrebor {
+  border: 1px solid #fc9159;
+}
+
+.lightgreybor {
+  border: 1px solid #e8e8e8;
+}
+
+.redbor {
+  border: 1px solid #f43e31;
+}
+
+.commodity{
+  padding: 26px 25px 60px 25px;
+}
+.icon,.icons{
+  font-family: 'iconfont';
+}
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url(../img/main/icons.png);
+}
+.merchant-phone i {
+  margin-right: 5px;
+  margin-top: -2px;
+}
+.icon-tel {
+  background-position: -56px -158px;
+  width: 11px;
+  height: 17px;
+}
+.blue{
+  color: #19a4f4;
+}
+.cursor{
+cursor: pointer;
+}
+
+
+
+.mycar .el-input__inner{
+  background: none;
+  border: none;
+  text-align: center;
+  color: #000;
+  height: 42px;
+  line-height: 42px;
+  width: 100%;
+  font-weight: bold;
+}
+.undertake .el-input__inner{
+  background: none;
+  border: none;
+  text-align: center;
+  color: #000;
+  height: 34px;
+  line-height: 34px;
+  width: 100%;
+  font-weight: bold;
+  font-size: 12px;
+  padding-left: 25px;
+}
+.undertake  .el-date-editor.el-input, .undertake  .el-date-editor.el-input__inner{
+  width: 100%;
+}
+.undertake .el-input__prefix{
+  width: 0;
+  opacity: 0;
+}
+.mycar  .el-select .el-input .el-select__caret{
+  color: #000;
+}
+
+.mycar  input::-webkit-input-placeholder {
+  color: #000;
+}
+.mycar input::-moz-input-placeholder {
+  color:  #000;
+}
+.mycar input::-ms-input-placeholder {
+  color: #000;
+}
+
+
+.longinputs  input::-webkit-input-placeholder {
+  color: #999;
+}
+.longinputs input::-moz-input-placeholder {
+  color:  #999;
+}
+.longinputs input::-ms-input-placeholder {
+  color: #999;
+}
+.longinputs .el-input__inner{
+  text-align: left;
+  font-weight: normal;
+}
+.toUser{
+  cursor: pointer;
+}
+.productserchnav .lightgrey{
+  cursor: pointer;
+}
+.productserchnav {
+  height: 40px;
+  line-height: 40px;
+  padding-left: 10px;
+}
+.checkbox-group{
+  font-size: 12px;
+}

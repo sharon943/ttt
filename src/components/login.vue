@@ -26,12 +26,12 @@
       <img src="../assets/img/login/login-bg.png" alt="">
       <section class="box">
         <div class="title">
-          <p  @click="defaultshow">账户密码登录</p>
-          <p  @click="mobileshow">手机动态登录</p>
+          <p  @click="defaultshow" :class="{active:showdefaultbox}">账户密码登录</p>
+          <p  @click="mobileshow" :class="{active:showmobilebox}">手机动态登录</p>
         </div>
         <div id="tabs_container" class="tabs-container" style="height: 312px;">
           <div id="default" class="tabs-content" v-show="showdefaultbox" style="position: absolute;top: 0px;">
-            <form id="login_form" class="nc-login-form" method="post" action="">
+            <form id="login_form" class="nc-login-form">
               <dl>
                 <dt>账  号：</dt>
                 <dd>
@@ -51,55 +51,49 @@
                     <input type="text" name="captcha" autocomplete="off" class="text w100" placeholder="输入验证码" id="captcha" size="10" />
                   </dd>
                 </dl>
-                <span  class="verificationCode">
-                                <!--<img src="" name="codeimage" id="sms_codeimage">-->
-                                <canvas id="canvas1" width="120" height="54"></canvas>
-                  <!--<img src="" alt="" id="code_img">-->
-                  <!--<a class="makecode" href="javascript:void(0);" onclick="javascript:document.getElementById('sms_codeimage').src='' + Math.random();">看不清，换一张</a>-->
+                <span  class="verificationCode" id="verificationCode1">
+                                <canvas id="canvas1"></canvas>
                             </span>
               </div>
-              <div class="submit-div">
-                <input type="submit" class="submit" value="登  录">
-                <input type="hidden" value="" name="ref_url">
+              <div class="submit-div"  @click="login">
+                <p class="submit" id="login_button">登  录</p>
               </div>
               <div class="handle-div"><a class="forget" href="">忘记密码</a></div>
             </form>
           </div>
           <div id="mobile" class="tabs-content " v-show="showmobilebox" style="position: absolute; top: 0px;">
-            <form id="post_form" method="post" class="nc-login-form" action="">
+            <form id="post_form" class="nc-login-form">
               <input type='hidden' name='formhash' value='nt0ToE9_bvt4ApjL_Lot8Oq0t_cfRmD' />            <input type="hidden" name="form_submit" value="ok" />
               <input name="nchash" type="hidden" value="ad6a68a5" />
               <dl>
                 <dt>手机号：</dt>
                 <dd>
-                  <input name="phone" type="text" class="text" id="phone" placeholder="可填写已注册的手机号接收短信" autocomplete="off" value="" >
+                  <input  name="phone" type="text" class="text" id="phone" placeholder="可填写已注册的手机号接收短信" autocomplete="off" value="" >
                 </dd>
               </dl>
               <div class="code-div">
                 <dl>
                   <dt>验证码：</dt>
                   <dd>
-                    <input type="text" name="captcha" class="text w100" placeholder="输入验证码" id="image_captcha" size="10" />
+                    <input type="text" name="image_captcha" class="text w100" placeholder="输入验证码" id="image_captcha" size="10" />
                   </dd>
                 </dl>
 
-                <span class="verificationCode">
-                                <!--<img src="" name="codeimage" id="sms_codeimage">-->
-                                <canvas id="canvas" width="120" height="54"></canvas>
-                  <!--<img src="" alt="" id="code_img">-->
-                  <!--<a class="makecode" href="javascript:void(0);" onclick="javascript:document.getElementById('sms_codeimage').src='' + Math.random();">看不清，换一张</a>-->
-                            </span>
-              </div>
+                <span class="verificationCode" id="verificationCode">
+                     <canvas id="canvas"></canvas>
 
-              <div class="tiptext" id="sms_text">正确输入上方验证码后，点击<span> <i class="icon-mobile-phone"></i>发送手机动态码</span>，查收短信将系统发送的“6位手机动态码”输入到下方验证后登录。</div>
+                </span>
+              </div>
+              <div class="tiptext"  v-show="isSendcode">正确输入上方验证码后，点击<span class="sendCode" @click="send_code">发送手机动态码</span>，查收短信将系统发送的“6位手机动态码”输入到下方验证后登录。</div>
+              <div class="tiptext"  v-show="!isSendcode">验证码已发送</div>
               <dl>
                 <dt>动态码：</dt>
                 <dd>
                   <input type="text" name="sms_captcha" autocomplete="off" class="text" placeholder="输入6位手机动态码" id="sms_captcha" size="15" />
                 </dd>
               </dl>
-              <div class="submit-div">
-                <input type="submit" id="submit" class="submit" value="登   录">
+              <div class="submit-div" @click="findRegCode">
+                <p class="submit" id="submit">登  录</p>
               </div>
             </form>
           </div>
@@ -116,29 +110,38 @@
   </header>
 </template>
 <script>
-  import api from '../api/api'
+  import api from '../api/api';
+  import axios from 'axios';
+
   export default {
     data() {
       return {
-        showmobilebox:false,showdefaultbox:true,
+        showmobilebox:false,showdefaultbox:true,isSendcode:true,code:'',
       }
     },
     created(){
     },
     mounted(){
       var name='canvas1'
-      this.draw(name)
+      var name1='verificationCode1'
+      this.draw(name,name1)
     },
+
     methods: {
+      send_code(){
+        this.isSendcode=false
+      },
       mobileshow(){
         var name='canvas'
-        this.draw(name)
+        var name1='verificationCode'
+        this.resetCode(name,name1)
         this.showdefaultbox=false
         this.showmobilebox=true
       },
       defaultshow(){
         var name='canvas1'
-        this.draw(name)
+        var name1='verificationCode1'
+        this.resetCode(name,name1)
         this.showdefaultbox=true
         this.showmobilebox=false
       },
@@ -148,6 +151,148 @@
         var b = Math.floor(Math.random() * 256);
         return "rgb(" + r + "," + g + "," + b + ")";
       },
+
+        //获取验证码
+        findRegCode() {
+            var mobile=document.getElementById('phone').value;
+            if(''==mobile || null ==mobile || undefined==mobile || 'undefined'==mobile){
+                this.$message.error("请输入手机号");
+                return;
+            }
+            var text =document.getElementById('image_captcha').value;//获取输入框的值
+            if (text !== this.code) {
+                this.$message.error("验证码错误");
+                return;
+            }
+            let formData = new FormData();
+            formData.append("mobile", mobile);
+            var instance = axios.create({
+                headers:{
+                    'Content-Type':'application/x-www-form-urlencoded'
+                },
+                timeout: 5000,
+            });
+            instance.post('/tongtaotao/v1/code/send/login/mobile', formData)
+                .then((res) => {
+                    if (res.data.code ==200){
+                        this.$message({
+                            message: '发送成功',
+                            type: 'success'
+                        });
+                    } else {
+                        this.$message.error(res.data.message);
+                    }
+                })
+                .catch((error)=> {
+                    this.$message.error(error);
+                })
+            return;
+        },
+        //登录
+        login() {
+              var mobile=document.getElementById('user_name').value;
+              var pass=document.getElementById('password').value;
+              var text =document.getElementById('captcha').value;//获取输入框的值
+              if(''==mobile || null ==mobile || undefined==mobile || 'undefined'==mobile){
+                      this.$message.error("请输入账号");
+                      return;
+              }
+              if(''==pass || null ==pass || undefined==pass || 'undefined'==pass){
+                  this.$message.error("请输入密码");
+                  return;
+              }
+              if(''==text || null ==text || undefined==text || 'undefined'==text){
+                  this.$message.error("请输入验证码");
+                  return;
+              }
+              if (text !== this.code) {
+                  this.$message.error("验证码错误");
+                  return;
+              }
+              let formData = new FormData();
+              formData.append("mobile", mobile);
+              formData.append("password",pass);
+              console.log(formData);
+              var instance = axios.create({
+                  headers:{
+                      'Content-Type':'application/x-www-form-urlencoded'
+                  },
+                  timeout: 5000,
+              });
+              instance.post('/tongtaotao/v1/user/login', formData)
+                  .then((res) => {
+                      if (res.data.code ==200){
+                          console.log(res.data)
+
+                          this.$message({
+                              message: '登录成功',
+                              type: 'success'
+                          });
+                          this.$router.push({name:'Homepage'})
+                      } else {
+                          this.$message.error(res.data.message);
+                      }
+                  })
+                  .catch((error)=> {
+                      this.$message.error(error);
+                  })
+              return;
+
+        },
+        //检查验证码
+        checkCode() {
+            var mobile=document.getElementById('phone').value;
+            if(''==mobile || null ==mobile || undefined==mobile || 'undefined'==mobile){
+                this.$message.error("请输入手机号");
+                return;
+            }
+            var text =document.getElementById('image_captcha').value;//获取输入框的值
+            if (text !== this.code) {
+                this.$message.error("验证码错误");
+                return;
+            }
+            var sms_captcha =document.getElementById('sms_captcha').value;//获取输入框的值
+            if(''==sms_captcha || null ==sms_captcha || undefined==sms_captcha || 'undefined'==sms_captcha){
+                this.$message.error("请输入动态码");
+                return;
+            }
+
+            let formData = new FormData();
+            formData.append("mobile", mobile);
+            formData.append("code", sms_captcha);
+            var instance = axios.create({
+                headers:{
+                    'Content-Type':'application/x-www-form-urlencoded'
+                },
+                timeout: 5000,
+            });
+            instance.post('/tongtaotao/v1/code/check/login/mobile/code', formData)
+                .then((res) => {
+                    if (res.data.code ==200){
+                        this.$message({
+                            message: '登录成功',
+                            type: 'success'
+                        });
+                    } else {
+                        this.$message.error(res.data.message);
+                    }
+                })
+                .catch((error)=> {
+                    this.$message.error(error);
+                })
+            return;
+
+        },
+
+      resetCode (name,name1) {
+        var canvas=document.getElementById(name)
+        var verificationCode=document.getElementById(name1)
+        canvas.remove();
+        var dom=document.createElement('canvas')
+        dom.id=name
+        verificationCode.appendChild(dom)
+        this.draw(name);
+     },
   draw(name){
         var canvas=document.getElementById(name)
     var context = canvas.getContext("2d");//舞台，getContext() 方法可返回一个对象，该对象提供了用于在画布上绘图的方法和属性。
@@ -174,6 +319,7 @@
       arr[i] = txt //接收产生的随机数
     }
     num = arr[0] + arr[1] + arr[2] + arr[3] //将产生的验证码放入num
+    this.code=num;
     // 绘制干扰线条
     for (var i = 0; i < 8; i++) {
       context.beginPath();//起始一条路径，或重置当前路径
@@ -193,15 +339,6 @@
       context.stroke();
     }
 
-    //点击按钮验证
-    // button.click = function () {
-    //   var text = input.value //获取输入框的值
-    //   if (text === num) {
-    //     alert('验证通过')
-    //   } else {
-    //     alert('验证失败')
-    //   }
-    // }
 
   },
 
@@ -228,6 +365,9 @@
         cursor: pointer;
       }
     }
+  }
+  .sendCode{
+    width: auto;height: 20px;line-height: 20px;background: #F32613;color:#fff;cursor: pointer;padding:2px;border-radius: 5px;
   }
   .inside ul{
     position: absolute;left:0;right:0;top:0;bottom: 0;margin:auto;
@@ -266,6 +406,9 @@
   }
   .loginbox .title{
     display: flex;justify-content: space-between;padding: 30px;
+    p.active{
+      color:#F32613;
+    }
   }
   .loginbox .title p{
     font-size: 18px;color: #333;width: calc(50% - 30px);text-align: center;cursor: pointer;
@@ -400,7 +543,8 @@
     margin-top: 15px;
   }
   .nc-login-form .submit-div .submit {
-    width: 348px;
+    width: 348px;text-align: center;
+    line-height: 42px;
   }
 
   .nc-login-form .submit-div .submit {

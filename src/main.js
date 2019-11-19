@@ -7,6 +7,10 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 // import VueQuillEditor from 'vue-quill-editor'
 
+import './assets/css/iconfont.css'
+import './assets/css/index.css'
+
+
 // import Distpicker from 'v-distpicker'
 // import QRCode from 'qrcodejs2'
 // Vue.component('v-distpicker', Distpicker)

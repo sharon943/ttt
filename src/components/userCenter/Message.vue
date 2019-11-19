@@ -1,8 +1,13 @@
 <template>
   <div style="height: 100%">
-    <headTop></headTop>
+    <!--<headTop></headTop>-->
     <main>
-      <p>用户中心 > <span>消息通知</span></p>
+      <div class="mycontainer" style="background: none">
+        <div class="productserchnav">
+          <span class="lightgrey" @click="backTohome">用户中心 &gt;</span>
+          <span>消息通知</span>
+        </div>
+      </div>
       <div class="main">
         <ul class="topUL">
           <li class="active">系统信息</li>
@@ -10,7 +15,7 @@
         <ul class="messageBox">
            <li v-for="row in messagesData">
              <div class="t_left">
-               <img src="../assets/img/erweima.png" alt="">
+               <img src="../../assets/img/erweima.png" alt="">
                <section>
                  <p>{{row.title}}</p>
                  <span>{{row.remark}}</span>
@@ -26,21 +31,24 @@
   </div>
 </template>
 <script>
-  import headTop from '../config/headTop'
+  // import headTop from '../config/headTop'
   export default {
     data(){
 
       return {
         messagesData:[
-          {img:'../assets/img/erweima.png',title:'这是一条童淘淘官方标题',remark:'这是一条童淘淘官方标题这是一条童淘淘官方标题'},
-          {img:'../assets/img/erweima.png',title:'这是一条童淘淘官方标题',remark:'这是一条童淘淘官方标题这是一条童淘淘官方标题'}
+          {img:'../../assets/img/erweima.png',title:'这是一条童淘淘官方标题',remark:'这是一条童淘淘官方标题这是一条童淘淘官方标题'},
+          {img:'../../assets/img/erweima.png',title:'这是一条童淘淘官方标题',remark:'这是一条童淘淘官方标题这是一条童淘淘官方标题'}
           ]
       }
     },
     components:{
-      headTop,
+      // headTop,
     },
     methods: {
+      backTohome(){
+        this.$parent.fatherMethod();
+      },
       onSubmit() {
         console.log('submit!');
       }

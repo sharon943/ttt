@@ -1,14 +1,19 @@
 <template>
   <div style="height:100%">
-    <headTop></headTop>
+    <!--<headTop></headTop>-->
     <main>
-      <p>用户中心 > <span>我的积分</span></p>
+      <div class="mycontainer" style="background: none">
+        <div class="productserchnav">
+          <span class="lightgrey" @click="backTohome">用户中心 &gt;</span>
+          <span>我的积分</span>
+        </div>
+      </div>
       <div class="main">
         <ul>
           <li v-for="(item,index) in categories" :class="{active:index==activeindex}" @click="activeindex=index">{{item}}</li>
         </ul>
         <section class="pointsBox erweima" v-if="activeindex==0">
-          <img src="../assets/img/erweima.png" alt="">
+          <img src="../../assets/img/erweima.png" alt="">
         </section>
         <section class="pointsBox" v-else-if="activeindex==1">
           <table cellspacing="0" cellpadding="0">
@@ -18,7 +23,7 @@
               <th>日期</th>
             </tr>
             <tr v-for="(item,index) in tableData">
-              <td><img src="../assets/img/erweima.png" alt=""><span>{{ item.Nname }}</span></td>
+              <td><img src="../../assets/img/erweima.png" alt=""><span>{{ item.Nname }}</span></td>
               <td>{{ item.pontsChange }}</td>
               <td>{{ item.date }}</td>
             </tr>
@@ -36,7 +41,7 @@
   </div>
 </template>
 <script>
-  import headTop from '../config/headTop'
+  // import headTop from '../config/headTop'
   export default {
     data(){
       return {
@@ -48,8 +53,13 @@
         ],
       }
     },
+    methods:{
+      backTohome(){
+        this.$parent.fatherMethod();
+      },
+    },
     components:{
-      headTop,
+      // headTop,
     },
   }
 </script>

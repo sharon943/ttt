@@ -110,6 +110,21 @@ header > img{
 .formBox span.el-checkbox__inner:hover,.formBox .is-focus span.el-checkbox__inner{
   border-color: #f3463a;
 }
+.searchBox .el-select{
+  width: 100px;font-size: 12px;
+}
+.searchBox .el-input__inner{
+  height: 30px;
+}
+.searchBox .el-input__suffix{
+  top:5px;
+}
+.searchBox .is-focus .el-input__suffix{
+  top:-5px;
+}
+.searchBox .el-date-editor .el-range-separator{
+  line-height: 24px;
+}
 /*input::before,input::after{*/
   /*background: #fff!important;*/
 /*}*/

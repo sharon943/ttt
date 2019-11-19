@@ -59,22 +59,9 @@
               </el-form-item>
               <el-form-item label="短信验证码" prop="checkPass">
                 <el-input type="number" v-model="form.phonecode" autocomplete="off" style="width: 150px"></el-input>
-                <span class="getCode">获取验证码</span>
+                <span class="getCode" @click="findRegCode" >获取验证码</span>
               </el-form-item>
-              <el-form-item label="您的店铺">
-                <el-checkbox-group v-model="form.type">
-                  <el-checkbox label="淘宝网店" name="type"></el-checkbox>
-                  <el-checkbox label="天猫商城" name="type"></el-checkbox>
-                  <el-checkbox label="阿里巴巴" name="type"></el-checkbox>
-                  <el-checkbox label="京东商城" name="type"></el-checkbox>
-                  <el-checkbox label="微店店主" name="type"></el-checkbox>
-                  <el-checkbox label="手机微商" name="type"></el-checkbox>
-                  <el-checkbox label="蘑菇街" name="type"></el-checkbox>
-                  <el-checkbox label="实体店主" name="type"></el-checkbox>
-                  <el-checkbox label="随便逛逛" name="type"></el-checkbox>
-                  <el-checkbox label="其他" name="type"></el-checkbox><el-input type="text" v-model="form.otherplatform" placeholder="请输入第三方平台名称" autocomplete="off" style="width: 200px" class="thirdParty"></el-input>
-                </el-checkbox-group>
-              </el-form-item>
+
 
               <el-form-item label="qq号码">
                 <el-input v-model="form.qq" placeholder="请输入您的qq号码"></el-input>
@@ -83,7 +70,7 @@
                 <el-input v-model="form.email" placeholder="请输入您的邮箱地址"></el-input>
               </el-form-item>
               <el-form-item>
-                <el-button type="primary" @click="onSubmit">立即创建</el-button>
+                <el-button type="primary" @click="checkCode">立即创建</el-button>
               </el-form-item>
             </el-form>
           </div>
@@ -103,6 +90,20 @@
               <el-form-item label="童淘淘店铺" prop="checkPass">
                 <p style="width: 50px;display: inline-block">http://</p><el-input v-model="supplyform.store" class="linkAddress" placeholder="请输入6-20位字母和数字，不可修改" autocomplete="off"></el-input><p style="width: 100px;display: inline-block;margin-left: 10px">.tongtaotao.com</p>
               </el-form-item>
+              <el-form-item label="您的店铺">
+                <el-checkbox-group v-model="supplyform.type">
+                  <el-checkbox label="淘宝网店" name="type"></el-checkbox>
+                  <el-checkbox label="天猫商城" name="type"></el-checkbox>
+                  <el-checkbox label="阿里巴巴" name="type"></el-checkbox>
+                  <el-checkbox label="京东商城" name="type"></el-checkbox>
+                  <el-checkbox label="微店店主" name="type"></el-checkbox>
+                  <el-checkbox label="手机微商" name="type"></el-checkbox>
+                  <el-checkbox label="蘑菇街" name="type"></el-checkbox>
+                  <el-checkbox label="实体店主" name="type"></el-checkbox>
+                  <el-checkbox label="随便逛逛" name="type"></el-checkbox>
+                  <el-checkbox label="其他" name="type"></el-checkbox><el-input type="text" v-model="supplyform.otherplatform" placeholder="请输入第三方平台名称" autocomplete="off" style="width: 200px" class="thirdParty"></el-input>
+                </el-checkbox-group>
+              </el-form-item>
               <span class="title">联系信息</span>
               <el-form-item label="商家品牌" prop="checkPass">
                 <el-input v-model="supplyform.brand" placeholder="请输入您的品牌名称（汉字，字母或数字）" autocomplete="off"></el-input>
@@ -119,6 +120,10 @@
               <el-form-item label="手机号码" prop="checkPass">
                 <el-input type="number" v-model="supplyform.phone" placeholder="请输入您的手机号码" autocomplete="off"></el-input>
               </el-form-item>
+              <el-form-item label="短信验证码" prop="checkPass">
+                <el-input type="number" v-model="supplyform.phonecode" autocomplete="off" style="width: 150px"></el-input>
+                <span class="getCode" @click="findRegCode" >获取验证码</span>
+              </el-form-item>
               <el-form-item label="qq号码">
                 <el-input v-model="supplyform.qq" placeholder="请输入您的QQ号"></el-input>
               </el-form-item>
@@ -127,20 +132,18 @@
               </el-form-item>
               <span class="title">公司信息</span>
               <el-form-item label="经营性质">
-                <el-checkbox-group v-model="supplyform.type">
-                  <el-checkbox label="生产厂家" name="type"></el-checkbox>
-                  <el-checkbox label="门市销售" name="type"></el-checkbox>
-                  <el-checkbox label="经销代理" name="type"></el-checkbox>
-                  <el-checkbox label="个人" name="type"></el-checkbox>
-                </el-checkbox-group>
+                <el-radio v-model="supplyform.radio" label="生产厂家">生产厂家</el-radio>
+                <el-radio v-model="supplyform.radio" label="门市销售">门市销售</el-radio>
+                <el-radio v-model="supplyform.radio" label="经销代理">经销代理</el-radio>
+                <el-radio v-model="supplyform.radio" label="个人">个人</el-radio>
               </el-form-item>
               <el-form-item label="生产规模">
-                <el-select v-model="supplyform.peopleNum" placeholder="请选择活动区域">
-                  <el-option v-for="item in optionNum" :label="item.label" :value="item.id" :key="item.id"></el-option>
+                <el-select v-model="supplyform.peopleNum" placeholder="请选择生产规模" >
+                  <el-option v-for="item in optionNum" :label="item.label" :value="item.label" :key="item.label"></el-option>
                 </el-select>
               </el-form-item>
               <el-form-item label="分销招募">
-                <el-checkbox-group v-model="supplyform.type">
+                <el-checkbox-group v-model="supplyform.type2">
                   <el-checkbox label="1" name="type" style="display: block">阅读并同意 <span class="agreement">《开通分销招募服务》</span>，为网销代理供货</el-checkbox>
                   <el-checkbox label="2" name="type">门市销售</el-checkbox>
                   <el-checkbox label="3" name="type">经销代理</el-checkbox>
@@ -148,7 +151,8 @@
                 </el-checkbox-group>
               </el-form-item>
               <el-form-item>
-                <el-button type="primary" @click="onSubmit">提交申请</el-button>
+                <el-button type="primary" @click="checkCode
+">提交申请</el-button>
                 <p>注册成功，即可成为供应商发布商品</p>
               </el-form-item>
             </el-form>
@@ -163,7 +167,8 @@
   </div>
 </template>
 <script>
-  import api from '../api/api'
+  import api from '../api/api';
+  import axios from 'axios';
   export default {
     data() {
       return {
@@ -203,10 +208,10 @@
         },
         // 供应商表单部分
         supplyform:{
-          name: '',checkPass:'',pass:'',
+          name: '',checkPass:'',pass:'',radio:'',
           phone: '',phonecode:'',otherplatform:'',
           qq:'',email:'',peopleNum:'',
-          type: [],
+          type: [],type1: [],type2: [],
 
         }
       }
@@ -217,11 +222,296 @@
 
     },
     methods: {
-      onSubmit() {
-        console.log('submit!');
-      }
 
+        //采购商注册
+        onSubmit() {
+            if (!this.form.name) {
+                this.$message.error("请输入姓名");
+                return;
+            }
+            if (!this.form.pass) {
+                this.$message.error("请输入密码");
+                return;
+            }
+            if (!this.form.checkPass) {
+                this.$message.error("请确认密码");
+                return;
+            }
+            if (!this.form.phonecode) {
+                this.$message.error("请输入验证码");
+                return;
+            }
+            if (!this.form.qq) {
+                this.$message.error("请输入QQ号");
+                return;
+            }
+            if (!this.form.email) {
+                this.$message.error("请输入邮箱");
+                return;
+            }
+            if (!this.form.phone) {
+                this.$message.error("请输入手机号");
+                return;
+            }
+            if(this.form.pass!=this.form.checkPass){
+                this.$message.error("两次密码不一致");
+                return;
+            }
 
+            let formData = new FormData();
+            formData.append("mobile", this.form.phone);
+            formData.append("password", this.form.pass);
+            formData.append("account", this.form.name);
+            formData.append("qqCode", this.form.qq);
+            formData.append("email", this.form.email);
+
+            var instance = axios.create({
+                headers:{
+                    'Content-Type':'application/x-www-form-urlencoded'
+                },
+                timeout: 5000,
+            });
+            instance.post('/tongtaotao/v1/user/insert', formData)
+                .then((res) => {
+                    if (res.data.code ==200){
+                        this.$message({message: '注册成功',type: 'success'});
+                        this.$router.push({name:'Login'})
+                    } else {
+                        this.$message.error(res.data.message);
+                    }
+                })
+                .catch((error)=> {
+                    this.$message.error(error);
+                })
+            return;
+        },
+        //检查验证码
+        checkCode() {
+            let formData = new FormData();
+
+            if(this.showpurchase){
+                if (!this.form.name) {
+                    this.$message.error("请输入姓名");
+                    return;
+                }
+                if (!this.form.pass) {
+                    this.$message.error("请输入密码");
+                    return;
+                }
+                if (!this.form.checkPass) {
+                    this.$message.error("请确认密码");
+                    return;
+                }
+                if (!this.form.phonecode) {
+                    this.$message.error("请输入验证码");
+                    return;
+                }
+                if (!this.form.qq) {
+                    this.$message.error("请输入QQ号");
+                    return;
+                }
+                if (!this.form.email) {
+                    this.$message.error("请输入邮箱");
+                    return;
+                }
+                if (!this.form.phone) {
+                    this.$message.error("请输入手机号");
+                    return;
+                }
+                if(this.form.pass!=this.form.checkPass){
+                    this.$message.error("两次密码不一致");
+                    return;
+                }
+                formData.append("mobile", this.form.phone);
+                formData.append("code", this.form.phonecode);
+            }else{
+                if (!this.supplyform.name) {
+                    this.$message.error("请输入姓名");
+                    return;
+                }
+                if (!this.supplyform.pass) {
+                    this.$message.error("请输入密码");
+                    return;
+                }
+                if (!this.supplyform.checkPass) {
+                    this.$message.error("请确认密码");
+                    return;
+                }
+                if(this.supplyform.pass!=this.supplyform.checkPass){
+                    this.$message.error("两次密码不一致");
+                    return;
+                }
+                if (!this.supplyform.store) {
+                    this.$message.error("请输入店铺地址");
+                    return;
+                }
+
+                //联系信息
+                if (!this.supplyform.brand) {
+                    this.$message.error("请输入品牌");
+                    return;
+                }
+                if (!this.supplyform.store) {
+                    this.$message.error("请输入商家品牌");
+                    return;
+                }
+                if (!this.supplyform.address) {
+                    this.$message.error("请输入取货地址");
+                    return;
+                }
+                if (!this.supplyform.Faddress) {
+                    this.$message.error("请输入厂址");
+                    return;
+                }
+                if (!this.supplyform.linePeople) {
+                    this.$message.error("请输入联系");
+                    return;
+                }
+                if (!this.supplyform.phone) {
+                    this.$message.error("请输入手机号码");
+                    return;
+                }
+                if (!this.supplyform.phonecode) {
+                    this.$message.error("请输入验证码");
+                    return;
+                }
+
+                if (!this.supplyform.qq) {
+                    this.$message.error("请输入QQ号");
+                    return;
+                }
+                if (!this.supplyform.email) {
+                    this.$message.error("请输入邮箱");
+                    return;
+                }
+                formData.append("mobile", this.supplyform.phone);
+                formData.append("code", this.supplyform.phonecode);
+
+            }
+
+            var instance = axios.create({
+                headers:{
+                    'Content-Type':'application/x-www-form-urlencoded'
+                },
+                timeout: 5000,
+            });
+            instance.post('/tongtaotao/v1/code/check/register/mobile/code', formData)
+                .then((res) => {
+                    if (res.data.code ==200){
+                        if(this.showpurchase){
+                            this.onSubmit();
+                        }else{
+                            this.regSupplier();
+                        }
+                    } else {
+                        this.$message.error(res.data.message);
+                    }
+                })
+                .catch((error)=> {
+                    this.$message.error(error);
+                })
+            return;
+
+        },
+        //获取验证码
+        findRegCode() {
+            let formData = new FormData();
+            if(this.showpurchase){
+                if (!this.form.phone) {
+                    this.$message.error("请输入手机号");
+                    return;
+                }
+                formData.append("mobile", this.form.phone);
+
+            }else{
+                if (!this.supplyform.phone) {
+                    this.$message.error("请输入手机号");
+                    return;
+                }
+                formData.append("mobile", this.supplyform.phone);
+            }
+            var instance = axios.create({
+                headers:{
+                    'Content-Type':'application/x-www-form-urlencoded'
+                },
+                timeout: 5000,
+            });
+            instance.post('/tongtaotao/v1/code/send/register/mobile', formData)
+                .then((res) => {
+                    if (res.data.code ==200){
+                        this.$message({
+                            message: '发送成功',
+                            type: 'success'
+                        });
+                    } else {
+                        this.$message.error(res.data.message);
+                    }
+                })
+                .catch((error)=> {
+                    this.$message.error(error);
+                })
+            return;
+        },
+        //供应商注册
+        regSupplier(){
+            //公司信息
+            if (! this.supplyform.peopleNum) {
+                this.$message.error("请选择生产规模");
+                return;
+            }
+            if (! this.supplyform.radio) {
+                this.$message.error("请选择经营性质");
+                return;
+            }
+            console.log(this.supplyform.peopleNum);
+            var myThirdStore="";
+            for(var x=0;x<=this.supplyform.type.length;x++){
+                if("undefined"!=this.supplyform.type[x] && undefined!=this.supplyform.type[x] ){
+                    if("其他" == this.supplyform.type[x]){
+                        myThirdStore+=this.supplyform.otherplatform+","
+                    }else{
+                        myThirdStore+=this.supplyform.type[x]+","
+                    }
+                }
+            };
+            if(""!=myThirdStore){
+                myThirdStore=myThirdStore.slice(0, myThirdStore.length-1);
+            }
+            let formData = new FormData();
+            formData.append("mobile", this.supplyform.phone);
+            formData.append("password", this.supplyform.pass);
+            formData.append("account", this.supplyform.name);
+            formData.append("qqCode", this.supplyform.qq);
+            formData.append("email", this.supplyform.email);
+            formData.append("merchantBrand", this.supplyform.brand);
+            formData.append("factoryAddress", this.supplyform.Faddress);
+            formData.append("empiricalNature",this.supplyform.radio);
+            formData.append("productionPersonType", this.supplyform.peopleNum);
+            formData.append("deliveryAddress", this.supplyform.address);
+            formData.append("myThirdStore", myThirdStore);
+            formData.append("httpAccessUrl", 'http://'+this.supplyform.store+'.tongtaotao.com');
+            console.log(formData);
+            var instance = axios.create({
+                headers:{
+                    'Content-Type':'application/x-www-form-urlencoded'
+                },
+                timeout: 5000,
+            });
+            instance.post('/tongtaotao/v1/user/insert/vendor', formData)
+                .then((res) => {
+                    if (res.data.code ==200){
+                        this.$message({message: '申请成功',type: 'success'});
+                        this.$router.push({name:'Login'})
+
+                    } else {
+                        this.$message.error(res.data.message);
+                    }
+                })
+                .catch((error)=> {
+                    this.$message.error(error);
+                })
+            return;
+        }
     },
   }
 </script>

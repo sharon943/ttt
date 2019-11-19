@@ -1,8 +1,13 @@
 <template>
   <div>
-    <headTop></headTop>
+    <!--<headTop></headTop>-->
     <main>
-      <p>用户中心 > <span>账户安全</span></p>
+      <div class="mycontainer" style="background: none">
+        <div class="productserchnav">
+          <span class="lightgrey" @click="backTohome">用户中心 &gt;</span>
+          <span>账户安全</span>
+        </div>
+      </div>
       <div class="main">
         <ul>
           <li v-for="(item,index) in categories" :class="{active:index==activeindex}" @click="activeindex=index">{{item}}</li>
@@ -10,19 +15,19 @@
         <section class="modification" v-if="activeindex==0">
            <ul class="tengXunbox">
              <li>
-               <img src="../assets/img/applogo/qq.png" alt="">
+               <img src="../../assets/img/applogo/qq.png" alt="">
                <p>qq账号</p>
                <span class="active">绑定</span>
              </li>
              <li>
-               <img src="../assets/img/applogo/wechat.png" alt="">
+               <img src="../../assets/img/applogo/wechat.png" alt="">
                <p>微信账号</p>
                <span >解除绑定</span>
              </li>
            </ul>
           <div class="mailBox">
             <section>
-              <img src="../assets/img/applogo/email.png" alt="">
+              <img src="../../assets/img/applogo/email.png" alt="">
               <p>邮箱绑定</p>
             </section>
             <section>
@@ -92,7 +97,7 @@
   </div>
 </template>
 <script>
-  import headTop from '../config/headTop'
+  // import headTop from '../config/headTop'
   export default {
     data(){
       var validatePass = (rule, value, callback) => {
@@ -161,8 +166,13 @@
         }
       }
     },
+    methods:{
+      backTohome(){
+        this.$parent.fatherMethod();
+      },
+    },
     components:{
-      headTop,
+      // headTop,
     },
   }
 </script>

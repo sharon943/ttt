@@ -1,8 +1,13 @@
 <template>
   <div>
-    <headTop></headTop>
+    <!--<headTop></headTop>-->
     <main>
-      <p>用户中心 > <span>我的积分</span></p>
+      <div class="mycontainer" style="background: none">
+        <div class="productserchnav">
+          <span class="lightgrey" @click="backTohome">用户中心 &gt;</span>
+          <span>我的积分</span>
+        </div>
+      </div>
       <div class="main">
         <ul>
           <li v-for="(item,index) in categories" :class="{active:index==activeindex}" @click="activeindex=index">{{item}}</li>
@@ -23,7 +28,7 @@
             </tr>
             <tr v-for="(item,index) in tableData">
               <td>
-                <img src="../assets/img/erweima.png" alt="">
+                <img src="../../assets/img/erweima.png" alt="">
                 <div>
                   <p>{{ item.from }}</p>
                   <span>编号：{{ item.NO }}</span>
@@ -54,7 +59,7 @@
             </tr>
             <tr v-for="(item,index) in tableData">
               <td>
-                <img src="../assets/img/erweima.png" alt="">
+                <img src="../../assets/img/erweima.png" alt="">
                 <div>
                   <p>{{ item.from }}</p>
                   <span>编号：{{ item.NO }}</span>
@@ -73,20 +78,25 @@
   </div>
 </template>
 <script>
-  import headTop from '../config/headTop'
+  // import headTop from '../config/headTop'
   export default {
     data(){
       return {
         categories:['积分明细','积分记录'],
         activeindex:0,
         tableData:[
-          {from:'618购物津贴',NO:'1000069064645',img:'../assets/img/erweima.png',pontsChange:-5,date:'2019年6月2日 13：24：30',remark:'618购物津贴'},
-          {from:'618购物津贴',NO:'1000069064645',img:'../assets/img/logo.png',pontsChange:-5,date:'2019年6月2日 13：24：30',remark:'618购物津贴'},
+          {from:'618购物津贴',NO:'1000069064645',img:'../../assets/img/erweima.png',pontsChange:-5,date:'2019年6月2日 13：24：30',remark:'618购物津贴'},
+          {from:'618购物津贴',NO:'1000069064645',img:'../../assets/img/logo.png',pontsChange:-5,date:'2019年6月2日 13：24：30',remark:'618购物津贴'},
           ],
       }
     },
+    methods:{
+      backTohome(){
+        this.$parent.fatherMethod();
+      },
+    },
     components:{
-      headTop,
+      // headTop,
     },
   }
 </script>

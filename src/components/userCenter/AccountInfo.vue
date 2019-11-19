@@ -1,8 +1,13 @@
 <template>
   <div>
-    <headTop></headTop>
+    <!--<headTop></headTop>-->
     <main>
-      <p>用户中心 > <span>账户信息</span></p>
+      <div class="mycontainer" style="background: none">
+        <div class="productserchnav">
+          <span class="lightgrey" @click="backTohome">用户中心 &gt;</span>
+          <span>账户信息</span>
+        </div>
+      </div>
       <div class="main">
         <ul class="topUL">
           <li class="active">我的资料</li>
@@ -53,7 +58,7 @@
   </div>
 </template>
 <script>
-  import headTop from '../config/headTop'
+  // import headTop from '../config/headTop'
   export default {
     data(){
 
@@ -67,9 +72,12 @@
       }
     },
     components:{
-      headTop,
+      // headTop,
     },
     methods: {
+      backTohome(){
+        this.$parent.fatherMethod();
+      },
       onSubmit() {
         console.log('submit!');
       }

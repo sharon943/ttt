@@ -36,7 +36,7 @@ Vue.use(PostOrder)
 
 export default new Router({
   routes: [
-    {path: '/', name: 'userhome', component: userhome},
+    {path: '/', name: 'PostOrder', component: PostOrder},
     // {path: '/', name: 'login', component: Login},
     {path: '/Register', name: 'Register', component: Register},
     {path: '/Homepage', name: 'Homepage', component: Homepage},

@@ -278,6 +278,57 @@ cursor: pointer;
   line-height: 40px;
   padding-left: 10px;
 }
-.el-checkbox-group{
+.el-checkbox-group {
   font-size: 12px;
+}
+.undertakebox .el-input__inner{
+  outline: none;
+  border: none;
+  height: 34px;
+  line-height: 34px;
+  overflow: hidden;
+  border-radius: unset;
+}
+.jindu .el-progress__text {
+  opacity: 0;
+}
+.jindu .el-progress-bar__outer{
+  height: 15px!important;
+  width: 215px;
+  background-color: #FFF;
+}
+.myswipers .el-carousel__container{
+  height: 92px;
+}
+.myswipers .el-carousel__item{
+  height: 92px;
+}
+.myswipers .el-carousel__arrow {
+  width: 24px;
+  height: 24px;
+}
+.upload-demo>ul .el-upload-list__item{
+  margin-top: 0;
+}
+
+.mydialog .el-dialog__header{
+  padding: 0;
+  opacity: 0;
+  width: 100%;
+  height: 0;
+}
+.mydialog .el-dialog__body{
+  padding: 0;
+}
+
+.editnum .el-input--mini .el-input__inner{
+  height: 27px;
+  line-height: 27px;
+  border-radius: 0;
+}
+.editnum  .el-input-number__decrease{
+  border-radius: 0;
+}
+.editnum .el-input-number__increase{
+  border-radius: 0;
 }

@@ -7,6 +7,10 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 // import VueQuillEditor from 'vue-quill-editor'
 
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+Vue.use(VueAwesomeSwiper)
+import Swiper from 'swiper';
+import 'swiper/dist/css/swiper.min.css';
 import './assets/css/iconfont.css'
 import './assets/css/index.css'
 

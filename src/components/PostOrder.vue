@@ -89,7 +89,7 @@
                    <el-button type="primary" @click="submitForm('consigneeForm')">保存收货人信息</el-button>
                  </el-form-item>
                  </el-form>
-               <section class=""><img src="../assets/img/check.png" alt=""><span style="display: inline-block">邓先生</span> <span style="color:#606266;">湖北  武汉  江岸 唐家墩街道 </span><span style="color: #d8504d;">删除</span></section>
+               <section class="" v-for="(row,index) in consigneeList" @click="checkOrnot(row.check,index)"><img :src="row.check==0?'../assets/img/notCheck.png':'../assets/img/Check.png'" alt=""><span style="display: inline-block">邓先生</span> <span style="color:#606266;"> </span><span style="color: #d8504d;">删除</span></section>
              </div>
            </section>
            <section class="goodsList">
@@ -159,6 +159,8 @@
     data(){
       return{
         provices:area.provice,citys:[],districtAndCounties:[],
+        //收货人列表
+        consigneeList:[{id:1,name:'等先生',address:'湖北  武汉  江岸 唐家墩街道',check:0},{id:2,name:'邓先生',address:'湖北  武汉  江岸 唐家墩街道1',check:0}],
         supplyForm:{name:'',phone:'',address:''},
         current : {prov: '', city: '', country: ''},
         checkedGifts:[],
@@ -236,6 +238,12 @@
 
     },
     methods:{
+      checkOrnot(e,index){
+        switch (e) {
+          case 0:this.consigneeList[index]=1;break;
+          case 1:this.consigneeList[index]=0;break;
+        }
+      },
       showCity(e){
         console.log(e)
         console.log(this.provices)
@@ -290,7 +298,7 @@
           width: 100%;border:2px solid #d73a19;height: auto;padding: 20px;
           & > section{
             height: 20px;margin-top: 20px;margin-bottom: 20px;
-            img{width: 18px;height: 18px;float: left;margin-top: 2px;margin-right: 10px}
+            img{width: 18px;height: 18px;float: left;margin-right: 10px}
             span{
               float: left;margin-right: 10px;
             }

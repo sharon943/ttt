@@ -295,15 +295,13 @@
     box-shadow: 2px 4px 10px #fdd9d8;
   }
 
-<<<<<<< HEAD
   .productserchnav {
     height: 40px;
     line-height: 40px;
     padding-left: 10px;
   }
-=======
 
->>>>>>> wt
+
 
   .mynavs {
     display: flex;

@@ -1,35 +1,36 @@
 <template>
-  <div class="mycar undertake">
+  <div>
     <div class="mycontainer" style="background: none">
       <div class="mycontainer" style="background: none">
         <div class="productserchnav">
-          <span class="lightgrey" @click="backTohome">用户中心 &gt;</span>
-          <span>产品收藏</span>
+          <span class="lightgrey">用户中心 &gt;</span>
+          <span>商户批量操作</span>
         </div>
       </div>
       <div class="mynavs">
-        <div class="tittle reds">产品收藏</div>
+        <div class="tittle reds">批量一键上传</div>
+        <div class="tittle">批量下载表情包</div>
       </div>
     </div>
-    <div class="mycontainer">
+    <div class="mycontainer" style="background: #fff; padding-top: 25px;">
       <div class="undertakebox">
-        <div class="undertakebox2 blods">
-          <div class="lightgreybor ">
-            <div style="display: inline-flex" >
-              <span class="icons icon-shanchu red m8 secondfont"></span>
-              <span>取消收藏</span>
-            </div>
+        <div class="undertakebox1">
+          <div class="lightgreybor longinputs" style="width: 418px">
+            <el-input v-model="value" placeholder="请输入内容"></el-input>
           </div>
-          <div class="lightgreybor firstfont">加入购物车</div>
-          <div class="lightgreybor red">一键发布</div>
-
+          <div class="sercchbtn">
+            搜索
+          </div>
+        </div>
+        <div class="undertakebox2">
+          <div class="lightgreybor red ">批量一键上传</div>
         </div>
       </div>
       <div class="underlists">
         <div class="thed">
           <div class="productpic">
             <span class="lightgreybor"></span>
-            <span  style="width: 158px;">商品图片</span>
+            <span style="width: 158px;">商品图片</span>
           </div>
           <div class="productcode">
             <span>货号</span>
@@ -39,7 +40,7 @@
           </div>
 
           <div class="ordertrack">
-            <span >厂家名称</span>
+            <span>厂家名称</span>
           </div>
           <div class="express">
             <span>联系电话</span>
@@ -63,7 +64,7 @@
               </div>
               <div>
                 <div class="productcode">
-                  <span >豆仔小当家&卡通</span>
+                  <span>豆仔小当家&卡通</span>
                 </div>
               </div>
 
@@ -93,57 +94,72 @@
             </div>
           </div>
         </div>
+        <div class="main">
+          <ul class="boxes" v-for="(row,index) in Stores" :key="index">
+            <li>
+              <div class="boxLeft">
+                <section class="l_top">
+                  <p>萌萌童装 <span>金牌厂家</span></p>
+                  <p>武汉江岸区某某大街上203 <img src="../../assets/img/ismargin.png" alt=""></p>
+                  <img src="../../assets/img/rz.png" alt="" class="img1">
+                  <img src="../../assets/img/yyzz.png" alt="" class="img2">
+                </section>
+                <section class="l_middle">
+                  <div>
+                    <p>目前有货： <span>4566</span></p>
+                    <p>联系方式： <span>123456789011</span></p>
+                  </div>
+                  <div>
+                    <p>供应登记： <span>lv20</span></p>
+                    <p>最新数据： <span>2018-9-12</span></p>
+                  </div>
+                </section>
+                <section class="l_bottom">
+                  <span>进入店铺</span>
+                  <span>关注商家</span>
+                </section>
+              </div>
+              <ul class="products">
+                <li v-for="(item,index) in productsARR" :key="index">
+                  <img src="../../assets/img/13.png" alt="">
+                  <p>6斤服装大甩卖生意好啊</p>
+                  <p><span>$30.00</span> 91387人看过</p>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
       </div>
     </div>
+
   </div>
+
 </template>
 <script>
   export default {
     data() {
       return {
         value: '',
-        allsale: [
-          {
-            value: '我要退款',
-            label: '我要退款'
-          }, {
-            value: '我要退款退货',
-            label: '我要退款退货'
-          }, {
-            value: '我要换货',
-            label: '我要换货'
-          }
-        ],
-        allshops: [
-          {
-            value: '选项1',
-            label: '黄金糕'
-          }, {
-            value: '选项2',
-            label: '双皮奶'
-          }
-        ],
-        starttime: '',
-        endtime: ''
-
+        productsARR:[{id:1},{id:2},{id:3},{id:4}],
+        Stores: [{id: 1}, {id: 2}, {id: 3}, {id: 4}],
       }
     },
-    methods: {
-      backTohome(){
-        this.$parent.fatherMethod();
-      },
+    methods: {},
+    created: function () {
+
     },
     mounted() {
 
     },
     beforeRouteEnter(to, from, next) {
       next(vm => {
-        document.title = '产品收藏'
+        document.title = '商户批量操作'
       })
     }
   }
 </script>
-<style scoped>
+<style scoped lang="scss">
   .mycar {
     font-size: 12px;
     background: #f6f5f5;
@@ -162,6 +178,7 @@
   .tablist {
     background: #f6f5f5;
   }
+
   .consultingtop {
     width: 100%;
     height: 122px;
@@ -207,6 +224,7 @@
     background: #f43e31; /* 红色背景 */
     color: #fff;
   }
+
   .consultingtop .serachs {
     width: 562px;
 
@@ -261,12 +279,6 @@
     border-right: 1px solid #fff;
   }
 
-  .selecttype {
-    padding: 0 18px;
-    display: flex;
-
-  }
-
   .selecttype > span {
     width: 50px;
     height: 24px;
@@ -282,20 +294,8 @@
     color: #fff;
   }
 
-  .tjlist {
-    display: flex;
-    padding: 0 18px;
-    color: #666;
-  }
-
   .tjlist > span {
     margin-right: 25px;
-  }
-
-  .sdcode {
-    width: 170px;
-    display: flex;
-    justify-content: space-between;
   }
 
   .sdcode > div {
@@ -325,20 +325,11 @@
     margin-right: 8px;
   }
 
-  .tbordernumer {
-    width: 394px;
-    display: flex;
-  }
-
-  .tbordernumer > div:nth-child(2) {
-    width: 220px;
-  }
-
   .undertakebox {
     display: flex;
     align-items: center;
     height: 65px;
-    /*padding: 0 13px;*/
+    padding: 0 13px;
   }
 
   .undertakebox > div {
@@ -372,6 +363,58 @@
     border-radius: 3px;
     position: relative;
     left: -2px;
+  }
+
+  .undertakebox {
+    margin-bottom: 18px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .undertakebox > div:nth-child(1) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .undertakebox1 {
+    display: inline-flex;
+    align-items: center;
+    height: 65px;
+    padding: 0 13px;
+  }
+
+  .undertakebox2 {
+    display: inline-flex;
+    align-items: center;
+    height: 65px;
+    padding: 0 13px;
+    justify-content: flex-end;
+  }
+
+  .undertakebox2 > div {
+    height: 34px;
+    line-height: 34px;
+    margin-left: 9px;
+    padding: 0 35px;
+  }
+
+  .undertakebox1 > div {
+    margin-right: 9px;
+  }
+
+  .undertakebox1 > .sercchbtn {
+    height: 34px;
+    line-height: 34px;
+    width: 62px;
+    background: #535353;
+    text-align: center;
+    color: #fff;
+    border-radius: 3px;
+  }
+
+  .undertakebox .el-input__inner {
+    outline: none;
+    border: none;
   }
   .underlists{
     width: 1160px;
@@ -432,7 +475,7 @@
   }
 
   .withmess {
-    width:358px;
+    width: 358px;
   }
 
   .orderdesc {
@@ -500,50 +543,147 @@
     margin-right: 4px;
   }
 
-  .undertakebox {
-    margin-bottom: 18px;
-    display: flex;
-    justify-content: space-between;
-  }
+  .main {
+    width: 1200px;border-top: 1px solid #f3463a;height: auto;margin:50px auto 0;position: relative;
+    .topUL{
+      width: 50%;display: flex;justify-content: space-between;position: absolute;top:-40px;left: 0;cursor: pointer;
+      li{
+        width: 150px;text-align: center;height: 40px;line-height: 40px;
+      }
+      li.active{
+        background: #f3463a;color: #fff;
+      }
+    }
+    .boxes {
+      margin-bottom: 10px;
+      background: #fff;
+      padding: 20px;
+      & > li {
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        .boxLeft {
+          width: 35%;
+          & > section {
+            height: 62px;
+          }
+          .l_top {
+            position: relative;
+            p {
+              font-size: 12px;
+              span {
+                display: inline-block;
+                width: 80px;
+                height: 25px;
+                line-height: 25px;
+                background: #ffd929;
+                color: #bb5800;
+                text-align: center;
+                border: 1px solid #bb5800
+              }
+              img {
+                width: 10px;
+                height: 10px;
+              }
+            }
+            & > .img1 {
+              width: 18px;
+              height: 18px;
+              position: absolute;
+              right: 25px;
+              top: 0px;
+            }
+            & > .img2 {
+              width: 21px;
+              height: 18px;
+              position: absolute;
+              right: 0;
+              top: 0px;
+            }
+          }
+          .l_middle {
+            border-top: 1px solid #f6f5f5;
+            border-bottom: 1px solid #f6f5f5;
+            height: 95px;
+            padding: 25px 0;
+            & > div {
+              display: flex;
+              justify-content: space-between;
+              font-size: 12px;
+              p {
+                color: #8c8c8c;
+                width: 150px;
+                span {
+                  color: #333;
+                  font-size: 13px;
+                }
+              }
+            }
+            & > div:nth-of-type(1) {
+              margin-bottom: 6px;
+            }
+          }
+          .l_bottom {
+            padding: 30px 50px;
+            display: flex;
+            justify-content: space-between;
+            span {
+              width: 120px;
+              height: 35px;
+              line-height: 35px;
+              display: inline-block;
+              text-align: center;
+              border: 1px solid #d0d0d0;
+              color: #d0d0d0;
+            }
+            & > span:nth-of-type(1) {
+              border-color: #f45148;
+              color: #f45148;
+            }
+          }
+        }
+        .products {
+          display: flex;
+          justify-content: space-between;
+          li {
+            width: 185px;
+            height: 245px;
+            border: 1px solid #e7e7e7;
+            box-sizing: border-box;
+            border-left: none;
+            p {
+              margin-left: 10px;
+            }
+            & > p:nth-of-type(1) {
+              font-size: 14px;
+              color: #333;
+              margin: 10px 0 10px 10px;
+            }
+            & > p:nth-of-type(2) {
+              font-size: 12px;
+              color: #666;
+              text-align: right;
+              margin: 0 10px;
+              span {
+                color: #f45148;
+                font-size: 14px;
+                float: left;
+              }
+            }
+            img {
+              width: 160px;
+              height: 160px;
+              margin: 7.5px auto 0;
+              display: block;
+            }
+          }
+          & > li:nth-of-type(1) {
+            border-left: 1px solid #e7e7e7;
+          }
 
-  .undertakebox > div:nth-child(1) {
-    display: flex;
-    justify-content: space-between;
-  }
+        }
+      }
 
-  .undertakebox1 {
-    display: inline-flex;
-    align-items: center;
-    height: 65px;
-    padding: 0 13px;
+    }
   }
-
-  .undertakebox2 {
-    display: inline-flex;
-    align-items: center;
-    height: 65px;
-    justify-content: flex-end;
-  }
-
-  .undertakebox2 > div {
-    height: 34px;
-    line-height: 34px;
-    margin-left: 9px;
-    padding: 0 35px;
-  }
-
-  .undertakebox1 > div {
-    margin-right: 9px;
-  }
-
-  .undertakebox1 > .sercchbtn {
-    height: 34px;
-    line-height: 34px;
-    width: 62px;
-    background: #535353;
-    text-align: center;
-    color: #fff;
-    border-radius: 3px;
-  }
-
 </style>

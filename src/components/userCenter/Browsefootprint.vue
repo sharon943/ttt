@@ -12,60 +12,60 @@
       </div>
     </div>
     <div class="mycontainer">
-        <div class="mytimes">
-          <div class="timebox activetime">
-            <div>
-              <div class="darkgrey">今天 16:30</div>
-              <div class="conbox">
+      <div class="mytimes">
+        <div class="timebox activetime">
+          <div>
+            <div class="darkgrey">今天 16:30</div>
+            <div class="conbox">
+              <div>
+                <img src="../../assets/img/1.png" alt="">
+              </div>
+              <div>
+                <div class="orange blods">2019年新款上市，服装特卖，血亏价格</div>
                 <div>
-                  <img src="../../assets/img/1.png" alt="">
-                </div>
-                <div>
-                  <div class="orange blods">2019年新款上市，服装特卖，血亏价格</div>
-                  <div>
-                    <span class="darkgrey">商品价格：</span><span class="red firstfont">￥68</span> <span class="delline lightgrey" style="margin-left: 8px">￥200</span>
-                  </div>
+                  <span class="darkgrey">商品价格：</span><span class="red firstfont">￥68</span> <span class="delline lightgrey" style="margin-left: 8px">￥200</span>
                 </div>
               </div>
-            </div>
-            <div class="editbox">
-              <div style="display: inline-block">
-                <div class="oranges">加入购物车</div>
-                <div class="lightgreybor">删除该记录</div>
-              </div>
-            </div>
-            <div class="timeline">
-              <div class="circles"></div>
-              <div class="line"></div>
             </div>
           </div>
-          <div class="timebox">
-            <div>
-              <div class="darkgrey">今天 16:30</div>
-              <div class="conbox">
-                <div>
-                  <img src="../../assets/img/1.png" alt="">
-                </div>
-                <div>
-                  <div class="orange blods">2019年新款上市，服装特卖，血亏价格</div>
-                  <div>
-                    <span class="darkgrey">商品价格：</span><span class="red firstfont">￥68</span> <span class="delline lightgrey" style="margin-left: 8px">￥200</span>
-                  </div>
-                </div>
-              </div>
+          <div class="editbox">
+            <div style="display: inline-block">
+              <div class="oranges">加入购物车</div>
+              <div class="lightgreybor">删除该记录</div>
             </div>
-            <div class="editbox">
-              <div style="display: inline-block">
-                <div class="oranges">加入购物车</div>
-                <div class="lightgreybor">删除该记录</div>
-              </div>
-            </div>
-            <div class="timeline">
-              <div class="circles"></div>
-              <div class="line"></div>
-            </div>
+          </div>
+          <div class="timeline">
+            <div class="circles"></div>
+            <div class="line"></div>
           </div>
         </div>
+        <div class="timebox">
+          <div>
+            <div class="darkgrey">今天 16:30</div>
+            <div class="conbox">
+              <div>
+                <img src="../../assets/img/1.png" alt="">
+              </div>
+              <div>
+                <div class="orange blods">2019年新款上市，服装特卖，血亏价格</div>
+                <div>
+                  <span class="darkgrey">商品价格：</span><span class="red firstfont">￥68</span> <span class="delline lightgrey" style="margin-left: 8px">￥200</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="editbox">
+            <div style="display: inline-block">
+              <div class="oranges">加入购物车</div>
+              <div class="lightgreybor">删除该记录</div>
+            </div>
+          </div>
+          <div class="timeline">
+            <div class="circles"></div>
+            <div class="line"></div>
+          </div>
+        </div>
+      </div>
     </div>
 
   </div>
@@ -84,9 +84,6 @@
     mounted() {
 
     },
-    created(){
-
-    },
     beforeRouteEnter(to, from, next) {
       next(vm => {
         document.title = '浏览足迹'
@@ -100,10 +97,34 @@
     background: #f6f5f5;
     padding-bottom: 80px;
   }
+  .mydetailtop {
+    background: #fff;
+    border-bottom: 1px solid #f43e31;
+
+  }
+
+  .storehome2top {
+    background: #f6f5f5;
+  }
 
   .tablist {
     background: #f6f5f5;
   }
+
+  .consultingtop {
+    width: 100%;
+    height: 122px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .consultingtop > div:nth-child(1) {
+    display: inline-block;
+    height: auto;
+  }
+
   .cursor {
     cursor: pointer;
   }
@@ -135,7 +156,10 @@
     background: #f43e31; /* 红色背景 */
     color: #fff;
   }
+  .consultingtop .serachs {
+    width: 562px;
 
+  }
   .Consultingsearchbox {
     position: relative;
     height: 40px;
@@ -310,11 +334,11 @@
     top: 9px;
   }
   .timeline>.circles{
-     width: 10px;
-     height: 10px;
-     border-radius: 50%;
-     background: #bababa;
-   }
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #bababa;
+  }
   .timeline>.line{
     width: 4px;
     height: 93px;

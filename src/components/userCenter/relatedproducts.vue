@@ -145,7 +145,9 @@
 
   }
 
-
+  .storehome2top {
+    background: #f6f5f5;
+  }
 
   .tablist {
     background: #f6f5f5;
@@ -356,7 +358,10 @@
     position: relative;
     left: -2px;
   }
-
+  .underlists{
+    width: 1160px;
+    margin: 0 auto;
+  }
   .underlists>.thed{
     height: 38px;
     display: flex;

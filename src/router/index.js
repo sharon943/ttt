@@ -19,8 +19,6 @@ import productsearch from '@/components/productsearch'//产品搜索页
 import Shopdetails from '@/components/Shopdetails'//店铺详情页
 import userhome from '@/components/userhome'//用户中心
 
-
-
 import Vueresource from "vue-resource"
 import VueClipboard from 'vue-clipboard2'
 

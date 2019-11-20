@@ -295,8 +295,6 @@
     box-shadow: 2px 4px 10px #fdd9d8;
   }
 
-
-
   .mynavs {
     display: flex;
     border-bottom: 1px solid #f43e31;

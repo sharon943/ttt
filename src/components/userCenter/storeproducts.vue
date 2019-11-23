@@ -107,7 +107,7 @@
           </div>
         </div>
         <div class="prolists">
-          <div class="proitem lightgreybor">
+          <div class="proitem lightgreybor" v-for="(val,index) in 4" :key="index">
             <div class="itembox">
               <div>
                 <div class="productpic">
@@ -450,6 +450,7 @@
     line-height: 34px;
     margin-left: 9px;
     padding: 0 35px;
+    cursor: pointer;
   }
   .undertakebox1 > div {
     margin-right: 9px;
@@ -464,7 +465,7 @@
     border-radius: 3px;
   }
   .underlists{
-    width: 1160px;
+    /*width: 1160px;*/
     margin: 0 auto;
   }
   .underlists > .thed {
@@ -600,6 +601,7 @@
     padding: 16px 64px;
     margin-right: 15px;
     display: inline-block;
+    cursor: pointer;
   }
   .m8{
     margin-right: 14px;

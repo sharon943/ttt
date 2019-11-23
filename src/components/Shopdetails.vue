@@ -307,25 +307,25 @@
         </div>
         <div class="right">
           <div class="prodetails lightgreybor">
-            <div class="lightgreys darkgrey active" @click="selitem='商品详情'">
+            <div class="lightgreys darkgrey " :class="{active:selitem=='商品详情'}" @click="selitem='商品详情'">
               <div><span>商品详情</span></div>
             </div>
-            <div class="lightgreys darkgrey" @click="selitem='拿货咨询'">
+            <div class="lightgreys darkgrey" :class="{active:selitem=='拿货咨询'}"  @click="selitem='拿货咨询'">
               <div><span>拿货咨询</span></div>
             </div>
-            <div class="lightgreys darkgrey" @click="selitem='发布人气'">
+            <div class="lightgreys darkgrey" :class="{active:selitem=='发布人气'}"  @click="selitem='发布人气'">
               <div><span>发布人气</span><span class="orange">6</span></div>
             </div>
-            <div class="lightgreys darkgrey" @click="selitem='下载人气'">
+            <div class="lightgreys darkgrey" :class="{active:selitem=='下载人气'}"  @click="selitem='下载人气'">
               <div><span>下载人气</span><span class="orange">9</span></div>
             </div>
-            <div class="lightgreys darkgrey" @click="selitem='数据'">
+            <div class="lightgreys darkgrey" :class="{active:selitem=='数据'}"  @click="selitem='数据'">
               <div><span>数据</span></div>
             </div>
-            <div class="lightgreys darkgrey" @click="selitem='投诉'">
+            <div class="lightgreys darkgrey" :class="{active:selitem=='投诉'}"  @click="selitem='投诉'">
               <div><span>投诉</span></div>
             </div>
-            <div class="lightgreys darkgrey" @click="selitem='服务承诺'">
+            <div class="lightgreys darkgrey" :class="{active:selitem=='服务承诺'}"  @click="selitem='服务承诺'">
               <div><span>服务承诺</span></div>
             </div>
             <div class="lightgreys darkgrey " @click="innerVisible=true">

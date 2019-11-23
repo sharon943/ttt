@@ -63,34 +63,60 @@
 
                     <div class="new_box_gh">
                         <div class="selecttb">
-                            <span class="active">全部</span>
-                            <span>最新动态</span>
+                            <span :class="{active:status=='全部'}" @click="changestatus('全部')">全部</span>
+                            <span :class="{active:status=='最新动态'}" @click="changestatus('最新动态')">最新动态</span>
                         </div>
                         <div class="gh_info_list m_t10">
-                            <ul>
+                            <ul v-if="status=='全部'">
                                 <li>
                                     <span class="fr lightgrey">[11月01日]</span>
-                                    <a href="" target="_blank">拼机遇·抖精彩-苏宁拼购招商会&amp;抖音运营公开课圆满落</a>
+                                    <a >拼机遇·抖精彩-苏宁拼购招商会&amp;抖音运营公开课圆满落</a>
                                 </li>
                                 <li>
                                     <span class="fr lightgrey">[11月01日]</span>
-                                    <a href="" target="_blank">苏宁拼购朱永国：苏宁拼购及当下最新的招商政策</a>
+                                    <a >苏宁拼购朱永国：苏宁拼购及当下最新的招商政策</a>
                                 </li>
                                 <li>
                                     <span class="fr lightgrey">[11月01日]</span>
-                                    <a href="" target="_blank">苏宁拼购李先知：苏宁拼购双十一营销玩法</a>
+                                    <a >苏宁拼购李先知：苏宁拼购双十一营销玩法</a>
                                 </li>
                                 <li>
                                     <span class="fr lightgrey">[11月01日]</span>
-                                    <a href="" target="_blank">巨量引擎陶方俊：【引流电商】“流量蓝海”品效结合打造电商爆款</a>
+                                    <a >巨量引擎陶方俊：【引流电商】“流量蓝海”品效结合打造电商爆款</a>
                                 </li>
                                 <li>
                                     <span class=" fr lightgrey">[11月01日]</span>
-                                    <a href="" target="_blank">巨量引擎贺晨阳：抖音短视频电商行业内容运营方法论</a>
+                                    <a >巨量引擎贺晨阳：抖音短视频电商行业内容运营方法论</a>
                                 </li>
                                 <li>
                                     <span class="fr lightgrey">[10月23日]</span>
-                                    <a href="" target="_blank">91家纺网志愿者贴心服务，助力五山森林音乐节！</a>
+                                    <a >91家纺网志愿者贴心服务，助力五山森林音乐节！</a>
+                                </li>
+                            </ul>
+                            <ul v-if="status=='最新动态'">
+                                <li>
+                                    <span class="fr lightgrey">[11月01日]</span>
+                                    <a >1拼机遇·抖精彩-苏宁拼购招商会&amp;抖音运营公开课圆满落</a>
+                                </li>
+                                <li>
+                                    <span class="fr lightgrey">[11月01日]</span>
+                                    <a >1苏宁拼购朱永国：苏宁拼购及当下最新的招商政策</a>
+                                </li>
+                                <li>
+                                    <span class="fr lightgrey">[11月01日]</span>
+                                    <a >1苏宁拼购李先知：苏宁拼购双十一营销玩法</a>
+                                </li>
+                                <li>
+                                    <span class="fr lightgrey">[11月01日]</span>
+                                    <a >1巨量引擎陶方俊：【引流电商】“流量蓝海”品效结合打造电商爆款</a>
+                                </li>
+                                <li>
+                                    <span class=" fr lightgrey">[11月01日]</span>
+                                    <a >1巨量引擎贺晨阳：抖音短视频电商行业内容运营方法论</a>
+                                </li>
+                                <li>
+                                    <span class="fr lightgrey">[10月23日]</span>
+                                    <a >191家纺网志愿者贴心服务，助力五山森林音乐节！</a>
                                 </li>
                             </ul>
                         </div>
@@ -166,10 +192,14 @@
   export default{
     data(){
       return{
-
+        status:'全部'
       }
     },
-    methods:{},
+    methods:{
+      changestatus(i){
+        this.status=i
+      }
+    },
     mounted(){
 
     },
@@ -414,6 +444,7 @@
 	color: #666;
 	font-weight: bold;
 	margin-right: 24px;
+  cursor: pointer;
 }
 .selecttb>.active{
 	color: #F43E31;

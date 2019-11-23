@@ -54,9 +54,9 @@
 
     <div class="mycontainer">
         <div class="consultingbox">
-            <div class="ghlistbox darkgrey ">
+            <div class="ghlistbox darkgrey " v-for="(val,index) in 6" :key="index">
                 <div class="gh_list_tit blods">
-                    <a href="" target="_blank" class="fr">全部 &gt;&gt;&gt;</a>
+                    <a @click="godetail()" class="fr cursor">全部 &gt;&gt;&gt;</a>
                     <span class="f15 fwb m_r5">|</span>
                     <span class="fwb f15 fm1"><a href="" target="_blank">平台公告</a></span>
                 </div>
@@ -91,191 +91,7 @@
                     </div>
                 </div>
             </div>
-            <div class="ghlistbox darkgrey ">
-                <div class="gh_list_tit blods">
-                    <a href="" target="_blank" class="fr">全部 &gt;&gt;&gt;</a>
-                    <span class="f15 fwb m_r5">|</span>
-                    <span class="fwb f15 fm1"><a href="" target="_blank">平台公告</a></span>
-                </div>
-                <div class="new_box_gh">
-                    <div class="gh_info_list m_t10">
-                        <ul>
-                            <li>
-                                <span class="fr lightgrey">[11月01日]</span>
-                                <a href="" target="_blank">拼机遇·抖精彩-苏宁拼购招商会&amp;抖音运营公开课圆满落</a>
-                            </li>
-                            <li>
-                                <span class="fr lightgrey">[11月01日]</span>
-                                <a href="" target="_blank">苏宁拼购朱永国：苏宁拼购及当下最新的招商政策</a>
-                            </li>
-                            <li>
-                                <span class="fr lightgrey">[11月01日]</span>
-                                <a href="" target="_blank">苏宁拼购李先知：苏宁拼购双十一营销玩法</a>
-                            </li>
-                            <li>
-                                <span class="fr lightgrey">[11月01日]</span>
-                                <a href="" target="_blank">巨量引擎陶方俊：【引流电商】“流量蓝海”品效结合打造电商爆款</a>
-                            </li>
-                            <li>
-                                <span class=" fr lightgrey">[11月01日]</span>
-                                <a href="" target="_blank">巨量引擎贺晨阳：抖音短视频电商行业内容运营方法论</a>
-                            </li>
-                            <li>
-                                <span class="fr lightgrey">[10月23日]</span>
-                                <a href="" target="_blank">91家纺网志愿者贴心服务，助力五山森林音乐节！</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="ghlistbox darkgrey ">
-                <div class="gh_list_tit blods">
-                    <a href="" target="_blank" class="fr">全部 &gt;&gt;&gt;</a>
-                    <span class="f15 fwb m_r5">|</span>
-                    <span class="fwb f15 fm1"><a href="" target="_blank">平台公告</a></span>
-                </div>
-                <div class="new_box_gh">
-                    <div class="gh_info_list m_t10">
-                        <ul>
-                            <li>
-                                <span class="fr lightgrey">[11月01日]</span>
-                                <a href="" target="_blank">拼机遇·抖精彩-苏宁拼购招商会&amp;抖音运营公开课圆满落</a>
-                            </li>
-                            <li>
-                                <span class="fr lightgrey">[11月01日]</span>
-                                <a href="" target="_blank">苏宁拼购朱永国：苏宁拼购及当下最新的招商政策</a>
-                            </li>
-                            <li>
-                                <span class="fr lightgrey">[11月01日]</span>
-                                <a href="" target="_blank">苏宁拼购李先知：苏宁拼购双十一营销玩法</a>
-                            </li>
-                            <li>
-                                <span class="fr lightgrey">[11月01日]</span>
-                                <a href="" target="_blank">巨量引擎陶方俊：【引流电商】“流量蓝海”品效结合打造电商爆款</a>
-                            </li>
-                            <li>
-                                <span class=" fr lightgrey">[11月01日]</span>
-                                <a href="" target="_blank">巨量引擎贺晨阳：抖音短视频电商行业内容运营方法论</a>
-                            </li>
-                            <li>
-                                <span class="fr lightgrey">[10月23日]</span>
-                                <a href="" target="_blank">91家纺网志愿者贴心服务，助力五山森林音乐节！</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="ghlistbox darkgrey ">
-                <div class="gh_list_tit blods">
-                    <a href="" target="_blank" class="fr">全部 &gt;&gt;&gt;</a>
-                    <span class="f15 fwb m_r5">|</span>
-                    <span class="fwb f15 fm1"><a href="" target="_blank">平台公告</a></span>
-                </div>
-                <div class="new_box_gh">
-                    <div class="gh_info_list m_t10">
-                        <ul>
-                            <li>
-                                <span class="fr lightgrey">[11月01日]</span>
-                                <a href="" target="_blank">拼机遇·抖精彩-苏宁拼购招商会&amp;抖音运营公开课圆满落</a>
-                            </li>
-                            <li>
-                                <span class="fr lightgrey">[11月01日]</span>
-                                <a href="" target="_blank">苏宁拼购朱永国：苏宁拼购及当下最新的招商政策</a>
-                            </li>
-                            <li>
-                                <span class="fr lightgrey">[11月01日]</span>
-                                <a href="" target="_blank">苏宁拼购李先知：苏宁拼购双十一营销玩法</a>
-                            </li>
-                            <li>
-                                <span class="fr lightgrey">[11月01日]</span>
-                                <a href="" target="_blank">巨量引擎陶方俊：【引流电商】“流量蓝海”品效结合打造电商爆款</a>
-                            </li>
-                            <li>
-                                <span class=" fr lightgrey">[11月01日]</span>
-                                <a href="" target="_blank">巨量引擎贺晨阳：抖音短视频电商行业内容运营方法论</a>
-                            </li>
-                            <li>
-                                <span class="fr lightgrey">[10月23日]</span>
-                                <a href="" target="_blank">91家纺网志愿者贴心服务，助力五山森林音乐节！</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="ghlistbox darkgrey ">
-                <div class="gh_list_tit blods">
-                    <a href="" target="_blank" class="fr">全部 &gt;&gt;&gt;</a>
-                    <span class="f15 fwb m_r5">|</span>
-                    <span class="fwb f15 fm1"><a href="" target="_blank">平台公告</a></span>
-                </div>
-                <div class="new_box_gh">
-                    <div class="gh_info_list m_t10">
-                        <ul>
-                            <li>
-                                <span class="fr lightgrey">[11月01日]</span>
-                                <a href="" target="_blank">拼机遇·抖精彩-苏宁拼购招商会&amp;抖音运营公开课圆满落</a>
-                            </li>
-                            <li>
-                                <span class="fr lightgrey">[11月01日]</span>
-                                <a href="" target="_blank">苏宁拼购朱永国：苏宁拼购及当下最新的招商政策</a>
-                            </li>
-                            <li>
-                                <span class="fr lightgrey">[11月01日]</span>
-                                <a href="" target="_blank">苏宁拼购李先知：苏宁拼购双十一营销玩法</a>
-                            </li>
-                            <li>
-                                <span class="fr lightgrey">[11月01日]</span>
-                                <a href="" target="_blank">巨量引擎陶方俊：【引流电商】“流量蓝海”品效结合打造电商爆款</a>
-                            </li>
-                            <li>
-                                <span class=" fr lightgrey">[11月01日]</span>
-                                <a href="" target="_blank">巨量引擎贺晨阳：抖音短视频电商行业内容运营方法论</a>
-                            </li>
-                            <li>
-                                <span class="fr lightgrey">[10月23日]</span>
-                                <a href="" target="_blank">91家纺网志愿者贴心服务，助力五山森林音乐节！</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="ghlistbox darkgrey ">
-                <div class="gh_list_tit blods">
-                    <a href="" target="_blank" class="fr">全部 &gt;&gt;&gt;</a>
-                    <span class="f15 fwb m_r5">|</span>
-                    <span class="fwb f15 fm1"><a href="" target="_blank">平台公告</a></span>
-                </div>
-                <div class="new_box_gh">
-                    <div class="gh_info_list m_t10">
-                        <ul>
-                            <li>
-                                <span class="fr lightgrey">[11月01日]</span>
-                                <a href="" target="_blank">拼机遇·抖精彩-苏宁拼购招商会&amp;抖音运营公开课圆满落</a>
-                            </li>
-                            <li>
-                                <span class="fr lightgrey">[11月01日]</span>
-                                <a href="" target="_blank">苏宁拼购朱永国：苏宁拼购及当下最新的招商政策</a>
-                            </li>
-                            <li>
-                                <span class="fr lightgrey">[11月01日]</span>
-                                <a href="" target="_blank">苏宁拼购李先知：苏宁拼购双十一营销玩法</a>
-                            </li>
-                            <li>
-                                <span class="fr lightgrey">[11月01日]</span>
-                                <a href="" target="_blank">巨量引擎陶方俊：【引流电商】“流量蓝海”品效结合打造电商爆款</a>
-                            </li>
-                            <li>
-                                <span class=" fr lightgrey">[11月01日]</span>
-                                <a href="" target="_blank">巨量引擎贺晨阳：抖音短视频电商行业内容运营方法论</a>
-                            </li>
-                            <li>
-                                <span class="fr lightgrey">[10月23日]</span>
-                                <a href="" target="_blank">91家纺网志愿者贴心服务，助力五山森林音乐节！</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </div>
 
@@ -289,7 +105,13 @@
 
       }
     },
-    methods:{},
+    methods:{
+      godetail(){
+        let routeData = this.$router.resolve({name: 'Consultingdetail'});
+        window.open(routeData.href, '_blank');
+
+      }
+    },
     mounted(){
 
     },

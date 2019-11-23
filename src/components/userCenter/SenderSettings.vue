@@ -75,7 +75,7 @@
           </el-form-item>
 
           <el-form-item>
-            <div @click="submitForm('ruleForm')" class="reds submits">保存发件人信息</div>
+            <div @click="submitForm('ruleForm')" class="reds submits cursor">保存发件人信息</div>
           </el-form-item>
         </el-form>
       </div>

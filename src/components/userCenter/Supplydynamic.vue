@@ -17,18 +17,18 @@
           <div class="lightgreybor longinputs" style="width: 418px">
             <el-input v-model="value" placeholder="请输入内容"></el-input>
           </div>
-          <div class="sercchbtn">
+          <div class="sercchbtn cursor">
             搜索
           </div>
         </div>
         <div class="undertakebox2">
-          <div class="lightgreybor blods">
+          <div class="lightgreybor blods cursor">
             <div style="display: inline-flex" class="red">
               <span class="icons icon-shanchu  m8 secondfont"></span>
               <span>批量删除</span>
             </div>
           </div>
-          <div class="red redbor blods">批量加购</div>
+          <div class="red redbor blods cursor">批量加购</div>
         </div>
       </div>
       <div class="underlists">
@@ -343,7 +343,7 @@
     left: -2px;
   }
   .underlists{
-    width: 1160px;
+    /*width: 1160px;*/
     margin: 0 auto;
   }
   .underlists > .thed {

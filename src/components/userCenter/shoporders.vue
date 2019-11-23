@@ -87,9 +87,11 @@
                 </el-option>
               </el-select>
             </div>
-            <div  class="lightgreybor"></div>
+            <div  class="lightgreybor serchs">
+              <el-input v-model="value" placeholder=""></el-input>
+            </div>
           </div>
-          <div class="oranges">搜索</div>
+          <div class="oranges cursor">搜索</div>
         </div>
         <div class="editdeletes">
           <div>
@@ -114,6 +116,44 @@
       </div>
     </div>
 
+
+    <!--代发须知-->
+    <div class="explain-contact">
+      <img src="../../assets/img/daifa2.jpeg">
+      <a target="_blank" href="http://www.zhaojiafang.com/index.php?act=activity&op=dfoption"
+         style="position: absolute;bottom:150px;width: 110px;height: 130px;display: inline-block;left: 0px;"></a>
+      <a class="contact-qq" target="_blank" href="http://wpa.b.qq.com/cgi/wpa.php?ln=2&amp;uin=4000513256"></a>
+      <a class="contact-wechat" href="javascript:;" @click="wechatVisible=true"></a>
+      <a class="contact-phone" href="javascript:;" @click="contactVisible=true"></a>
+    </div>
+
+    <div class="mydialog">
+      <el-dialog
+        width="277px"
+        title=""
+        :visible.sync="wechatVisible">
+        <div class="ewcodes">
+          <img src="../../assets/img/ismargin.png" alt="">
+          <span>扫一扫，咨询微信客服</span>
+
+        </div>
+      </el-dialog>
+      <el-dialog
+        width="277px"
+        title=""
+        :visible.sync="contactVisible">
+        <div class="kfphone">
+
+          <div class="phone">
+            <p style="font-size: 18px;color:#555;padding-top:20px">客服热线</p>
+            <br>
+            400-115-0886
+          </div>
+
+        </div>
+      </el-dialog>
+    </div>
+
   </div>
 
 </template>
@@ -121,6 +161,8 @@
   export default {
     data() {
       return {
+        wechatVisible:false,
+        contactVisible:false,
         value:'',
         shopnames:[
           {
@@ -435,5 +477,78 @@
   }
   .editdeletes>div:nth-child(2)>div{
     margin-right: 20px;
+  }
+  .serchs .el-input__inner{
+    height: 100%;
+  }
+  .explain-contact {
+    position: fixed;
+    right: 0px;
+    top: 50%;
+    z-index: 2;
+    margin-top: -190px;
+  }
+  .explain-contact img {
+    width: 110px;
+    /*margin-right: 50px;*/
+  }
+  .contact-qq {
+    position: absolute;
+    bottom: 115px;
+    width: 70px;
+    height: 20px;
+    display: inline-block;
+    left: 20px;
+  }
+  .contact-wechat {
+    position: absolute;
+    bottom: 84px;
+    width: 70px;
+    height: 20px;
+    display: inline-block;
+    left: 20px;
+  }
+  .contact-phone {
+    position: absolute;
+    bottom: 54px;
+    width: 70px;
+    height: 20px;
+    display: inline-block;
+    left: 20px;
+  }
+  .ewcodes{
+    width: 277px;
+    height: 310px;
+    border: 5px solid #F43E31;
+    background: none;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .ewcodes img {
+    width: 260px;
+    height: 260px;
+    position: absolute;
+    top: 6px;
+    left: 8px;
+  }
+  .ewcodes span {
+    bottom: 15px;
+    position: absolute;
+    color: #000;
+    font-size: 14px;
+    width: 260px;
+    display: inline-block;
+    text-align: center;
+  }
+  .kfphone .phone {
+    width: 277px;
+    /*height: 100px;*/
+    border: 5px solid #F43E31;
+    background: #fff;
+    border-radius: 5px;
+    font-size: 20px;
+    text-align: center;
+    color: #fc4a00;
+    padding-bottom: 30px;
   }
 </style>

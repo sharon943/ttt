@@ -18,18 +18,18 @@
           <div class="lightgreybor longinputs" style="width: 418px">
             <el-input v-model="value" placeholder="请输入内容"></el-input>
           </div>
-          <div class="sercchbtn">
+          <div class="sercchbtn cursor">
             搜索
           </div>
         </div>
         <div class="undertakebox2">
-          <div class="lightgreybor red ">批量一键上传</div>
+          <div class="lightgreybor red cursor">批量一键上传</div>
         </div>
       </div>
       <div class="underlists">
         <div class="thed">
           <div class="productpic">
-            <span class="lightgreybor"></span>
+            <span class="checkboxs lightgreybor"><el-checkbox v-model="checked" ></el-checkbox></span>
             <span style="width: 158px;">商品图片</span>
           </div>
           <div class="productcode">
@@ -140,6 +140,7 @@
   export default {
     data() {
       return {
+        checked:true,
         value: '',
         productsARR:[{id:1},{id:2},{id:3},{id:4}],
         Stores: [{id: 1}, {id: 2}, {id: 3}, {id: 4}],
@@ -417,7 +418,7 @@
     border: none;
   }
   .underlists{
-    width: 1160px;
+    /*width: 1160px;*/
     margin: 0 auto;
   }
   .underlists > .thed {

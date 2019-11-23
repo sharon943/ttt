@@ -106,27 +106,86 @@
       </div>
       <div class="productlistboxs">
         <div>
-          <div class="lightgreybor productsearchtab">
-            <div :class="{active:itemname=='综合'}" @click="itemname='综合'">综合</div>
-            <div :class="{active:itemname=='价格'}" @click="itemname='价格'">价格</div>
-            <div :class="{active:itemname=='人气'}" @click="itemname='人气'">人气</div>
-            <div :class="{active:itemname=='竞争力'}" @click="itemname='竞争力'">竞争力</div>
-            <div :class="{active:itemname=='性价比'}" @click="itemname='性价比'">性价比</div>
-            <div :class="{active:itemname=='最新'}" @click="itemname='最新'">最新</div>
-            <div :class="{active:itemname=='价格s'}" @click="itemname='价格s'">价格s</div>
+          <div class="lightgreybor productsearchtab store2selecs">
+            <div class="items">
+              <span :class="{active:state=='综合'}" @click="changestate('综合')">综合</span>
+              <span :class="{active:state=='销量'}" @click="changestate('销量')">销量</span>
+              <span :class="{active:state=='人气'}" @click="changestate('人气')">人气</span>
+              <span :class="{active:state=='竞争力'}" @click="changestate('竞争力')">竞争力</span>
+              <span :class="{active:state=='性价比'}" @click="changestate('性价比')">性价比</span>
+              <span :class="{active:state=='最新'}" @click="changestate('最新')">最新</span>
+              <div class="changeprice" @click="changestate('价格升序')">
+                <div :class="{active:state=='价格升序'||state=='价格降序'}">价格</div>
+                <div>
+                <span :class="{active:state=='价格升序'}" class="icon-jiantouarrow492 iconfont"
+                      @click.stop="changestate('价格升序')"></span>
+                  <span :class="{active:state=='价格降序'}" class="icon-jiantousanjiaoxia iconfont"
+                        @click.stop="changestate('价格降序')"></span>
+                </div>
+              </div>
+            </div>
             <div class="store2price">
-              <span class="lightgreybor"><input type="text"></span>
-              <span>-</span>
-              <span class="lightgreybor"><input type="text"></span>
+              <span class="lightgreybor"><el-input v-model="sprice" placeholder=""></el-input></span>
+              <span>至</span>
+              <span class="lightgreybor"><el-input v-model="bprice" placeholder=""></el-input></span>
             </div>
-            <div @click="submits">提交</div>
+            <div>
+              <span class="lightgreybor pricebtn cursor" @click="submits">确定</span>
+            </div>
           </div>
-          <div class="productpages">
-            <div class="items">
-              <div>
+          <div class="productpages" >
+            <div class="items cursor" v-for="(val,index) in 12" :key="index" >
+              <div @mouseenter="showshadow(index)" @mouseleave.stop="hideshadow">
                 <img src="../assets/img/2.png" alt="">
+                <div class="shadows orangrebor"   v-if="showhide&&(index==activeindex)">
+                  <div class="oranges">
+                    <span>传淘宝</span>
+                    <span>加购物车</span>
+                    <span>一件代发</span>
+                  </div>
+                  <div>
+                    <div>
+                      <span class="secondfont">￥</span><span class="secondfont red blods">120</span>
+                    </div>
+                    <div class="orangrebor orange">一件起批</div>
+                  </div>
+                  <div style="padding-bottom: 30px;border-bottom: 1px solid #dfdfdf">
+                    <div>
+                      <div>商家名称：</div>
+                      <div></div>
+                    </div>
+                    <div>
+                      <div>商家验证：</div>
+                      <div></div>
+                    </div>
+                    <div>
+                      <div>供应等级：</div>
+                      <div></div>
+                    </div>
+                    <div>
+                      <div>主要属性：</div>
+                      <div>
+                        <span class="orange">2</span>色
+                        <span class="orange">6</span>码</div>
+                    </div>
+                  </div>
+                  <div class="zixunbox">
+                    <div>
+                      <div><span><img src="../assets/img/main/product/id_card.png" alt="" ></span><span>姓名</span></div>
+                      <div><span class="icons icon-tel"></span><span>电话</span></div>
+
+                    </div>
+                    <div>
+                      联系地址
+                    </div>
+                    <div>
+                      <div><img src="../assets/img/main/qq_talk.png" alt="" style="width: 77px;height: 22px"></div>
+                      <div><img src="../assets/img/main/product/phone_ico.png" alt=""></div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="scproductprice">
+              <div class="scproductprice" >
                 <div>
                   <div><span>￥</span><span class="blods red secondfont">150</span></div>
                   <div class="lightgrey">15色5码</div>
@@ -140,301 +199,36 @@
                     <span class="orangrebor orange">人</span>
                   </div>
                   <div>
-                    <span class="orangrebor orange">收藏20</span>
+                    <span class="orangrebor orange cursor">收藏20</span>
                   </div>
                 </div>
               </div>
 
             </div>
-            <div class="items">
-              <div>
-                <img src="../assets/img/2.png" alt="">
-              </div>
-              <div class="scproductprice">
-                <div>
-                  <div><span>￥</span><span class="blods red secondfont">150</span></div>
-                  <div class="lightgrey">15色5码</div>
-                </div>
-                <div>小仙女店家#5432</div>
-                <div>
-                  <div>
-                    <span class="orangrebor orange">新</span>
-                    <span class="orangrebor orange">货</span>
-                    <span class="orangrebor orange">爆</span>
-                    <span class="orangrebor orange">人</span>
-                  </div>
-                  <div>
-                    <span class="orangrebor orange">收藏20</span>
-                  </div>
-                </div>
-              </div>
 
-            </div>
-            <div class="items">
-              <div>
-                <img src="../assets/img/2.png" alt="">
-              </div>
-              <div class="scproductprice">
-                <div>
-                  <div><span>￥</span><span class="blods red secondfont">150</span></div>
-                  <div class="lightgrey">15色5码</div>
-                </div>
-                <div>小仙女店家#5432</div>
-                <div>
-                  <div>
-                    <span class="orangrebor orange">新</span>
-                    <span class="orangrebor orange">货</span>
-                    <span class="orangrebor orange">爆</span>
-                    <span class="orangrebor orange">人</span>
-                  </div>
-                  <div>
-                    <span class="orangrebor orange">收藏20</span>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-            <div class="items">
-              <div>
-                <img src="../assets/img/2.png" alt="">
-              </div>
-              <div class="scproductprice">
-                <div>
-                  <div><span>￥</span><span class="blods red secondfont">150</span></div>
-                  <div class="lightgrey">15色5码</div>
-                </div>
-                <div>小仙女店家#5432</div>
-                <div>
-                  <div>
-                    <span class="orangrebor orange">新</span>
-                    <span class="orangrebor orange">货</span>
-                    <span class="orangrebor orange">爆</span>
-                    <span class="orangrebor orange">人</span>
-                  </div>
-                  <div>
-                    <span class="orangrebor orange">收藏20</span>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-            <div class="items">
-              <div>
-                <img src="../assets/img/2.png" alt="">
-              </div>
-              <div class="scproductprice">
-                <div>
-                  <div><span>￥</span><span class="blods red secondfont">150</span></div>
-                  <div class="lightgrey">15色5码</div>
-                </div>
-                <div>小仙女店家#5432</div>
-                <div>
-                  <div>
-                    <span class="orangrebor orange">新</span>
-                    <span class="orangrebor orange">货</span>
-                    <span class="orangrebor orange">爆</span>
-                    <span class="orangrebor orange">人</span>
-                  </div>
-                  <div>
-                    <span class="orangrebor orange">收藏20</span>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-            <div class="items">
-              <div>
-                <img src="../assets/img/2.png" alt="">
-              </div>
-              <div class="scproductprice">
-                <div>
-                  <div><span>￥</span><span class="blods red secondfont">150</span></div>
-                  <div class="lightgrey">15色5码</div>
-                </div>
-                <div>小仙女店家#5432</div>
-                <div>
-                  <div>
-                    <span class="orangrebor orange">新</span>
-                    <span class="orangrebor orange">货</span>
-                    <span class="orangrebor orange">爆</span>
-                    <span class="orangrebor orange">人</span>
-                  </div>
-                  <div>
-                    <span class="orangrebor orange">收藏20</span>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-            <div class="items">
-              <div>
-                <img src="../assets/img/2.png" alt="">
-              </div>
-              <div class="scproductprice">
-                <div>
-                  <div><span>￥</span><span class="blods red secondfont">150</span></div>
-                  <div class="lightgrey">15色5码</div>
-                </div>
-                <div>小仙女店家#5432</div>
-                <div>
-                  <div>
-                    <span class="orangrebor orange">新</span>
-                    <span class="orangrebor orange">货</span>
-                    <span class="orangrebor orange">爆</span>
-                    <span class="orangrebor orange">人</span>
-                  </div>
-                  <div>
-                    <span class="orangrebor orange">收藏20</span>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-            <div class="items">
-              <div>
-                <img src="../assets/img/2.png" alt="">
-              </div>
-              <div class="scproductprice">
-                <div>
-                  <div><span>￥</span><span class="blods red secondfont">150</span></div>
-                  <div class="lightgrey">15色5码</div>
-                </div>
-                <div>小仙女店家#5432</div>
-                <div>
-                  <div>
-                    <span class="orangrebor orange">新</span>
-                    <span class="orangrebor orange">货</span>
-                    <span class="orangrebor orange">爆</span>
-                    <span class="orangrebor orange">人</span>
-                  </div>
-                  <div>
-                    <span class="orangrebor orange">收藏20</span>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-            <div class="items">
-              <div>
-                <img src="../assets/img/2.png" alt="">
-              </div>
-              <div class="scproductprice">
-                <div>
-                  <div><span>￥</span><span class="blods red secondfont">150</span></div>
-                  <div class="lightgrey">15色5码</div>
-                </div>
-                <div>小仙女店家#5432</div>
-                <div>
-                  <div>
-                    <span class="orangrebor orange">新</span>
-                    <span class="orangrebor orange">货</span>
-                    <span class="orangrebor orange">爆</span>
-                    <span class="orangrebor orange">人</span>
-                  </div>
-                  <div>
-                    <span class="orangrebor orange">收藏20</span>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-            <div class="items">
-              <div>
-                <img src="../assets/img/2.png" alt="">
-              </div>
-              <div class="scproductprice">
-                <div>
-                  <div><span>￥</span><span class="blods red secondfont">150</span></div>
-                  <div class="lightgrey">15色5码</div>
-                </div>
-                <div>小仙女店家#5432</div>
-                <div>
-                  <div>
-                    <span class="orangrebor orange">新</span>
-                    <span class="orangrebor orange">货</span>
-                    <span class="orangrebor orange">爆</span>
-                    <span class="orangrebor orange">人</span>
-                  </div>
-                  <div>
-                    <span class="orangrebor orange">收藏20</span>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-            <div class="items">
-              <div>
-                <img src="../assets/img/2.png" alt="">
-              </div>
-              <div class="scproductprice">
-                <div>
-                  <div><span>￥</span><span class="blods red secondfont">150</span></div>
-                  <div class="lightgrey">15色5码</div>
-                </div>
-                <div>小仙女店家#5432</div>
-                <div>
-                  <div>
-                    <span class="orangrebor orange">新</span>
-                    <span class="orangrebor orange">货</span>
-                    <span class="orangrebor orange">爆</span>
-                    <span class="orangrebor orange">人</span>
-                  </div>
-                  <div>
-                    <span class="orangrebor orange">收藏20</span>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-            <div class="items">
-              <div>
-                <img src="../assets/img/2.png" alt="">
-              </div>
-              <div class="scproductprice">
-                <div>
-                  <div><span>￥</span><span class="blods red secondfont">150</span></div>
-                  <div class="lightgrey">15色5码</div>
-                </div>
-                <div>小仙女店家#5432</div>
-                <div>
-                  <div>
-                    <span class="orangrebor orange">新</span>
-                    <span class="orangrebor orange">货</span>
-                    <span class="orangrebor orange">爆</span>
-                    <span class="orangrebor orange">人</span>
-                  </div>
-                  <div>
-                    <span class="orangrebor orange">收藏20</span>
-                  </div>
-                </div>
-              </div>
-
-            </div>
           </div>
           <div class="searchpages">
             <div class="pages">
-              <div class="gobtn activego">上一页</div>
+              <div class="gobtn " @click="prev()" :class="{activego:pageindex==1||pageindex==-1}">上一页</div>
               <div>
-                <span class="lightgreybor activepage">1</span>
-                <span class="lightgreybor">2</span>
-                <span class="lightgreybor">3</span>
-                <span class="lightgreybor">4</span>
-                <span class="lightgreybor">5</span>
-                <span class="lightgreybor">6</span>
-                <span class="lightgreybor">7</span>
-                <span class="ignores">...</span>
-                <span class="lightgreybor">50</span>
+                <el-pagination
+                  background
+                  layout="pager"
+                  :page-sizes="pageSizes"
+                  :current-page="pageindex"
+                  :total="total" @current-change="currentchanges" @size-change="sizechanges">
+                </el-pagination >
               </div>
-              <div class="gobtn darkgrey lightgreybor">下一页</div>
-              <div>总共50页</div>
+              <div class="gobtn"  @click="next()" :class="{activego:pageindex==total/pageSizes}">下一页</div>
+              <div>总共{{total/pageSizes}}页</div>
               <div class="gopages">
                 <span>到</span>
                 <span>
-                                <input type="text">
-                            </span>
+                   <el-input class="thepages" v-model="pages" placeholder=""></el-input>
+                </span>
                 <span>页</span>
               </div>
-              <div class="surebtn lightgreybor">确定</div>
+              <div class="surebtn lightgreybor" @click="gotos()">确定</div>
             </div>
           </div>
         </div>
@@ -450,6 +244,7 @@
               </div>
               <div><span class="lightgreybor">广告</span></div>
             </div>
+
 
           </div>
           <div class="itwmss">
@@ -525,13 +320,71 @@
   export default {
     data() {
       return {
-        itemname: '综合',
+        state: '综合',
+        activeindex:-1,
+        showhide:false,
+        pages:'',
+        pageindex:1,
+        total:120,
+        pageSizes:[10],
+        sprice:'',
+        bprice:''
       }
     },
+    watch:{
+
+    },
     methods: {
+      changestate(i) {
+        this.state = i
+      },
+      prev(){
+        if(this.pageindex==1){
+          return
+        }else{
+          this.pageindex=this.pageindex-1
+        }
+      },
+      next(){
+        if(this.pageindex==this.total/this.pageSizes){
+          return
+        }else{
+          this.pageindex=this.pageindex+1
+        }
+        console.log( this.pageindex)
+      },
+      gotos(){
+        if(this.pages==''){
+          return
+        }else if(this.pages<=0){
+          this.pageindex=1
+        }else if(this.pages>=(this.total/this.pageSizes)){
+          this.pageindex=this.total/this.pageSizes
+        }else{
+          this.pageindex=this.pages
+        }
+      },
+      currentchanges(e){
+        this.pageindex=e
+      },
+      sizechanges(e){
+
+      },
+
       submits() {
+        if(this.sprice!=''&&this.bprice!=''){
 
-
+        }else{
+          return
+        }
+      },
+      showshadow(index){
+        this.activeindex=index
+        this.showhide=true
+      },
+      hideshadow(){
+        this.activeindex=-1
+        this.showhide=false
       }
     },
     mounted() {
@@ -843,21 +696,7 @@
     width: 100%;
   }
 
-  .productsearchtab {
-    height: 34px;
-    background: #f6f5f5;
-    display: flex;
-    align-items: center;
-    width: 980px;
-  }
 
-  .productsearchtab > div {
-    padding: 0 14px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-  }
 
   .productsearchtab > div:nth-child(1) {
     border-left: 0 !important;
@@ -869,27 +708,68 @@
     border-bottom: 1px solid #efefef;
   }
 
-  .productsearchtab .store2price {
-    width: 118px;
-    display: -ms-flexbox;
+  .store2selecs {
     display: flex;
-    -ms-flex-pack: justify;
+    height: 36px;
+    align-items: center;
+    background: #eeeeee;
+  }
+
+  .store2selecs > div {
+    display: flex;
+    align-items: center;
+    margin-right: 4px;
+  }
+
+  .store2selecs > div > span {
+    padding: 0 10px;
+    height: 20px;
+    line-height: 20px;
+  }
+
+  .store2selecs > .items > span {
+    color: #000;
+    cursor: pointer;
+  }
+
+  .store2selecs > .items > .active {
+    color: #f43e31;
+  }
+
+  .store2selecs > .items > span {
+    border-right: 1px solid #d9d9d9;
+  }
+
+  .store2selecs > .items > span:last-child {
+    border-right: none;
+  }
+
+  .store2price {
+    width: 118px;
+    display: flex;
     justify-content: space-between;
-    padding: 0;
   }
 
   .store2price > span {
-    display: inline-block;
-  }
-
-  .store2price > span > input {
-    width: 42px;
+    line-height: 21px;
+    height: 21px;
     display: block;
-    text-align: center;
-    font-weight: bold;
-
   }
 
+  .store2price > .lightgreybor {
+    width: 46px;
+    background: #fff;
+    text-align: center;
+    padding: 0;
+  }
+
+  .store2price > .lightgreybor > input {
+    display: block;
+    outline: none;
+    border: 0;
+    width: 100%;
+    height: 100%;
+  }
   .productlistboxs {
     display: flex;
     justify-content: space-between;
@@ -963,6 +843,8 @@
   .productpages > .items {
     width: 220px;
     margin-right: 32px;
+    height: 334px;
+    position: relative;
   }
 
   .productpages > .items:nth-child(4n) {
@@ -973,6 +855,7 @@
     display: block;
     width: 100%;
     height: 220px;
+    position: relative;
   }
 
   .productpages > .items > div:nth-child(1) > img {
@@ -1076,12 +959,99 @@
 
   }
 
-  .searchpages > .pages > .gopages > span > input {
+  .searchpages > .pages > .gopages > span > .thepages {
     display: block;
     width: 40px;
     height: 100%;
     background: #fff;
     outline: none;
     border: 0;
+  }
+  .shadows{
+    position: absolute;
+    left: 0;
+    bottom: -160px;
+    background: #fff;
+    padding-bottom: 6px;
+    width: 100%;
+    z-index: 10;
+  }
+  .shadows>div:nth-child(1){
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .shadows>div:nth-child(2){
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    padding: 8px;
+    align-items: center;
+  }
+  .shadows>div:nth-child(2)>div:nth-child(2){
+    padding: 0 8px;
+  }
+  .shadows>div:nth-child(3){
+    padding: 0 8px;
+  }
+  .shadows>div:nth-child(3)>div{
+    display: flex;
+    color: #666;
+    font-size: 14px;
+    line-height: 24px;
+    /*justify-content: space-between;*/
+  }
+  .changeprice {
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+  }
+
+  .changeprice > div:nth-child(2) {
+    margin-left: 4px;
+  }
+
+  .changeprice > div:nth-child(2) > span {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .changeprice .active {
+    color: #f43e31;
+  }
+  .icons{
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url('../assets/img/main/icons.png');
+  }
+  .icon-tel {
+    background-position: -56px -158px;
+    width: 11px;
+    height: 17px;
+  }
+  .zixunbox{
+    padding: 0 8px;
+    padding-top: 10px;
+  }
+  .zixunbox>div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+  }
+  .zixunbox>div:nth-child(1){
+    height: 20px;
+  }
+  .zixunbox>div:nth-child(1)>div{
+    margin-right: 8px;
+  }
+  .zixunbox>div:nth-child(1)>div>span{
+    margin-right: 4px;
+  }
+  .zixunbox>div:nth-child(3){
+    justify-content: space-between;
   }
 </style>

@@ -13,7 +13,7 @@
     </div>
     <div class="mycontainer">
       <div class="mytimes">
-        <div class="timebox activetime">
+        <div class="timebox" :class="{activetime:index==0}" v-for="(val,index) in list" :key="index">
           <div>
             <div class="darkgrey">今天 16:30</div>
             <div class="conbox">
@@ -39,32 +39,7 @@
             <div class="line"></div>
           </div>
         </div>
-        <div class="timebox">
-          <div>
-            <div class="darkgrey">今天 16:30</div>
-            <div class="conbox">
-              <div>
-                <img src="../../assets/img/1.png" alt="">
-              </div>
-              <div>
-                <div class="orange blods">2019年新款上市，服装特卖，血亏价格</div>
-                <div>
-                  <span class="darkgrey">商品价格：</span><span class="red firstfont">￥68</span> <span class="delline lightgrey" style="margin-left: 8px">￥200</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="editbox">
-            <div style="display: inline-block">
-              <div class="oranges">加入购物车</div>
-              <div class="lightgreybor">删除该记录</div>
-            </div>
-          </div>
-          <div class="timeline">
-            <div class="circles"></div>
-            <div class="line"></div>
-          </div>
-        </div>
+
       </div>
     </div>
 
@@ -74,7 +49,9 @@
 <script>
   export default {
     data() {
-      return {}
+      return {
+        list:[1,2,3,4]
+      }
     },
     methods: {},
     mounted() {
@@ -348,6 +325,9 @@
     border-radius: 50px;
   }
   .activetime{
+
+  }
+  .timebox:hover{
     background: #f4f4f4;
     border-radius: 10px;
   }

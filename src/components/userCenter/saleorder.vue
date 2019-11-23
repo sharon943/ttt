@@ -61,140 +61,145 @@
           </div>
         </div>
       </div>
-      <div>
-        <div class="itemdesc">
+
+      <el-checkbox-group v-model="checkedOrders" class="boxes" @change="handleCheckedOrdersChange">
+        <div v-for="row in orderLists">
           <div>
-            <div class="prostatus" style="border: none;padding-right: 3px">
-              <span class="lightgreybor"></span>
-              <span class="red redbor" style="padding: 2px 3px;">换货中</span>
-            </div>
-            <div>订单号：1909303763077</div>
-            <div>生成时间：2019-9-30 14：05</div>
-            <div>商品数量：1</div>
-            <div>
+            <div class="itemdesc">
               <div>
-                服务费：<span class="red">2.00</span>元
-              </div>
-              <div>
-                质检费：<span class="red">2.00</span>元
-              </div>
-              <div>
-                订单总价：<span class="red">2.00</span>元
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="underlists">
-        <div class="thed">
-          <div class="productpic">
-            <span  style="margin: 0 auto">商品图片</span>
-          </div>
-          <div  class="productcode">
-            <span>货号</span>
-          </div>
-          <div class="productsize">
-            <span>颜色/尺码</span>
-          </div>
-          <div  class="productnum">
-            <span>数量</span>
-          </div>
-          <div  class="productprice">
-            <span>拿货价</span>
-          </div>
-          <div class="orderstatus">
-            <span class="red firstfont">订单状态</span>
-          </div>
-          <div class="ordertrack">
-            <span class="red">拿货轨迹</span>
-          </div>
-          <div class="express">
-            <span>快递信息</span>
-          </div>
-          <div class="withmess">
-            <span>拿货信息</span>
-          </div>
-          <div class="orderdesc">
-            <span>订单备注</span>
-          </div>
-          <div class="proedit">
-            <span>操作</span>
-          </div>
-        </div>
-        <div class="prolists">
-          <div class="proitem lightgreybor">
-            <div class="itembox">
-              <div>
-                <div class="productpic">
-                <span>
-                  <img src="../../assets/img/1.png" alt="">
-                </span>
+                <div class="prostatus" style="border: none;padding-right: 3px">
+                  <el-checkbox  :label="row.id" :key="row.id">{{null}}</el-checkbox>
+                  <span class="red redbor" style="padding: 2px 3px;">换货中</span>
                 </div>
-              </div>
-              <div>
-                <div  class="productcode">
-                  <span>豆仔小当家&卡通</span>
-                </div>
-              </div>
-              <div>
-                <div class="productsize">
-                  <span>白色/30</span>
-                </div>
-              </div>
-              <div>
-                <div  class="productnum">
-                  <span>1</span>
-                </div>
-              </div>
-              <div>
-                <div  class="productprice">
-                  <span>9.90</span>
-                </div>
-              </div>
-              <div>
-                <div class="orderstatus">
-                  <span >已完成</span>
-                </div>
-              </div>
-              <div>
-                <div class="ordertrack" style="text-align: center">
-                  <div >安排拿货员（周边地区拿货取消是，着急请联系厂家代发）</div>
-                  <div>拿货中</div>
-                  <div style="text-align: center">
-                    <div style="border: 1px dotted #F43E31;padding: 2px 4px;display: inline-block" class="red">轨迹</div>
+                <div>订单号：1909303763077</div>
+                <div>生成时间：2019-9-30 14：05</div>
+                <div>商品数量：1</div>
+                <div>
+                  <div>
+                    服务费：<span class="red">2.00</span>元
                   </div>
+                  <div>
+                    质检费：<span class="red">2.00</span>元
+                  </div>
+                  <div>
+                    订单总价：<span class="red">2.00</span>元
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="underlists" >
+          <div class="thed">
+            <div class="productpic">
+              <span  style="margin: 0 auto">商品图片</span>
+            </div>
+            <div  class="productcode">
+              <span>货号</span>
+            </div>
+            <div class="productsize">
+              <span>颜色/尺码</span>
+            </div>
+            <div  class="productnum">
+              <span>数量</span>
+            </div>
+            <div  class="productprice">
+              <span>拿货价</span>
+            </div>
+            <div class="orderstatus">
+              <span class="red firstfont">订单状态</span>
+            </div>
+            <div class="ordertrack">
+              <span class="red">拿货轨迹</span>
+            </div>
+            <div class="express">
+              <span>快递信息</span>
+            </div>
+            <div class="withmess">
+              <span>拿货信息</span>
+            </div>
+            <div class="orderdesc">
+              <span>订单备注</span>
+            </div>
+            <div class="proedit">
+              <span>操作</span>
+            </div>
+          </div>
+          <div class="prolists">
+            <div class="proitem lightgreybor">
+              <div class="itembox">
+                <div>
+                  <div class="productpic">
+                  <span>
+                    <img src="../../assets/img/1.png" alt="">
+                  </span>
+                  </div>
+                </div>
+                <div>
+                  <div  class="productcode">
+                    <span>豆仔小当家&卡通</span>
+                  </div>
+                </div>
+                <div>
+                  <div class="productsize">
+                    <span>白色/30</span>
+                  </div>
+                </div>
+                <div>
+                  <div  class="productnum">
+                    <span>1</span>
+                  </div>
+                </div>
+                <div>
+                  <div  class="productprice">
+                    <span>9.90</span>
+                  </div>
+                </div>
+                <div>
+                  <div class="orderstatus">
+                    <span >已完成</span>
+                  </div>
+                </div>
+                <div>
+                  <div class="ordertrack" style="text-align: center">
+                    <div >安排拿货员（周边地区拿货取消是，着急请联系厂家代发）</div>
+                    <div>拿货中</div>
+                    <div style="text-align: center">
+                      <div style="border: 1px dotted #F43E31;padding: 2px 4px;display: inline-block" class="red">轨迹</div>
+                    </div>
 
+                  </div>
                 </div>
-              </div>
-              <div>
-                <div class="express" style="text-align: left">
-                  <div>快递:申通快递 <span style="border:1px dotted #19a4f4;padding: 2px;margin-left: 3px" class="blue">普</span> </div>
-                  <div>快递费：4.00</div>
-                  <div>单号：</div>
+                <div>
+                  <div class="express" style="text-align: left">
+                    <div>快递:申通快递 <span style="border:1px dotted #19a4f4;padding: 2px;margin-left: 3px" class="blue">普</span> </div>
+                    <div>快递费：4.00</div>
+                    <div>单号：</div>
+                  </div>
                 </div>
-              </div>
-              <div>
-                <div class="withmess" style="text-align: left">
-                  <div>浙江省杭州市客户地址什么的</div>
-                  <div>陈雅元 18634301234</div>
+                <div>
+                  <div class="withmess" style="text-align: left">
+                    <div>浙江省杭州市客户地址什么的</div>
+                    <div>陈雅元 18634301234</div>
+                  </div>
                 </div>
-              </div>
-              <div>
-                <div class="orderdesc">
-                  <div></div>
+                <div>
+                  <div class="orderdesc">
+                    <div></div>
+                  </div>
                 </div>
-              </div>
-              <div>
-                <div class="proedit">
-                  <div class="blue cursor">查看详情</div>
-                  <div class="blue cursor">退款</div>
+                <div>
+                  <div class="proedit">
+                    <div class="blue cursor">查看详情</div>
+                    <div class="blue cursor">退款</div>
+                  </div>
                 </div>
-              </div>
 
+              </div>
             </div>
           </div>
         </div>
-      </div>
+        </div>
+      </el-checkbox-group>
     </div>
   </div>
 </template>
@@ -225,7 +230,10 @@
           }
         ],
         starttime:'',
-        endtime:''
+        endtime:'',
+        orderLists:[{id:1},{id:2}],
+        checkedOrders:[],
+        checkAll: false,isIndeterminate: true,Orders:[1,2]
 
       }
     },
@@ -233,6 +241,12 @@
       backTohome(){
         this.$parent.fatherMethod();
       },
+      handleCheckedOrdersChange(value) {
+        let checkedCount = value.length;
+        this.checkAll = checkedCount === this.Orders.length;
+        this.isIndeterminate = checkedCount > 0 && checkedCount < this.Orders.length;
+      },
+
     },
     mounted() {
 
@@ -317,10 +331,6 @@
     border-radius: 3px;
     position: relative;
     left: -2px;
-  }
-  .underlists{
-    width: 1160px;
-    margin: 0 auto;
   }
   .underlists>.thed{
     height: 38px;
@@ -448,8 +458,7 @@
   }
   .prolists{
     background: #fff;
-    padding-bottom: 120px;
-    margin-bottom: 80px;
+    padding-bottom: 20px;
   }
   .prostatus{
     display: flex;

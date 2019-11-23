@@ -316,10 +316,6 @@
     color: #fff;
     border-radius: 3px;
   }
-  .underlists{
-    width: 1160px;
-    margin: 0 auto;
-  }
   .underlists > .thed {
     height: 38px;
     display: flex;

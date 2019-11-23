@@ -12,13 +12,14 @@
       </div>
     </div>
     <div class="mycontainer" >
-      <div class="undertakebox">
-        <div class="red lightgreybor" style="padding: 10px 20px">批量移除关联</div>
+      <div class="undertakebox" @click="handleCheckAllChange">
+        <div class="red lightgreybor" style="padding: 10px 20px" >批量移除关联</div>
       </div>
-      <div class="underlists">
+      <el-checkbox-group v-model="checkedOrders" class="boxes" @change="handleCheckedOrdersChange">
+        <div class="underlists" v-for="row in orderLists">
         <div class="thed">
           <div class="productpic">
-            <span class="lightgreybor"></span>
+            <el-checkbox  :label="row.id" :key="row.id">{{null}}</el-checkbox>
             <span style="width: 158px;">商品图片</span>
           </div>
           <div class="productcode">
@@ -27,7 +28,6 @@
           <div class="productprice">
             <span>拿货价</span>
           </div>
-
           <div class="ordertrack">
             <span >厂家名称</span>
           </div>
@@ -84,6 +84,7 @@
           </div>
         </div>
       </div>
+      </el-checkbox-group>
     </div>
   </div>
 </template>
@@ -114,14 +115,24 @@
           }
         ],
         starttime:'',
-        endtime:''
-
+        endtime:'',
+        orderLists:[{id:1},{id:2}],
+        checkedOrders:[],
+        checkAll: false,isIndeterminate: true,Orders:[1,2]
       }
     },
     methods: {
       backTohome(){
         this.$parent.fatherMethod();
       },
+      handleCheckedOrdersChange(value) {
+        let checkedCount = value.length;
+        this.checkAll = checkedCount === this.Orders.length;
+        this.isIndeterminate = checkedCount > 0 && checkedCount < this.Orders.length;
+      },
+      handleCheckAllChange(){
+        this.checkedOrders =this.Orders; //如果这里的批量不是全选的意思删掉这行
+      }
     },
     mounted() {
 
@@ -358,10 +369,6 @@
     position: relative;
     left: -2px;
   }
-  .underlists{
-    width: 1160px;
-    margin: 0 auto;
-  }
   .underlists>.thed{
     height: 38px;
     display: flex;
@@ -455,13 +462,12 @@
     height: 60px;
     margin: 0 auto;
   }
-  .itembox>div>div>div{
+  .itembox > div>div>div{
     margin-bottom: 4px;
   }
   .prolists{
     background: #fff;
-    padding-bottom: 120px;
-    margin-bottom: 80px;
+    padding-bottom: 20px;
   }
   .prostatus{
     display: flex;

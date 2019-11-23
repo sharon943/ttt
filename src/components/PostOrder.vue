@@ -23,26 +23,37 @@
                <span v-for="(item,index) in orderTypes" :class="{active:index===activeIndex}" @click="activeIndex=index">{{item}}</span>
                <div class="senderBox" v-show="activeIndex==0">
                    <h2>寄件人信息</h2>
-                   <section class=""><img src="../assets/img/check.png" alt=""><span style="display: inline-block">使用新寄件人</span></section>
-                 <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
-                   <el-form-item label="寄件人名称" prop="name">
-                     <el-input v-model="ruleForm.name"></el-input>
-                   </el-form-item>
-                   <el-form-item label="寄件人地址" prop="address">
-                     <el-input v-model="ruleForm.address"></el-input>
-                   </el-form-item>
-                   <el-form-item label="寄件人手机" prop="phone" class="phoneBox">
-                     <el-input v-model="ruleForm.phone"></el-input>（或）电话   <el-input v-model="ruleForm.phone"></el-input>
-                   </el-form-item>
-                   <el-form-item style="padding-left: 0">
-                     <el-button type="primary" @click="submitForm('ruleForm')">保存寄件人信息</el-button>
-                   </el-form-item>
-                 </el-form>
+                   <section class="">
+                     <img v-if="isNewsender" src="../assets/img/Check.png" alt="" >
+                     <img v-else src="../assets/img/notCheck.png" alt="" @click="uesNewsender">
+                     <span style="display: inline-block">使用新寄件人</span></section>
+                     <el-form v-show="isNewsender" :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
+                       <el-form-item label="寄件人名称" prop="name">
+                         <el-input v-model="ruleForm.name"></el-input>
+                       </el-form-item>
+                       <el-form-item label="寄件人地址" prop="address">
+                         <el-input v-model="ruleForm.address"></el-input>
+                       </el-form-item>
+                       <el-form-item label="寄件人手机" prop="phone" class="phoneBox">
+                         <el-input v-model="ruleForm.phone"></el-input>（或）电话   <el-input v-model="ruleForm.phone"></el-input>
+                       </el-form-item>
+                       <el-form-item style="padding-left: 0">
+                         <el-button type="primary" @click="submitForm('ruleForm')">保存寄件人信息</el-button>
+                       </el-form-item>
+                     </el-form>
+                 <section class="" v-for="(row,index) in senderList" @click="checkOrnot(index,'senderList')">
+                   <img v-if="row.check==0" src="../assets/img/notCheck.png" alt="">
+                   <img v-else src="../assets/img/Check.png" alt="">
+                   <span style="display: inline-block">{{row.name}}</span> <span style="color:#606266;">{{row.address}}</span><span style="color: #d8504d;" @click="deleteA(row.id)">删除</span>
+                 </section>
                </div>
              <div class="senderBox" v-show="activeIndex==1">
                <h2>提货人信息</h2>
-               <section class=""><img src="../assets/img/check.png" alt=""><span style="display: inline-block">使用新提货人</span></section>
-               <el-form :model="supplyForm" :rules="rules" ref="supplyForm" label-width="100px" class="demo-ruleForm">
+               <section class="">
+                 <img v-if="isNewsupply" src="../assets/img/Check.png" alt="" >
+                 <img v-else src="../assets/img/notCheck.png" alt="" @click="uesNewsupply">
+                 <span style="display: inline-block">使用新提货人</span></section>
+               <el-form v-show="isNewsupply" :model="supplyForm" :rules="rules" ref="supplyForm" label-width="100px" class="demo-ruleForm">
                  <el-form-item label="提货人姓名" prop="name">
                    <el-input v-model="supplyForm.name"></el-input>
                  </el-form-item>
@@ -56,11 +67,19 @@
                    <el-button type="primary" @click="submitForm('ruleForm')">保存提货人信息</el-button>
                  </el-form-item>
                </el-form>
+               <section class="" v-for="(row,index) in supplyList" @click="checkOrnot(index,'supplyList')">
+                 <img v-if="row.check==0" src="../assets/img/notCheck.png" alt="">
+                 <img v-else src="../assets/img/Check.png" alt="">
+                 <span style="display: inline-block">{{row.name}}</span> <span style="color:#606266;">{{row.address}}</span><span style="color: #d8504d;" @click="deleteA(row.id)">删除</span>
+               </section>
              </div>
              <div class="senderBox" v-show="activeIndex==0">
                <h2>收货人信息</h2>
-               <section class=""><img src="../assets/img/check.png" alt=""><span style="display: inline-block">使用新地址</span> <span style="color: #d8504d;">使用自提服务站</span></section>
-                 <el-form :model="consigneeForm" :rules="rules" ref="consigneeForm" label-width="120px" class="demo-ruleForm">
+               <section class="">
+                 <img v-if="isNewconsignee" src="../assets/img/Check.png" alt="" >
+                 <img v-else src="../assets/img/notCheck.png" alt="" @click="uesNewconsignee">
+                 <span style="display: inline-block">使用新地址</span> <span style="color: #d8504d;">使用自提服务站</span></section>
+                 <el-form v-show="isNewconsignee" :model="consigneeForm" :rules="rules" ref="consigneeForm" label-width="120px" class="demo-ruleForm">
                  <el-form-item label="模糊地址识别" class="textarea" prop="name">
                    <el-input type="textarea" v-model="consigneeForm.text"></el-input>
                  </el-form-item>
@@ -89,7 +108,11 @@
                    <el-button type="primary" @click="submitForm('consigneeForm')">保存收货人信息</el-button>
                  </el-form-item>
                  </el-form>
-               <section class="" v-for="(row,index) in consigneeList" @click="checkOrnot(row.check,index)"><img :src="row.check==0?'../assets/img/notCheck.png':'../assets/img/Check.png'" alt=""><span style="display: inline-block">邓先生</span> <span style="color:#606266;"> </span><span style="color: #d8504d;">删除</span></section>
+               <section class="" v-for="(row,index) in consigneeList" @click="checkOrnot(index,'consigneeList')">
+                 <img v-if="row.check==0" src="../assets/img/notCheck.png" alt="">
+                 <img v-else src="../assets/img/Check.png" alt="">
+                 <span style="display: inline-block">{{row.name}}</span> <span style="color:#606266;">{{row.address}}</span><span style="color: #d8504d;" @click="deleteA(row.id)">删除</span>
+               </section>
              </div>
            </section>
            <section class="goodsList">
@@ -153,14 +176,25 @@
     </div>
 </template>
 <script>
+  import Vue from 'vue'
   import headTop from '../config/headTop'
   import area from '../assets/js/area'
   export default {
     data(){
       return{
         provices:area.provice,citys:[],districtAndCounties:[],
+        //是否选用新寄件人新地址
+        isNewsender:false,
+        //是否选用新提货人
+        isNewsupply:false,
+        //是否选用新货人新地址
+        isNewconsignee:false,
+        //寄件人列表
+        senderList:[{id:1,name:'等先生',address:'湖北  武汉  江岸 唐家墩街道',check:1},{id:2,name:'邓先生',address:'湖北  武汉  江岸 唐家墩街道1',check:0}],
         //收货人列表
-        consigneeList:[{id:1,name:'等先生',address:'湖北  武汉  江岸 唐家墩街道',check:0},{id:2,name:'邓先生',address:'湖北  武汉  江岸 唐家墩街道1',check:0}],
+        consigneeList:[{id:1,name:'等先生',address:'湖北  武汉  江岸 唐家墩街道',check:1},{id:2,name:'邓先生',address:'湖北  武汉  江岸 唐家墩街道1',check:0}],
+        //提货人列表
+        supplyList:[{id:1,name:'等先生',address:'湖北  武汉  江岸 唐家墩街道',check:1},{id:2,name:'邓先生',address:'湖北  武汉  江岸 唐家墩街道1',check:0}],
         supplyForm:{name:'',phone:'',address:''},
         current : {prov: '', city: '', country: ''},
         checkedGifts:[],
@@ -238,11 +272,44 @@
 
     },
     methods:{
-      checkOrnot(e,index){
-        switch (e) {
-          case 0:this.consigneeList[index]=1;break;
-          case 1:this.consigneeList[index]=0;break;
+      uesNewsender(){
+        this.isNewsender=true
+        for (let i = 0; i <this.consigneeList.length ; i++) {
+          this.senderList[i].check=0
         }
+      },
+      uesNewsupply(){
+        this.isNewsupply=true
+        for (let i = 0; i <this.supplyList.length ; i++) {
+          this.supplyList[i].check=0
+        }
+      },
+      //删除收货人地址
+      deleteA(e){
+
+      },
+      uesNewconsignee(){
+        this.isNewconsignee=true
+        for (let i = 0; i <this.consigneeList.length ; i++) {
+            this.consigneeList[i].check=0
+        }
+      },
+      checkOrnot(index,name){
+        if(name=='senderList'){
+          this.isNewsender=false
+        }else if(name=='supplyList'){
+          this.isNewsupply=false
+        }else{
+          this.isNewconsignee=false
+        }
+        for (let i = 0; i <this[name].length ; i++) {
+          if(i==index){
+            this[name][i].check=1
+          }else{
+            this[name][i].check=0
+          }
+        }
+
       },
       showCity(e){
         console.log(e)

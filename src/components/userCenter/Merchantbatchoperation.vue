@@ -3,7 +3,7 @@
     <div class="mycontainer" style="background: none">
       <div class="mycontainer" style="background: none">
         <div class="productserchnav">
-          <span class="lightgrey">用户中心 &gt;</span>
+          <span class="lightgrey" @click="backTohome">用户中心 &gt;</span>
           <span>商户批量操作</span>
         </div>
       </div>
@@ -22,115 +22,122 @@
             搜索
           </div>
         </div>
-        <div class="undertakebox2">
+        <div class="undertakebox2"  @click="handleCheckAllChange">
           <div class="lightgreybor red ">批量一键上传</div>
         </div>
       </div>
-      <div class="underlists">
-        <div class="thed">
-          <div class="productpic">
-            <span class="lightgreybor"></span>
-            <span style="width: 158px;">商品图片</span>
-          </div>
-          <div class="productcode">
-            <span>货号</span>
-          </div>
-          <div class="productprice">
-            <span>拿货价</span>
-          </div>
-
-          <div class="ordertrack">
-            <span>厂家名称</span>
-          </div>
-          <div class="express">
-            <span>联系电话</span>
-          </div>
-          <div class="withmess">
-            <span>厂址</span>
-          </div>
-        </div>
-        <div class="prolists">
-          <div class="proitem lightgreybor darkgrey">
-            <div class="itembox">
-              <div>
+      <el-checkbox-group v-model="checkedOrders" class="boxes" @change="handleCheckedOrdersChange">
+        <div class="underlists">
+          <div v-if="isdefault" >
+            <div  v-for="row in orderLists">
+              <div class="thed">
                 <div class="productpic">
-                  <div style="display: flex;align-items: center">
-                    <div>
-                      <img src="../../assets/img/1.png" alt="">
-                    </div>
-                    <div class="blods" style="margin-left: 8px;width: 80px;text-align: left;color: #000">红色家族童装套装</div>
-                  </div>
+                  <el-checkbox  :label="row.id" :key="row.id">{{null}}</el-checkbox>
+                  <span style="width: 158px;">商品图片</span>
                 </div>
-              </div>
-              <div>
                 <div class="productcode">
-                  <span>豆仔小当家&卡通</span>
+                  <span>货号</span>
                 </div>
-              </div>
-
-              <div>
                 <div class="productprice">
-                  <span class="red blods secondfont">￥9.90</span>
+                  <span>拿货价</span>
                 </div>
-              </div>
 
-              <div>
                 <div class="ordertrack">
-
-
+                  <span>厂家名称</span>
                 </div>
-              </div>
-              <div>
                 <div class="express">
-
+                  <span>联系电话</span>
+                </div>
+                <div class="withmess">
+                  <span>厂址</span>
                 </div>
               </div>
-              <div>
-                <div class="withmess" style="text-align: left">
-                  <div>浙江省杭州市客户地址什么的</div>
-                  <div>陈雅元 18634301234</div>
+              <div class="prolists">
+                <div class="proitem lightgreybor darkgrey">
+                  <div class="itembox">
+                    <div>
+                      <div class="productpic">
+                        <div style="display: flex;align-items: center">
+                          <div>
+                            <img src="../../assets/img/1.png" alt="">
+                          </div>
+                          <div class="blods" style="margin-left: 8px;width: 80px;text-align: left;color: #000">红色家族童装套装</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="productcode">
+                        <span>豆仔小当家&卡通</span>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div class="productprice">
+                        <span class="red blods secondfont">￥9.90</span>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div class="ordertrack">
+
+
+                      </div>
+                    </div>
+                    <div>
+                      <div class="express">
+
+                      </div>
+                    </div>
+                    <div>
+                      <div class="withmess" style="text-align: left">
+                        <div>浙江省杭州市客户地址什么的</div>
+                        <div>陈雅元 18634301234</div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          <div v-else class="main">
+            <el-checkbox-group v-model="checkList" @change="handleCheckedCitiesChange">
+              <ul class="boxes" v-for="(row,index) in Stores" :key="index">
+              <li>
+                <div class="boxLeft">
+                  <section class="l_top">
+                    <p><el-checkbox :label="row.id">{{row.name}}</el-checkbox>  <span>金牌厂家</span></p>
+                    <p>武汉江岸区某某大街上203 <img src="../../assets/img/ismargin.png" alt=""></p>
+                    <img src="../../assets/img/rz.png" alt="" class="img1">
+                    <img src="../../assets/img/yyzz.png" alt="" class="img2">
+                  </section>
+                  <section class="l_middle">
+                    <div>
+                      <p>目前有货： <span>4566</span></p>
+                      <p>联系方式： <span>123456789011</span></p>
+                    </div>
+                    <div>
+                      <p>供应登记： <span>lv20</span></p>
+                      <p>最新数据： <span>2018-9-12</span></p>
+                    </div>
+                  </section>
+                  <section class="l_bottom">
+                    <span>进入店铺</span>
+                    <span>关注商家</span>
+                  </section>
+                </div>
+                <ul class="products">
+                  <li v-for="(item,index) in productsARR" :key="index">
+                    <img src="../../assets/img/13.png" alt="">
+                    <p>6斤服装大甩卖生意好啊</p>
+                    <p><span>$30.00</span> 91387人看过</p>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            </el-checkbox-group>
+          </div>
         </div>
-        <div class="main">
-          <ul class="boxes" v-for="(row,index) in Stores" :key="index">
-            <li>
-              <div class="boxLeft">
-                <section class="l_top">
-                  <p>萌萌童装 <span>金牌厂家</span></p>
-                  <p>武汉江岸区某某大街上203 <img src="../../assets/img/ismargin.png" alt=""></p>
-                  <img src="../../assets/img/rz.png" alt="" class="img1">
-                  <img src="../../assets/img/yyzz.png" alt="" class="img2">
-                </section>
-                <section class="l_middle">
-                  <div>
-                    <p>目前有货： <span>4566</span></p>
-                    <p>联系方式： <span>123456789011</span></p>
-                  </div>
-                  <div>
-                    <p>供应登记： <span>lv20</span></p>
-                    <p>最新数据： <span>2018-9-12</span></p>
-                  </div>
-                </section>
-                <section class="l_bottom">
-                  <span>进入店铺</span>
-                  <span>关注商家</span>
-                </section>
-              </div>
-              <ul class="products">
-                <li v-for="(item,index) in productsARR" :key="index">
-                  <img src="../../assets/img/13.png" alt="">
-                  <p>6斤服装大甩卖生意好啊</p>
-                  <p><span>$30.00</span> 91387人看过</p>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-
-      </div>
+      </el-checkbox-group>
     </div>
 
   </div>
@@ -142,10 +149,39 @@
       return {
         value: '',
         productsARR:[{id:1},{id:2},{id:3},{id:4}],
-        Stores: [{id: 1}, {id: 2}, {id: 3}, {id: 4}],
+        Stores:[{id:1,name:'萌萌童装1'},{id:2,name:'萌萌童装2'},{id:3,name:'萌萌童装3'},{id:4,name:'萌萌童装4'}],
+        isdefault:true,//true:默认展示。false:以搜索为结果的"厂家名称"展示的界面
+        orderLists:[{id:1},{id:2}],
+        checkedOrders:[],
+        Orders:[1,2],
+        //以搜索为结果的"厂家名称"展示的界面的选框参数
+        checkList:[],
       }
     },
-    methods: {},
+    methods: {
+      backTohome(){
+        this.$parent.fatherMethod();
+      },
+      handleCheckedOrdersChange(value) {
+        let checkedCount = value.length;
+        this.checkAll = checkedCount === this.Orders.length;
+      },
+      handleCheckAllChange(e){
+        if(this.isdefault){
+          this.checkedOrders =this.Orders; //如果这里的批量不是全选的意思删掉这行
+        }else {
+          var Options=[]
+          for (let i = 0; i < this.Stores.length; i++) {
+            Options.push(this.Stores[i].id)
+          }
+          this.checkList = Options;
+        }
+      },
+      handleCheckedCitiesChange(value) {
+        console.log(value)
+        let checkedCount = value.length;
+      },
+    },
     created: function () {
 
     },
@@ -416,11 +452,7 @@
     outline: none;
     border: none;
   }
-  .underlists{
-    width: 1160px;
-    margin: 0 auto;
-  }
-  .underlists > .thed {
+  .underlists .thed {
     height: 38px;
     display: flex;
     align-items: center;
@@ -428,16 +460,16 @@
     color: #515056;
   }
 
-  .underlists > .thed > div {
+  .underlists .thed > div {
     text-align: center;
   }
 
-  .underlists > .thed > div:nth-child(1) {
+  .underlists .thed > div:nth-child(1) {
     display: flex;
     padding-left: 5px;
   }
 
-  .underlists > .thed > div:nth-child(1) > .lightgreybor {
+  .underlists .thed > div:nth-child(1) > .lightgreybor {
     width: 20px;
     height: 20px;
     background: #fff;
@@ -527,8 +559,7 @@
 
   .prolists {
     background: #fff;
-    padding-bottom: 120px;
-    margin-bottom: 80px;
+    padding-bottom: 20px;
   }
 
   .prostatus {

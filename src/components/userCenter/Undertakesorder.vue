@@ -83,16 +83,16 @@
             </div>
           </div>
           <div class="darkgrey">
-            <div class="lightgreybor">
+            <div class="lightgreybor" @click="handleCheckAllChange('export')">
               <span class="red icons icon-daochu secondfont m8"></span><span>导出订单</span>
             </div>
-            <div  class="lightgreybor">
+            <div  class="lightgreybor" @click="handleCheckAllChange('into')">
               <span class="red icons icon-daoru secondfont m8"></span><span>导入发货单</span>
             </div>
-            <div  class="lightgreybor">
+            <div  class="lightgreybor" @click="handleCheckAllChange('establish')">
               <span class="red icons icon-order-add secondfont m8"></span><span>创建发货单</span>
             </div>
-            <div  class="lightgreybor">
+            <div  class="lightgreybor" @click="handleCheckAllChange('compensation')">
               <span class="red icons icon-jiacha secondfont m8"></span><span>补差价</span>
             </div>
           </div>
@@ -169,11 +169,11 @@
           <div>总金额<span class="red blods">15.00</span>元</div>
         </div>
       </div>
-
-      <div class="underlists">
+      <el-checkbox-group v-model="checkedOrders" class="boxes" @change="handleCheckedOrdersChange">
+        <div class="underlists" v-for="row in orderLists">
           <div class="thed">
             <div class="productpic">
-              <span class="lightgreybor"></span>
+              <el-checkbox  :label="row.id" :key="row.id">{{null}}</el-checkbox>
               <span>商品图片</span>
             </div>
             <div  class="productcode">
@@ -304,6 +304,7 @@
           </div>
           </div>
         </div>
+      </el-checkbox-group>
       </div>
   </div>
 
@@ -323,7 +324,10 @@
           }
         ],
         starttime:'',
-        endtime:''
+        endtime:'',
+        orderLists:[{id:1},{id:2}],
+        checkedOrders:[],
+        checkAll: false,isIndeterminate: true,Orders:[1,2]
 
       }
     },
@@ -331,6 +335,21 @@
       backTohome(){
         this.$parent.fatherMethod();
       },
+      handleCheckedOrdersChange(value) {
+        let checkedCount = value.length;
+        this.checkAll = checkedCount === this.Orders.length;
+        this.isIndeterminate = checkedCount > 0 && checkedCount < this.Orders.length;
+      },
+      handleCheckAllChange(e){
+        switch (e) {
+          case 'export': console.log(1);break;
+          case 'into': console.log(1);break;
+          case 'establish': console.log(3);break;
+          case 'compensation': console.log(4);break;
+
+        }
+        this.checkedOrders =this.Orders; //如果这里的批量不是全选的意思删掉这行
+      }
     },
     mounted() {
 
@@ -516,10 +535,6 @@
   .undertakeprices>div>div:nth-child(1){
     margin-right: 10px;
   }
-  .underlists{
-    width: 1160px;
-    margin: 0 auto;
-  }
   .underlists>.thed{
     height: 38px;
     display: flex;
@@ -645,9 +660,8 @@
   .itembox>div>div>div{
     margin-bottom: 4px;
   }
-  .prolists{
+  .prolists {
     background: #fff;
-    padding-bottom: 120px;
-    margin-bottom: 80px;
+    padding-bottom: 20px;
   }
 </style>

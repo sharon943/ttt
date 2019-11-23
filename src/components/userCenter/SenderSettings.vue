@@ -207,7 +207,7 @@
       }
     },
     created: function () {
-      this.getCityData()
+      // this.getCityData()
     },
     mounted() {
 

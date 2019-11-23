@@ -332,3 +332,6 @@ cursor: pointer;
 .editnum .el-input-number__increase{
   border-radius: 0;
 }
+.el-checkbox{
+  margin-right: 0;
+}

@@ -15,20 +15,20 @@
       <div class="undertakebox">
         <div class="undertakebox2 blods">
           <div class="lightgreybor ">
-            <div style="display: inline-flex" >
+            <div style="display: inline-flex"  @click="handleCheckAllChange('del')">
               <span class="icons icon-shanchu red m8 secondfont"></span>
               <span>取消收藏</span>
             </div>
           </div>
-          <div class="lightgreybor firstfont">加入购物车</div>
-          <div class="lightgreybor red">一键发布</div>
-
+          <div class="lightgreybor firstfont"  @click="handleCheckAllChange('car')">加入购物车</div>
+          <div class="lightgreybor red"  @click="handleCheckAllChange('publish')">一键发布</div>
         </div>
       </div>
-      <div class="underlists">
+      <el-checkbox-group v-model="checkedOrders" class="boxes" @change="handleCheckedOrdersChange">
+         <div class="underlists" v-for="row in orderLists">
         <div class="thed">
           <div class="productpic">
-            <span class="lightgreybor"></span>
+            <el-checkbox  :label="row.id" :key="row.id">{{null}}</el-checkbox>
             <span  style="width: 158px;">商品图片</span>
           </div>
           <div class="productcode">
@@ -94,6 +94,7 @@
           </div>
         </div>
       </div>
+      </el-checkbox-group>
     </div>
   </div>
 </template>
@@ -124,7 +125,10 @@
           }
         ],
         starttime: '',
-        endtime: ''
+        endtime: '',
+        orderLists:[{id:1},{id:2}],
+        checkedOrders:[],
+        checkAll: false,isIndeterminate: true,Orders:[1,2]
 
       }
     },
@@ -132,6 +136,19 @@
       backTohome(){
         this.$parent.fatherMethod();
       },
+      handleCheckedOrdersChange(value) {
+        let checkedCount = value.length;
+        this.checkAll = checkedCount === this.Orders.length;
+        this.isIndeterminate = checkedCount > 0 && checkedCount < this.Orders.length;
+      },
+      handleCheckAllChange(e){
+        switch (e) {
+          case 'del': console.log(1);break;
+          case 'car': console.log(2);break;
+          case 'publish': console.log(4);break;
+        }
+        this.checkedOrders =this.Orders; //如果这里的不需要全选删掉这行
+      }
     },
     mounted() {
 
@@ -373,10 +390,6 @@
     position: relative;
     left: -2px;
   }
-  .underlists{
-    width: 1160px;
-    margin: 0 auto;
-  }
   .underlists > .thed {
     height: 38px;
     display: flex;
@@ -484,10 +497,8 @@
 
   .prolists {
     background: #fff;
-    padding-bottom: 120px;
-    margin-bottom: 80px;
+    padding-bottom: 20px;
   }
-
   .prostatus {
     display: flex;
     align-items: center;

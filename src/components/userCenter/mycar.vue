@@ -16,8 +16,9 @@
         <div class="darkgrey shopedits">
           <div>
             <div>
-              <div class="lightgreybor cursor"></div>
-              <div class="cursor">全选</div>
+              <!--<div class="lightgreybor cursor"></div>-->
+              <!--<div class="cursor">全选</div>-->
+              <el-checkbox class="cursor" :indeterminate="isIndeterminate" v-model="checkAll_" @change="handleCheckAllChange_">全选</el-checkbox>
             </div>
             <div>货名</div>
           </div>
@@ -28,87 +29,55 @@
           <div>供货价</div>
           <div>操作</div>
         </div>
-        <div class="shopedits" style="margin-bottom: 9px;">
-          <div>
+        <div v-for="(r,i) in orderShops">
+          <div class="shopedits" style="margin-bottom: 9px;">
             <div>
-              <div class="lightgreybor"></div>
-              <div>这是一家店名</div>
-            </div>
-
-          </div>
-        </div>
-        <div>
-          <div class="caredit">
-            <div class="carlist darkgrey lightgreybor">
               <div>
-                <div class="lightgreybor"></div>
-                <div>
-                  <div>
-                    <img src="../../assets/img/1.png" alt="">
-                  </div>
-                  <div>
-                    <div>货号：456456</div>
-                    <div class="orange">￥60.00</div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div>
-                  <span class="lightgrey">已选1色2码</span>
-                  <span  class="blue cursor">修改</span>
-                </div>
-                <div class="lightgreybor">
-                  <div>黄色</div>
-                  <div>
-                    <span>120</span>
-                    <span>x2</span>
-                  </div>
-                </div>
-              </div>
-              <div>2</div>
-              <div class="blods orange">160.00</div>
-              <div>
-                <div class="cursor">收藏</div>
-                <div class="cursor">删除</div>
-                <div class="lightgreybor cursor">补差价</div>
+                <el-checkbox :indeterminate="r.isIndeterminate" v-model="r.checkAll" @change="handleCheckAllChange(r.checkAll,i)">这是一家店名</el-checkbox>
               </div>
             </div>
           </div>
-          <div class="caredit">
-            <div class="carlist darkgrey lightgreybor">
-              <div>
-                <div class="lightgreybor"></div>
+          <div>
+            <el-checkbox-group v-model="r.checks" @change="handleCheckedOrdersChange(r.checks,i)">
+           <div>
+            <div class="caredit" v-for="row in Orders">
+              <div class="carlist darkgrey lightgreybor">
+                <div>
+                  <el-checkbox :label="row">{{null}}</el-checkbox>
+                  <div>
+                    <div>
+                      <img src="../../assets/img/1.png" alt="">
+                    </div>
+                    <div>
+                      <div>货号：456456</div>
+                      <div class="orange">￥60.00</div>
+                    </div>
+                  </div>
+                </div>
                 <div>
                   <div>
-                    <img src="../../assets/img/1.png" alt="">
+                    <span class="lightgrey">已选1色2码</span>
+                    <span  class="blue cursor">修改</span>
                   </div>
-                  <div>
-                    <div>货号：456456</div>
-                    <div class="orange">￥60.00</div>
+                  <div class="lightgreybor">
+                    <div>黄色</div>
+                    <div>
+                      <span>120</span>
+                      <span>x2</span>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div>
+                <div>2</div>
+                <div class="blods orange">160.00</div>
                 <div>
-                  <span class="lightgrey">已选1色2码</span>
-                  <span class="blue cursor">修改</span>
+                  <div class="cursor">收藏</div>
+                  <div class="cursor">删除</div>
+                  <div class="lightgreybor cursor">补差价</div>
                 </div>
-                <div class="lightgreybor">
-                  <div>黄色</div>
-                  <div>
-                    <span>120</span>
-                    <span>x2</span>
-                  </div>
-                </div>
-              </div>
-              <div>2</div>
-              <div class="blods orange">160.00</div>
-              <div>
-                <div class="cursor">收藏</div>
-                <div class="cursor">删除</div>
-                <div class="lightgreybor cursor">补差价</div>
               </div>
             </div>
+          </div>
+        </el-checkbox-group>
           </div>
         </div>
         <div class="darkgrey alllist">
@@ -140,14 +109,41 @@
 
 </template>
 <script>
+  const Ordersoptions=[1,2]
   export default {
     data() {
-      return {}
+      return {
+        //各家订单
+        orderShops:[{id:1,checks:[],isIndeterminate:true,checkAll:false,checkedOrders:[1,2]},{id:2,checks:[],isIndeterminate:true,checkAll:false,checkedOrders:[1,2]}],
+        Orders:Ordersoptions,
+        //全选开关数据
+        checkAll_:false,isIndeterminate:true
+      }
     },
     methods: {
       backTohome(){
         this.$parent.fatherMethod();
-      }
+      },
+      handleCheckedOrdersChange(value,i){
+        console.log(value,i)
+        let checkedCount = value.length;
+        this.orderShops[i].checkAll = checkedCount === this.Orders.length;
+        this.orderShops[i].isIndeterminate = checkedCount > 0 && checkedCount < this.Orders.length;
+        // console.log(this.checkedOrders)
+      },
+      handleCheckAllChange(val,i){
+        console.log(val,i)
+        this.orderShops[i].checks = val ? this.Orders : [];
+        this.orderShops[i].isIndeterminate = false;
+        console.log(this.orderShops[i].checks)
+      },
+      handleCheckAllChange_(val){
+        for(var i=0;i<this.orderShops.length;i++){
+          this.orderShops[i].checks=val ? this.orderShops[i].checkedOrders:[]
+          this.orderShops[i].isIndeterminate = false;
+          this.orderShops[i].checkAll = val;
+        }
+      },
 
     },
     mounted() {

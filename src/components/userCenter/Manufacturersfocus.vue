@@ -12,14 +12,16 @@
       <div class="main">
         <ul class="topUL">
           <li class="active">厂家关注</li>
-          <li>批量取消关注</li>
+          <li>
+            <el-checkbox :indeterminate="isIndeterminate" v-model="checkAll" @change="handleCheckAllChange">批量取消关注</el-checkbox>
+          </li>
         </ul>
-        <el-checkbox-group v-model="checkList">
+        <el-checkbox-group v-model="checkList" @change="handleCheckedCitiesChange">
           <ul class="boxes" v-for="row in Stores">
             <li>
               <div class="boxLeft">
                 <section class="l_top">
-                  <p><el-checkbox :label="row.name"></el-checkbox> <span>金牌厂家</span></p>
+                  <p><el-checkbox :label="row.id">{{row.name}}</el-checkbox> <span>金牌厂家</span></p>
                   <p>武汉江岸区某某大街上203 <img src="../../assets/img/ismargin.png" alt=""></p>
                   <img src="../../assets/img/29.png" alt="">
                 </section>
@@ -59,12 +61,26 @@
     data(){
 
       return {
-        checkList:[],
+        checkList:[],isIndeterminate:false,checkAll:true,
         productsARR:[{id:1},{id:2},{id:3},{id:4}],
         Stores:[{id:1,name:'萌萌童装1'},{id:2,name:'萌萌童装2'},{id:3,name:'萌萌童装3'},{id:4,name:'萌萌童装4'}],
       }
     },
     methods:{
+      handleCheckAllChange(val){
+        var Options=[]
+        for (let i = 0; i < this.Stores.length; i++) {
+          Options.push(this.Stores[i].name)
+        }
+        this.checkList = val ? Options : [];
+        this.isIndeterminate = false;
+      },
+      handleCheckedCitiesChange(value) {
+        console.log(value)
+        let checkedCount = value.length;
+        this.checkAll = checkedCount === this.Stores.length;
+        this.isIndeterminate = checkedCount > 0 && checkedCount < this.Stores.length;
+      },
       backTohome(){
         this.$parent.fatherMethod();
       },
@@ -86,7 +102,7 @@
     .main{
       width: 1200px;border-top: 1px solid #f3463a;height: auto;margin:50px auto 0;position: relative;
       .topUL{
-        width: 50%;display: flex;justify-content: space-between;position: absolute;top:-40px;left: 0;cursor: pointer;
+        width: 30%;display: flex;justify-content: space-between;position: absolute;top:-40px;left: 0;cursor: pointer;
         li{
           width: 150px;text-align: center;height: 40px;line-height: 40px;
         }

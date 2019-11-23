@@ -451,6 +451,7 @@
     <Manufacturersfocus v-else-if="active==10"></Manufacturersfocus>
     <Browsefootprint v-else-if="active==11"></Browsefootprint>
     <Supplydynamic v-else-if="active==12"></Supplydynamic>
+    <Merchantbatchoperation v-else-if="active==13"></Merchantbatchoperation>
     <AccountInfo v-else-if="active==14"></AccountInfo>
     <SafeAuthorization v-else-if="active==15"></SafeAuthorization>
     <AccountBalance v-else-if="active==17"></AccountBalance>
@@ -458,6 +459,7 @@
     <MyPoints v-else-if="active==19"></MyPoints>
     <Message v-else-if="active==20"></Message>
     <GrandPrize v-else-if="active==21"></GrandPrize>
+    <SenderSettings v-else-if="active==22"></SenderSettings>
   </div>
 
 </template>
@@ -480,6 +482,8 @@
   import AccountInfo from './userCenter/AccountInfo'           //账户信息
   import AccountBalance from './userCenter/AccountBalance'           //账户余额
   import MyCoupons from './userCenter/MyCoupons'           //优惠券
+  import Merchantbatchoperation from './userCenter/Merchantbatchoperation'           //商品批量操作
+  import SenderSettings from './userCenter/SenderSettings'           //寄件人设置
   export default {
     data() {
       return {
@@ -490,7 +494,8 @@
     },
     components:{
       Mycar,Shoporders,Browsefootprint,GrandPrize,Message,MyPoints,Productcollection,Relatedproducts,SafeAuthorization,Saleorder,
-      Storeproducts,Undertakesorder,uploadpicpackage,Manufacturersfocus,Supplydynamic,AccountInfo,AccountBalance,MyCoupons
+      Storeproducts,Undertakesorder,uploadpicpackage,Manufacturersfocus,Supplydynamic,AccountInfo,AccountBalance,MyCoupons,Merchantbatchoperation,
+      SenderSettings
     },
     methods: {
       fatherMethod(){

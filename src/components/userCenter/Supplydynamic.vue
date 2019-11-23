@@ -4,7 +4,7 @@
       <div class="mycontainer" style="background: none">
         <div class="productserchnav">
           <span class="lightgrey" @click="backTohome">用户中心 &gt;</span>
-          <span>店铺订单</span>
+          <span>资源动态</span>
         </div>
       </div>
       <div class="mynavs">
@@ -22,18 +22,20 @@
           </div>
         </div>
         <div class="undertakebox2">
-          <div class="lightgreybor blods">
-            <div style="display: inline-flex" class="red">
+          <div class="lightgreybor blods" @click="handleCheckAllChange('del')">
+            <div style="display: inline-flex" class="red" >
               <span class="icons icon-shanchu  m8 secondfont"></span>
               <span>批量删除</span>
             </div>
           </div>
-          <div class="red redbor blods">批量加购</div>
+          <div class="red redbor blods" @click="handleCheckAllChange('car')">批量加购</div>
         </div>
       </div>
-      <div class="underlists">
+      <el-checkbox-group v-model="checkedOrders" class="boxes" @change="handleCheckedOrdersChange">
+         <div class="underlists"  v-for="row in orderLists">
         <div class="thed">
           <div class="productpic"  >
+            <el-checkbox  :label="row.id" :key="row.id">{{null}}</el-checkbox>
             <span style="margin: 0 auto">商品图片</span>
           </div>
           <div class="productprice">
@@ -87,6 +89,7 @@
           </div>
         </div>
       </div>
+      </el-checkbox-group>
     </div>
 
   </div>
@@ -96,13 +99,29 @@
   export default {
     data() {
       return {
-        value:''
+        value:'',
+        orderLists:[{id:1},{id:2}],
+        checkedOrders:[],
+        checkAll: false,isIndeterminate: true,Orders:[1,2]
       }
     },
     methods: {
       backTohome(){
         this.$parent.fatherMethod();
       },
+      handleCheckedOrdersChange(value) {
+        let checkedCount = value.length;
+        this.checkAll = checkedCount === this.Orders.length;
+        this.isIndeterminate = checkedCount > 0 && checkedCount < this.Orders.length;
+      },
+      handleCheckAllChange(e){
+        switch (e) {
+          case 'del': console.log(1);break;
+          case 'car': console.log(2);break;
+
+        }
+        this.checkedOrders =this.Orders; //如果这里的批量不是全选的意思删掉这行
+      }
     },
     mounted() {
 
@@ -204,10 +223,6 @@
     position: relative;
     left: -2px;
   }
-  .underlists{
-    width: 1160px;
-    margin: 0 auto;
-  }
   .underlists > .thed {
     height: 38px;
     display: flex;
@@ -294,10 +309,8 @@
 
   .prolists {
     background: #fff;
-    padding-bottom: 120px;
-    margin-bottom: 80px;
+    padding-bottom: 20px;
   }
-
   .prostatus {
     display: flex;
     align-items: center;

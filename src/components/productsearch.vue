@@ -12,8 +12,9 @@
               <span>厂家</span>
             </div>
             <div class="Consultingsearchbox">
-              <div>
-                <input type="text" placeholder="根据产品标题、厂家名称进行搜索">
+              <div style="overflow: hidden">
+                <el-input v-model="proname" placeholder="根据产品标题、厂家名称进行搜索"></el-input>
+
               </div>
               <div>
                 <span class="iconfont icon-sousuo"></span>
@@ -185,7 +186,7 @@
                         <div class="two-code-ico">
                           <img src="../assets/img/main/product/phone_ico.png" alt="">
                           <div class="two-code-img">
-                            <img src="http://www.3e3e.cn/upload/site/yzltz123.png" alt="" width="126" height="126">
+                            <img src="../assets/img/code.jpg" alt="" width="126" height="126">
                             <span>手机详情请扫描二维码找厂商洽谈货源更方便</span>
                           </div>
                         </div>
@@ -330,6 +331,7 @@
   export default {
     data() {
       return {
+        proname:'',
         state: '综合',
         activeindex: -1,
         showvisible: true,
@@ -339,7 +341,8 @@
         total: 120,
         pageSizes: [10],
         sprice: '',
-        bprice: ''
+        bprice: '',
+
       }
     },
     watch: {},
@@ -1119,7 +1122,7 @@
   }
   .two-code-img:before {
     content: "";
-    background: url('../assets/img/logo.png');
+    background: url('../assets/img/left_arrow.png');
     width: 10px;
     height: 18px;
     position: absolute;
@@ -1136,7 +1139,7 @@
     display: block;
   }
   .enshrine:hover{
-    background: #f43e31;
+    background: #fd6619;
     color: #fff;
   }
 </style>

@@ -13,7 +13,7 @@
             </div>
             <div class="Consultingsearchbox">
               <div>
-                <input type="text" placeholder="根据产品标题、厂家名称进行搜索">
+                <el-input v-model="proname" placeholder="根据产品标题、厂家名称进行搜索"></el-input>
               </div>
               <div>
                 <span class="iconfont icon-sousuo"></span>
@@ -61,10 +61,9 @@
           <div>童淘淘欢迎你！</div>
           <div class="lightgreybor allproductsearch">
             <span class="iconfont icon-sousuo"></span>
-            <span>
-                          <input type="text" placeholder="搜索标题、货号">
-                    </span>
-
+            <span >
+               <el-input v-model="ordernumber" placeholder="搜索标题、货号"></el-input>
+             </span>
           </div>
         </div>
         <div></div>
@@ -100,7 +99,7 @@
             <span class="lightgreybor"><el-input v-model="bprice" placeholder=""></el-input></span>
           </div>
           <div>
-            <span class="lightgreybor pricebtn">确定</span>
+            <span class="lightgreybor pricebtn" @click="submits">确定</span>
 
           </div>
         </div>
@@ -211,8 +210,65 @@
 
             <div class="lightgreybor stroe2tjbox stroe2zhitem cursor" v-for="(val,index) in 12" :key="index">
               <a >
-                <div>
-                  <img src="../assets/img/11.png" alt="" class="storepic">
+                <div @mouseenter="showshadow(index)" @mouseleave.stop="hideshadow">
+                  <img src="../assets/img/11.png" alt="" class="storepic" @mouseenter="showvisible=true">
+                  <div class="shadows orangrebor" v-if="showhide&&(index==activeindex)">
+                    <div class="oranges" v-show="showvisible">
+                      <span>传淘宝</span>
+                      <span>加购物车</span>
+                      <span>一件代发</span>
+                    </div>
+                    <div class="shadowbox" @mouseenter="showvisible=false">
+                      <div>
+                        <div>
+                          <span class="secondfont">￥</span><span class="secondfont red blods">120</span>
+                        </div>
+                        <div class="orangrebor orange">一件起批</div>
+                      </div>
+                      <div style="padding-bottom: 30px;border-bottom: 1px solid #dfdfdf">
+                        <div>
+                          <div>商家名称：</div>
+                          <div></div>
+                        </div>
+                        <div>
+                          <div>商家验证：</div>
+                          <div></div>
+                        </div>
+                        <div>
+                          <div>供应等级：</div>
+                          <div></div>
+                        </div>
+                        <div>
+                          <div>主要属性：</div>
+                          <div>
+                            <span class="orange">2</span>色
+                            <span class="orange">6</span>码
+                          </div>
+                        </div>
+                      </div>
+                      <div class="zixunbox">
+                        <div>
+                          <div><span><img src="../assets/img/main/product/id_card.png" alt=""></span><span>姓名</span></div>
+                          <div><span class="icons icon-tel"></span><span>电话</span></div>
+
+                        </div>
+                        <div>
+                          联系地址
+                        </div>
+                        <div>
+                          <div><img src="../assets/img/main/qq_talk.png" alt="" style="width: 77px;height: 22px"></div>
+                          <div class="two-code-ico">
+                            <img src="../assets/img/main/product/phone_ico.png" alt="">
+                            <div class="two-code-img">
+                              <img src="../assets/img/code.jpg" alt="" width="126" height="126">
+                              <span>手机详情请扫描二维码找厂商洽谈货源更方便</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
                 </div>
                 <div class="blods">
                   <div><span>￥</span><span class="orange secondfont productprice2">80</span></div>
@@ -222,7 +278,7 @@
                   穿个大熊熊的外套
                 </div>
                 <div class="stroe2sc">
-                  <span class="lightgreybor orange" @click.stop="focus(index)">收藏80</span>
+                  <span class="lightgreybor orange enshrine" @click.stop="focus(index)">收藏80</span>
                 </div>
               </a>
             </div>
@@ -239,12 +295,21 @@
   export default {
     data() {
       return {
+        proname:'',
+        ordernumber:'',
         category: '所有',
+        activeindex: -1,
         state: '综合',
         sprice: '',
         bprice: '',
         isshow: true,
-        order: [1, 2, 3, 4, 5]
+        order: [1, 2, 3, 4, 5],
+        showvisible: true,
+        showhide: true,
+        pages: '',
+        pageindex: 1,
+        total: 120,
+        pageSizes: [10],
       }
     },
     methods: {
@@ -257,6 +322,56 @@
       },
       focus(index){
 
+      },
+      prev() {
+        if (this.pageindex == 1) {
+          return
+        } else {
+          this.pageindex = this.pageindex - 1
+        }
+      },
+      next() {
+        if (this.pageindex == this.total / this.pageSizes) {
+          return
+        } else {
+          this.pageindex = this.pageindex + 1
+        }
+        console.log(this.pageindex)
+      },
+      gotos() {
+        if (this.pages == '') {
+          return
+        } else if (this.pages <= 0) {
+          this.pageindex = 1
+        } else if (this.pages >= (this.total / this.pageSizes)) {
+          this.pageindex = this.total / this.pageSizes
+        } else {
+          this.pageindex = this.pages
+        }
+      },
+      currentchanges(e) {
+        this.pageindex = e
+      },
+      sizechanges(e) {
+
+      },
+
+      submits() {
+        if (this.sprice != '' && this.bprice != '') {
+
+        } else {
+          return
+        }
+      },
+      showshadow(index) {
+        this.activeindex = index
+        this.showhide = true
+
+      },
+      hideshadow() {
+        this.activeindex = -1
+        this.showhide = false
+        this.showvisible = true
       }
     },
     mounted() {
@@ -646,6 +761,7 @@
   .stroe2tjbox > a > div:nth-child(1) {
     width: 100%;
     height: 220px;
+    position: relative;
   }
 
   .stroe2tjbox > a > div:nth-child(1) > img {
@@ -1045,6 +1161,130 @@
   .changeprice .active {
     color: #f43e31;
   }
+  .shadows {
+    position: absolute;
+    left: 0;
+    bottom: -250px;
+    background: #fff;
+    padding-bottom: 6px;
+    width: 100%;
+    z-index: 10;
+  }
 
+  .shadows > div:nth-child(1) {
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .shadowbox > div:nth-child(1) {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    padding: 8px;
+    align-items: center;
+  }
+
+  .shadows > div:nth-child(1) > span {
+    width: 33.333333%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+
+  }
+
+  .shadows > div:nth-child(1) > span:hover {
+    background: #ff3c3c;
+  }
+
+  .shadowbox > div:nth-child(1) > div:nth-child(2) {
+    padding: 0 8px;
+  }
+
+  .shadowbox > div:nth-child(2) {
+    padding: 0 8px;
+  }
+
+  .shadowbox > div:nth-child(2) > div {
+    display: flex;
+    color: #666;
+    font-size: 14px;
+    line-height: 24px;
+    /*justify-content: space-between;*/
+  }
+  .zixunbox {
+    padding: 0 8px;
+    padding-top: 10px;
+  }
+
+  .zixunbox > div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+  }
+
+  .zixunbox > div:nth-child(1) {
+    height: 20px;
+  }
+
+  .zixunbox > div:nth-child(1) > div {
+    margin-right: 8px;
+  }
+
+  .zixunbox > div:nth-child(1) > div > span {
+    margin-right: 4px;
+  }
+
+  .zixunbox > div:nth-child(3) {
+    justify-content: space-between;
+  }
+
+  .two-code-ico {
+    background: url(http://plus.go2.cn/images/main/search/two_code_ico_normal.png) no-repeat;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .two-code-img {
+    position: absolute;
+    left: 27px;
+    bottom: -13px;
+    border: 1px solid #ff6c00;
+    padding: 18px 20px 13px 21px;
+    text-align: center;
+    display: none;
+    cursor: default;
+    z-index: 2;
+    background: #fff;
+  }
+  .two-code-ico:hover .two-code-img {
+    display: block;
+  }
+  .two-code-img img {
+    margin-bottom: 8px;
+  }
+
+  .two-code-img span {
+    line-height: 17px;
+    display: block;
+  }
+  .enshrine:hover{
+    background: #fd6619;
+    color: #fff;
+  }
+  .two-code-img:before {
+    content: "";
+    background: url('../assets/img/left_arrow.png');
+    width: 10px;
+    height: 18px;
+    position: absolute;
+    left: -10px;
+    bottom: 9px;
+  }
 </style>
 

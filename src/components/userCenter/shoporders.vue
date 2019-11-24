@@ -122,7 +122,7 @@
       <img src="../../assets/img/daifa2.jpeg">
       <a target="_blank" href="http://www.zhaojiafang.com/index.php?act=activity&op=dfoption"
          style="position: absolute;bottom:150px;width: 110px;height: 130px;display: inline-block;left: 0px;"></a>
-      <a class="contact-qq" target="_blank" href="http://wpa.b.qq.com/cgi/wpa.php?ln=2&amp;uin=4000513256"></a>
+      <a class="contact-qq" target="_blank" href="http://wpa.b.qq.com/cgi/wpa.php?ln=2&amp;uin=3609751767"></a>
       <a class="contact-wechat" href="javascript:;" @click="wechatVisible=true"></a>
       <a class="contact-phone" href="javascript:;" @click="contactVisible=true"></a>
     </div>
@@ -133,7 +133,7 @@
         title=""
         :visible.sync="wechatVisible">
         <div class="ewcodes">
-          <img src="../../assets/img/ismargin.png" alt="">
+          <img src="../../assets/img/code.jpg" alt="">
           <span>扫一扫，咨询微信客服</span>
 
         </div>

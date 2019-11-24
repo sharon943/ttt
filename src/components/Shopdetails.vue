@@ -663,7 +663,7 @@
       }
     },
     mounted() {
-
+        this.activeimg=this.propiclist[0].url
     },
     beforeRouteEnter(to, from, next) {
       next(vm => {

@@ -133,59 +133,69 @@
               <span class="lightgreybor pricebtn cursor" @click="submits">确定</span>
             </div>
           </div>
-          <div class="productpages" >
-            <div class="items cursor" v-for="(val,index) in 12" :key="index" >
+          <div class="productpages">
+            <div class="items cursor" v-for="(val,index) in 12" :key="index">
               <div @mouseenter="showshadow(index)" @mouseleave.stop="hideshadow">
-                <img src="../assets/img/2.png" alt="">
-                <div class="shadows orangrebor"   v-if="showhide&&(index==activeindex)">
-                  <div class="oranges">
+                <img src="../assets/img/2.png" alt="" @mouseenter="showvisible=true">
+                <div class="shadows orangrebor" v-if="showhide&&(index==activeindex)">
+                  <div class="oranges" v-show="showvisible">
                     <span>传淘宝</span>
                     <span>加购物车</span>
                     <span>一件代发</span>
                   </div>
-                  <div>
+                  <div class="shadowbox" @mouseenter="showvisible=false">
                     <div>
-                      <span class="secondfont">￥</span><span class="secondfont red blods">120</span>
-                    </div>
-                    <div class="orangrebor orange">一件起批</div>
-                  </div>
-                  <div style="padding-bottom: 30px;border-bottom: 1px solid #dfdfdf">
-                    <div>
-                      <div>商家名称：</div>
-                      <div></div>
-                    </div>
-                    <div>
-                      <div>商家验证：</div>
-                      <div></div>
-                    </div>
-                    <div>
-                      <div>供应等级：</div>
-                      <div></div>
-                    </div>
-                    <div>
-                      <div>主要属性：</div>
                       <div>
-                        <span class="orange">2</span>色
-                        <span class="orange">6</span>码</div>
+                        <span class="secondfont">￥</span><span class="secondfont red blods">120</span>
+                      </div>
+                      <div class="orangrebor orange">一件起批</div>
                     </div>
-                  </div>
-                  <div class="zixunbox">
-                    <div>
-                      <div><span><img src="../assets/img/main/product/id_card.png" alt="" ></span><span>姓名</span></div>
-                      <div><span class="icons icon-tel"></span><span>电话</span></div>
+                    <div style="padding-bottom: 30px;border-bottom: 1px solid #dfdfdf">
+                      <div>
+                        <div>商家名称：</div>
+                        <div></div>
+                      </div>
+                      <div>
+                        <div>商家验证：</div>
+                        <div></div>
+                      </div>
+                      <div>
+                        <div>供应等级：</div>
+                        <div></div>
+                      </div>
+                      <div>
+                        <div>主要属性：</div>
+                        <div>
+                          <span class="orange">2</span>色
+                          <span class="orange">6</span>码
+                        </div>
+                      </div>
+                    </div>
+                    <div class="zixunbox">
+                      <div>
+                        <div><span><img src="../assets/img/main/product/id_card.png" alt=""></span><span>姓名</span></div>
+                        <div><span class="icons icon-tel"></span><span>电话</span></div>
 
-                    </div>
-                    <div>
-                      联系地址
-                    </div>
-                    <div>
-                      <div><img src="../assets/img/main/qq_talk.png" alt="" style="width: 77px;height: 22px"></div>
-                      <div><img src="../assets/img/main/product/phone_ico.png" alt=""></div>
+                      </div>
+                      <div>
+                        联系地址
+                      </div>
+                      <div>
+                        <div><img src="../assets/img/main/qq_talk.png" alt="" style="width: 77px;height: 22px"></div>
+                        <div class="two-code-ico">
+                          <img src="../assets/img/main/product/phone_ico.png" alt="">
+                          <div class="two-code-img">
+                            <img src="http://www.3e3e.cn/upload/site/yzltz123.png" alt="" width="126" height="126">
+                            <span>手机详情请扫描二维码找厂商洽谈货源更方便</span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
+
                 </div>
               </div>
-              <div class="scproductprice" >
+              <div class="scproductprice">
                 <div>
                   <div><span>￥</span><span class="blods red secondfont">150</span></div>
                   <div class="lightgrey">15色5码</div>
@@ -199,7 +209,7 @@
                     <span class="orangrebor orange">人</span>
                   </div>
                   <div>
-                    <span class="orangrebor orange cursor">收藏20</span>
+                    <span class="orangrebor orange cursor enshrine">收藏20</span>
                   </div>
                 </div>
               </div>
@@ -217,9 +227,9 @@
                   :page-sizes="pageSizes"
                   :current-page="pageindex"
                   :total="total" @current-change="currentchanges" @size-change="sizechanges">
-                </el-pagination >
+                </el-pagination>
               </div>
-              <div class="gobtn"  @click="next()" :class="{activego:pageindex==total/pageSizes}">下一页</div>
+              <div class="gobtn" @click="next()" :class="{activego:pageindex==total/pageSizes}">下一页</div>
               <div>总共{{total/pageSizes}}页</div>
               <div class="gopages">
                 <span>到</span>
@@ -321,70 +331,71 @@
     data() {
       return {
         state: '综合',
-        activeindex:-1,
-        showhide:false,
-        pages:'',
-        pageindex:1,
-        total:120,
-        pageSizes:[10],
-        sprice:'',
-        bprice:''
+        activeindex: -1,
+        showvisible: true,
+        showhide: true,
+        pages: '',
+        pageindex: 1,
+        total: 120,
+        pageSizes: [10],
+        sprice: '',
+        bprice: ''
       }
     },
-    watch:{
-
-    },
+    watch: {},
     methods: {
       changestate(i) {
         this.state = i
       },
-      prev(){
-        if(this.pageindex==1){
+      prev() {
+        if (this.pageindex == 1) {
           return
-        }else{
-          this.pageindex=this.pageindex-1
+        } else {
+          this.pageindex = this.pageindex - 1
         }
       },
-      next(){
-        if(this.pageindex==this.total/this.pageSizes){
+      next() {
+        if (this.pageindex == this.total / this.pageSizes) {
           return
-        }else{
-          this.pageindex=this.pageindex+1
+        } else {
+          this.pageindex = this.pageindex + 1
         }
-        console.log( this.pageindex)
+        console.log(this.pageindex)
       },
-      gotos(){
-        if(this.pages==''){
+      gotos() {
+        if (this.pages == '') {
           return
-        }else if(this.pages<=0){
-          this.pageindex=1
-        }else if(this.pages>=(this.total/this.pageSizes)){
-          this.pageindex=this.total/this.pageSizes
-        }else{
-          this.pageindex=this.pages
+        } else if (this.pages <= 0) {
+          this.pageindex = 1
+        } else if (this.pages >= (this.total / this.pageSizes)) {
+          this.pageindex = this.total / this.pageSizes
+        } else {
+          this.pageindex = this.pages
         }
       },
-      currentchanges(e){
-        this.pageindex=e
+      currentchanges(e) {
+        this.pageindex = e
       },
-      sizechanges(e){
+      sizechanges(e) {
 
       },
 
       submits() {
-        if(this.sprice!=''&&this.bprice!=''){
+        if (this.sprice != '' && this.bprice != '') {
 
-        }else{
+        } else {
           return
         }
       },
-      showshadow(index){
-        this.activeindex=index
-        this.showhide=true
+      showshadow(index) {
+        this.activeindex = index
+        this.showhide = true
+
       },
-      hideshadow(){
-        this.activeindex=-1
-        this.showhide=false
+      hideshadow() {
+        this.activeindex = -1
+        this.showhide = false
+        this.showvisible = true
       }
     },
     mounted() {
@@ -696,8 +707,6 @@
     width: 100%;
   }
 
-
-
   .productsearchtab > div:nth-child(1) {
     border-left: 0 !important;
   }
@@ -770,6 +779,7 @@
     width: 100%;
     height: 100%;
   }
+
   .productlistboxs {
     display: flex;
     justify-content: space-between;
@@ -967,41 +977,62 @@
     outline: none;
     border: 0;
   }
-  .shadows{
+
+  .shadows {
     position: absolute;
     left: 0;
-    bottom: -160px;
+    bottom: -250px;
     background: #fff;
     padding-bottom: 6px;
     width: 100%;
     z-index: 10;
   }
-  .shadows>div:nth-child(1){
+
+  .shadows > div:nth-child(1) {
     height: 40px;
     display: flex;
     justify-content: space-around;
     align-items: center;
   }
-  .shadows>div:nth-child(2){
+
+  .shadowbox > div:nth-child(1) {
     display: flex;
     justify-content: space-between;
     height: 40px;
     padding: 8px;
     align-items: center;
   }
-  .shadows>div:nth-child(2)>div:nth-child(2){
+
+  .shadows > div:nth-child(1) > span {
+    width: 33.333333%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+
+  }
+
+  .shadows > div:nth-child(1) > span:hover {
+    background: #ff3c3c;
+  }
+
+  .shadowbox > div:nth-child(1) > div:nth-child(2) {
     padding: 0 8px;
   }
-  .shadows>div:nth-child(3){
+
+  .shadowbox > div:nth-child(2) {
     padding: 0 8px;
   }
-  .shadows>div:nth-child(3)>div{
+
+  .shadowbox > div:nth-child(2) > div {
     display: flex;
     color: #666;
     font-size: 14px;
     line-height: 24px;
     /*justify-content: space-between;*/
   }
+
   .changeprice {
     padding: 0 10px;
     display: flex;
@@ -1023,35 +1054,89 @@
   .changeprice .active {
     color: #f43e31;
   }
-  .icons{
+
+  .icons {
     display: inline-block;
     vertical-align: middle;
     background-image: url('../assets/img/main/icons.png');
   }
+
   .icon-tel {
     background-position: -56px -158px;
     width: 11px;
     height: 17px;
   }
-  .zixunbox{
+
+  .zixunbox {
     padding: 0 8px;
     padding-top: 10px;
   }
-  .zixunbox>div{
+
+  .zixunbox > div {
     display: flex;
     align-items: center;
     margin-bottom: 4px;
   }
-  .zixunbox>div:nth-child(1){
+
+  .zixunbox > div:nth-child(1) {
     height: 20px;
   }
-  .zixunbox>div:nth-child(1)>div{
+
+  .zixunbox > div:nth-child(1) > div {
     margin-right: 8px;
   }
-  .zixunbox>div:nth-child(1)>div>span{
+
+  .zixunbox > div:nth-child(1) > div > span {
     margin-right: 4px;
   }
-  .zixunbox>div:nth-child(3){
+
+  .zixunbox > div:nth-child(3) {
     justify-content: space-between;
+  }
+
+  .two-code-ico {
+    background: url(http://plus.go2.cn/images/main/search/two_code_ico_normal.png) no-repeat;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .two-code-img {
+    position: absolute;
+    left: 27px;
+    bottom: -13px;
+    border: 1px solid #ff6c00;
+    padding: 18px 20px 13px 21px;
+    text-align: center;
+    display: none;
+    cursor: default;
+    z-index: 2;
+    background: #fff;
+  }
+  .two-code-ico:hover .two-code-img {
+    display: block;
+  }
+  .two-code-img:before {
+    content: "";
+    background: url('../assets/img/logo.png');
+    width: 10px;
+    height: 18px;
+    position: absolute;
+    left: -10px;
+    bottom: 9px;
+  }
+
+  .two-code-img img {
+    margin-bottom: 8px;
+  }
+
+  .two-code-img span {
+    line-height: 17px;
+    display: block;
+  }
+  .enshrine:hover{
+    background: #f43e31;
+    color: #fff;
   }
 </style>

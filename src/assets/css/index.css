@@ -374,4 +374,17 @@ cursor: pointer;
   height: 40px;
   line-height: 40px;
 }
-
+.Consultingsearchbox .el-input__inner{
+  border: none;
+  outline: none;
+}
+.allproductsearch .el-input__inner{
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+.tjlist > span:hover{
+  color: #fd6619;
+  cursor: pointer;
+}

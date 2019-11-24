@@ -40,7 +40,7 @@
           <div>
             <el-checkbox-group v-model="r.checks" @change="handleCheckedOrdersChange(r.checks,i)">
            <div>
-            <div class="caredit" v-for="row in Orders">
+            <div class="caredit" v-for="(row,index) in Orders" :key="index">
               <div class="carlist darkgrey lightgreybor">
                 <div>
                   <el-checkbox :label="row">{{null}}</el-checkbox>

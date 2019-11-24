@@ -37,7 +37,9 @@
           <div class="withmess">
             <span>厂址</span>
           </div>
-          <div class="prolists" >
+
+        </div>
+         <div class="prolists" >
             <div class="proitem lightgreybor darkgrey">
               <div class="itembox">
                 <div>
@@ -82,7 +84,6 @@
               </div>
             </div>
           </div>
-        </div>
       </div>
       </el-checkbox-group>
     </div>

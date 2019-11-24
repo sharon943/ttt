@@ -89,280 +89,269 @@
             <div class="lightgreybor" @click="handleCheckAllChange('export')">
               <span class="red icons icon-daochu secondfont m8"></span><span>导出订单</span>
             </div>
-<<<<<<< HEAD
-            <div  class="lightgreybor" @click="handleCheckAllChange('into')">
+            <div class="lightgreybor" @click="handleCheckAllChange('into')">
               <span class="red icons icon-daoru secondfont m8"></span><span>导入发货单</span>
             </div>
-            <div  class="lightgreybor" @click="handleCheckAllChange('establish')">
+            <div class="lightgreybor" @click="handleCheckAllChange('establish')">
               <span class="red icons icon-order-add secondfont m8"></span><span>创建发货单</span>
             </div>
-            <div  class="lightgreybor" @click="handleCheckAllChange('compensation')">
-=======
-            <div class="lightgreybor">
-              <span class="red icons icon-daoru secondfont m8"></span><span>导入发货单</span>
-            </div>
-            <div class="lightgreybor">
-              <span class="red icons icon-order-add secondfont m8"></span><span>创建发货单</span>
-            </div>
-            <div class="lightgreybor">
->>>>>>> news
+            <div class="lightgreybor" @click="handleCheckAllChange('compensation')">
               <span class="red icons icon-jiacha secondfont m8"></span><span>补差价</span>
             </div>
           </div>
-        </div>
-      </div>
 
+      </div>
     </div>
-    <div class="mycontainer" style="background: none">
-      <div class="undertakebox">
-        <div class="lightgreybor">
-          <el-select v-model="value" placeholder="全部发货商">
-            <el-option
-              v-for="item in allshops"
-              :key="item.value"
-              :label="item.label"
-              :value="item.value">
-            </el-option>
-          </el-select>
+
+  </div>
+  <div class="mycontainer" style="background: none">
+    <div class="undertakebox">
+      <div class="lightgreybor">
+        <el-select v-model="value" placeholder="全部发货商">
+          <el-option
+            v-for="item in allshops"
+            :key="item.value"
+            :label="item.label"
+            :value="item.value">
+          </el-option>
+        </el-select>
+      </div>
+      <div class="lightgreybor">
+        <el-select v-model="value" placeholder="补款标识">
+          <el-option
+            v-for="item in allshops"
+            :key="item.value"
+            :label="item.label"
+            :value="item.value">
+          </el-option>
+        </el-select>
+      </div>
+      <div>
+        <div class="times lightgreybor">
+          <el-date-picker
+            v-model="starttime"
+            type="date"
+            placeholder="选择日期">
+          </el-date-picker>
         </div>
-        <div class="lightgreybor">
-          <el-select v-model="value" placeholder="补款标识">
-            <el-option
-              v-for="item in allshops"
-              :key="item.value"
-              :label="item.label"
-              :value="item.value">
-            </el-option>
-          </el-select>
-        </div>
-        <div>
-          <div class="times lightgreybor">
-            <el-date-picker
-              v-model="starttime"
-              type="date"
-              placeholder="选择日期">
-            </el-date-picker>
-          </div>
-          <div>至</div>
-          <div class="times lightgreybor">
-            <el-date-picker
-              v-model="endtime"
-              type="date"
-              placeholder="选择日期">
-            </el-date-picker>
-          </div>
-        </div>
-        <div>
-          <div>类型：</div>
-          <div class="tbordernumer">
-            <div class="selectbtn lightgreybor" style="border-right: none;width: 176px">
-              <el-select v-model="value" placeholder="淘宝订单编号">
-                <el-option
-                  v-for="item in allshops"
-                  :key="item.value"
-                  :label="item.label"
-                  :value="item.value">
-                </el-option>
-              </el-select>
-            </div>
-            <div class="lightgreybor">
-              <el-input v-model="proname" placeholder=""></el-input>
-            </div>
-          </div>
-          <div class="sercchbtn">
-            搜索
-          </div>
+        <div>至</div>
+        <div class="times lightgreybor">
+          <el-date-picker
+            v-model="endtime"
+            type="date"
+            placeholder="选择日期">
+          </el-date-picker>
         </div>
       </div>
-      <div class="undertakeprices ">
-        <div>
-          <div class="icons blods icon-liebiao red secondfont"></div>
-          <div>共<span class="red blods">1</span>单</div>
+      <div>
+        <div>类型：</div>
+        <div class="tbordernumer">
+          <div class="selectbtn lightgreybor" style="border-right: none;width: 176px">
+            <el-select v-model="value" placeholder="淘宝订单编号">
+              <el-option
+                v-for="item in allshops"
+                :key="item.value"
+                :label="item.label"
+                :value="item.value">
+              </el-option>
+            </el-select>
+          </div>
+          <div class="lightgreybor">
+            <el-input v-model="proname" placeholder=""></el-input>
+          </div>
         </div>
-        <div>
-          <div class="icons blods  icon-jifen2 red secondfont"></div>
-          <div>总金额<span class="red blods">15.00</span>元</div>
+        <div class="sercchbtn">
+          搜索
         </div>
       </div>
-      <el-checkbox-group v-model="checkedOrders" class="boxes" @change="handleCheckedOrdersChange">
-        <div class="underlists" v-for="row in orderLists">
-          <div class="thed">
-            <div class="productpic">
-              <el-checkbox  :label="row.id" :key="row.id">{{null}}</el-checkbox>
-              <span>商品图片</span>
-            </div>
-            <div  class="productcode">
-              <span>货号</span>
-            </div>
-            <div class="productsize">
-              <span>颜色/尺码</span>
-            </div>
-            <div  class="productnum">
-              <span>数量</span>
-            </div>
-            <div  class="productprice">
-              <span>拿货价</span>
-            </div>
-            <div class="orderstatus">
-              <span class="red firstfont">订单状态</span>
-            </div>
-            <div class="ordertrack">
-              <span class="red">拿货轨迹</span>
-            </div>
-            <div class="express">
-              <span>快递信息</span>
-            </div>
-            <div class="withmess">
-              <span>拿货信息</span>
-            </div>
-            <div class="orderdesc">
-              <span>订单备注</span>
-            </div>
-            <div class="proedit">
-              <span>操作</span>
-            </div>
+    </div>
+    <div class="undertakeprices ">
+      <div>
+        <div class="icons blods icon-liebiao red secondfont"></div>
+        <div>共<span class="red blods">1</span>单</div>
+      </div>
+      <div>
+        <div class="icons blods  icon-jifen2 red secondfont"></div>
+        <div>总金额<span class="red blods">15.00</span>元</div>
+      </div>
+    </div>
+    <el-checkbox-group v-model="checkedOrders" class="boxes" @change="handleCheckedOrdersChange">
+      <div class="underlists" v-for="row in orderLists">
+        <div class="thed">
+          <div class="productpic">
+            <el-checkbox :label="row.id" :key="row.id">{{null}}</el-checkbox>
+            <span>商品图片</span>
+          </div>
+          <div class="productcode">
+            <span>货号</span>
+          </div>
+          <div class="productsize">
+            <span>颜色/尺码</span>
+          </div>
+          <div class="productnum">
+            <span>数量</span>
+          </div>
+          <div class="productprice">
+            <span>拿货价</span>
+          </div>
+          <div class="orderstatus">
+            <span class="red firstfont">订单状态</span>
+          </div>
+          <div class="ordertrack">
+            <span class="red">拿货轨迹</span>
+          </div>
+          <div class="express">
+            <span>快递信息</span>
+          </div>
+          <div class="withmess">
+            <span>拿货信息</span>
+          </div>
+          <div class="orderdesc">
+            <span>订单备注</span>
           </div>
           <div class="proedit">
             <span>操作</span>
           </div>
         </div>
-        <div class="prolists">
-          <div class="proitem lightgreybor" v-for="(val,index) in 4" :key="index">
-            <div class="itemdesc">
+
+      </div>
+      <div class="prolists">
+        <div class="proitem lightgreybor" v-for="(val,index) in 4" :key="index">
+          <div class="itemdesc">
+            <div>
+              <div>订单号：1909303763077</div>
+              <div>生成时间：2019-9-30 14：05</div>
+              <div>商品数量：1</div>
               <div>
-                <div>订单号：1909303763077</div>
-                <div>生成时间：2019-9-30 14：05</div>
-                <div>商品数量：1</div>
                 <div>
-                  <div>
-                    服务费：<span class="red">2.00</span>元
-                  </div>
-                  <div>
-                    质检费：<span class="red">2.00</span>元
-                  </div>
-                  <div>
-                    订单总价：<span class="red">2.00</span>元
-                  </div>
+                  服务费：<span class="red">2.00</span>元
+                </div>
+                <div>
+                  质检费：<span class="red">2.00</span>元
+                </div>
+                <div>
+                  订单总价：<span class="red">2.00</span>元
                 </div>
               </div>
-              <div>
-                <div>发货商：</div>
-                <div class="lightgreybor">3E3E.CN官方合作代发</div>
-              </div>
             </div>
-            <div class="itembox">
-              <div>
-                <div class="productpic">
+            <div>
+              <div>发货商：</div>
+              <div class="lightgreybor">3E3E.CN官方合作代发</div>
+            </div>
+          </div>
+          <div class="itembox">
+            <div>
+              <div class="productpic">
                 <span>
                   <img src="../../assets/img/1.png" alt="">
                 </span>
-                </div>
               </div>
-              <div>
-                <div class="productcode">
-                  <span>豆仔小当家&卡通</span>
-                </div>
+            </div>
+            <div>
+              <div class="productcode">
+                <span>豆仔小当家&卡通</span>
               </div>
-              <div>
-                <div class="productsize">
-                  <span>白色/30</span>
-                </div>
+            </div>
+            <div>
+              <div class="productsize">
+                <span>白色/30</span>
               </div>
-              <div>
-                <div class="productnum">
-                  <span>1</span>
-                </div>
+            </div>
+            <div>
+              <div class="productnum">
+                <span>1</span>
               </div>
-              <div>
-                <div class="productprice">
-                  <span>9.90</span>
-                </div>
+            </div>
+            <div>
+              <div class="productprice">
+                <span>9.90</span>
               </div>
-              <div>
-                <div class="orderstatus">
-                  <span>已完成</span>
-                </div>
+            </div>
+            <div>
+              <div class="orderstatus">
+                <span>已完成</span>
               </div>
-              <div>
-                <div class="ordertrack" style="text-align: center">
-                  <div>安排拿货员（周边地区拿货取消是，着急请联系厂家代发）</div>
-                  <div>拿货中</div>
-                  <div style="text-align: center">
-                    <div style="border: 1px dotted #F43E31;padding: 2px 4px;display: inline-block" class="red">轨迹</div>
+            </div>
+            <div>
+              <div class="ordertrack" style="text-align: center">
+                <div>安排拿货员（周边地区拿货取消是，着急请联系厂家代发）</div>
+                <div>拿货中</div>
+                <div style="text-align: center">
+                  <div style="border: 1px dotted #F43E31;padding: 2px 4px;display: inline-block" class="red">轨迹
                   </div>
+                </div>
 
-                </div>
               </div>
-              <div>
-                <div class="express" style="text-align: left">
-                  <div>快递:申通快递 <span style="border:1px dotted #19a4f4;padding: 2px;margin-left: 3px"
-                                     class="blue">普</span></div>
-                  <div>快递费：4.00</div>
-                  <div>单号：</div>
-                </div>
+            </div>
+            <div>
+              <div class="express" style="text-align: left">
+                <div>快递:申通快递 <span style="border:1px dotted #19a4f4;padding: 2px;margin-left: 3px"
+                                   class="blue">普</span></div>
+                <div>快递费：4.00</div>
+                <div>单号：</div>
               </div>
-              <div>
-                <div class="withmess" style="text-align: left">
-                  <div>浙江省杭州市客户地址什么的</div>
-                  <div>陈雅元 18634301234</div>
-                </div>
+            </div>
+            <div>
+              <div class="withmess" style="text-align: left">
+                <div>浙江省杭州市客户地址什么的</div>
+                <div>陈雅元 18634301234</div>
               </div>
-              <div>
-                <div class="orderdesc">
-                  <div></div>
-                </div>
+            </div>
+            <div>
+              <div class="orderdesc">
+                <div></div>
               </div>
-              <div>
-                <div class="proedit">
-                  <div class="blue cursor">查看详情</div>
-                  <div class="blue cursor">退款</div>
-                </div>
+            </div>
+            <div>
+              <div class="proedit">
+                <div class="blue cursor">查看详情</div>
+                <div class="blue cursor">退款</div>
               </div>
-
             </div>
 
           </div>
+
         </div>
-      </el-checkbox-group>
       </div>
-    </div>
+    </el-checkbox-group>
+  </div>
 
-    <!--代发须知-->
-    <div class="explain-contact">
-      <img src="../../assets/img/daifa2.jpeg">
-      <a target="_blank" href="http://www.zhaojiafang.com/index.php?act=activity&op=dfoption"
-         style="position: absolute;bottom:150px;width: 110px;height: 130px;display: inline-block;left: 0px;"></a>
-      <a class="contact-qq" target="_blank" href="http://wpa.b.qq.com/cgi/wpa.php?ln=2&amp;uin=3609751767"></a>
-      <a class="contact-wechat" href="javascript:;" @click="wechatVisible=true"></a>
-      <a class="contact-phone" href="javascript:;" @click="contactVisible=true"></a>
-    </div>
+  <!--代发须知-->
+  <div class="explain-contact">
+    <img src="../../assets/img/daifa2.jpeg">
+    <a target="_blank" href="http://www.zhaojiafang.com/index.php?act=activity&op=dfoption"
+       style="position: absolute;bottom:150px;width: 110px;height: 130px;display: inline-block;left: 0px;"></a>
+    <a class="contact-qq" target="_blank" href="http://wpa.b.qq.com/cgi/wpa.php?ln=2&amp;uin=3609751767"></a>
+    <a class="contact-wechat" href="javascript:;" @click="wechatVisible=true"></a>
+    <a class="contact-phone" href="javascript:;" @click="contactVisible=true"></a>
+  </div>
 
-    <div class="mydialog">
-      <el-dialog
-        width="277px"
-        title=""
-        :visible.sync="wechatVisible">
-        <div class="ewcodes">
-          <img src="../../assets/img/code.jpg" alt="">
-          <span>扫一扫，咨询微信客服</span>
+  <div class="mydialog">
+    <el-dialog
+      width="277px"
+      title=""
+      :visible.sync="wechatVisible">
+      <div class="ewcodes">
+        <img src="../../assets/img/code.jpg" alt="">
+        <span>扫一扫，咨询微信客服</span>
 
+      </div>
+    </el-dialog>
+    <el-dialog
+      width="277px"
+      title=""
+      :visible.sync="contactVisible">
+      <div class="kfphone">
+
+        <div class="phone">
+          <p style="font-size: 18px;color:#555;padding-top:20px">客服热线</p>
+          <br>
+          400-115-0886
         </div>
-      </el-dialog>
-      <el-dialog
-        width="277px"
-        title=""
-        :visible.sync="contactVisible">
-        <div class="kfphone">
 
-          <div class="phone">
-            <p style="font-size: 18px;color:#555;padding-top:20px">客服热线</p>
-            <br>
-            400-115-0886
-          </div>
-
-        </div>
-      </el-dialog>
-    </div>
+      </div>
+    </el-dialog>
+  </div>
 
   </div>
 
@@ -371,8 +360,8 @@
   export default {
     data() {
       return {
-        wechatVisible:false,
-        contactVisible:false,
+        wechatVisible: false,
+        contactVisible: false,
         checked: true,
         proname: '',
         status: '全部',
@@ -386,15 +375,15 @@
             label: '双皮奶'
           }
         ],
-        starttime:'',
-        endtime:'',
-        orderLists:[{id:1},{id:2}],
-        checkedOrders:[],
-        checkAll: false,isIndeterminate: true,Orders:[1,2]
+        starttime: '',
+        endtime: '',
+        orderLists: [{id: 1}, {id: 2}],
+        checkedOrders: [],
+        checkAll: false, isIndeterminate: true, Orders: [1, 2]
       }
     },
     methods: {
-      backTohome(){
+      backTohome() {
         this.$parent.fatherMethod();
       },
       handleCheckedOrdersChange(value) {
@@ -439,6 +428,7 @@
     font-size: 12px;
     background: #f6f5f5;
   }
+
   .productserchnav {
     height: 40px;
     line-height: 40px;
@@ -637,7 +627,8 @@
   .undertakeprices > div > div:nth-child(1) {
     margin-right: 10px;
   }
-  .underlists > .thed{
+
+  .underlists > .thed {
     height: 38px;
     display: flex;
     align-items: center;
@@ -791,10 +782,7 @@
   .itembox > div > div > div {
     margin-bottom: 4px;
   }
-<<<<<<< HEAD
-=======
 
->>>>>>> news
   .prolists {
     background: #fff;
     padding-bottom: 20px;
@@ -807,10 +795,12 @@
     z-index: 2;
     margin-top: -190px;
   }
+
   .explain-contact img {
     width: 110px;
     /*margin-right: 50px;*/
   }
+
   .contact-qq {
     position: absolute;
     bottom: 115px;
@@ -819,6 +809,7 @@
     display: inline-block;
     left: 20px;
   }
+
   .contact-wechat {
     position: absolute;
     bottom: 84px;
@@ -827,6 +818,7 @@
     display: inline-block;
     left: 20px;
   }
+
   .contact-phone {
     position: absolute;
     bottom: 54px;
@@ -835,7 +827,8 @@
     display: inline-block;
     left: 20px;
   }
-  .ewcodes{
+
+  .ewcodes {
     width: 277px;
     height: 310px;
     border: 5px solid #F43E31;
@@ -843,6 +836,7 @@
     border-radius: 5px;
     overflow: hidden;
   }
+
   .ewcodes img {
     width: 260px;
     height: 260px;
@@ -850,6 +844,7 @@
     top: 6px;
     left: 8px;
   }
+
   .ewcodes span {
     bottom: 15px;
     position: absolute;
@@ -859,6 +854,7 @@
     display: inline-block;
     text-align: center;
   }
+
   .kfphone .phone {
     width: 277px;
     /*height: 100px;*/

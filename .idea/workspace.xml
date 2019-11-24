@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8397bca8-c3d5-408c-a0d4-39116ed926c2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/img/code.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/daifa2.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/img/left_arrow.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
@@ -52,6 +49,8 @@
       <change beforePath="$PROJECT_DIR$/src/assets/img/childrenWear/baby-4.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/childrenWear/baby-4.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/img/childrenWear/baby-6.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/childrenWear/baby-6.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/img/childrenWear/top.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/childrenWear/top.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/code.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/code.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/daifa2.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/daifa2.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/img/emiltalk.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/emiltalk.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/img/erweima.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/erweima.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/img/fullnumber.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/fullnumber.png" afterDir="false" />
@@ -60,6 +59,7 @@
       <change beforePath="$PROJECT_DIR$/src/assets/img/increase-active.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/increase-active.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/img/increase.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/increase.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/img/ismargin.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/ismargin.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/left_arrow.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/left_arrow.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/img/login/login-bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/login/login-bg.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/img/login/qqlogo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/login/qqlogo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/img/login/wechatlogo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/login/wechatlogo.png" afterDir="false" />
@@ -101,6 +101,7 @@
       <change beforePath="$PROJECT_DIR$/src/assets/img/main/s_9.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/main/s_9.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/img/main/supplier/qq_talk.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/main/supplier/qq_talk.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/img/main/wangwang-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/main/wangwang-logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/notCheck.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/notCheck.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/img/pageBg.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/pageBg.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/img/prd/float.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/prd/float.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/img/prd/prd.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/prd/prd.png" afterDir="false" />
@@ -142,12 +143,23 @@
       <change beforePath="$PROJECT_DIR$/src/components/Consultingprogram.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Consultingprogram.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Homepage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Homepage.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Pay.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pay.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PostOrder.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostOrder.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Register.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Shopdetails.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Shopdetails.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/allproduct.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/allproduct.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/productsearch.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/productsearch.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/storehome.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/storehome.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/userCenter/AccountBalance.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/userCenter/AccountBalance.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/userCenter/AccountInfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/userCenter/AccountInfo.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/userCenter/Browsefootprint.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/userCenter/Browsefootprint.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/userCenter/GrandPrize.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/userCenter/GrandPrize.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/userCenter/Manufacturersfocus.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/userCenter/Manufacturersfocus.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/userCenter/Merchantbatchoperation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/userCenter/Merchantbatchoperation.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/userCenter/Message.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/userCenter/Message.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/userCenter/MyCoupons.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/userCenter/MyCoupons.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/userCenter/MyPoints.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/userCenter/MyPoints.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/userCenter/SafeAuthorization.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/userCenter/SafeAuthorization.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/userCenter/SenderSettings.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/userCenter/SenderSettings.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/userCenter/Supplydynamic.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/userCenter/Supplydynamic.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/userCenter/Undertakesorder.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/userCenter/Undertakesorder.vue" afterDir="false" />
@@ -187,92 +199,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/userCenter/mycar.vue">
+        <entry file="file://$PROJECT_DIR$/src/components/userCenter/Merchantbatchoperation.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="208" lean-forward="true" selection-start-line="208" selection-end-line="208" />
-              <folding>
-                <element signature="e#8136#8285#0" />
-                <element signature="e#8304#8650#1" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/userCenter/Message.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#main#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="e#236#240#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/userCenter/Supplydynamic.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1542">
-              <caret line="224" column="3" selection-start-line="224" selection-start-column="3" selection-end-line="224" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/userCenter/uploadpicpackage.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2882">
-              <caret line="346" column="21" selection-start-line="346" selection-start-column="21" selection-end-line="346" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/userCenter/Undertakesorder.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2652">
-              <caret line="650" column="3" lean-forward="true" selection-start-line="650" selection-start-column="3" selection-end-line="650" selection-end-column="3" />
-              <folding>
-                <element signature="n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/userCenter/relatedproducts.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1688">
-              <caret line="151" column="3" selection-start-line="151" selection-start-column="3" selection-end-line="151" selection-end-column="3" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/userCenter/saleorder.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="423">
-              <caret line="458" column="23" lean-forward="true" selection-start-line="458" selection-start-column="23" selection-end-line="458" selection-end-column="23" />
-              <folding>
-                <element signature="n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" />
-                <element signature="n#div#0;n#el-checkbox-group#0;n#div#1;n#div#0;n#template#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/userCenter/storeproducts.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2622">
-              <caret line="218" column="8" lean-forward="true" selection-start-line="218" selection-start-column="8" selection-end-line="218" selection-end-column="8" />
+            <state relative-caret-position="180">
+              <caret line="162" column="6" selection-start-line="162" selection-start-column="6" selection-end-line="164" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -280,8 +210,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/userCenter/SenderSettings.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3345">
-              <caret line="223" column="16" selection-start-line="223" selection-start-column="16" selection-end-line="223" selection-end-column="16" />
+            <state relative-caret-position="205">
+              <caret line="205" column="42" selection-start-line="205" selection-start-column="42" selection-end-line="205" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="18" column="19" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -301,7 +240,6 @@
       <find>Supplydynamic</find>
       <find>1160</find>
       <find>导出</find>
-      <find>backTohome</find>
       <find>handleCheckedOrdersChange</find>
       <find>underlists</find>
       <find>批量</find>
@@ -320,6 +258,7 @@
       <find>selecttype</find>
       <find>Consultingsearchbox</find>
       <find>cursor</find>
+      <find>backTohome</find>
     </findStrings>
     <replaceStrings>
       <replace>regionitems</replace>
@@ -375,7 +314,6 @@
         <option value="$PROJECT_DIR$/src/router/index.js" />
         <option value="$PROJECT_DIR$/src/components/userhome.vue" />
         <option value="$PROJECT_DIR$/src/assets/map.json" />
-        <option value="$PROJECT_DIR$/src/components/userCenter/SenderSettings.vue" />
         <option value="$PROJECT_DIR$/src/components/userCenter/Manufacturersfocus.vue" />
         <option value="$PROJECT_DIR$/src/App.vue" />
         <option value="$PROJECT_DIR$/src/components/userCenter/Merchantbatchoperation.vue" />
@@ -388,6 +326,7 @@
         <option value="$PROJECT_DIR$/src/components/userCenter/Supplydynamic.vue" />
         <option value="$PROJECT_DIR$/src/components/userCenter/Undertakesorder.vue" />
         <option value="$PROJECT_DIR$/src/components/userCenter/uploadpicpackage.vue" />
+        <option value="$PROJECT_DIR$/src/components/userCenter/SenderSettings.vue" />
       </list>
     </option>
   </component>
@@ -439,13 +378,6 @@
               <item name="ttt" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ttt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ttt" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="userCenter" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ttt" type="b2602c69:ProjectViewProjectNode" />
@@ -547,12 +479,12 @@
       <workItem from="1573527389084" duration="7207000" />
       <workItem from="1573557298109" duration="5833000" />
       <workItem from="1574432290638" duration="7540000" />
-      <workItem from="1574591902384" duration="1408000" />
+      <workItem from="1574591902384" duration="1780000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="364354000" />
+    <option name="totallyTimeSpent" value="364726000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -571,7 +503,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49964765" weight="0.25903615" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49964765" visible="true" weight="0.25903615" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5003524" side_tool="true" weight="0.3626506" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -618,13 +550,6 @@
     <entry file="file://$PROJECT_DIR$/src/components/marketing/accurateMarket.vue" />
     <entry file="file://$PROJECT_DIR$/src/components/dataPanel.vue" />
     <entry file="file://$PROJECT_DIR$/src/components/marketing/couponManage.vue" />
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -836,43 +761,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/userCenter/Message.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#main#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#236#240#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/userCenter/Merchantbatchoperation.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1037">
-          <caret line="620" column="23" lean-forward="true" selection-start-line="620" selection-start-column="23" selection-end-line="620" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/userhome.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="481" column="61" selection-start-line="481" selection-start-column="61" selection-end-line="481" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/userCenter/mycar.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="208" lean-forward="true" selection-start-line="208" selection-end-line="208" />
-          <folding>
-            <element signature="e#8136#8285#0" />
-            <element signature="e#8304#8650#1" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/userCenter/productcollection.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="659">
@@ -928,24 +816,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/userCenter/SenderSettings.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3345">
-          <caret line="223" column="16" selection-start-line="223" selection-start-column="16" selection-end-line="223" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/userCenter/storeproducts.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2622">
           <caret line="218" column="8" lean-forward="true" selection-start-line="218" selection-start-column="8" selection-end-line="218" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/userCenter/Supplydynamic.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1542">
-          <caret line="224" column="3" selection-start-line="224" selection-start-column="3" selection-end-line="224" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -961,8 +835,66 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/userCenter/uploadpicpackage.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2882">
-          <caret line="346" column="21" selection-start-line="346" selection-start-column="21" selection-end-line="346" selection-end-column="21" />
+        <state relative-caret-position="347">
+          <caret line="177" lean-forward="true" selection-start-line="177" selection-end-line="177" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/userCenter/Supplydynamic.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1542">
+          <caret line="224" column="3" selection-start-line="224" selection-start-column="3" selection-end-line="224" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/userCenter/Message.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#main#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#236#240#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/userCenter/mycar.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="208" lean-forward="true" selection-start-line="208" selection-end-line="208" />
+          <folding>
+            <element signature="e#8136#8285#0" />
+            <element signature="e#8304#8650#1" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/userhome.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="481" column="61" selection-start-line="481" selection-start-column="61" selection-end-line="481" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/userCenter/Merchantbatchoperation.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="162" column="6" selection-start-line="162" selection-start-column="6" selection-end-line="164" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/userCenter/SenderSettings.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="205" column="42" selection-start-line="205" selection-start-column="42" selection-end-line="205" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="18" column="19" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="19" />
         </state>
       </provider>
     </entry>

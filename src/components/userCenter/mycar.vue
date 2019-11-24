@@ -122,8 +122,7 @@
         <div class="darkgrey alllist">
           <div>
             <div>
-              <div class="lightgreybor"></div>
-              <div class="cursor">全选</div>
+              <div><el-checkbox class="cursor" :indeterminate="isIndeterminate" v-model="checkAll_" @change="handleCheckAllChange_">全选</el-checkbox></div>
             </div>
             <div>
               <div class="cursor">删除</div>
@@ -464,14 +463,15 @@
     /*height: 105px;*/
     margin-bottom: 13px;
     margin-top: 9px;
-    border-bottom: 1px solid #dfdfdf;
+    /*border-bottom: 1px solid #dfdfdf;*/
+    text-align: center;
   }
 
   .carlist {
     padding: 12px 0px 18px 37px;
     display: inline-flex;
     /*margin-left: 25px;*/
-    /*width: 1117px;*/
+    width: 1117px;
     align-items: center;
 
   }
@@ -600,7 +600,7 @@
     width: 16px;
     height: 16px;
     margin-right: 9px;
-    background-color: #fff;
+    /*background-color: #fff;*/
   }
 
   .alllist > div:nth-child(1) > div:nth-child(2) > div {

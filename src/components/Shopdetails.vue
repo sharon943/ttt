@@ -62,13 +62,13 @@
         <div class="left">
           <div class="picdetail">
             <div>
-              <img src="../assets/img/shopdetail/list.jpg" alt="">
+              <img :src="activeimg" alt="">
             </div>
             <div class="lunbolist">
               <swiper :options="swiperOptionlist">
-                <swiper-slide v-for="(val,index) in 6" :key="index">
-                  <div class="items">
-                    <img src="../assets/img/shopdetail/list.jpg" alt="">
+                <swiper-slide v-for="(val,index) in propiclist" :key="index" style="width: 58px;">
+                  <div class="items" @mouseover="getactiveimg(val)">
+                    <img :src="val.url" alt="">
                   </div>
                 </swiper-slide>
               </swiper>
@@ -602,6 +602,18 @@
   export default {
     data() {
       return {
+        activeimg:'',
+        propiclist:[
+          {
+            url:'/static/img/recommend.e46afde.jpg'
+          },
+          {
+            url:'/static/img/ismargin.993bdb9.png'
+          },
+          {
+            url:'/static/img/recommend.e46afde.jpg'
+          },
+        ],
         sizelist:['80','90','100','110','120'],
         size:'80',
         selitem: '商品详情',
@@ -618,8 +630,7 @@
           }
         },
         swiperOption: {
-          // loop:true,
-          autoplay : 3000,
+          autoplay:true,
           direction: 'vertical',
           slidesPerView: 2,
           spaceBetween: 20,
@@ -632,6 +643,9 @@
       }
     },
     methods: {
+      getactiveimg(val){
+        this.activeimg=val.url
+      },
       handleRemove(file, fileList) {
         console.log(file, fileList);
       },
@@ -1771,5 +1785,11 @@
   }
   .lunbolist{
     width: 100%;
+  }
+  .lunbolist .swiper-container{
+    margin: 0;
+  }
+  .lunbolist .swiper-slide{
+    width: 58px!important;
   }
 </style>

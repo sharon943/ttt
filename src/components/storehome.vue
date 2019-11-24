@@ -57,22 +57,11 @@
     </div>
     <div class="mycontainer" style="background: none">
       <div class="storehome2gg">
-        <div class="sl-ad">
-          <div class="ad_top1">
-            <div class="ad_top1_content">
-              <ul id="fullScreenSlides" class="full-screen-slides"  v-for="(val,index) in order" :key="index">
-                <li class="sli-item" style="z-index: 800; display: list-item;"  v-if="val.isshow">
-                  <p class="c9 fz16 sl-adtitle">狠狠爱</p>
-                  <p class="c3 m0 fz12 sl-addesc">2019新款提花宝宝绒四件套</p>
-                  <div>
-                    <img src="https://www.zhaojiafang.com/data/upload/shop/rec_position/b83d542eb7cdb5b14195.png"></div></li>
-                <li class="sli-item" style="z-index: 800; display: list-item;" v-if="!val.isshow">
-                  <p class="c9 fz16 sl-adtitle">宜代光年</p>
-                  <p class="c3 m0 fz12 sl-addesc">2019新款纯色牛奶绒 系列四件套</p>
-                  <div>
-                    <img src="https://www.zhaojiafang.com/data/upload/shop/rec_position/4e44565c13d4981b9041.jpg"></div></li>
-              </ul>
-            </div>
+
+        <div>
+          <div class="red firstfont">—— 橱窗广告 ——</div>
+          <div class="darkgrey normalfont" style="margin-bottom: 40px">
+            广告内容什么的
           </div>
         </div>
         <div class="store2tj">
@@ -95,7 +84,7 @@
 
               </div>
               <div class="lightgreybor stroe2tjbox">
-                <a >
+                <a>
                   <div>
                     <img src="../assets/img/11.png" alt="" class="storepic">
                   </div>
@@ -109,7 +98,7 @@
                 </a>
               </div>
               <div class="lightgreybor stroe2tjbox">
-                <a >
+                <a>
                   <div>
                     <img src="../assets/img/11.png" alt="" class="storepic">
                   </div>
@@ -123,7 +112,7 @@
                 </a>
               </div>
               <div class="lightgreybor stroe2tjbox">
-                <a >
+                <a>
                   <div>
                     <img src="../assets/img/11.png" alt="" class="storepic">
                   </div>
@@ -140,15 +129,22 @@
           </div>
           <div>
             <div class="secondfont store2tittle">走货</div>
-            <div class="lightgreybor store2zh">
-              <a class="cursor" v-for="(val,index) in 3" :key="index">
-                <div>
-                  <img src="../assets/img/18.png" alt="">
+            <div class="lightgreybor " >
+            <swiper :options="swiperOption" class="swiperpro">
+              <swiper-slide v-for="(val,index) in 50" :key="index"  style="height:68px">
+                <div class="store2zh"  style="height:68px">
+                  <a class="cursor">
+                    <div>
+                      <img src="../assets/img/18.png" alt="">
+                    </div>
+                    <div>
+                      <span>sxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</span><span>还有300人也收藏了</span>
+                    </div>
+                  </a>
                 </div>
-                <div>
-                  <span>sxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</span><span>还有300人也收藏了</span>
-                </div>
-              </a>
+
+              </swiper-slide>
+            </swiper>
             </div>
           </div>
         </div>
@@ -217,36 +213,36 @@
   export default {
     data() {
       return {
-        timer:null,
+        timer: null,
         category: '所有',
         state: '综合',
         sprice: '',
         bprice: '',
-        isshow:true,
-        order:[1,2,3,4,5]
+        isshow: true,
+        order: [1, 2, 3, 4, 5],
+        swiperOption: {
+          autoplay:true,
+          scrollbar: '.swiper-scrollbar',
+          direction: 'vertical',
+          slidesPerView: 2,
+          spaceBetween: 20,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+          }
+        }
       }
     },
     methods: {
       changecategory(i) {
         this.category = i
       },
-
       changestate(i) {
         this.state = i
-      },
-      get(i) {
-        this.order[i]["isshow"]=!this.order[i]["isshow"];
       }
 
     },
     mounted() {
-      // this.order.map((obj, index) => {
-      //   this.$set(obj, "isshow",true)
-      // })
-      // console.log(this.order)
-      // for(var i=0;i<this.order.length;i++){
-      //   setInterval(this.get(i), 3000)
-      // }
 
     },
     beforeRouteEnter(to, from, next) {
@@ -255,7 +251,7 @@
       })
     },
     beforeDestroy() {
-      // clearInterval(this.timer);
+
     }
   }
 </script>
@@ -626,18 +622,15 @@
   }
 
   .store2zh {
-    height: 292px;
+    height: 68px;
     padding: 10px;
-
-    overflow: hidden;
-    /*overflow: auto;*/
+    margin-bottom: 8px;
   }
 
   .store2zh > a {
     height: 68px;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 8px;
     color: #666;
   }
 
@@ -902,7 +895,22 @@
   .c3 {
     color: #999;
   }
-  .full-screen-slides:last-child li{
+
+  .full-screen-slides:last-child li {
     border-right: none;
+  }
+
+  .store2zhbox > .stroe2zhitem:hover {
+    border-color: #f43e31;
+  }
+  .swiperpro{
+    height: 292px!important;
+    /*margin-bottom: 20px;*/
+  }
+  .swiperpro:last-child{
+    margin-bottom: 0;
+  }
+  .swiperpro .swiper-slide{
+    height: 68px!important;
   }
 </style>

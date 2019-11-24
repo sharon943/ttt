@@ -17,7 +17,7 @@
           <div class="lightgreybor longinputs" style="width: 418px">
             <el-input v-model="value" placeholder="请输入内容"></el-input>
           </div>
-          <div class="sercchbtn">
+          <div class="sercchbtn cursor">
             搜索
           </div>
         </div>
@@ -28,7 +28,7 @@
               <span>批量删除</span>
             </div>
           </div>
-          <div class="red redbor blods" @click="handleCheckAllChange('car')">批量加购</div>
+          <div class="red redbor blods cursor" @click="handleCheckAllChange('car')">批量加购</div>
         </div>
       </div>
       <el-checkbox-group v-model="checkedOrders" class="boxes" @change="handleCheckedOrdersChange">

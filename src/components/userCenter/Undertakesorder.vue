@@ -15,7 +15,7 @@
     <div class="mycontainer">
       <div class="undertake">
         <div class="undertaketips">
-          <div >
+          <div>
             <div>代发拿货范围：</div>
             <div>您的客户经理：</div>
             <div>退 换 货地址：</div>
@@ -23,69 +23,73 @@
               <div>代发须知：</div>
               <div>&nbsp;</div>
             </div>
-            <div>运费价格表：</div>
+            <div class="blue">运费价格表：</div>
           </div>
           <div class="lightgreybor">
             <div>
-              浙江省湖州市织里镇
+              浙江省湖州市织里镇及周边
             </div>
             <div>童淘淘代发部 座机：400-115-0886 手机号：xxxxxxxxxxxxx 下单过程中有任何问题可电联</div>
             <div>
-              浙江省湖州市织里镇栋梁北路288号（拒收到附件） 联系电话：xxxxxxxxxxxxxx
+              浙江省湖州市织里镇栋梁北路288号1号楼304室<span class="red">（拒收到付件）</span> 联系电话：xxxxxxxxxxxxxx
             </div>
             <div>
-              <div>手续费每单收件￥0.00，续件￥0快递费由平台格局顶顶那总重量自动计算</div>
-              <div>为保证及时发货 请网销的朋友尽量找网销货源稳定的店拿货</div>
+              <div>手续费每单收件<span class="red">¥0.00</span>，续件<span class="red">¥0.00</span></div>
+              <div>快递费由平台根据订单总重量自动计算 <span class="red">为保证及时发货 请网销的朋友尽量找网销货源稳定的门店拿货</span></div>
             </div>
             <div>
-              运费的价格请<span class="cursor">点击查询</span>
+              <span class="cursor blue">运费的价格请点击查询</span>
             </div>
           </div>
         </div>
         <div class="undertakeedit ">
           <div class="secondfont blods">
-            <div class="active">
+            <div @click="changestatus('全部')" :class="{active:status=='全部'}">
               <div>
                 <span>全部订单</span>
                 <span class="nums reds">1</span>
               </div>
             </div>
-            <div>
+            <div @click="changestatus('待支付')" :class="{active:status=='待支付'}">
               <div>
                 <span>待支付</span>
                 <span></span>
               </div>
             </div>
-            <div>
+            <div @click="changestatus('待发货')" :class="{active:status=='待发货'}">
               <div>
                 <span>待发货</span>
                 <span></span>
               </div>
 
             </div>
-            <div>
-            <div>
-              <span>已发货</span>
-              <span></span>
+            <div @click="changestatus('已发货')" :class="{active:status=='已发货'}">
+              <div>
+                <div>
+                  <span>已发货</span>
+                  <span></span>
+                </div>
+
+              </div>
             </div>
-            </div>
-            <div>
+            <div @click="changestatus('已完成')" :class="{active:status=='已完成'}">
               <div>
                 <span>已完成</span>
                 <span></span>
               </div>
             </div>
-            <div>
-            <div>
-              <span>已取消</span>
-              <span></span>
-            </div>
+            <div @click="changestatus('已取消')" :class="{active:status=='已取消'}">
+              <div>
+                <span>已取消</span>
+                <span></span>
+              </div>
             </div>
           </div>
           <div class="darkgrey">
             <div class="lightgreybor" @click="handleCheckAllChange('export')">
               <span class="red icons icon-daochu secondfont m8"></span><span>导出订单</span>
             </div>
+<<<<<<< HEAD
             <div  class="lightgreybor" @click="handleCheckAllChange('into')">
               <span class="red icons icon-daoru secondfont m8"></span><span>导入发货单</span>
             </div>
@@ -93,6 +97,15 @@
               <span class="red icons icon-order-add secondfont m8"></span><span>创建发货单</span>
             </div>
             <div  class="lightgreybor" @click="handleCheckAllChange('compensation')">
+=======
+            <div class="lightgreybor">
+              <span class="red icons icon-daoru secondfont m8"></span><span>导入发货单</span>
+            </div>
+            <div class="lightgreybor">
+              <span class="red icons icon-order-add secondfont m8"></span><span>创建发货单</span>
+            </div>
+            <div class="lightgreybor">
+>>>>>>> news
               <span class="red icons icon-jiacha secondfont m8"></span><span>补差价</span>
             </div>
           </div>
@@ -112,7 +125,7 @@
             </el-option>
           </el-select>
         </div>
-        <div  class="lightgreybor">
+        <div class="lightgreybor">
           <el-select v-model="value" placeholder="补款标识">
             <el-option
               v-for="item in allshops"
@@ -142,7 +155,7 @@
         <div>
           <div>类型：</div>
           <div class="tbordernumer">
-            <div  class="selectbtn lightgreybor" style="border-right: none;width: 176px">
+            <div class="selectbtn lightgreybor" style="border-right: none;width: 176px">
               <el-select v-model="value" placeholder="淘宝订单编号">
                 <el-option
                   v-for="item in allshops"
@@ -152,7 +165,9 @@
                 </el-option>
               </el-select>
             </div>
-            <div  class="lightgreybor"></div>
+            <div class="lightgreybor">
+              <el-input v-model="proname" placeholder=""></el-input>
+            </div>
           </div>
           <div class="sercchbtn">
             搜索
@@ -207,8 +222,12 @@
               <span>操作</span>
             </div>
           </div>
+          <div class="proedit">
+            <span>操作</span>
+          </div>
+        </div>
         <div class="prolists">
-          <div class="proitem lightgreybor">
+          <div class="proitem lightgreybor" v-for="(val,index) in 4" :key="index">
             <div class="itemdesc">
               <div>
                 <div>订单号：1909303763077</div>
@@ -239,59 +258,60 @@
                 </span>
                 </div>
               </div>
-             <div>
-               <div  class="productcode">
-                 <span>豆仔小当家&卡通</span>
-               </div>
-             </div>
-             <div>
-               <div class="productsize">
-                 <span>白色/30</span>
-               </div>
-             </div>
-             <div>
-               <div  class="productnum">
-                 <span>1</span>
-               </div>
-             </div>
-             <div>
-               <div  class="productprice">
-                 <span>9.90</span>
-               </div>
-             </div>
               <div>
-                <div class="orderstatus">
-                  <span >已完成</span>
+                <div class="productcode">
+                  <span>豆仔小当家&卡通</span>
                 </div>
               </div>
-             <div>
-               <div class="ordertrack" style="text-align: center">
-                 <div >安排拿货员（周边地区拿货取消是，着急请联系厂家代发）</div>
-                 <div>拿货中</div>
-                 <div style="text-align: center">
-                   <div style="border: 1px dotted #F43E31;padding: 2px 4px;display: inline-block" class="red">轨迹</div>
-                 </div>
-
-               </div>
-             </div>
-            <div>
-              <div class="express" style="text-align: left">
-                <div>快递:申通快递 <span style="border:1px dotted #19a4f4;padding: 2px;margin-left: 3px" class="blue">普</span> </div>
-                <div>快递费：4.00</div>
-                <div>单号：</div>
+              <div>
+                <div class="productsize">
+                  <span>白色/30</span>
+                </div>
               </div>
-            </div>
-             <div>
-               <div class="withmess" style="text-align: left">
-                 <div>浙江省杭州市客户地址什么的</div>
-                 <div>陈雅元 18634301234</div>
-               </div>
-             </div>
-             <div>
-               <div class="orderdesc">
-                 <div></div>
-               </div>
-             </div>
+              <div>
+                <div class="productnum">
+                  <span>1</span>
+                </div>
+              </div>
+              <div>
+                <div class="productprice">
+                  <span>9.90</span>
+                </div>
+              </div>
+              <div>
+                <div class="orderstatus">
+                  <span>已完成</span>
+                </div>
+              </div>
+              <div>
+                <div class="ordertrack" style="text-align: center">
+                  <div>安排拿货员（周边地区拿货取消是，着急请联系厂家代发）</div>
+                  <div>拿货中</div>
+                  <div style="text-align: center">
+                    <div style="border: 1px dotted #F43E31;padding: 2px 4px;display: inline-block" class="red">轨迹</div>
+                  </div>
+
+                </div>
+              </div>
+              <div>
+                <div class="express" style="text-align: left">
+                  <div>快递:申通快递 <span style="border:1px dotted #19a4f4;padding: 2px;margin-left: 3px"
+                                     class="blue">普</span></div>
+                  <div>快递费：4.00</div>
+                  <div>单号：</div>
+                </div>
+              </div>
+              <div>
+                <div class="withmess" style="text-align: left">
+                  <div>浙江省杭州市客户地址什么的</div>
+                  <div>陈雅元 18634301234</div>
+                </div>
+              </div>
+              <div>
+                <div class="orderdesc">
+                  <div></div>
+                </div>
+              </div>
               <div>
                 <div class="proedit">
                   <div class="blue cursor">查看详情</div>
@@ -302,10 +322,48 @@
             </div>
 
           </div>
-          </div>
         </div>
       </el-checkbox-group>
       </div>
+    </div>
+
+    <!--代发须知-->
+    <div class="explain-contact">
+      <img src="../../assets/img/daifa2.jpeg">
+      <a target="_blank" href="http://www.zhaojiafang.com/index.php?act=activity&op=dfoption"
+         style="position: absolute;bottom:150px;width: 110px;height: 130px;display: inline-block;left: 0px;"></a>
+      <a class="contact-qq" target="_blank" href="http://wpa.b.qq.com/cgi/wpa.php?ln=2&amp;uin=3609751767"></a>
+      <a class="contact-wechat" href="javascript:;" @click="wechatVisible=true"></a>
+      <a class="contact-phone" href="javascript:;" @click="contactVisible=true"></a>
+    </div>
+
+    <div class="mydialog">
+      <el-dialog
+        width="277px"
+        title=""
+        :visible.sync="wechatVisible">
+        <div class="ewcodes">
+          <img src="../../assets/img/code.jpg" alt="">
+          <span>扫一扫，咨询微信客服</span>
+
+        </div>
+      </el-dialog>
+      <el-dialog
+        width="277px"
+        title=""
+        :visible.sync="contactVisible">
+        <div class="kfphone">
+
+          <div class="phone">
+            <p style="font-size: 18px;color:#555;padding-top:20px">客服热线</p>
+            <br>
+            400-115-0886
+          </div>
+
+        </div>
+      </el-dialog>
+    </div>
+
   </div>
 
 </template>
@@ -313,8 +371,13 @@
   export default {
     data() {
       return {
-        value:'',
-        allshops:[
+        wechatVisible:false,
+        contactVisible:false,
+        checked: true,
+        proname: '',
+        status: '全部',
+        value: '',
+        allshops: [
           {
             value: '选项1',
             label: '黄金糕'
@@ -328,7 +391,6 @@
         orderLists:[{id:1},{id:2}],
         checkedOrders:[],
         checkAll: false,isIndeterminate: true,Orders:[1,2]
-
       }
     },
     methods: {
@@ -340,15 +402,26 @@
         this.checkAll = checkedCount === this.Orders.length;
         this.isIndeterminate = checkedCount > 0 && checkedCount < this.Orders.length;
       },
-      handleCheckAllChange(e){
+      handleCheckAllChange(e) {
         switch (e) {
-          case 'export': console.log(1);break;
-          case 'into': console.log(1);break;
-          case 'establish': console.log(3);break;
-          case 'compensation': console.log(4);break;
+          case 'export':
+            console.log(1);
+            break;
+          case 'into':
+            console.log(1);
+            break;
+          case 'establish':
+            console.log(3);
+            break;
+          case 'compensation':
+            console.log(4);
+            break;
 
         }
-        this.checkedOrders =this.Orders; //如果这里的批量不是全选的意思删掉这行
+        this.checkedOrders = this.Orders; //如果这里的批量不是全选的意思删掉这行
+      },
+      changestatus(i) {
+        this.status = i
       }
     },
     mounted() {
@@ -382,47 +455,56 @@
     height: 40px;
     line-height: 40px;
   }
-  .undertake{
-   padding-top: 17px;
+
+  .undertake {
+    padding-top: 17px;
   }
-  .undertaketips{
+
+  .undertaketips {
     display: flex;
     width: 1153px;
     height: 168px;
     margin: 0 auto;
     margin-bottom: 23px;
   }
-  .undertaketips>div{
+
+  .undertaketips > div {
     padding: 13px;
     display: block;
   }
-  .undertaketips>div:nth-child(1){
+
+  .undertaketips > div:nth-child(1) {
     width: 120px;
     height: 100%;
     background: #f4f4f4;
     color: #666;
   }
-  .undertaketips>div:nth-child(2){
+
+  .undertaketips > div:nth-child(2) {
     width: 1032px;
   }
-  .undertaketips>div>div{
+
+  .undertaketips > div > div {
     margin-bottom: 8px;
     display: block;
   }
-  .undertaketips>div>div>div{
+
+  .undertaketips > div > div > div {
     margin-bottom: 8px;
   }
 
-  .undertakeedit{
+  .undertakeedit {
     height: 56px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  .undertakeedit>div{
+
+  .undertakeedit > div {
     height: 100%;
   }
-  .undertakeedit>div:nth-child(1){
+
+  .undertakeedit > div:nth-child(1) {
     padding-top: 18px;
     text-align: center;
     display: flex;
@@ -430,21 +512,24 @@
     justify-content: space-around;
     height: 100%;
   }
-  .undertakeedit>div:nth-child(1)>div{
 
+  .undertakeedit > div:nth-child(1) > div {
+    cursor: pointer;
     height: 100%;
   }
 
-  .undertakeedit>div:nth-child(1)>div>div{
+  .undertakeedit > div:nth-child(1) > div > div {
     padding: 0 15px;
     display: inline-flex;
     align-items: center;
     border-right: 1px solid #efefef;
   }
-  .undertakeedit>div:nth-child(1)>div>div:last-child{
+
+  .undertakeedit > div:nth-child(1) > div > div:last-child {
     border-right: 0;
   }
-  .undertakeedit>div:nth-child(1)>div>div>.nums{
+
+  .undertakeedit > div:nth-child(1) > div > div > .nums {
     margin-left: 15px;
     height: 20px;
     text-align: center;
@@ -453,10 +538,12 @@
     font-size: 10px;
     padding: 0 5px;
   }
-  .undertakeedit>div>.active{
+
+  .undertakeedit > div > .active {
     border-bottom: 1px solid #f43e31;
   }
-  .undertakeedit>div:nth-child(2){
+
+  .undertakeedit > div:nth-child(2) {
     height: 36px;
     display: flex;
     justify-content: flex-end;
@@ -464,34 +551,42 @@
     font-weight: bold;
 
   }
-  .undertakeedit>div:nth-child(2)>div{
+
+  .undertakeedit > div:nth-child(2) > div {
     display: flex;
     margin-left: 10px;
     align-items: center;
     padding: 0 15px;
+    cursor: pointer;
   }
-  .m8{
+
+  .m8 {
     margin-right: 8px;
   }
-  .tbordernumer{
+
+  .tbordernumer {
     width: 394px;
     display: flex;
   }
-  .tbordernumer>div:nth-child(2){
+
+  .tbordernumer > div:nth-child(2) {
     width: 220px;
   }
-  .undertakebox{
+
+  .undertakebox {
     display: flex;
     align-items: center;
     height: 65px;
   }
-  .undertakebox>div{
+
+  .undertakebox > div {
     height: 34px;
     line-height: 34px;
     width: 157px;
     margin-right: 9px;
   }
-  .undertakebox>div:nth-child(3){
+
+  .undertakebox > div:nth-child(3) {
     width: 258px;
     display: flex;
     justify-content: space-between;
@@ -499,14 +594,17 @@
     height: 34px;
 
   }
-  .undertakebox>div:nth-child(3)>.times{
+
+  .undertakebox > div:nth-child(3) > .times {
     width: 106px;
   }
-  .undertakebox>div:nth-child(4){
+
+  .undertakebox > div:nth-child(4) {
     display: flex;
     width: auto;
   }
-  .undertakebox>div:nth-child(4)>.sercchbtn{
+
+  .undertakebox > div:nth-child(4) > .sercchbtn {
     width: 62px;
     height: 100%;
     background: #535353;
@@ -516,26 +614,30 @@
     position: relative;
     left: -2px;
   }
-  .undertakeprices{
+
+  .undertakeprices {
     display: flex;
     justify-content: flex-end;
     height: 16px;
     align-items: center;
     margin-bottom: 24px;
   }
-  .undertakeprices>div{
+
+  .undertakeprices > div {
     padding: 0 13px;
     display: flex;
     align-items: center;
     height: 16px;
   }
-  .undertakeprices>div:last-child{
+
+  .undertakeprices > div:last-child {
     border-left: 1px solid #999;
   }
-  .undertakeprices>div>div:nth-child(1){
+
+  .undertakeprices > div > div:nth-child(1) {
     margin-right: 10px;
   }
-  .underlists>.thed{
+  .underlists > .thed{
     height: 38px;
     display: flex;
     align-items: center;
@@ -543,14 +645,17 @@
     color: #515056;
     margin-bottom: 16px;
   }
-  .underlists>.thed>div{
+
+  .underlists > .thed > div {
     text-align: center;
   }
-  .underlists>.thed>div:nth-child(1){
+
+  .underlists > .thed > div:nth-child(1) {
     display: flex;
     padding-left: 5px;
   }
-  .underlists>.thed>div:nth-child(1)>.lightgreybor{
+
+  .underlists > .thed > div:nth-child(1) > .lightgreybor {
     width: 20px;
     height: 20px;
     background: #fff;
@@ -558,43 +663,56 @@
     display: block;
     border-color: #a6a6a6;
   }
-  .productpic{
+
+  .productpic {
     width: 106px;
   }
-  .productcode{
+
+  .productcode {
     width: 106px;
   }
-  .productsize{
+
+  .productsize {
     width: 84px;
   }
-  .productnum{
+
+  .productnum {
     width: 52px;
   }
-  .productprice{
+
+  .productprice {
     width: 68px;
   }
-  .orderstatus{
+
+  .orderstatus {
     width: 84px;
   }
-  .ordertrack{
+
+  .ordertrack {
     width: 132px;
   }
-  .express{
+
+  .express {
     width: 166px;
   }
-  .withmess{
+
+  .withmess {
     width: 135px;
   }
-  .orderdesc{
+
+  .orderdesc {
     width: 156px;
   }
-  .proedit{
+
+  .proedit {
     width: 104px;
   }
-  .proitem{
 
+  .proitem {
+    margin-bottom: 14px;
   }
-  .itemdesc{
+
+  .itemdesc {
     display: flex;
     justify-content: space-between;
     height: 41px;
@@ -603,39 +721,48 @@
     background: #f8f8f8;
     border-bottom: 1px solid #efefef;
   }
-  .itemdesc>div{
+
+  .itemdesc > div {
     display: flex;
     align-items: center;
     height: 13px;
   }
-  .itemdesc>div:nth-child(1){
+
+  .itemdesc > div:nth-child(1) {
     height: 13px;
   }
-  .itemdesc>div:nth-child(1)>div{
+
+  .itemdesc > div:nth-child(1) > div {
     padding: 0 11px;
     border-right: 1px solid #605d69;
   }
-  .itemdesc>div:nth-child(1)>div:last-child{
+
+  .itemdesc > div:nth-child(1) > div:last-child {
     border-right: 0;
     display: flex;
   }
-  .itemdesc>div:nth-child(1)>div:last-child>div{
+
+  .itemdesc > div:nth-child(1) > div:last-child > div {
     margin-right: 10px;
   }
-  .itemdesc>div:nth-child(2){
+
+  .itemdesc > div:nth-child(2) {
     height: 27px;
     align-items: center;
   }
-  .itemdesc>div:nth-child(2)>.lightgreybor{
+
+  .itemdesc > div:nth-child(2) > .lightgreybor {
     padding: 0 12px;
     height: 27px;
     line-height: 27px;
   }
-  .itembox{
+
+  .itembox {
     display: flex;
     background: #fff;
   }
-  .itembox>div{
+
+  .itembox > div {
     align-items: center;
     justify-content: space-around;
 
@@ -644,24 +771,103 @@
     display: flex;
 
   }
-  .itembox>div:last-child{
+
+  .itembox > div:last-child {
     border-right: none;
   }
-  .itembox>div>div{
+
+  .itembox > div > div {
     display: inline-block;
     padding: 12px 10px;
   }
-  .productpic img{
+
+  .productpic img {
     display: block;
     width: 60px;
     height: 60px;
     margin: 0 auto;
   }
-  .itembox>div>div>div{
+
+  .itembox > div > div > div {
     margin-bottom: 4px;
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> news
   .prolists {
     background: #fff;
     padding-bottom: 20px;
+  }
+
+  .explain-contact {
+    position: fixed;
+    right: 0px;
+    top: 50%;
+    z-index: 2;
+    margin-top: -190px;
+  }
+  .explain-contact img {
+    width: 110px;
+    /*margin-right: 50px;*/
+  }
+  .contact-qq {
+    position: absolute;
+    bottom: 115px;
+    width: 70px;
+    height: 20px;
+    display: inline-block;
+    left: 20px;
+  }
+  .contact-wechat {
+    position: absolute;
+    bottom: 84px;
+    width: 70px;
+    height: 20px;
+    display: inline-block;
+    left: 20px;
+  }
+  .contact-phone {
+    position: absolute;
+    bottom: 54px;
+    width: 70px;
+    height: 20px;
+    display: inline-block;
+    left: 20px;
+  }
+  .ewcodes{
+    width: 277px;
+    height: 310px;
+    border: 5px solid #F43E31;
+    background: none;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .ewcodes img {
+    width: 260px;
+    height: 260px;
+    position: absolute;
+    top: 6px;
+    left: 8px;
+  }
+  .ewcodes span {
+    bottom: 15px;
+    position: absolute;
+    color: #000;
+    font-size: 14px;
+    width: 260px;
+    display: inline-block;
+    text-align: center;
+  }
+  .kfphone .phone {
+    width: 277px;
+    /*height: 100px;*/
+    border: 5px solid #F43E31;
+    background: #fff;
+    border-radius: 5px;
+    font-size: 20px;
+    text-align: center;
+    color: #fc4a00;
+    padding-bottom: 30px;
   }
 </style>

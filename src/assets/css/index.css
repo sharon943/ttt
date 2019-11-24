@@ -332,6 +332,76 @@ cursor: pointer;
 .editnum .el-input-number__increase{
   border-radius: 0;
 }
-.el-checkbox{
+.el-checkbox {
   margin-right: 0;
+}
+.checkboxs{
+  /*overflow: hidden;*/
+}
+.checkboxs .el-checkbox__inner{
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border:none;
+  outline: none;
+}
+.checkboxs .el-checkbox__inner::after{
+  top: 5px;
+  left: 6px;
+}
+.checkboxs  .el-checkbox__input.is-checked .el-checkbox__inner,.checkboxs  .el-checkbox__input.is-indeterminate .el-checkbox__inner{
+  background-color: #f43e31;
+  border-color: #f43e31;
+}
+.store2price .el-input__inner{
+  border: none;
+  height: 100%;
+  padding: 0 5px;
+  line-height: 18px;
+  background: none;
+}
+.gopages .el-input__inner{
+  height: 100%;
+  padding: 0 5px;
+  line-height: 18px;
+  border: none;
+}
+.pages .el-pagination.is-background .el-pager li:not(.disabled).active{
+  background-color: #fd6619;
+}
+.pages .el-pagination.is-background .el-pager li:not(.disabled):hover{
+  color: #fd6619;
+}
+.pages .el-pager li:hover{
+  color: #fd6619;
+}
+.iconfont{
+  font-family: 'iconfont';
+}
+
+.carjishu .el-input__inner{
+  height: 40px;
+  border: 1px solid #DCDFE6;
+}
+.carjishu .el-input-number{
+  width: 90px;
+}
+.cart_con .el-input__inner{
+  border: 1px solid #DCDFE6;
+  height: 40px;
+  line-height: 40px;
+}
+.Consultingsearchbox .el-input__inner{
+  border: none;
+  outline: none;
+}
+.allproductsearch .el-input__inner{
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+.tjlist > span:hover{
+  color: #fd6619;
+  cursor: pointer;
 }

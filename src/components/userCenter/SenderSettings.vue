@@ -3,7 +3,7 @@
     <div class="mycontainer" style="background: none">
       <div class="mycontainer" style="background: none">
         <div class="productserchnav">
-          <span class="lightgrey">用户中心 &gt;</span>
+          <span class="lightgrey" @click="backTohome">用户中心 &gt;</span>
           <span>寄件人设置</span>
         </div>
       </div>
@@ -75,7 +75,7 @@
           </el-form-item>
 
           <el-form-item>
-            <div @click="submitForm('ruleForm')" class="reds submits">保存发件人信息</div>
+            <div @click="submitForm('ruleForm')" class="reds submits cursor">保存发件人信息</div>
           </el-form-item>
         </el-form>
       </div>
@@ -131,6 +131,9 @@
       }
     },
     methods: {
+      backTohome(){
+        this.$parent.fatherMethod();
+      },
       // 加载china地点数据，三级
       getCityData: function () {
         var that = this
@@ -206,8 +209,8 @@
         });
       }
     },
-    created: function () {
-      // this.getCityData()
+    created() {
+      this.getCityData()
     },
     mounted() {
 

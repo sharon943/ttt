@@ -18,12 +18,12 @@
           <div class="lightgreybor longinputs" style="width: 418px">
             <el-input v-model="value" placeholder="请输入内容"></el-input>
           </div>
-          <div class="sercchbtn">
+          <div class="sercchbtn cursor">
             搜索
           </div>
         </div>
         <div class="undertakebox2"  @click="handleCheckAllChange">
-          <div class="lightgreybor red ">批量一键上传</div>
+          <div class="lightgreybor red cursor">批量一键上传</div>
         </div>
       </div>
       <el-checkbox-group v-model="checkedOrders" class="boxes" @change="handleCheckedOrdersChange">
@@ -147,6 +147,7 @@
   export default {
     data() {
       return {
+        checked:true,
         value: '',
         productsARR:[{id:1},{id:2},{id:3},{id:4}],
         Stores:[{id:1,name:'萌萌童装1'},{id:2,name:'萌萌童装2'},{id:3,name:'萌萌童装3'},{id:4,name:'萌萌童装4'}],

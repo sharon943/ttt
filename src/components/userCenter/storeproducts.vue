@@ -107,7 +107,7 @@
           </div>
         </div>
         <div class="prolists">
-          <div class="proitem lightgreybor">
+          <div class="proitem lightgreybor" v-for="(val,index) in 4" :key="index">
             <div class="itembox">
               <div>
                 <div class="productpic">
@@ -225,13 +225,6 @@
     font-size: 12px;
     background: #f6f5f5;
   }
-
-
-  .cursor {
-    cursor: pointer;
-  }
-
-
   .productserchnav {
     height: 40px;
     line-height: 40px;
@@ -303,6 +296,7 @@
     line-height: 34px;
     margin-left: 9px;
     padding: 0 35px;
+    cursor: pointer;
   }
   .undertakebox1 > div {
     margin-right: 9px;
@@ -368,18 +362,6 @@
 
   .ordertrack {
     width: 132px;
-  }
-
-  .express {
-    width: 166px;
-  }
-
-  .withmess {
-    width: 135px;
-  }
-
-  .orderdesc {
-    width: 156px;
   }
 
   .proedit {
@@ -449,6 +431,7 @@
     padding: 16px 64px;
     margin-right: 15px;
     display: inline-block;
+    cursor: pointer;
   }
   .m8{
     margin-right: 14px;

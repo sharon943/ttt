@@ -964,9 +964,11 @@
   }
 
   .productpages > .items:nth-child(4n) {
+    /*margin-right: 0;*/
+  }
+  .productpages > .items:last-child{
     margin-right: 0;
   }
-
   .productpages > .items > div:nth-child(1) {
     display: block;
     width: 100%;
@@ -1143,6 +1145,8 @@
   }
   .carlist{
     padding: 15px 18px;
+    height: 314px;
+    overflow: auto;
   }
   .carlist>.item{
     display: flex;
@@ -1216,5 +1220,10 @@
   .scbtn{
     cursor: pointer;
   }
-
+  .productpages > .items:hover{
+    border: 1px solid  #f43e31;
+  }
+  .manages > .items > .lists > div:hover{
+    color: #f43e31;
+  }
 </style>

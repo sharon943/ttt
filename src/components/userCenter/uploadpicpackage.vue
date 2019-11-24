@@ -46,62 +46,61 @@
           <div class="productprice">
             <span>拿货价</span>
           </div>
-
-          <div class="ordertrack">
-            <span >厂家名称</span>
+            <div class="ordertrack">
+              <span >厂家名称</span>
+            </div>
+            <div class="express">
+              <span>联系电话</span>
+            </div>
+            <div class="withmess">
+              <span>厂址</span>
+            </div>
           </div>
-          <div class="express">
-            <span>联系电话</span>
-          </div>
-          <div class="withmess">
-            <span>厂址</span>
-          </div>
-        </div>
-        <div class="prolists">
-          <div class="proitem lightgreybor darkgrey">
-            <div class="itembox">
-              <div>
-                <div class="productpic">
-                  <div style="display: flex;align-items: center">
-                    <div>
-                      <img src="../../assets/img/1.png" alt="">
+          <div class="prolists" >
+            <div class="proitem lightgreybor darkgrey">
+              <div class="itembox">
+                <div>
+                  <div class="productpic">
+                    <div style="display: flex;align-items: center">
+                      <div>
+                        <img src="../../assets/img/1.png" alt="">
+                      </div>
+                      <div class="blods" style="margin-left: 8px;width: 80px;text-align: left;color: #000">红色家族童装套装</div>
                     </div>
-                    <div class="blods" style="margin-left: 8px;width: 80px;text-align: left;color: #000">红色家族童装套装</div>
                   </div>
                 </div>
-              </div>
-              <div>
-                <div class="productcode">
-                  <span >豆仔小当家&卡通</span>
+                <div>
+                  <div class="productcode">
+                    <span >豆仔小当家&卡通</span>
+                  </div>
                 </div>
-              </div>
 
-              <div>
-                <div class="productprice">
-                  <span class="red blods secondfont">￥9.90</span>
+                <div>
+                  <div class="productprice">
+                    <span class="red blods secondfont">￥9.90</span>
+                  </div>
                 </div>
-              </div>
 
-              <div>
-                <div class="ordertrack">
+                <div>
+                  <div class="ordertrack">
 
 
+                  </div>
                 </div>
-              </div>
-              <div>
-                <div class="express">
+                <div>
+                  <div class="express">
 
+                  </div>
                 </div>
-              </div>
-              <div>
-                <div class="withmess" style="text-align: left">
-                  <div>浙江省杭州市客户地址什么的</div>
-                  <div>陈雅元 18634301234</div>
+                <div>
+                  <div class="withmess" style="text-align: left">
+                    <div>浙江省杭州市客户地址什么的</div>
+                    <div>陈雅元 18634301234</div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
       </div>
       </el-checkbox-group>
     </div>
@@ -392,6 +391,7 @@
     line-height: 34px;
     margin-left: 9px;
     padding: 0 35px;
+    cursor: pointer;
   }
 
   .undertakebox1 > div {

@@ -57,14 +57,53 @@
                 <div>
                   <div>
                     <span class="lightgrey">已选1色2码</span>
-                    <span  class="blue cursor">修改</span>
+                    <span class="blue cursor" @click="edit(index)">修改</span>
                   </div>
-                  <div class="lightgreybor">
-                    <div>黄色</div>
-                    <div>
-                      <span>120</span>
-                      <span>x2</span>
-                    </div>
+                  <div>
+                    <table class="common-sema-table">
+                      <tbody>
+                      <tr>
+                        <td class="common-sema-se">卡其色</td>
+                        <td>
+                          <ul class="common-sema-item">
+                            <li>
+										         <span class="inline-block">
+										             XL
+										             										         </span>
+                              <span class="common-sema-no">×1</span>
+                            </li>
+                            <li>
+										         <span class="inline-block">
+										             L
+										             										         </span>
+                              <span class="common-sema-no">×1</span>
+                            </li>
+                            <li>
+										         <span class="inline-block">
+										             M
+										             										         </span>
+                              <span class="common-sema-no">×1</span>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                      </tbody>
+                      <tbody>
+                      <tr>
+                        <td class="common-sema-se">黑色</td>
+                        <td>
+                          <ul class="common-sema-item">
+                            <li>
+										         <span class="inline-block">
+										             L
+										             										         </span>
+                              <span class="common-sema-no">×2</span>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
                 <div>2</div>
@@ -105,6 +144,67 @@
       </div>
     </div>
 
+
+    <el-dialog
+      title="修改采购单"
+      :visible.sync="editVisible"
+      width="680px"
+      center>
+      <div class="cart_con">
+        <div class="con">
+          <div class="color">
+            <dl class="clearfix" id="list_color">
+              <dt>颜色</dt>
+              <dd>
+                <ul>
+                  <li :class="{act:thecolor==item.color}" v-for="(item,nums) in colors" :key="nums"
+                      @click="changecolor(item.color)"><a href="javascript:;">{{item.color}}</a><b v-if="item.num>0">{{item.num}}</b>
+                  </li>
+                </ul>
+              </dd>
+            </dl>
+          </div>
+          <div class="size">
+            <dl class="clearfix">
+              <dt>尺码</dt>
+              <dd>
+                <table>
+                  <tbody id="bodycount">
+                  <form id="updatecart"></form>
+                  <tr :class="val.color" style="display: table-row;" v-for="(val,index) in prolist" :key="index">
+                    <td class="model">
+                      <span>{{val.size}}</span>
+                    </td>
+                    <td class="model">
+                      <span>{{val.price}}</span>
+                    </td>
+
+                    <td class="count">
+                      <div>
+                        <el-input-number v-model="val.num" @change="handleChange" :min="0"
+                                         style="transform: scale(0.7)"></el-input-number>
+
+                      </div>
+                    </td>
+
+                  </tr>
+                  </tbody>
+                </table>
+              </dd>
+            </dl>
+          </div>
+        </div>
+        <div style="text-align: center">
+          <span slot="footer" class="dialog-footer">
+        <el-button @click="editVisible = false">取 消</el-button>
+        <el-button type="primary" @click="sure()">确 定</el-button>
+      </span>
+        </div>
+
+      </div>
+
+    </el-dialog>
+
   </div>
 
 </template>
@@ -117,7 +217,39 @@
         orderShops:[{id:1,checks:[],isIndeterminate:true,checkAll:false,checkedOrders:[1,2]},{id:2,checks:[],isIndeterminate:true,checkAll:false,checkedOrders:[1,2]}],
         Orders:Ordersoptions,
         //全选开关数据
-        checkAll_:false,isIndeterminate:true
+        checkAll_:false,isIndeterminate:true,
+        proindex: -1,
+        editVisible: false,
+        thecolor: '黑色',
+        colors: [
+        {
+          color: '黑色',
+          num: 0
+        },
+        {
+          color: '卡其色',
+          num: 2
+        }
+      ],
+        prolist: [
+        {
+          color: '黑色',
+          size: 90,
+          price: 120.00,
+          num: 1
+        }, {
+          color: '黑色',
+          size: 100,
+          price: 120.00,
+          num: 2
+        }, {
+          color: '黑色',
+          size: 110,
+          price: 120.00,
+          num: 3
+        }
+      ]
+
       }
     },
     methods: {
@@ -144,7 +276,26 @@
           this.orderShops[i].checkAll = val;
         }
       },
+      edit(index) {
+        this.proindex = index
+        this.editVisible = true
+      },
+      sure() {
 
+      },
+      changecolor(name) {
+        this.thecolor = name
+        this.getprolist()
+      },
+      getprolist() {
+
+      },
+      handleChange() {
+
+      },
+      changenum(index) {
+
+      }
     },
     mounted() {
 
@@ -161,7 +312,6 @@
     font-size: 12px;
     background: #f6f5f5;
   }
-
 
   .tablist {
     background: #f6f5f5;
@@ -311,22 +461,26 @@
   }
 
   .caredit {
-    height: 105px;
+    /*height: 105px;*/
     margin-bottom: 13px;
     margin-top: 9px;
-
+    border-bottom: 1px solid #dfdfdf;
   }
 
   .carlist {
-    padding: 18px 36px 18px 37px;
+    padding: 12px 0px 18px 37px;
     display: inline-flex;
-    margin-left: 25px;
-    width: 1117px;
-  }
+    /*margin-left: 25px;*/
+    /*width: 1117px;*/
+    align-items: center;
 
+  }
+  .caredit:last-child{
+    border-bottom: 0;
+  }
   .carlist > div:nth-child(1) {
     display: flex;
-    width: 305px;
+    width: 280px;
   }
 
   .carlist > div:nth-child(1) > div:nth-child(1) {
@@ -360,7 +514,7 @@
   }
 
   .carlist > div:nth-child(2) {
-    width: 183px;
+    width: 300px;
   }
 
   .carlist > div:nth-child(2) > div {
@@ -368,33 +522,9 @@
     justify-content: space-between;
   }
 
-  .carlist > div:nth-child(2) > div:nth-child(2) {
-    display: flex;
-    margin-top: 14px;
-    align-items: center;
-  }
-
-  .carlist > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) {
-    width: 58px;
-    border-right: 1px solid #efefef;
-    height: 29px;
-    text-align: center;
-    line-height: 29px;
-  }
-
-  .carlist > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) {
-    padding: 0 10px;
-    display: flex;
-    justify-content: space-between;
-    width: 125px;
-  }
-
-  .carlist > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > span {
-    display: inline-block;
-  }
 
   .carlist > div:nth-child(3) {
-    width: 202px;
+    width: 182px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -405,7 +535,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-right: 152px;
+    margin-right: 58px;
   }
 
   .carlist > div:nth-child(5) {
@@ -516,7 +646,7 @@
   }
 
   .shopedits > div:nth-child(1) {
-    width: 329px;
+    width: 317px;
   }
 
   .shopedits > div:nth-child(1) > div:nth-child(1) {
@@ -531,18 +661,18 @@
   }
 
   .shopedits > div:nth-child(2) {
-    width: 183px;
+    width: 300px;
   }
 
   .shopedits > div:nth-child(3) {
-    width: 202px;
+    width: 182px;
     justify-content: space-around;
   }
 
   .shopedits > div:nth-child(4) {
     width: 155px;
     justify-content: space-around;
-    margin-right: 152px;
+    margin-right: 52px;
   }
 
   .shopedits > div:nth-child(5) {
@@ -551,4 +681,166 @@
 
   }
 
+  .cart_con {
+    width: 582px;
+    background: #fff;
+  }
+
+  .cart_con .con {
+    width: 550px;
+    margin: 0 auto;
+    margin-bottom: 35px;
+  }
+
+  .cart_con .con .color {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .cart_con .con dl {
+    margin-left: 80px;
+  }
+
+  .cart_con .con dl dt {
+    float: left;
+    width: 60px;
+    margin-left: -80px;
+    text-align: center;
+    line-height: 30px;
+  }
+
+  .cart_con .con dl dd {
+    float: left;
+  }
+
+  .cart_con .con dl dd ul li.act {
+    background: #fff8f4;
+    border-color: #ff7300;
+    color: #ff7300;
+  }
+
+  .cart_con .con .color dd li {
+    position: relative;
+    margin: 5px 5px;
+  }
+
+  .cart_con .con dl dd ul li {
+    float: left;
+    list-style: none;
+    border: 1px solid #ebebeb;
+  }
+
+  .cart_con .con dl dd ul li a {
+    display: inline-block;
+    padding: 5px 10px 5px 15px;
+    color: #999;
+  }
+
+  .cart_con .con .color dd li b {
+    color: #ff7300;
+    font-size: 9px;
+    margin-right: 2px;
+    vertical-align: bottom;
+  }
+
+  .cart_con .con .size {
+    margin-top: 13px;
+    overflow-y: auto;
+    max-height: 360px;
+  }
+
+  .cart_con .con dl {
+    margin-left: 80px;
+  }
+
+  .cart_con .con dl dt {
+    float: left;
+    width: 60px;
+    margin-left: -80px;
+    text-align: center;
+    line-height: 30px;
+  }
+
+  .cart_con .con dl dd {
+    float: left;
+  }
+
+  .clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+
+  .cart_con .con table {
+    width: 100%;
+  }
+
+  .cart_con .con table tbody td {
+    height: 35px;
+    padding-left: 5px;
+    font-size: 14px;
+    vertical-align: middle;
+    padding-left: 5px;
+    font-size: 12px;
+  }
+
+  .cart_con .con table tbody td.model {
+    width: 300px;
+    font-weight: bold;
+  }
+
+
+  .common-sema-table {
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    /*border-top-width: 2px;*/
+  }
+  .common-sema-table tr {
+    border-bottom: 1px dotted #d5d7d9;
+  }
+  .common-sema-se {
+    width: 90px;
+    text-align: center;
+    border-right: 1px solid #d5d7d9;
+  }
+  .common-sema-item {
+    width: 205px;
+  }
+  .common-sema-item li {
+    position: relative;
+    margin: 5px 0;
+    padding-left: 5px;
+    float: none;
+    height: 22px;
+    line-height: 22px;
+  }
+  .cart-goods-list li {
+    float: left;
+    padding-left: 5px;
+  }
+  .inline-block {
+    width: 160px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+  }
+  .common-sema-no {
+    position: absolute;
+    right: 5px;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  table {
+    display: table;
+  }
+  .myprolist{
+
+    width: 1117px;
+    margin: 0 auto;
+  }
 </style>

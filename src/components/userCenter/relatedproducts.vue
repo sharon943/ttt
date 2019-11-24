@@ -37,47 +37,47 @@
           <div class="withmess">
             <span>厂址</span>
           </div>
-        </div>
-        <div class="prolists">
-          <div class="proitem lightgreybor darkgrey">
-            <div class="itembox">
-              <div>
-                <div class="productpic">
-                  <div style="display: flex;align-items: center">
-                    <div>
-                      <img src="../../assets/img/1.png" alt="">
+          <div class="prolists" >
+            <div class="proitem lightgreybor darkgrey">
+              <div class="itembox">
+                <div>
+                  <div class="productpic">
+                    <div style="display: flex;align-items: center">
+                      <div>
+                        <img src="../../assets/img/1.png" alt="">
+                      </div>
+                      <div class="blods" style="margin-left: 8px;width: 80px;text-align: left;color: #000">红色家族童装套装</div>
                     </div>
-                    <div class="blods" style="margin-left: 8px;width: 80px;text-align: left;color: #000">红色家族童装套装</div>
                   </div>
                 </div>
-              </div>
-              <div>
-                <div class="productcode">
-                  <span >豆仔小当家&卡通</span>
+                <div>
+                  <div class="productcode">
+                    <span >豆仔小当家&卡通</span>
+                  </div>
                 </div>
-              </div>
 
-              <div>
-                <div class="productprice">
-                  <span class="red blods secondfont">￥9.90</span>
+                <div>
+                  <div class="productprice">
+                    <span class="red blods secondfont">￥9.90</span>
+                  </div>
                 </div>
-              </div>
 
-              <div>
-                <div class="ordertrack">
+                <div>
+                  <div class="ordertrack">
 
 
+                  </div>
                 </div>
-              </div>
-              <div>
-                <div class="express">
+                <div>
+                  <div class="express">
 
+                  </div>
                 </div>
-              </div>
-              <div>
-                <div class="withmess" style="text-align: left">
-                  <div>浙江省杭州市客户地址什么的</div>
-                  <div>陈雅元 18634301234</div>
+                <div>
+                  <div class="withmess" style="text-align: left">
+                    <div>浙江省杭州市客户地址什么的</div>
+                    <div>陈雅元 18634301234</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -92,6 +92,7 @@
   export default {
     data() {
       return {
+        checked:true,
         value:'',
         allsale:[
           {
@@ -149,62 +150,6 @@
     font-size: 12px;
     background: #f6f5f5;
   }
-
-  .mydetailtop {
-    background: #fff;
-    border-bottom: 1px solid #f43e31;
-
-  }
-
-  .storehome2top {
-    background: #f6f5f5;
-  }
-
-  .tablist {
-    background: #f6f5f5;
-  }
-
-  .consultingtop {
-    width: 100%;
-    height: 122px;
-    background: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .consultingtop > div:nth-child(1) {
-    display: inline-block;
-    height: auto;
-  }
-
-  .cursor {
-    cursor: pointer;
-  }
-
-  .tabs {
-    height: 38px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    background: #f6f5f5;
-
-  }
-
-  .tabs > div:nth-child(1) {
-    display: flex;
-    height: 100%;
-    align-items: center;
-  }
-
-  .tabs > div > span {
-    display: flex;
-    height: 100%;
-    padding: 0 22px;
-    align-items: center;
-  }
-
   .mytab > .active {
     background: #f43e31; /* 红色背景 */
     color: #fff;
@@ -213,98 +158,6 @@
   .consultingtop .serachs {
     width: 562px;
 
-  }
-
-  .Consultingsearchbox {
-    position: relative;
-    height: 40px;
-    display: flex;
-    border: 2px solid #f24e48;
-    border-radius: 50px;
-    overflow: hidden;
-    margin-bottom: 7px;
-  }
-
-  .Consultingsearchbox > div:nth-child(1) {
-    width: 454px;
-  }
-
-  .Consultingsearchbox > div:nth-child(1) > input {
-    display: block;
-    width: 100%;
-    height: 100%;
-    outline: none;
-    padding: 0 16px;
-    border: none;
-  }
-
-  .Consultingsearchbox > div:nth-child(2) {
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 100%;
-    display: flex;
-    width: 120px;
-    align-items: center;
-    border-radius: 50px;
-    background-image: linear-gradient(90deg, #f24e48 0%, #ff6349 100%);
-  }
-
-  .Consultingsearchbox > div:nth-child(2) > span {
-    display: inline-block;
-    height: 20px;
-    width: 50%;
-    color: #fff;
-    text-align: center;
-    font-size: 18px;
-    line-height: 20px;
-  }
-
-  .Consultingsearchbox > div:nth-child(2) > span:nth-child(1) {
-    border-right: 1px solid #fff;
-  }
-
-  .selecttype {
-    padding: 0 18px;
-    display: flex;
-
-  }
-
-  .selecttype > span {
-    width: 50px;
-    height: 24px;
-    line-height: 24px;
-    text-align: center;
-    color: #666;
-    border-radius: 50px;
-    margin-bottom: 2px;
-  }
-
-  .selecttype > .active {
-    background-image: linear-gradient(90deg, #f24e48 0%, #ff6349 100%);
-    color: #fff;
-  }
-
-  .tjlist {
-    display: flex;
-    padding: 0 18px;
-    color: #666;
-  }
-
-  .tjlist > span {
-    margin-right: 25px;
-  }
-
-  .sdcode {
-    width: 170px;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .sdcode > div {
-    height: 80px;
-    width: 80px;
-    box-shadow: 2px 4px 10px #fdd9d8;
   }
 
   .productserchnav {
@@ -323,15 +176,6 @@
     height: 40px;
     line-height: 40px;
   }
-
-
-  .m8{
-    margin-right: 8px;
-  }
-  .tbordernumer{
-    width: 394px;
-    display: flex;
-  }
   .tbordernumer>div:nth-child(2){
     width: 220px;
   }
@@ -343,6 +187,7 @@
   }
   .undertakebox>div{
     margin-right: 9px;
+    cursor: pointer;
   }
   .undertakebox>.jztimes{
     width: 290px;
@@ -397,14 +242,6 @@
 
   .productcode {
     width: 146px;
-  }
-
-  .productsize {
-    width: 84px;
-  }
-
-  .productnum {
-    width: 52px;
   }
 
   .productprice {
@@ -468,15 +305,5 @@
   .prolists{
     background: #fff;
     padding-bottom: 20px;
-  }
-  .prostatus{
-    display: flex;
-    align-items: center;
-  }
-  .prostatus>.lightgreybor{
-    width: 17px;
-    height: 15px;
-    background: #fff;
-    margin-right: 4px;
   }
 </style>

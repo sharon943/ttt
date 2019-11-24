@@ -54,7 +54,9 @@
                 </el-option>
               </el-select>
             </div>
-            <div  class="lightgreybor"></div>
+            <div  class="lightgreybor" style="text-align: left">
+              <el-input v-model="proname" placeholder=""></el-input>
+            </div>
           </div>
           <div class="sercchbtn">
             搜索
@@ -207,6 +209,7 @@
   export default {
     data() {
       return {
+        proname:'',
         value:'',
         allsale:[
           {

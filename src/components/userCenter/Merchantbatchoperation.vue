@@ -7,12 +7,12 @@
           <span>商户批量操作</span>
         </div>
       </div>
-      <div class="mynavs">
-        <div class="tittle reds">批量一键上传</div>
-        <div class="tittle">批量下载表情包</div>
+      <div class="mynavs cursor">
+        <div :class="['tittle',{reds:IsdefaultBox}]" @click="IsdefaultBox=true">批量一键上传</div>
+        <div :class="['tittle',{reds:!IsdefaultBox}]" @click="IsdefaultBox=false">批量下载表情包</div>
       </div>
     </div>
-    <div class="mycontainer" style="background: #fff; padding-top: 25px;">
+    <div class="mycontainer" style="background: #fff; padding-top: 25px;" >
       <div class="undertakebox">
         <div class="undertakebox1">
           <div class="lightgreybor longinputs" style="width: 418px">
@@ -26,7 +26,7 @@
           <div class="lightgreybor red cursor">批量一键上传</div>
         </div>
       </div>
-      <el-checkbox-group v-model="checkedOrders" class="boxes" @change="handleCheckedOrdersChange">
+      <el-checkbox-group v-model="checkedOrders" class="boxes" @change="handleCheckedOrdersChange" v-if="IsdefaultBox">
         <div class="underlists">
           <div v-if="isdefault" >
             <div  v-for="row in orderLists">
@@ -138,6 +138,82 @@
           </div>
         </div>
       </el-checkbox-group>
+      <el-checkbox-group v-model="checkedOrdersPic" class="boxes" @change="handleCheckedOrdersChangePic" v-else>
+        <div class="underlists">
+          <div v-if="isdefault" >
+            <div  v-for="row in orderListsPic">
+              <div class="thed">
+                <div class="productpic">
+                  <el-checkbox  :label="row.id" :key="row.id">{{null}}</el-checkbox>
+                  <span style="width: 158px;">商品图片</span>
+                </div>
+                <div class="productcode">
+                  <span>货号</span>
+                </div>
+                <div class="productprice">
+                  <span>拿货价</span>
+                </div>
+
+                <div class="ordertrack">
+                  <span>厂家名称</span>
+                </div>
+                <div class="express">
+                  <span>联系电话</span>
+                </div>
+                <div class="withmess">
+                  <span>厂址</span>
+                </div>
+              </div>
+              <div class="prolists">
+                <div class="proitem lightgreybor darkgrey">
+                  <div class="itembox">
+                    <div>
+                      <div class="productpic">
+                        <div style="display: flex;align-items: center">
+                          <div>
+                            <img src="../../assets/img/1.png" alt="">
+                          </div>
+                          <div class="blods" style="margin-left: 8px;width: 80px;text-align: left;color: #000">红色家族童装套装</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="productcode">
+                        <span>豆仔小当家&卡通</span>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div class="productprice">
+                        <span class="red blods secondfont">￥9.90</span>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div class="ordertrack">
+
+
+                      </div>
+                    </div>
+                    <div>
+                      <div class="express">
+
+                      </div>
+                    </div>
+                    <div>
+                      <div class="withmess" style="text-align: left">
+                        <div>浙江省杭州市客户地址什么的</div>
+                        <div>陈雅元 18634301234</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </el-checkbox-group>
     </div>
 
   </div>
@@ -154,9 +230,14 @@
         isdefault:true,//true:默认展示。false:以搜索为结果的"厂家名称"展示的界面
         orderLists:[{id:1},{id:2}],
         checkedOrders:[],
-        Orders:[1,2],
+        Orders:[1,2],checkAll:false,
         //以搜索为结果的"厂家名称"展示的界面的选框参数
         checkList:[],
+        IsdefaultBox:true,//true展示批量一键上传，false批量下载表情包
+        //批量下载表情包的参数
+        orderListsPic:[{id:1},{id:2},{id:3}],
+        checkedOrdersPic:[],
+        OrdersPic:[1,2],checkAllPic:false,
       }
     },
     methods: {
@@ -167,16 +248,25 @@
         let checkedCount = value.length;
         this.checkAll = checkedCount === this.Orders.length;
       },
+      handleCheckedOrdersChangePic(value){
+        let checkedCount = value.length;
+        this.checkAllPic = checkedCount === this.OrdersPic.length;
+      },
       handleCheckAllChange(e){
-        if(this.isdefault){
-          this.checkedOrders =this.Orders; //如果这里的批量不是全选的意思删掉这行
-        }else {
-          var Options=[]
-          for (let i = 0; i < this.Stores.length; i++) {
-            Options.push(this.Stores[i].id)
+        if(this.IsdefaultBox){   //展示批量一键上传
+          if(this.isdefault){    //批量一键上传下的默认
+            this.checkedOrders =this.Orders; //如果这里的批量不是全选的意思删掉这行
+          }else {           //批量一键上传下的以搜索为结果的"厂家名称"展示的界面
+            var Options=[]
+            for (let i = 0; i < this.Stores.length; i++) {
+              Options.push(this.Stores[i].id)
+            }
+            this.checkList = Options;
           }
-          this.checkList = Options;
+        }else{  //批量下载表情包
+          this.checkedOrdersPic =this.OrdersPic;
         }
+
       },
       handleCheckedCitiesChange(value) {
         console.log(value)

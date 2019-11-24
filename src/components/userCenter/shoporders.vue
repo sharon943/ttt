@@ -114,6 +114,145 @@
           </div>
         </div>
       </div>
+      <el-checkbox-group v-model="checkedOrders" class="boxes" @change="handleCheckedOrdersChange">
+        <div class="underlists" v-for=" (row,index) in orderLists" :key="index">
+          <div class="thed">
+            <div class="productpic">
+              <el-checkbox :label="row.id" :key="row.id">{{null}}</el-checkbox>
+              <span>商品图片</span>
+            </div>
+            <div class="productcode">
+              <span>货号</span>
+            </div>
+            <div class="productsize">
+              <span>颜色/尺码</span>
+            </div>
+            <div class="productnum">
+              <span>数量</span>
+            </div>
+            <div class="productprice">
+              <span>拿货价</span>
+            </div>
+            <div class="orderstatus">
+              <span class="red firstfont">订单状态</span>
+            </div>
+            <div class="ordertrack">
+              <span class="red">拿货轨迹</span>
+            </div>
+            <div class="express">
+              <span>快递信息</span>
+            </div>
+            <div class="withmess">
+              <span>拿货信息</span>
+            </div>
+            <div class="orderdesc">
+              <span>订单备注</span>
+            </div>
+            <div class="proedit">
+              <span>操作</span>
+            </div>
+          </div>
+          <div class="prolists">
+            <div class="proitem lightgreybor" >
+              <div class="itemdesc">
+                <div>
+                  <div>订单号：1909303763077</div>
+                  <div>生成时间：2019-9-30 14：05</div>
+                  <div>商品数量：1</div>
+                  <div>
+                    <div>
+                      服务费：<span class="red">2.00</span>元
+                    </div>
+                    <div>
+                      质检费：<span class="red">2.00</span>元
+                    </div>
+                    <div>
+                      订单总价：<span class="red">2.00</span>元
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div>发货商：</div>
+                  <div class="lightgreybor">3E3E.CN官方合作代发</div>
+                </div>
+              </div>
+              <div class="itembox">
+                <div>
+                  <div class="productpic">
+                <span>
+                  <img src="../../assets/img/1.png" alt="">
+                </span>
+                  </div>
+                </div>
+                <div>
+                  <div class="productcode">
+                    <span>豆仔小当家&卡通</span>
+                  </div>
+                </div>
+                <div>
+                  <div class="productsize">
+                    <span>白色/30</span>
+                  </div>
+                </div>
+                <div>
+                  <div class="productnum">
+                    <span>1</span>
+                  </div>
+                </div>
+                <div>
+                  <div class="productprice">
+                    <span>9.90</span>
+                  </div>
+                </div>
+                <div>
+                  <div class="orderstatus">
+                    <span>已完成</span>
+                  </div>
+                </div>
+                <div>
+                  <div class="ordertrack" style="text-align: center">
+                    <div>安排拿货员（周边地区拿货取消是，着急请联系厂家代发）</div>
+                    <div>拿货中</div>
+                    <div style="text-align: center">
+                      <div style="border: 1px dotted #F43E31;padding: 2px 4px;display: inline-block" class="red">轨迹
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <div>
+                  <div class="express" style="text-align: left">
+                    <div>快递:申通快递 <span style="border:1px dotted #19a4f4;padding: 2px;margin-left: 3px"
+                                       class="blue">普</span></div>
+                    <div>快递费：4.00</div>
+                    <div>单号：</div>
+                  </div>
+                </div>
+                <div>
+                  <div class="withmess" style="text-align: left">
+                    <div>浙江省杭州市客户地址什么的</div>
+                    <div>陈雅元 18634301234</div>
+                  </div>
+                </div>
+                <div>
+                  <div class="orderdesc">
+                    <div></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="proedit">
+                    <div class="blue cursor">查看详情</div>
+                    <div class="blue cursor">退款</div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </el-checkbox-group>
+
     </div>
 
 
@@ -172,12 +311,20 @@
             value: '选项2',
             label: '双皮奶'
           }
-        ]
+        ],
+        orderLists: [{id: 1}, {id: 2}],
+        checkedOrders: [],
+        checkAll: false, isIndeterminate: true, Orders: [1, 2]
       }
     },
     methods: {
       backTohome(){
         this.$parent.fatherMethod();
+      },
+      handleCheckedOrdersChange(value) {
+        let checkedCount = value.length;
+        this.checkAll = checkedCount === this.Orders.length;
+        this.isIndeterminate = checkedCount > 0 && checkedCount < this.Orders.length;
       },
     },
     mounted() {
@@ -226,7 +373,7 @@
 
   .editsteps {
     padding: 28px;
-    min-height: 496px;
+    min-height: 320px;
   }
 
   .editsteps > div:nth-child(1) {
@@ -409,4 +556,163 @@
     color: #fc4a00;
     padding-bottom: 30px;
   }
+  .underlists > .thed {
+    height: 38px;
+    display: flex;
+    align-items: center;
+    background: #dadada;
+    color: #515056;
+    margin-bottom: 16px;
+  }
+
+  .underlists > .thed > div {
+    text-align: center;
+  }
+
+  .underlists > .thed > div:nth-child(1) {
+    display: flex;
+    padding-left: 5px;
+  }
+
+  .underlists > .thed > div:nth-child(1) > .lightgreybor {
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    margin-right: 5px;
+    display: block;
+    border-color: #a6a6a6;
+  }
+
+  .productpic {
+    width: 106px;
+  }
+
+  .productcode {
+    width: 106px;
+  }
+
+  .productsize {
+    width: 84px;
+  }
+
+  .productnum {
+    width: 52px;
+  }
+
+  .productprice {
+    width: 68px;
+  }
+
+  .orderstatus {
+    width: 84px;
+  }
+
+  .ordertrack {
+    width: 132px;
+  }
+
+  .express {
+    width: 166px;
+  }
+
+  .withmess {
+    width: 135px;
+  }
+
+  .orderdesc {
+    width: 156px;
+  }
+
+  .proedit {
+    width: 104px;
+  }
+
+  .proitem {
+    margin-bottom: 14px;
+  }
+
+  .itemdesc {
+    display: flex;
+    justify-content: space-between;
+    height: 41px;
+    align-items: center;
+    padding: 0 13px;
+    background: #f8f8f8;
+    border-bottom: 1px solid #efefef;
+  }
+
+  .itemdesc > div {
+    display: flex;
+    align-items: center;
+    height: 13px;
+  }
+
+  .itemdesc > div:nth-child(1) {
+    height: 13px;
+  }
+
+  .itemdesc > div:nth-child(1) > div {
+    padding: 0 11px;
+    border-right: 1px solid #605d69;
+  }
+
+  .itemdesc > div:nth-child(1) > div:last-child {
+    border-right: 0;
+    display: flex;
+  }
+
+  .itemdesc > div:nth-child(1) > div:last-child > div {
+    margin-right: 10px;
+  }
+
+  .itemdesc > div:nth-child(2) {
+    height: 27px;
+    align-items: center;
+  }
+
+  .itemdesc > div:nth-child(2) > .lightgreybor {
+    padding: 0 12px;
+    height: 27px;
+    line-height: 27px;
+  }
+  .itembox {
+    display: flex;
+    background: #fff;
+  }
+
+  .itembox > div {
+    align-items: center;
+    justify-content: space-around;
+
+    border-right: 1px solid #efefef;
+    text-align: center;
+    display: flex;
+
+  }
+
+  .itembox > div:last-child {
+    border-right: none;
+  }
+
+  .itembox > div > div {
+    display: inline-block;
+    padding: 12px 10px;
+  }
+
+  .productpic img {
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+  }
+
+  .itembox > div > div > div {
+    margin-bottom: 4px;
+  }
+
+  .prolists {
+    background: #fff;
+    margin-bottom: 20px;
+  }
+
 </style>

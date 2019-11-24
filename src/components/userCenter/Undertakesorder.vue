@@ -176,7 +176,7 @@
       </div>
     </div>
     <el-checkbox-group v-model="checkedOrders" class="boxes" @change="handleCheckedOrdersChange">
-      <div class="underlists" v-for="row in orderLists">
+      <div class="underlists" v-for=" (row,index) in orderLists" :key="index">
         <div class="thed">
           <div class="productpic">
             <el-checkbox :label="row.id" :key="row.id">{{null}}</el-checkbox>
@@ -213,10 +213,8 @@
             <span>操作</span>
           </div>
         </div>
-
-      </div>
-      <div class="prolists">
-        <div class="proitem lightgreybor" v-for="(val,index) in 4" :key="index">
+        <div class="prolists">
+        <div class="proitem lightgreybor" >
           <div class="itemdesc">
             <div>
               <div>订单号：1909303763077</div>
@@ -312,6 +310,7 @@
           </div>
 
         </div>
+      </div>
       </div>
     </el-checkbox-group>
   </div>

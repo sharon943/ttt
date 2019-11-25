@@ -35,20 +35,28 @@ Vue.use(PostOrder)
 
 export default new Router({
   routes: [
-    {path: '/', name: 'userhome', component: userhome},
+    { path: '/', name: 'userhome', component: userhome },
     // {path: '/', name: 'login', component: Login},
-    {path: '/Register', name: 'Register', component: Register},
-    {path: '/Homepage', name: 'Homepage', component: Homepage},
-    {path: '/PostOrder', name: 'PostOrder', component: PostOrder},
-    {path: '/Pay', name: 'Pay', component: Pay},
-    {path: '/storehome', name: 'storehome', component: storehome},
-    {path: '/allproduct', name: 'allproduct', component: allproduct},
-    {path: '/Consultingdetail', name: 'Consultingdetail', component: Consultingdetail},
-    {path: '/news_detail', name: 'news_detail', component: news_detail},
-    {path: '/Consultingprogram', name: 'Consultingprogram', component: Consultingprogram},
-    {path: '/productsearch', name: 'productsearch', component: productsearch},
-    {path: '/Shopdetails', name: 'Shopdetails', component: Shopdetails},
-    {path: '/userhome', name: 'userhome', component: userhome}
-    // {path: '/index', name: 'index', component: index},
+    { path: '/Register', name: 'Register', component: Register },
+    { path: '/Homepage', name: 'Homepage', component: Homepage },
+    { path: '/PostOrder', name: 'PostOrder', component: PostOrder },
+    { path: '/Pay', name: 'Pay', component: Pay },
+    { path: '/storehome', name: 'storehome', component: storehome },
+    { path: '/allproduct', name: 'allproduct', component: allproduct },
+    { path: '/Consultingdetail', name: 'Consultingdetail', component: Consultingdetail },
+    { path: '/news_detail', name: 'news_detail', component: news_detail},
+    { path: '/Consultingprogram', name: 'Consultingprogram', component: Consultingprogram },
+    { path: '/productsearch', name: 'productsearch', component: productsearch },
+    { path: '/Shopdetails', name: 'Shopdetails', component: Shopdetails },
+    //用户中心
+    { path: '/userhome', name: 'userhome', component: userhome },
+    //厂家直销
+    { path: '/factoryDirect', name: 'factoryDirect', component: () => import('@/components/team/factoryDirect.vue'), },
+    //今日新款
+    { path: '/newStyle', name: 'newStyle', component: () => import('@/components/team/newStyle.vue'), },
+     //视频专区
+     { path: '/videoArea', name: 'videoArea', component: () => import('@/components/team/videoArea.vue'), },
+    //一周人气
+    { path: '/weekhot', name: 'weekhot', component: () => import('@/components/team/weekhot.vue'), },
   ]
 })

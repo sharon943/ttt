@@ -1,5 +1,6 @@
 <template>
   <div class="productsearch">
+    <THeader></THeader>
     <div class="mydetailtop storehome2top">
       <div style="background: #fff">
         <div class="mycontainer">
@@ -48,12 +49,12 @@
             <div class="mytab blods firstfont">
               <span class="active"><i class="iconfont icon-liebiao1"></i>童装批发采购平台</span>
               <span>首页</span>
-              <span>厂家直供</span>
+              <span @click="toPage('/factoryDirect')">厂家直供</span>
               <span>今日新款</span>
               <span>库存直播频道</span>
               <span class="red">爆款专区</span>
               <span>视频专区</span>
-              <span>一周人气</span>
+              <span @click="toPage('/weekhot')">一周人气</span>
               <span>金牌厂家</span>
               <span>童装服务</span>
             </div>
@@ -464,6 +465,7 @@
 
 </template>
 <script>
+import THeader from "@/components/common/headerTop";
   import Mycar from './userCenter/mycar'                //购物车
   import Shoporders from './userCenter/shoporders'     //店铺订单
   import Browsefootprint from './userCenter/Browsefootprint'     //浏览足迹
@@ -493,11 +495,14 @@
       }
     },
     components:{
-      Mycar,Shoporders,Browsefootprint,GrandPrize,Message,MyPoints,Productcollection,Relatedproducts,SafeAuthorization,Saleorder,
+      THeader,Mycar,Shoporders,Browsefootprint,GrandPrize,Message,MyPoints,Productcollection,Relatedproducts,SafeAuthorization,Saleorder,
       Storeproducts,Undertakesorder,uploadpicpackage,Manufacturersfocus,Supplydynamic,AccountInfo,AccountBalance,MyCoupons,Merchantbatchoperation,
       SenderSettings
     },
     methods: {
+      toPage(name){
+        this.$router.push(name)
+      },
       fatherMethod(){
         this.active=1
     },

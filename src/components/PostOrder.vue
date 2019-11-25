@@ -165,7 +165,7 @@
                </th></tr>
              </table>
              <div class="postOrderPre">
-               <p>我已同意并阅读《<span>找家纺代发合作协议</span>》</p><img src="../assets/img/check.png" alt="">
+               <p>我已同意并阅读《<span>找家纺代发合作协议</span>》</p><img src="../assets/img/Check.png" alt="">
              </div>
              <div class="postButton">
                <router-link :to="{path:'/Pay'}">提交订单</router-link>

@@ -18,6 +18,7 @@ import storehome from '@/components/storehome'//店铺首页
 import productsearch from '@/components/productsearch'//产品搜索页
 import Shopdetails from '@/components/Shopdetails'//店铺详情页
 import userhome from '@/components/userhome'//用户中心
+import news_detail from '@/components/news_detail'//用户中心
 
 import Vueresource from "vue-resource"
 import VueClipboard from 'vue-clipboard2'
@@ -43,6 +44,7 @@ export default new Router({
     {path: '/storehome', name: 'storehome', component: storehome},
     {path: '/allproduct', name: 'allproduct', component: allproduct},
     {path: '/Consultingdetail', name: 'Consultingdetail', component: Consultingdetail},
+    {path: '/news_detail', name: 'news_detail', component: news_detail},
     {path: '/Consultingprogram', name: 'Consultingprogram', component: Consultingprogram},
     {path: '/productsearch', name: 'productsearch', component: productsearch},
     {path: '/Shopdetails', name: 'Shopdetails', component: Shopdetails},
